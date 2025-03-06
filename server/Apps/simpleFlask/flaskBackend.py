@@ -1,8 +1,16 @@
 from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 import os
+import iris
+import json
+import numpy as np
+from sentence_transformers import SentenceTransformer
+import openai
+import re
+import nltk
+from nltk.corpus import stopwords
 
-
+nltk.download('stopwords')
 
 app = Flask(__name__)
 CORS(app)
@@ -12,13 +20,7 @@ def homepage():
     return render_template('index.html') 
 
 
-####################################################################################################
-##CONNECTING THE IRIS DATABASE
-# https://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=BPYNAT_pyapi
-
-import iris
-import json
-
+# ---- DATABASE CONFIG ----
 namespace="USER"
 port = "1972"
 hostname= "localhost"
@@ -26,22 +28,22 @@ connection_string = f"{hostname}:{port}/{namespace}"
 username = "demo"
 password = "demo"
 
+# Load AI embedding model
+embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
 
-# CRUD operations
-# table name must always be in A.B format. Otherwise SQLUser will get prefixed by default when the table is created 
-# example tablename = project.tableName
-# example schema = (myvarchar VARCHAR(255), myint INTEGER, myfloat FLOAT)
+# OpenAI API Key (Use environment variables in production)
+openai.api_key = "your-api-key-here"
+
+# ---- CRUD OPERATIONS ----
 @app.route('/create', methods=['POST'])
 def create():
     tableName = request.json.get('tableName')
     schema = request.json.get('schema')
-    # print("trying connection string: ", connection_string, flush=True) # useful for debugging
     conn = iris.connect(connection_string, username, password)
     cursor = conn.cursor()
     try:
         cursor.execute(f"DROP TABLE {tableName}")
-    except Exception as inst:
-        # Ignore the error thrown when no table exists
+    except:
         pass
     try:
         cursor.execute(f"CREATE TABLE {tableName} {schema}")
@@ -58,21 +60,15 @@ def getall():
     conn = iris.connect(connection_string, username, password)
     cursor = conn.cursor()
     try:
-        cursor.execute(f"Select * From {tableName}")
+        cursor.execute(f"SELECT * FROM {tableName}")
         data = cursor.fetchall()
     except Exception as inst:
         return jsonify({"response": str(inst)})
     cursor.close()
     conn.commit()
     conn.close()
-    print(data)
     return jsonify({"response": data})
 
-
-# Example usage:
-# query = "Insert into Sample.Person (name, phone) values (?, ?)"
-# params = [('ABC', '123-456-7890'), ('DEF', '234-567-8901'), ('GHI', '345-678-9012')]
-# cursor.executemany(query, params) // batch update
 @app.route('/insert', methods=['POST'])
 def insert():
     tableName = request.json.get('tableName')
@@ -80,12 +76,7 @@ def insert():
     data = request.json.get('data')
     json_compatible_string = data.replace("(", "[").replace(")", "]").replace("'", '"')
     data = json.loads(json_compatible_string)
-    qMarks = "("
-    for i in range(len(data[0])):
-        if i == len(data[0])-1:
-            qMarks = qMarks+"?)"
-            break
-        qMarks = qMarks+"?,"
+    qMarks = "(" + ",".join(["?"] * len(data[0])) + ")"
     query = f"INSERT INTO {tableName} {columns} VALUES {qMarks}"
     conn = iris.connect(connection_string, username, password)
     cursor = conn.cursor()
@@ -98,9 +89,69 @@ def insert():
     conn.close()
     return jsonify({"response": "new information added"})
 
+# ---- AI-POWERED DOCTOR RECOMMENDATION ----
+@app.route('/recommend_doctor', methods=['POST'])
+def recommend_doctor():
+    data = request.json
+    symptoms = data.get('symptoms', '')
 
+    # Generate embeddings
+    symptoms_vector = embedding_model.encode(symptoms).tolist()
+
+    # Fetch doctors from IRIS
+    conn = iris.connect(connection_string, username, password)
+    cursor = conn.cursor()
+    cursor.execute("SELECT doctorId, name, specialty, locationId, experience_years, available_hours, description, embedding_vector FROM SQLUser.Doctor")
+    doctors = cursor.fetchall()
+    cursor.close()
+    conn.close()
+
+    best_match = None
+    highest_similarity = -1
+
+    for doctor in doctors:
+        doctor_vector = json.loads(doctor[7]) if doctor[7] else [0] * 384  # Default zero vector
+        similarity = np.dot(symptoms_vector, doctor_vector) / (np.linalg.norm(symptoms_vector) * np.linalg.norm(doctor_vector))
+        
+        if similarity > highest_similarity:
+            highest_similarity = similarity
+            best_match = doctor
+
+    if best_match:
+        return jsonify({
+            "doctorId": best_match[0],
+            "name": best_match[1],
+            "specialty": best_match[2],
+            "locationId": best_match[3],
+            "experience_years": best_match[4],
+            "available_hours": best_match[5],
+            "description": best_match[6]
+        })
+    else:
+        return jsonify({"message": "No suitable doctor found"})
+
+# ---- AI CHATBOT RESPONSE (WITH PREPROCESSING) ----
+def preprocess_text(text):
+    text = text.lower()  # Lowercasing
+    text = re.sub(r'[^\w\s]', '', text)  # Removing punctuation
+    words = text.split()
+    words = [word for word in words if word not in stopwords.words('english')]  # Removing stopwords
+    return " ".join(words)
+
+@app.route('/chatbot_response', methods=['POST'])
+def chatbot_response():
+    data = request.json
+    patient_input = data.get('message', '')
+
+    cleaned_input = preprocess_text(patient_input)  # Preprocess before sending
+
+    response = openai.ChatCompletion.create(
+        model="gpt-4",
+        messages=[{"role": "system", "content": "You are a healthcare chatbot assisting patients."},
+                  {"role": "user", "content": cleaned_input}]
+    )
+
+    return jsonify({"response": response['choices'][0]['message']['content']})
 
 if __name__ == '__main__':
-    app.run(debug=True,host='0.0.0.0', port=5010)
-
-
+    app.run(debug=True, host='0.0.0.0', port=5010)
