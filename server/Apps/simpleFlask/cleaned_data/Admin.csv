@@ -1,0 +1,11 @@
+adminId,name,role
+1,admin1,System Administrator
+2,admin2,Database Administrator
+3,admin3,Network Administrator
+4,admin4,Security Administrator
+5,admin5,Application Administrator
+6,admin6,Web Administrator
+7,admin7,IT Support Specialist
+8,admin8,DevOps Engineer
+9,admin9,Cloud Administrator
+10,admin10,Technical Support Engineer

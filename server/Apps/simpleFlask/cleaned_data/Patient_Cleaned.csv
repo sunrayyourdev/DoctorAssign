@@ -1,0 +1,1001 @@
+patientId,email,name,age,gender,drug_allergies,medical_conditions
+919,Anallese.Halla@yopmail.com,Anallese Halla,50,Female,Mold,Depression
+535,Shel.Dearborn@yopmail.com,Shel Dearborn,67,Male,Pet Dander,None
+830,Mara.Shuler@yopmail.com,Mara Shuler,58,Female,None,None
+398,Dale.Lewes@yopmail.com,Dale Lewes,29,Female,None,Sleep Apnea
+375,Sharlene.Luhe@yopmail.com,Sharlene Luhe,53,Female,None,Anxiety
+566,Rebeca.Winnick@yopmail.com,Rebeca Winnick,48,Male,Latex,Migraine; Hypertension
+404,Merry.Henebry@yopmail.com,Merry Henebry,66,Female,Wheat; Eggs; Latex; NSAIDs,None
+922,Orsola.Torray@yopmail.com,Orsola Torray,56,Male,Nickel,Depression
+603,Dolli.Anderea@yopmail.com,Dolli Anderea,54,Male,None,Heart Disease
+939,Mellicent.Shama@yopmail.com,Mellicent Shama,29,Female,Nickel; Alcohol,Thyroid Disorder
+334,Kaia.Taam@yopmail.com,Kaia Taam,68,Female,Alcohol; Insect Stings; Sulfa Drugs; Shellfish,None
+906,Viviene.Autrey@yopmail.com,Viviene Autrey,61,Female,Pet Dander,None
+147,Winny.Arley@yopmail.com,Winny Arley,48,Male,None,High Cholesterol; IBS
+599,Kylynn.Maryanne@yopmail.com,Kylynn Maryanne,53,Male,Sulfa Drugs,COPD
+650,Wendi.Chem@yopmail.com,Wendi Chem,44,Male,None,Asthma
+489,Lory.Wu@yopmail.com,Lory Wu,50,Male,None,Obesity
+404,Marcy.Vacuva@yopmail.com,Marcy Vacuva,37,Female,Eggs; Pollen; Wheat,Thyroid Disorder
+318,Tori.Zeeba@yopmail.com,Tori Zeeba,71,Male,None,None
+388,Dennie.Emmaline@yopmail.com,Dennie Emmaline,62,Female,Peanuts; Eggs; Insect Stings,Chronic Kidney Disease
+935,Meriel.Loring@yopmail.com,Meriel Loring,55,Female,None,Sleep Apnea; Depression
+969,Roseline.Anton@yopmail.com,Roseline Anton,61,Male,Nickel,None
+147,Marinna.Ortrude@yopmail.com,Marinna Ortrude,33,Male,None,Cancer
+825,Norine.Elbertina@yopmail.com,Norine Elbertina,32,Female,Latex,Obesity; Diabetes; High Cholesterol
+464,Lynnea.Bennie@yopmail.com,Lynnea Bennie,38,Male,Peanuts; Pet Dander; Gluten,Diabetes; Depression
+804,Madelle.Camden@yopmail.com,Madelle Camden,50,Female,Pollen; Fragrances; Peanuts; Nickel,Stroke
+350,Neila.Sprage@yopmail.com,Neila Sprage,67,Male,None,None
+888,Reeba.Romelda@yopmail.com,Reeba Romelda,22,Female,Alcohol; NSAIDs; Eggs; Latex,Cancer
+452,Joleen.Sophronia@yopmail.com,Joleen Sophronia,68,Male,Pet Dander,None
+926,Doro.Tybald@yopmail.com,Doro Tybald,74,Male,Mold; Sulfa Drugs; Pet Dander,Heart Disease
+952,Brena.Cassius@yopmail.com,Brena Cassius,18,Male,Latex,None
+192,Fidelia.Buckler@yopmail.com,Fidelia Buckler,51,Male,None,High Cholesterol
+297,Kore.Genna@yopmail.com,Kore Genna,34,Male,Aspirin,Migraine; Hypertension; Osteoporosis; Liver Disease
+659,Chere.Tice@yopmail.com,Chere Tice,44,Female,Peanuts; Penicillin; Sulfa Drugs,None
+653,Allis.Edison@yopmail.com,Allis Edison,49,Male,Pet Dander; Aspirin; Penicillin,Stroke
+813,Tiffie.Ochs@yopmail.com,Tiffie Ochs,73,Male,Fragrances; Pollen; Penicillin; Milk,None
+124,Netty.Allina@yopmail.com,Netty Allina,21,Female,None,None
+213,Gale.Pattin@yopmail.com,Gale Pattin,24,Female,Latex; Peanuts; Insect Stings,Liver Disease; Diabetes; Hypertension
+850,Dari.Agle@yopmail.com,Dari Agle,42,Male,Insect Stings; Gluten; Aspirin; Milk,IBS
+228,Leona.Othilia@yopmail.com,Leona Othilia,43,Female,None,Arthritis; Epilepsy; Stroke
+685,Nataline.Sherrie@yopmail.com,Nataline Sherrie,53,Male,None,Depression
+561,Selia.Katrine@yopmail.com,Selia Katrine,72,Male,NSAIDs,Cancer
+931,Keelia.Olin@yopmail.com,Keelia Olin,38,Male,Pollen; Fragrances,Depression; Diabetes
+925,Kassey.Amasa@yopmail.com,Kassey Amasa,35,Male,Peanuts,None
+205,Corry.Neils@yopmail.com,Corry Neils,48,Male,None,None
+723,Alex.Dituri@yopmail.com,Alex Dituri,32,Male,Aspirin; Insect Stings,None
+159,Jan.Wyn@yopmail.com,Jan Wyn,44,Female,Shellfish; Milk; Mold,Thyroid Disorder
+747,Lila.Rhu@yopmail.com,Lila Rhu,66,Female,Latex,Depression; Migraine; Osteoporosis
+285,Monika.Larochelle@yopmail.com,Monika Larochelle,26,Female,None,Heart Disease; Epilepsy; Hypertension
+772,Glynnis.Yusuk@yopmail.com,Glynnis Yusuk,71,Male,Eggs; Wheat; NSAIDs,None
+844,Sandie.Saint@yopmail.com,Sandie Saint,70,Male,Pollen; Pet Dander,None
+317,Sallie.Alice@yopmail.com,Sallie Alice,30,Male,Sulfa Drugs,None
+241,Lynnea.Arquit@yopmail.com,Lynnea Arquit,25,Male,None,Heart Disease
+952,Hildegaard.Maurine@yopmail.com,Hildegaard Maurine,56,Female,Insect Stings; Alcohol; Eggs,Chronic Kidney Disease; Asthma; Hypertension
+782,Jerry.Pattin@yopmail.com,Jerry Pattin,70,Female,None,Asthma
+199,Melina.Han@yopmail.com,Melina Han,74,Female,Pollen; Milk; Mold; Insect Stings,None
+625,Donetta.Sandye@yopmail.com,Donetta Sandye,50,Female,None,Migraine
+700,Georgetta.Dawkins@yopmail.com,Georgetta Dawkins,62,Female,None,Heart Disease; Liver Disease; Depression
+942,Ingrid.McLaughlin@yopmail.com,Ingrid McLaughlin,44,Male,Nickel; Fragrances; NSAIDs,None
+275,Alleen.Cyrie@yopmail.com,Alleen Cyrie,29,Female,Soy; NSAIDs; Alcohol; Wheat,Hypertension; Chronic Kidney Disease
+338,Laurene.Garek@yopmail.com,Laurene Garek,30,Male,None,Anxiety
+580,Stephanie.Dash@yopmail.com,Stephanie Dash,64,Female,None,None
+623,Beatriz.Matthew@yopmail.com,Beatriz Matthew,53,Male,Aspirin; Alcohol; Latex; Gluten,Stroke; Obesity; Chronic Kidney Disease; Anxiety
+697,Basia.Sheedy@yopmail.com,Basia Sheedy,63,Male,None,None
+271,Dode.Haymes@yopmail.com,Dode Haymes,60,Female,Alcohol; Mold; Sulfa Drugs; Nickel,Sleep Apnea; IBS; Stroke
+935,Adele.Japeth@yopmail.com,Adele Japeth,29,Female,Pollen,None
+700,Goldie.Sophronia@yopmail.com,Goldie Sophronia,60,Male,Eggs,Epilepsy
+867,Doro.Johnsson@yopmail.com,Doro Johnsson,66,Male,Eggs; Wheat; Peanuts,Migraine; Hypertension; Liver Disease
+397,Lorenza.Gaynor@yopmail.com,Lorenza Gaynor,32,Female,Wheat; Penicillin,None
+532,Karina.Sisile@yopmail.com,Karina Sisile,19,Male,Wheat,Thyroid Disorder; Osteoporosis
+880,Rosaline.Nicoline@yopmail.com,Rosaline Nicoline,64,Male,Wheat,COPD
+568,Kary.Telfer@yopmail.com,Kary Telfer,58,Male,None,Heart Disease; Hypertension; Cancer
+111,Leontine.Zachary@yopmail.com,Leontine Zachary,68,Male,None,High Cholesterol; Asthma; Thyroid Disorder
+151,Linet.Persse@yopmail.com,Linet Persse,40,Male,None,Asthma
+698,Imojean.Sekofski@yopmail.com,Imojean Sekofski,39,Female,None,Stroke; Anxiety
+258,Marleah.Maiah@yopmail.com,Marleah Maiah,68,Female,Nickel; Eggs,IBS
+547,Pearline.Carri@yopmail.com,Pearline Carri,21,Female,None,Sleep Apnea
+454,Tera.Linehan@yopmail.com,Tera Linehan,31,Female,Pet Dander,Chronic Kidney Disease; Liver Disease; Stroke
+824,Misha.Bonilla@yopmail.com,Misha Bonilla,57,Female,Peanuts; Wheat,Obesity; Hypertension; Thyroid Disorder
+513,Sandie.Dash@yopmail.com,Sandie Dash,25,Female,Pet Dander,Osteoporosis
+788,Bobbi.Jaylene@yopmail.com,Bobbi Jaylene,30,Male,Shellfish; Mold; Eggs,None
+816,Brena.Obed@yopmail.com,Brena Obed,57,Female,Fragrances; Wheat,Diabetes
+850,Mellicent.Virgin@yopmail.com,Mellicent Virgin,41,Male,Latex; Milk; Dust Mites; Pollen,COPD; Anxiety; Heart Disease
+808,Cathyleen.Sigfrid@yopmail.com,Cathyleen Sigfrid,38,Male,Gluten,None
+779,Candi.Shaver@yopmail.com,Candi Shaver,55,Female,Insect Stings; Shellfish; Fragrances,Anxiety
+480,Sharlene.Kiersten@yopmail.com,Sharlene Kiersten,72,Female,Shellfish,Hypertension; Thyroid Disorder; Heart Disease
+590,Courtnay.Wittie@yopmail.com,Courtnay Wittie,27,Male,Dust Mites,Migraine
+202,Rivalee.Loring@yopmail.com,Rivalee Loring,23,Male,Pet Dander,Liver Disease; Obesity
+354,Ivett.Milson@yopmail.com,Ivett Milson,23,Female,Latex; Dust Mites,None
+226,Gianina.Bevin@yopmail.com,Gianina Bevin,66,Female,None,None
+550,Marcelline.Keelia@yopmail.com,Marcelline Keelia,46,Female,Peanuts; Milk; Soy,None
+387,Kayla.Emmy@yopmail.com,Kayla Emmy,43,Female,None,None
+551,Raf.McCutcheon@yopmail.com,Raf McCutcheon,48,Female,Soy; Dust Mites,Obesity; Stroke; COPD
+929,Sonni.Regan@yopmail.com,Sonni Regan,50,Female,Latex; Alcohol,Heart Disease
+166,Marcy.Melleta@yopmail.com,Marcy Melleta,64,Male,Nickel; Peanuts; Shellfish; Soy,None
+465,Mathilda.Torray@yopmail.com,Mathilda Torray,39,Male,Shellfish; Eggs,None
+523,Yolane.Kevon@yopmail.com,Yolane Kevon,34,Male,Mold,None
+963,Consuela.Heisel@yopmail.com,Consuela Heisel,50,Male,Pollen,Migraine
+533,Jany.Hortensia@yopmail.com,Jany Hortensia,70,Male,Shellfish,Heart Disease; IBS; Diabetes; Osteoporosis
+984,Perry.Dudley@yopmail.com,Perry Dudley,43,Female,None,Arthritis; High Cholesterol; Diabetes
+623,Jackie.Lay@yopmail.com,Jackie Lay,73,Female,Insect Stings; Wheat; Peanuts; Sulfa Drugs,IBS; Depression; Osteoporosis; Diabetes
+460,Evita.Silvan@yopmail.com,Evita Silvan,59,Female,None,Asthma
+756,Sissy.Kelula@yopmail.com,Sissy Kelula,38,Female,None,Stroke; Arthritis; Migraine
+120,Camile.Ovid@yopmail.com,Camile Ovid,69,Male,None,Epilepsy
+527,Amalie.Raffo@yopmail.com,Amalie Raffo,70,Male,Peanuts; Mold,Depression; Epilepsy; Cancer
+979,Winifred.Tice@yopmail.com,Winifred Tice,66,Male,Alcohol; Sulfa Drugs; Shellfish; Pollen,Migraine; Diabetes
+405,Annaliese.Gaulin@yopmail.com,Annaliese Gaulin,36,Female,None,High Cholesterol
+849,Marti.Jarib@yopmail.com,Marti Jarib,60,Male,None,Stroke
+628,Marcelline.Peg@yopmail.com,Marcelline Peg,32,Male,Latex; Pet Dander; Nickel; Soy,None
+297,Ariela.Ietta@yopmail.com,Ariela Ietta,24,Female,Fragrances,None
+610,Trixi.Hollingsworth@yopmail.com,Trixi Hollingsworth,65,Male,None,Thyroid Disorder
+174,Cam.Cordi@yopmail.com,Cam Cordi,62,Male,Insect Stings; Milk,COPD; Hypertension; Depression; Heart Disease
+978,Aryn.Arvo@yopmail.com,Aryn Arvo,56,Female,Pet Dander; Sulfa Drugs; Fragrances,None
+952,Lanae.Havens@yopmail.com,Lanae Havens,35,Male,Milk,IBS
+211,Sara-Ann.Amadas@yopmail.com,Sara-Ann Amadas,71,Male,None,Chronic Kidney Disease; Diabetes; Arthritis; Cancer
+184,Consuela.Macey@yopmail.com,Consuela Macey,40,Male,None,Arthritis
+203,Chickie.Fiester@yopmail.com,Chickie Fiester,51,Female,None,Thyroid Disorder; IBS; Osteoporosis
+867,Marika.Etom@yopmail.com,Marika Etom,44,Female,None,None
+848,Sybille.McLaughlin@yopmail.com,Sybille McLaughlin,51,Female,Insect Stings; Mold,Osteoporosis
+405,Ilse.Gamaliel@yopmail.com,Ilse Gamaliel,67,Female,Pollen,Diabetes; Arthritis
+562,Sam.Florina@yopmail.com,Sam Florina,23,Male,Aspirin; Alcohol; Insect Stings,Liver Disease
+686,Sherrie.Ashely@yopmail.com,Sherrie Ashely,42,Female,Aspirin; NSAIDs; Milk; Shellfish,Epilepsy; IBS; Sleep Apnea
+405,Hannis.Madox@yopmail.com,Hannis Madox,54,Male,None,Sleep Apnea
+347,Latisha.Percy@yopmail.com,Latisha Percy,30,Male,None,Cancer; Stroke; Anxiety; Heart Disease
+574,Camile.Jammal@yopmail.com,Camile Jammal,33,Male,Milk; Mold; Shellfish,None
+739,Claresta.Lane@yopmail.com,Claresta Lane,43,Female,Mold,None
+730,Agnese.Gherardo@yopmail.com,Agnese Gherardo,70,Female,NSAIDs,Migraine
+645,Tiffie.Johnsson@yopmail.com,Tiffie Johnsson,34,Female,Mold,IBS; Thyroid Disorder; Sleep Apnea; Hypertension
+240,Margette.Belldas@yopmail.com,Margette Belldas,34,Female,None,None
+241,Etta.Ambrosia@yopmail.com,Etta Ambrosia,70,Male,Mold,None
+747,Mary.Klemperer@yopmail.com,Mary Klemperer,69,Male,Peanuts; Wheat,Cancer; Liver Disease; Stroke; IBS
+167,Nyssa.Hanleigh@yopmail.com,Nyssa Hanleigh,62,Female,None,None
+426,Philis.Sawtelle@yopmail.com,Philis Sawtelle,69,Male,Dust Mites; Pet Dander,Asthma
+425,Dione.Revkah@yopmail.com,Dione Revkah,24,Female,None,None
+667,Ileana.Fabiola@yopmail.com,Ileana Fabiola,48,Female,Wheat,None
+685,Antonietta.Reinke@yopmail.com,Antonietta Reinke,20,Male,None,None
+641,Andeee.Chapland@yopmail.com,Andeee Chapland,38,Male,Dust Mites; Nickel; Eggs,None
+341,Ebonee.Kendrick@yopmail.com,Ebonee Kendrick,51,Male,Shellfish,None
+630,Brooks.Ephrem@yopmail.com,Brooks Ephrem,42,Male,None,Cancer
+992,Angela.Claudine@yopmail.com,Angela Claudine,54,Male,None,Asthma
+803,Gilligan.Rolf@yopmail.com,Gilligan Rolf,49,Female,Pet Dander; Latex; Wheat,COPD; Cancer; Hypertension
+298,Chere.Dom@yopmail.com,Chere Dom,55,Female,Eggs; NSAIDs; Nickel,None
+263,Fernande.Nelsen@yopmail.com,Fernande Nelsen,71,Female,Insect Stings,Cancer
+514,Kirbee.Tarrant@yopmail.com,Kirbee Tarrant,46,Female,Nickel,Osteoporosis
+316,Kara-Lynn.Goddard@yopmail.com,Kara-Lynn Goddard,74,Male,None,Thyroid Disorder
+161,Chloris.Crudden@yopmail.com,Chloris Crudden,48,Female,None,Stroke; Hypertension; COPD; Heart Disease
+618,Molli.Liebermann@yopmail.com,Molli Liebermann,34,Male,Pet Dander,Arthritis; Anxiety; High Cholesterol; Liver Disease
+773,Daryl.Cordi@yopmail.com,Daryl Cordi,66,Female,Peanuts; Gluten; Insect Stings,Stroke
+865,Bobbi.Ambrosia@yopmail.com,Bobbi Ambrosia,59,Female,None,None
+360,Frances.McGrody@yopmail.com,Frances McGrody,47,Female,Wheat; NSAIDs,Liver Disease
+639,Misha.Yate@yopmail.com,Misha Yate,54,Female,Sulfa Drugs,Sleep Apnea
+499,Trudie.Erb@yopmail.com,Trudie Erb,25,Female,Shellfish; Alcohol; Sulfa Drugs,Obesity
+930,Bernardine.Bates@yopmail.com,Bernardine Bates,39,Male,Pollen,Chronic Kidney Disease; Stroke; Depression; Cancer
+355,Sallie.Plato@yopmail.com,Sallie Plato,48,Male,Latex,Stroke; Depression; Epilepsy
+470,Emilia.Zetta@yopmail.com,Emilia Zetta,45,Male,Aspirin,Asthma
+438,Sissy.Bari@yopmail.com,Sissy Bari,44,Female,None,Migraine
+959,Lory.Dash@yopmail.com,Lory Dash,50,Male,Peanuts,None
+959,Thalia.Glenden@yopmail.com,Thalia Glenden,52,Female,Eggs; Latex; Mold,None
+434,Lauryn.Karl@yopmail.com,Lauryn Karl,45,Male,Eggs; Gluten; Penicillin,Liver Disease; Stroke
+468,Mildrid.Brandice@yopmail.com,Mildrid Brandice,29,Male,Alcohol; Penicillin; Pet Dander; Wheat,Depression; Heart Disease; Obesity; Stroke
+596,Susan.Christal@yopmail.com,Susan Christal,46,Male,Eggs; Pet Dander; Nickel; Alcohol,Anxiety
+194,Priscilla.Mathilde@yopmail.com,Priscilla Mathilde,48,Female,None,Obesity
+349,Emylee.Redmond@yopmail.com,Emylee Redmond,30,Male,Pet Dander,None
+502,Gretal.Pelagias@yopmail.com,Gretal Pelagias,73,Female,None,Osteoporosis; COPD; Liver Disease; Asthma
+134,Shirlee.Anselmi@yopmail.com,Shirlee Anselmi,58,Male,Insect Stings; Nickel; Wheat,Depression
+186,Roseline.Leary@yopmail.com,Roseline Leary,41,Male,Pollen; NSAIDs; Gluten,None
+566,Renie.Pulsifer@yopmail.com,Renie Pulsifer,72,Female,Shellfish,Thyroid Disorder; High Cholesterol
+216,Michaelina.Goerke@yopmail.com,Michaelina Goerke,61,Male,Insect Stings; Gluten; Aspirin,Liver Disease; Sleep Apnea
+332,Winny.Kravits@yopmail.com,Winny Kravits,31,Female,Sulfa Drugs; Mold; NSAIDs; Soy,None
+716,Melanie.Zola@yopmail.com,Melanie Zola,61,Female,None,COPD; Sleep Apnea; Liver Disease
+816,Zsa Zsa.Nikaniki@yopmail.com,Zsa Zsa Nikaniki,61,Male,Wheat; Pollen; Dust Mites,Epilepsy
+353,Raina.Fabiola@yopmail.com,Raina Fabiola,71,Male,None,Obesity
+155,Joelly.Anyah@yopmail.com,Joelly Anyah,25,Male,Insect Stings,Epilepsy; High Cholesterol; IBS; Cancer
+522,Ardys.Ortrude@yopmail.com,Ardys Ortrude,73,Female,Pollen,Asthma; Thyroid Disorder; High Cholesterol
+492,Gretal.Merell@yopmail.com,Gretal Merell,18,Male,None,Osteoporosis; Liver Disease; Epilepsy; Arthritis
+609,Jemie.Alva@yopmail.com,Jemie Alva,25,Male,None,High Cholesterol
+482,Annora.Jillane@yopmail.com,Annora Jillane,66,Male,Soy; Eggs; Penicillin,Cancer
+431,Dianemarie.Ferrell@yopmail.com,Dianemarie Ferrell,56,Female,None,Heart Disease
+739,Ninnetta.Tjon@yopmail.com,Ninnetta Tjon,22,Female,Penicillin; Wheat,None
+768,Mignon.Lattie@yopmail.com,Mignon Lattie,58,Male,None,Asthma; Hypertension; Migraine; IBS
+207,Carree.Brotherson@yopmail.com,Carree Brotherson,49,Female,Pet Dander; Milk,Epilepsy
+205,Roxane.Koehler@yopmail.com,Roxane Koehler,43,Male,Alcohol; Insect Stings,None
+736,Augustine.Raama@yopmail.com,Augustine Raama,67,Female,Soy,Sleep Apnea
+281,Marguerite.Silvan@yopmail.com,Marguerite Silvan,57,Male,Dust Mites; Latex; Aspirin,None
+600,Devina.Hoenack@yopmail.com,Devina Hoenack,71,Male,None,None
+161,Loree.Bertold@yopmail.com,Loree Bertold,68,Female,None,Hypertension
+756,Ariela.Maurine@yopmail.com,Ariela Maurine,53,Male,Shellfish; Wheat; Nickel; Soy,None
+658,Jean.Sekofski@yopmail.com,Jean Sekofski,59,Male,Latex,Liver Disease; Chronic Kidney Disease; Anxiety
+421,Queenie.Haldas@yopmail.com,Queenie Haldas,70,Male,None,COPD; Migraine; Cancer; Thyroid Disorder
+134,Joelly.Grimbly@yopmail.com,Joelly Grimbly,27,Male,Sulfa Drugs; Latex; Gluten; Milk,Chronic Kidney Disease
+881,Maye.Kannry@yopmail.com,Maye Kannry,24,Male,Dust Mites; Nickel; Insect Stings,Cancer
+435,Taffy.Olympium@yopmail.com,Taffy Olympium,39,Male,Eggs; Fragrances; Soy; Insect Stings,Heart Disease
+490,Codie.Bandeen@yopmail.com,Codie Bandeen,31,Female,Aspirin; Nickel,Diabetes
+613,Zia.Wildermuth@yopmail.com,Zia Wildermuth,57,Female,Milk,None
+430,Demetris.Velick@yopmail.com,Demetris Velick,63,Female,Insect Stings; NSAIDs,None
+615,Rosene.Devlen@yopmail.com,Rosene Devlen,34,Male,None,None
+919,Roberta.Schalles@yopmail.com,Roberta Schalles,45,Male,Wheat; Peanuts,Arthritis; Osteoporosis
+214,Janey.Bearnard@yopmail.com,Janey Bearnard,44,Male,None,None
+264,Elsie.Bivins@yopmail.com,Elsie Bivins,66,Male,Nickel; Fragrances; Wheat,None
+624,Dominga.Jalbert@yopmail.com,Dominga Jalbert,42,Female,Fragrances,Diabetes
+308,Noelle.Hailee@yopmail.com,Noelle Hailee,25,Male,None,Depression
+370,Fanchon.Bennie@yopmail.com,Fanchon Bennie,74,Female,Pet Dander,None
+734,Carilyn.Rosemary@yopmail.com,Carilyn Rosemary,53,Male,Mold; Alcohol,Osteoporosis; High Cholesterol
+170,Bibby.Aaberg@yopmail.com,Bibby Aaberg,46,Female,Fragrances,None
+856,Gretal.Bonilla@yopmail.com,Gretal Bonilla,28,Male,None,Epilepsy; Stroke; Hypertension; Cancer
+886,Bill.Mich@yopmail.com,Bill Mich,19,Female,None,COPD
+771,Ninnetta.Oneida@yopmail.com,Ninnetta Oneida,33,Male,Insect Stings; Latex; Gluten; Eggs,None
+906,Rhoda.Glenden@yopmail.com,Rhoda Glenden,39,Female,Fragrances,Epilepsy; Diabetes; High Cholesterol
+138,Sherrie.Alcott@yopmail.com,Sherrie Alcott,60,Male,Pollen; Gluten; NSAIDs,Depression
+718,Bettine.Lareena@yopmail.com,Bettine Lareena,46,Female,None,Liver Disease; IBS; Chronic Kidney Disease
+187,Arlena.Keily@yopmail.com,Arlena Keily,47,Male,None,Diabetes; Anxiety; COPD; Osteoporosis
+466,Myrtice.Oriana@yopmail.com,Myrtice Oriana,20,Female,NSAIDs,None
+737,Joeann.Adrienne@yopmail.com,Joeann Adrienne,28,Female,Penicillin; Shellfish; Dust Mites,Migraine; Liver Disease
+893,Dorthy.Roscoe@yopmail.com,Dorthy Roscoe,18,Female,None,None
+379,Tracey.Martguerita@yopmail.com,Tracey Martguerita,34,Male,Eggs; Dust Mites; Peanuts,None
+778,Katleen.Lewes@yopmail.com,Katleen Lewes,75,Male,Dust Mites; Pollen; Aspirin; Pet Dander,Thyroid Disorder
+453,Ginnie.Doig@yopmail.com,Ginnie Doig,60,Female,Soy; Shellfish,None
+791,Minda.Haymes@yopmail.com,Minda Haymes,34,Female,Alcohol; Pet Dander; Eggs; Gluten,Stroke
+526,Consuela.Yusuk@yopmail.com,Consuela Yusuk,56,Female,None,None
+597,Mady.Marcellus@yopmail.com,Mady Marcellus,18,Male,Gluten; Shellfish; Insect Stings,IBS; Arthritis
+185,Carolina.Sparhawk@yopmail.com,Carolina Sparhawk,62,Male,None,None
+426,Lesly.Garbe@yopmail.com,Lesly Garbe,29,Female,None,Thyroid Disorder; Epilepsy
+993,Brietta.Stanwood@yopmail.com,Brietta Stanwood,39,Male,Pollen,Sleep Apnea; COPD
+686,Lynea.Hourigan@yopmail.com,Lynea Hourigan,34,Male,Milk,None
+826,Hermione.Weide@yopmail.com,Hermione Weide,46,Male,Pet Dander,Hypertension; High Cholesterol
+922,Verla.Gualtiero@yopmail.com,Verla Gualtiero,22,Male,Insect Stings; NSAIDs,High Cholesterol
+187,Yolane.Carri@yopmail.com,Yolane Carri,25,Male,Nickel; Shellfish,None
+961,Ruthe.Garbe@yopmail.com,Ruthe Garbe,54,Male,None,None
+878,Janis.Marcellus@yopmail.com,Janis Marcellus,72,Female,Gluten,Migraine; Depression; Arthritis
+579,Cathie.Naashom@yopmail.com,Cathie Naashom,41,Female,Peanuts,Heart Disease
+960,Lorie.Dielu@yopmail.com,Lorie Dielu,69,Female,Wheat; Mold,None
+299,Helena.Rosemary@yopmail.com,Helena Rosemary,54,Female,Aspirin,None
+835,Elie.Brackely@yopmail.com,Elie Brackely,20,Female,Wheat; NSAIDs; Soy; Milk,Liver Disease
+330,Gilda.Infield@yopmail.com,Gilda Infield,55,Male,NSAIDs; Pollen,None
+893,Amara.Aloise@yopmail.com,Amara Aloise,62,Female,Soy; Wheat; Mold; Shellfish,Epilepsy
+131,Jaclyn.Euridice@yopmail.com,Jaclyn Euridice,26,Female,None,None
+865,Belinda.Anis@yopmail.com,Belinda Anis,24,Male,Soy; Wheat,COPD; Diabetes; Chronic Kidney Disease
+623,Frank.Brieta@yopmail.com,Frank Brieta,53,Male,Soy,None
+952,Bettine.Gusella@yopmail.com,Bettine Gusella,49,Female,Pollen; Gluten,Osteoporosis
+162,Lynde.Imelida@yopmail.com,Lynde Imelida,62,Male,Latex; Mold,None
+383,Konstance.Dichy@yopmail.com,Konstance Dichy,18,Male,Pollen,None
+146,Evita.Ricki@yopmail.com,Evita Ricki,59,Female,Sulfa Drugs; Wheat; Soy; Nickel,None
+260,Brynna.Ahab@yopmail.com,Brynna Ahab,29,Female,None,None
+198,Sue.Guildroy@yopmail.com,Sue Guildroy,53,Male,Alcohol,Chronic Kidney Disease; High Cholesterol; Asthma
+227,Brooks.Chem@yopmail.com,Brooks Chem,47,Female,Pet Dander,Migraine; Stroke; Diabetes; Asthma
+176,Dorthy.Maisey@yopmail.com,Dorthy Maisey,50,Male,Eggs; Shellfish; Mold; Nickel,None
+507,Winny.Dreda@yopmail.com,Winny Dreda,64,Male,Nickel,Asthma
+364,Blondelle.Iphlgenia@yopmail.com,Blondelle Iphlgenia,71,Female,None,Migraine
+606,Aurelie.Jalbert@yopmail.com,Aurelie Jalbert,70,Male,None,IBS; Chronic Kidney Disease
+628,Darlleen.Berl@yopmail.com,Darlleen Berl,46,Male,None,Depression; Thyroid Disorder
+870,Carolina.Carbo@yopmail.com,Carolina Carbo,29,Female,Penicillin; Mold; Alcohol,High Cholesterol
+322,Valli.Rese@yopmail.com,Valli Rese,23,Male,Penicillin,Obesity; Depression
+900,Kristan.Ortrude@yopmail.com,Kristan Ortrude,53,Female,Wheat,Migraine; COPD; Stroke
+373,Asia.Bendick@yopmail.com,Asia Bendick,41,Female,Milk,None
+920,Ann-Marie.Maurine@yopmail.com,Ann-Marie Maurine,60,Female,None,Sleep Apnea
+794,Margalo.Lucienne@yopmail.com,Margalo Lucienne,34,Female,Aspirin,Asthma
+403,Ericka.Ortrude@yopmail.com,Ericka Ortrude,42,Female,Soy,Migraine
+694,Paola.Swigart@yopmail.com,Paola Swigart,30,Female,Mold; Shellfish; Alcohol,None
+410,Ilse.Felecia@yopmail.com,Ilse Felecia,56,Male,None,Asthma; High Cholesterol; Cancer; Migraine
+393,Fanchon.Eachern@yopmail.com,Fanchon Eachern,74,Male,Nickel,Heart Disease; Arthritis; Liver Disease
+317,Zondra.Mike@yopmail.com,Zondra Mike,33,Female,Insect Stings; Alcohol,Migraine
+122,Janenna.Croix@yopmail.com,Janenna Croix,49,Male,Fragrances; NSAIDs,None
+334,Carly.Janene@yopmail.com,Carly Janene,75,Male,Eggs,Migraine; Depression; Thyroid Disorder; Stroke
+130,Ermengarde.Izaak@yopmail.com,Ermengarde Izaak,63,Male,Fragrances,None
+1000,Noelle.Grayce@yopmail.com,Noelle Grayce,34,Male,None,Hypertension; COPD
+866,Annabela.Gabrielli@yopmail.com,Annabela Gabrielli,25,Male,Eggs; Milk; Insect Stings,Chronic Kidney Disease; Stroke; Anxiety
+614,Ardeen.Carri@yopmail.com,Ardeen Carri,58,Female,None,Hypertension; Obesity; High Cholesterol
+520,Nicoli.Seligman@yopmail.com,Nicoli Seligman,18,Male,Fragrances,Heart Disease; Thyroid Disorder
+145,Jacquetta.Kirbee@yopmail.com,Jacquetta Kirbee,24,Male,Penicillin,None
+576,Stevana.Henrie@yopmail.com,Stevana Henrie,28,Female,Aspirin; Eggs; Soy; Alcohol,None
+681,Andeee.Devlen@yopmail.com,Andeee Devlen,44,Male,Pet Dander,Asthma
+645,Ana.Nedrud@yopmail.com,Ana Nedrud,46,Male,None,Sleep Apnea; Epilepsy
+962,Jere.Therine@yopmail.com,Jere Therine,62,Female,Peanuts,None
+907,Keelia.Alva@yopmail.com,Keelia Alva,69,Male,Soy; Gluten; Pollen,COPD
+319,Bernardine.Stuart@yopmail.com,Bernardine Stuart,70,Male,None,None
+520,Gisela.Hanshaw@yopmail.com,Gisela Hanshaw,43,Female,Penicillin; NSAIDs; Peanuts; Eggs,None
+802,Barbi.Lindemann@yopmail.com,Barbi Lindemann,29,Female,Pollen; Wheat; Aspirin; Milk,Osteoporosis
+877,Nelle.Prouty@yopmail.com,Nelle Prouty,73,Male,Gluten,Hypertension; Migraine; Osteoporosis
+553,Tersina.Linskey@yopmail.com,Tersina Linskey,40,Female,None,Anxiety; Migraine; High Cholesterol; Diabetes
+236,Roz.Erich@yopmail.com,Roz Erich,27,Male,Alcohol; Fragrances,Sleep Apnea
+995,Robbi.Berl@yopmail.com,Robbi Berl,43,Male,Insect Stings; Pet Dander; Milk,Asthma; Sleep Apnea
+805,Sallie.Dielu@yopmail.com,Sallie Dielu,65,Male,None,Cancer; Hypertension
+866,Sharlene.Gordon@yopmail.com,Sharlene Gordon,25,Male,Soy; Sulfa Drugs,None
+570,Cassondra.Vins@yopmail.com,Cassondra Vins,49,Male,None,None
+591,Leona.Ralfston@yopmail.com,Leona Ralfston,45,Female,Peanuts,Asthma
+730,Delilah.Edison@yopmail.com,Delilah Edison,45,Male,Dust Mites; NSAIDs; Sulfa Drugs,None
+931,Bettine.Lorenz@yopmail.com,Bettine Lorenz,42,Female,None,Osteoporosis
+645,Angela.Craggie@yopmail.com,Angela Craggie,43,Female,Latex,Heart Disease
+903,Raina.Delp@yopmail.com,Raina Delp,57,Male,Eggs; Milk; Pollen,Asthma; Hypertension; IBS
+884,Krystle.Ashok@yopmail.com,Krystle Ashok,71,Female,None,Heart Disease
+619,Kristina.Ackerley@yopmail.com,Kristina Ackerley,40,Female,Eggs; Soy,Arthritis
+359,Amalie.Stephie@yopmail.com,Amalie Stephie,35,Female,None,Chronic Kidney Disease; Arthritis
+299,Larine.Vivle@yopmail.com,Larine Vivle,31,Male,NSAIDs; Aspirin; Soy; Dust Mites,Arthritis; Liver Disease
+435,Leona.Jerald@yopmail.com,Leona Jerald,60,Female,Mold,Hypertension; COPD; IBS
+529,Viki.Kristi@yopmail.com,Viki Kristi,66,Male,Gluten,Chronic Kidney Disease; Sleep Apnea
+907,Rubie.Buttaro@yopmail.com,Rubie Buttaro,42,Female,NSAIDs; Insect Stings; Pollen,Migraine; Depression; Epilepsy; Anxiety
+234,Susette.Jalbert@yopmail.com,Susette Jalbert,25,Male,Alcohol,Thyroid Disorder; Diabetes; Anxiety; Chronic Kidney Disease
+966,Kelly.Kaete@yopmail.com,Kelly Kaete,38,Male,None,None
+795,Goldie.Dudley@yopmail.com,Goldie Dudley,49,Male,Eggs,Diabetes
+463,Loree.Lutero@yopmail.com,Loree Lutero,20,Male,Wheat; Fragrances,Diabetes
+710,Amara.Anderea@yopmail.com,Amara Anderea,61,Male,Eggs,None
+647,Bernardine.August@yopmail.com,Bernardine August,21,Female,Wheat,Stroke; Liver Disease; High Cholesterol; Depression
+202,Frank.Desai@yopmail.com,Frank Desai,69,Male,Mold,Diabetes; Liver Disease; Asthma; Depression
+613,Camile.Olin@yopmail.com,Camile Olin,35,Female,Pollen,None
+198,Maisey.Flyn@yopmail.com,Maisey Flyn,49,Male,None,None
+604,Neila.Tremayne@yopmail.com,Neila Tremayne,64,Male,Nickel; Eggs; Aspirin,Asthma; Stroke; Sleep Apnea; IBS
+124,Dari.Tufts@yopmail.com,Dari Tufts,45,Male,None,Osteoporosis; High Cholesterol; Diabetes; Heart Disease
+981,Chandra.Brodench@yopmail.com,Chandra Brodench,40,Female,Pet Dander; NSAIDs; Latex,Arthritis; Epilepsy; IBS
+121,Correy.Pozzy@yopmail.com,Correy Pozzy,18,Male,Peanuts; Mold; Latex; Milk,Arthritis; High Cholesterol
+116,Babita.Felecia@yopmail.com,Babita Felecia,54,Male,Eggs; Alcohol; Pollen; Mold,Asthma; Liver Disease
+794,Daune.Isacco@yopmail.com,Daune Isacco,27,Female,None,Chronic Kidney Disease; Cancer; Liver Disease; Obesity
+595,Aubrie.Carolin@yopmail.com,Aubrie Carolin,66,Female,Insect Stings; Alcohol; Wheat; Penicillin,COPD
+184,Susan.Garlinda@yopmail.com,Susan Garlinda,56,Male,Peanuts,Sleep Apnea; Osteoporosis; IBS
+148,Korrie.Jefferey@yopmail.com,Korrie Jefferey,66,Female,Eggs; Milk,Asthma
+847,Deloria.Cutlerr@yopmail.com,Deloria Cutlerr,75,Female,None,Thyroid Disorder
+688,Merle.Lucienne@yopmail.com,Merle Lucienne,50,Female,Gluten; Dust Mites; Wheat; Penicillin,Liver Disease
+371,Zaria.Durware@yopmail.com,Zaria Durware,49,Female,Latex; Gluten,High Cholesterol; Osteoporosis
+854,Berget.Hirsch@yopmail.com,Berget Hirsch,56,Female,Mold; Sulfa Drugs; Gluten; Aspirin,IBS; Stroke
+863,Yetty.Sherfield@yopmail.com,Yetty Sherfield,51,Female,Latex,None
+819,Nannie.Gino@yopmail.com,Nannie Gino,60,Male,Fragrances; Wheat,Heart Disease; Osteoporosis; Sleep Apnea; Epilepsy
+190,Amara.Sawtelle@yopmail.com,Amara Sawtelle,27,Male,Penicillin; Shellfish,None
+876,Robbi.Bakerman@yopmail.com,Robbi Bakerman,61,Male,NSAIDs,COPD
+250,Vonny.Lissi@yopmail.com,Vonny Lissi,32,Female,NSAIDs,None
+914,Jemie.Baudin@yopmail.com,Jemie Baudin,55,Male,None,Anxiety; Depression; Asthma; Migraine
+588,Eadie.Wattenberg@yopmail.com,Eadie Wattenberg,42,Female,Dust Mites,Hypertension
+976,Leontine.Dominy@yopmail.com,Leontine Dominy,26,Male,Latex,Chronic Kidney Disease; Heart Disease
+238,Phylis.Calhoun@yopmail.com,Phylis Calhoun,74,Female,NSAIDs; Wheat; Fragrances; Latex,Diabetes; IBS; Asthma
+989,Johna.Terencio@yopmail.com,Johna Terencio,55,Male,None,Arthritis
+387,Gianina.Merna@yopmail.com,Gianina Merna,45,Female,Milk,Obesity
+812,Fred.Graig@yopmail.com,Fred Graig,73,Male,Fragrances,None
+940,Karolina.Roche@yopmail.com,Karolina Roche,21,Female,None,Diabetes
+368,Stephanie.Agle@yopmail.com,Stephanie Agle,34,Female,None,Chronic Kidney Disease
+352,Cam.Dorothy@yopmail.com,Cam Dorothy,65,Female,Sulfa Drugs; Pollen; Dust Mites; Pet Dander,None
+305,Grier.Ummersen@yopmail.com,Grier Ummersen,43,Female,Eggs; Dust Mites; Mold; Shellfish,Obesity; Osteoporosis; Thyroid Disorder; Sleep Apnea
+484,Korrie.Glovsky@yopmail.com,Korrie Glovsky,41,Female,None,None
+673,Keelia.Kauppi@yopmail.com,Keelia Kauppi,44,Female,None,None
+178,Konstance.Vary@yopmail.com,Konstance Vary,56,Male,Fragrances; Soy; Eggs; Milk,None
+369,Shirlee.Bonucci@yopmail.com,Shirlee Bonucci,43,Female,Dust Mites,Sleep Apnea
+523,Melina.Revkah@yopmail.com,Melina Revkah,69,Female,None,None
+655,Selma.Naashom@yopmail.com,Selma Naashom,21,Male,Aspirin; Dust Mites; Sulfa Drugs,Sleep Apnea; COPD; Arthritis
+465,Bettine.Huggins@yopmail.com,Bettine Huggins,54,Female,Latex,Epilepsy
+346,Pierette.Bari@yopmail.com,Pierette Bari,73,Male,Peanuts; Dust Mites,None
+182,Annice.Randene@yopmail.com,Annice Randene,22,Male,Soy; Mold; Fragrances; Pollen,None
+765,Reeba.Moina@yopmail.com,Reeba Moina,24,Female,Penicillin; Insect Stings; Peanuts,None
+621,Tarra.Bouchard@yopmail.com,Tarra Bouchard,66,Male,None,Osteoporosis; Epilepsy
+516,Maurene.Adrienne@yopmail.com,Maurene Adrienne,56,Male,Milk; Latex; Fragrances,Thyroid Disorder; Osteoporosis; High Cholesterol; Asthma
+710,Ida.Pettiford@yopmail.com,Ida Pettiford,25,Male,Milk,Heart Disease
+266,Ricky.Israeli@yopmail.com,Ricky Israeli,56,Male,None,None
+409,Netty.Moseley@yopmail.com,Netty Moseley,38,Male,Eggs; Shellfish; Penicillin,None
+656,Sherrie.Chabot@yopmail.com,Sherrie Chabot,25,Female,None,None
+922,Vita.Couture@yopmail.com,Vita Couture,20,Male,Soy; Milk; Pollen; Gluten,Anxiety; Diabetes
+673,Rosene.Evangelia@yopmail.com,Rosene Evangelia,20,Female,Nickel,COPD; Epilepsy
+363,Alia.Wesle@yopmail.com,Alia Wesle,23,Male,NSAIDs; Milk; Latex; Alcohol,Epilepsy
+511,Antonietta.Ovid@yopmail.com,Antonietta Ovid,36,Female,Insect Stings; Sulfa Drugs; Latex; Dust Mites,Liver Disease; Stroke; Hypertension
+967,Cam.Beebe@yopmail.com,Cam Beebe,21,Male,Alcohol,Liver Disease; Migraine; Arthritis; Chronic Kidney Disease
+142,Aurore.Garrison@yopmail.com,Aurore Garrison,32,Male,Pet Dander; Latex; Dust Mites; Gluten,Liver Disease; Diabetes
+707,Christian.Ephrem@yopmail.com,Christian Ephrem,34,Male,Wheat; Pet Dander,Thyroid Disorder; Heart Disease; COPD; Hypertension
+624,Blinni.Allare@yopmail.com,Blinni Allare,70,Female,NSAIDs,None
+490,Elena.McGrody@yopmail.com,Elena McGrody,28,Male,Penicillin,None
+460,Dorthy.Noman@yopmail.com,Dorthy Noman,35,Female,Eggs,Liver Disease
+620,Ebonee.Gabrielli@yopmail.com,Ebonee Gabrielli,30,Male,Eggs; NSAIDs; Insect Stings,Hypertension
+883,Merci.Clara@yopmail.com,Merci Clara,27,Male,None,Diabetes
+311,Nadine.Rossner@yopmail.com,Nadine Rossner,50,Female,None,None
+606,Kial.Autrey@yopmail.com,Kial Autrey,43,Male,Aspirin; Sulfa Drugs; Pet Dander; Eggs,Thyroid Disorder
+188,Tybie.Sandye@yopmail.com,Tybie Sandye,63,Male,None,None
+574,Delilah.Montgomery@yopmail.com,Delilah Montgomery,19,Female,Shellfish; Nickel,None
+328,Pierette.Atcliffe@yopmail.com,Pierette Atcliffe,62,Male,Aspirin,Obesity
+149,Drucie.Nedrud@yopmail.com,Drucie Nedrud,58,Male,Milk; Pollen,None
+740,Libbie.Juan@yopmail.com,Libbie Juan,34,Male,Eggs; Gluten,Obesity
+926,Eve.Ochs@yopmail.com,Eve Ochs,75,Male,Peanuts,Depression; COPD; Sleep Apnea; Epilepsy
+175,Magdalena.Alabaster@yopmail.com,Magdalena Alabaster,41,Male,Pet Dander; Soy,None
+416,Rosene.Anestassia@yopmail.com,Rosene Anestassia,70,Male,NSAIDs; Penicillin; Soy,Asthma
+733,Lesly.Arquit@yopmail.com,Lesly Arquit,71,Male,None,Epilepsy
+681,Meriel.Albertine@yopmail.com,Meriel Albertine,23,Male,Insect Stings; Soy; Aspirin; Wheat,Stroke; Hypertension; High Cholesterol; Asthma
+922,Christal.Goth@yopmail.com,Christal Goth,63,Male,Latex; Wheat,Asthma; High Cholesterol; Stroke
+195,Korrie.Pattin@yopmail.com,Korrie Pattin,74,Female,None,High Cholesterol
+595,Lonnie.Cohdwell@yopmail.com,Lonnie Cohdwell,34,Female,Penicillin; Mold; Wheat; Shellfish,Chronic Kidney Disease
+812,Verla.Ursulette@yopmail.com,Verla Ursulette,46,Female,None,IBS; COPD
+146,Flory.Sawtelle@yopmail.com,Flory Sawtelle,49,Female,Penicillin; Soy; Eggs,High Cholesterol; IBS; Migraine
+650,Steffane.Morgun@yopmail.com,Steffane Morgun,61,Male,Sulfa Drugs; Pet Dander; Peanuts,Hypertension; Thyroid Disorder; Heart Disease; Cancer
+227,Heddie.Ethban@yopmail.com,Heddie Ethban,63,Male,Nickel,Depression
+254,Ketti.Monk@yopmail.com,Ketti Monk,53,Male,None,Heart Disease; IBS; Obesity
+103,Lusa.Alisia@yopmail.com,Lusa Alisia,74,Male,Nickel; Mold; Peanuts,None
+991,Anica.Pierette@yopmail.com,Anica Pierette,40,Female,Nickel,Osteoporosis; Asthma; Thyroid Disorder
+457,Ebonee.Bari@yopmail.com,Ebonee Bari,68,Male,Pollen,Depression; Diabetes
+948,Jere.Sabella@yopmail.com,Jere Sabella,60,Male,Gluten; Insect Stings,None
+511,Sam.Gibbeon@yopmail.com,Sam Gibbeon,37,Female,None,None
+497,Merry.Revkah@yopmail.com,Merry Revkah,64,Male,None,Osteoporosis
+828,Andree.Koziara@yopmail.com,Andree Koziara,41,Female,None,Stroke
+143,Micheline.Eugenia@yopmail.com,Micheline Eugenia,57,Female,Insect Stings,Osteoporosis; Arthritis
+430,Elora.Rosemary@yopmail.com,Elora Rosemary,57,Male,None,None
+212,Annice.Gino@yopmail.com,Annice Gino,74,Female,Latex; NSAIDs; Peanuts,None
+647,Gertrud.Naor@yopmail.com,Gertrud Naor,75,Female,Sulfa Drugs; Soy,None
+587,Alex.Mallon@yopmail.com,Alex Mallon,33,Female,Milk,Arthritis
+838,Heida.Sisile@yopmail.com,Heida Sisile,42,Male,None,Heart Disease; Arthritis; Depression; High Cholesterol
+274,Tami.Georgy@yopmail.com,Tami Georgy,53,Female,Penicillin,Osteoporosis; Cancer; Heart Disease
+778,Cordi.Madox@yopmail.com,Cordi Madox,73,Female,None,Arthritis; IBS; Cancer; Anxiety
+258,Renae.Gaynor@yopmail.com,Renae Gaynor,31,Male,Latex; NSAIDs; Aspirin,Hypertension; IBS
+262,Kenna.Kesley@yopmail.com,Kenna Kesley,59,Female,None,Osteoporosis; Arthritis; High Cholesterol; Epilepsy
+743,Hallie.Cloris@yopmail.com,Hallie Cloris,47,Female,None,Diabetes; Cancer; Chronic Kidney Disease; Sleep Apnea
+228,Marnia.Love@yopmail.com,Marnia Love,65,Male,None,Sleep Apnea
+225,Ivett.Gaal@yopmail.com,Ivett Gaal,53,Male,None,Anxiety
+141,Maye.McLaughlin@yopmail.com,Maye McLaughlin,61,Female,Mold; Wheat; Eggs; Latex,COPD
+844,Margette.Tamsky@yopmail.com,Margette Tamsky,25,Male,NSAIDs; Insect Stings; Fragrances,Arthritis; Heart Disease; COPD; Asthma
+398,Frank.Zeeba@yopmail.com,Frank Zeeba,27,Male,Aspirin,None
+853,Morganica.Haerr@yopmail.com,Morganica Haerr,39,Male,Alcohol,Anxiety
+412,Esmeralda.Dannye@yopmail.com,Esmeralda Dannye,30,Female,None,None
+844,Lizzie.Jammal@yopmail.com,Lizzie Jammal,50,Male,Aspirin,Heart Disease; Arthritis
+336,Gilda.Thilda@yopmail.com,Gilda Thilda,30,Male,Dust Mites; Penicillin; Soy,Hypertension
+970,Ira.Helve@yopmail.com,Ira Helve,41,Male,None,Diabetes; Thyroid Disorder; Anxiety
+838,Mellicent.Slifka@yopmail.com,Mellicent Slifka,20,Male,None,None
+593,Dagmar.Suzetta@yopmail.com,Dagmar Suzetta,26,Male,Alcohol,None
+203,Kore.Merriott@yopmail.com,Kore Merriott,64,Male,Pollen,Migraine; Depression; Chronic Kidney Disease; Asthma
+714,Anallese.Clie@yopmail.com,Anallese Clie,35,Female,None,Epilepsy; Thyroid Disorder; Sleep Apnea; Anxiety
+857,Beth.Audly@yopmail.com,Beth Audly,65,Female,Gluten,Stroke; Cancer; High Cholesterol
+987,Dacia.Saree@yopmail.com,Dacia Saree,72,Male,Pet Dander; Fragrances,Thyroid Disorder; High Cholesterol; Stroke
+471,Neila.Heisel@yopmail.com,Neila Heisel,62,Male,Wheat; Gluten; Milk,Stroke; Cancer; Anxiety
+891,Lucy.Leary@yopmail.com,Lucy Leary,73,Male,None,Depression
+740,Belinda.Gladstone@yopmail.com,Belinda Gladstone,32,Female,Wheat,Osteoporosis; Asthma
+158,Damaris.Greenwald@yopmail.com,Damaris Greenwald,24,Female,None,Epilepsy; Obesity; Sleep Apnea; Arthritis
+692,Tori.Stacy@yopmail.com,Tori Stacy,36,Female,NSAIDs,None
+957,Wynne.Zrike@yopmail.com,Wynne Zrike,59,Male,Pet Dander,None
+773,Jean.Ogren@yopmail.com,Jean Ogren,36,Male,Penicillin,Cancer; Epilepsy
+356,Ketti.Infield@yopmail.com,Ketti Infield,53,Male,Latex,Stroke
+831,Robbi.Reneta@yopmail.com,Robbi Reneta,75,Female,None,Thyroid Disorder
+909,Cassondra.Audly@yopmail.com,Cassondra Audly,30,Male,Insect Stings; Wheat; Peanuts,Epilepsy; Osteoporosis; High Cholesterol; Depression
+865,Dianemarie.Cath@yopmail.com,Dianemarie Cath,46,Female,Alcohol,Sleep Apnea; Cancer; Migraine; Epilepsy
+460,Danny.Hachmin@yopmail.com,Danny Hachmin,32,Female,Peanuts; Pet Dander; Mold; Insect Stings,None
+330,Misha.Malina@yopmail.com,Misha Malina,19,Male,None,Stroke
+190,Gilda.Weaks@yopmail.com,Gilda Weaks,64,Male,None,Cancer
+531,Brana.Redmond@yopmail.com,Brana Redmond,38,Male,NSAIDs,None
+198,Maisey.Goldina@yopmail.com,Maisey Goldina,25,Male,Penicillin,Asthma
+849,Jinny.Naashom@yopmail.com,Jinny Naashom,19,Female,Mold,Hypertension
+664,Monika.Leary@yopmail.com,Monika Leary,67,Male,Alcohol; NSAIDs; Dust Mites; Eggs,Thyroid Disorder; Asthma; Arthritis; Epilepsy
+337,Ricky.Darrell@yopmail.com,Ricky Darrell,29,Male,None,Thyroid Disorder; Heart Disease; Diabetes
+330,Penelopa.Yerkovich@yopmail.com,Penelopa Yerkovich,65,Male,Latex; Soy; Milk,Cancer
+667,Sallie.Lail@yopmail.com,Sallie Lail,29,Male,Shellfish; Wheat; Fragrances; Milk,Hypertension; Sleep Apnea; Migraine
+747,Maryellen.Eugenia@yopmail.com,Maryellen Eugenia,63,Male,None,None
+814,Merci.Laurianne@yopmail.com,Merci Laurianne,62,Female,None,Epilepsy; Anxiety
+722,Millie.Schwejda@yopmail.com,Millie Schwejda,33,Male,Eggs,IBS; Asthma; Migraine
+732,Neila.Bertold@yopmail.com,Neila Bertold,68,Male,Pollen; Nickel,None
+879,Mildrid.Bakerman@yopmail.com,Mildrid Bakerman,49,Female,None,COPD; Diabetes
+124,Bobinette.Peti@yopmail.com,Bobinette Peti,41,Female,Soy; Shellfish,Depression; COPD; Osteoporosis
+804,Collen.Daniele@yopmail.com,Collen Daniele,59,Male,Alcohol,Obesity; Liver Disease; Thyroid Disorder; Migraine
+614,Lauryn.Rogerio@yopmail.com,Lauryn Rogerio,36,Male,Milk; Peanuts; Wheat,None
+710,Mireielle.Sheedy@yopmail.com,Mireielle Sheedy,47,Female,None,Sleep Apnea
+389,Shandie.Koziara@yopmail.com,Shandie Koziara,24,Female,Gluten,None
+238,Jillayne.Sigfrid@yopmail.com,Jillayne Sigfrid,42,Male,None,Cancer; Obesity
+607,Joelly.Othilia@yopmail.com,Joelly Othilia,69,Male,Insect Stings,None
+968,Merle.Charity@yopmail.com,Merle Charity,29,Female,Pollen; Insect Stings; Mold; Soy,High Cholesterol; Chronic Kidney Disease
+152,Winifred.Kazimir@yopmail.com,Winifred Kazimir,64,Female,None,COPD; Anxiety
+133,Mariele.Emanuel@yopmail.com,Mariele Emanuel,30,Female,Soy,Arthritis
+565,Gabriellia.Pyle@yopmail.com,Gabriellia Pyle,28,Female,None,IBS
+545,Chandra.Alrich@yopmail.com,Chandra Alrich,65,Female,NSAIDs; Peanuts; Insect Stings; Latex,None
+807,Gwenneth.Kylander@yopmail.com,Gwenneth Kylander,53,Male,None,Depression
+648,Flory.Aloise@yopmail.com,Flory Aloise,19,Male,None,Sleep Apnea
+431,Rochette.Laurianne@yopmail.com,Rochette Laurianne,50,Female,Fragrances,Epilepsy; IBS; Sleep Apnea; Stroke
+112,Elbertina.Dosia@yopmail.com,Elbertina Dosia,28,Female,None,Epilepsy
+504,Ingrid.Harl@yopmail.com,Ingrid Harl,54,Female,Insect Stings; Penicillin; Pollen,Liver Disease; Depression
+637,Merrie.Lilybelle@yopmail.com,Merrie Lilybelle,35,Female,None,Asthma
+142,Patricia.Septima@yopmail.com,Patricia Septima,47,Female,Eggs,None
+797,Oona.Kaja@yopmail.com,Oona Kaja,18,Male,None,None
+377,Fred.Stover@yopmail.com,Fred Stover,62,Female,Dust Mites; Aspirin; Alcohol,Obesity; Anxiety; Diabetes; Depression
+138,Frances.Lamoree@yopmail.com,Frances Lamoree,51,Female,Sulfa Drugs,None
+673,Cathyleen.Caitlin@yopmail.com,Cathyleen Caitlin,45,Female,None,COPD; Sleep Apnea; Thyroid Disorder
+602,Bernie.Brenn@yopmail.com,Bernie Brenn,52,Male,None,None
+118,Alexine.Isacco@yopmail.com,Alexine Isacco,43,Male,None,COPD; Obesity; Thyroid Disorder; Heart Disease
+237,Janeczka.Kinnard@yopmail.com,Janeczka Kinnard,23,Male,Peanuts; Alcohol; Shellfish,None
+976,Rosene.Oriana@yopmail.com,Rosene Oriana,62,Male,Dust Mites; Soy; Gluten; Pollen,Sleep Apnea; Stroke; Osteoporosis
+448,Wendi.Gilmour@yopmail.com,Wendi Gilmour,40,Female,Latex; Eggs; Penicillin,None
+940,Leanna.Elbertina@yopmail.com,Leanna Elbertina,29,Male,Nickel; Alcohol,High Cholesterol
+438,Shauna.Ioab@yopmail.com,Shauna Ioab,34,Female,None,Thyroid Disorder
+330,Nikki.Hull@yopmail.com,Nikki Hull,41,Male,Fragrances; Aspirin; Eggs; Shellfish,Cancer; COPD; Osteoporosis
+934,Sam.Cookie@yopmail.com,Sam Cookie,22,Female,Wheat,None
+128,Kelly.Celestine@yopmail.com,Kelly Celestine,41,Male,None,Anxiety; Stroke; Epilepsy
+820,Marsiella.Pitt@yopmail.com,Marsiella Pitt,35,Male,None,IBS
+543,Giustina.Fancie@yopmail.com,Giustina Fancie,40,Female,None,Anxiety; Hypertension; Epilepsy; Chronic Kidney Disease
+291,Roz.Oster@yopmail.com,Roz Oster,69,Male,None,None
+536,Hayley.Lorenz@yopmail.com,Hayley Lorenz,56,Female,Aspirin,Obesity
+466,Roberta.My@yopmail.com,Roberta My,39,Male,Pet Dander,Arthritis; Anxiety; Obesity
+419,Elfreda.Stuart@yopmail.com,Elfreda Stuart,61,Female,NSAIDs,None
+985,Sallie.Yorick@yopmail.com,Sallie Yorick,67,Female,Milk,None
+228,Shandie.Dawkins@yopmail.com,Shandie Dawkins,39,Male,Latex; Gluten; Milk,COPD; Heart Disease; Thyroid Disorder
+974,Cyb.Ivens@yopmail.com,Cyb Ivens,74,Female,Shellfish; Soy,Migraine; Heart Disease; Anxiety
+389,Myriam.Philoo@yopmail.com,Myriam Philoo,49,Male,Gluten; Sulfa Drugs,Cancer
+916,Binny.Frodi@yopmail.com,Binny Frodi,70,Male,Alcohol,None
+827,Mureil.Oriana@yopmail.com,Mureil Oriana,37,Male,Mold; Alcohol,IBS
+830,Amii.Lail@yopmail.com,Amii Lail,54,Female,Latex,Hypertension
+482,Sara-Ann.Wadell@yopmail.com,Sara-Ann Wadell,20,Male,Pet Dander; Latex; Alcohol; Penicillin,Anxiety; Osteoporosis
+321,Penelopa.Kathie@yopmail.com,Penelopa Kathie,48,Male,Alcohol,Cancer; Stroke; Diabetes
+626,Allis.Colleen@yopmail.com,Allis Colleen,75,Male,Milk,None
+968,Amelia.Durware@yopmail.com,Amelia Durware,43,Male,Pet Dander,None
+940,Inga.Hourigan@yopmail.com,Inga Hourigan,50,Female,None,Cancer
+430,Aili.Ventre@yopmail.com,Aili Ventre,48,Female,Peanuts; Sulfa Drugs,Epilepsy; Cancer
+972,Minda.MacIntosh@yopmail.com,Minda MacIntosh,29,Female,None,None
+964,Clo.Cherianne@yopmail.com,Clo Cherianne,27,Female,Wheat,Arthritis; Heart Disease
+108,Antonietta.Claudine@yopmail.com,Antonietta Claudine,52,Female,Eggs,Sleep Apnea; Anxiety; Osteoporosis; Heart Disease
+126,Silvana.Zina@yopmail.com,Silvana Zina,29,Male,Pet Dander; Peanuts; Eggs,None
+200,Feliza.Curren@yopmail.com,Feliza Curren,57,Male,None,Obesity
+141,Lila.Martguerita@yopmail.com,Lila Martguerita,71,Female,Sulfa Drugs; Milk; Fragrances; NSAIDs,None
+658,Vere.Bury@yopmail.com,Vere Bury,64,Female,None,COPD
+487,Dawn.Teryn@yopmail.com,Dawn Teryn,62,Male,Nickel; Wheat,Asthma
+870,Feliza.Moina@yopmail.com,Feliza Moina,33,Male,None,High Cholesterol; Migraine; Anxiety; COPD
+311,Karlee.Creamer@yopmail.com,Karlee Creamer,35,Female,None,None
+647,Renae.Heidt@yopmail.com,Renae Heidt,25,Female,Aspirin,None
+718,Aryn.Dominy@yopmail.com,Aryn Dominy,63,Female,None,Sleep Apnea; Chronic Kidney Disease; High Cholesterol
+702,Dari.Schroth@yopmail.com,Dari Schroth,34,Male,Penicillin,Chronic Kidney Disease; Hypertension
+888,Inga.Camden@yopmail.com,Inga Camden,28,Female,None,None
+395,Libbie.Burnside@yopmail.com,Libbie Burnside,63,Female,None,Hypertension
+221,Benita.Ashok@yopmail.com,Benita Ashok,55,Female,Wheat; Dust Mites; Alcohol; Pet Dander,High Cholesterol; Cancer; Heart Disease; Asthma
+456,Olwen.Uund@yopmail.com,Olwen Uund,45,Female,None,None
+171,Barbi.Emmaline@yopmail.com,Barbi Emmaline,70,Male,Alcohol,Cancer; Depression
+751,Cacilie.Jotham@yopmail.com,Cacilie Jotham,57,Male,Eggs; NSAIDs; Latex,COPD
+896,Mireielle.Koziara@yopmail.com,Mireielle Koziara,65,Male,Fragrances,Obesity
+921,Gavrielle.Kellby@yopmail.com,Gavrielle Kellby,55,Female,None,None
+144,Susan.Evangelia@yopmail.com,Susan Evangelia,62,Female,Wheat,Heart Disease; Migraine; Anxiety
+265,Merrie.Kellby@yopmail.com,Merrie Kellby,18,Male,NSAIDs,Migraine; Diabetes
+279,Siana.Oneida@yopmail.com,Siana Oneida,36,Female,NSAIDs,Arthritis
+327,Sybille.McClimans@yopmail.com,Sybille McClimans,69,Male,Mold,Osteoporosis; Arthritis; IBS; Cancer
+579,Sue.Adrienne@yopmail.com,Sue Adrienne,51,Female,None,IBS; Liver Disease; Cancer
+498,Asia.Riordan@yopmail.com,Asia Riordan,35,Female,None,Asthma; Diabetes
+924,Ericka.Melan@yopmail.com,Ericka Melan,37,Female,None,IBS; Stroke
+405,Misha.Ferrell@yopmail.com,Misha Ferrell,65,Female,None,Sleep Apnea
+327,Karlee.Georas@yopmail.com,Karlee Georas,20,Male,Shellfish; Gluten; Dust Mites; Eggs,Heart Disease; Sleep Apnea; Hypertension
+421,Chrystel.Berard@yopmail.com,Chrystel Berard,69,Male,None,Sleep Apnea
+694,Millie.Belldas@yopmail.com,Millie Belldas,36,Female,Nickel; Aspirin; Eggs,None
+175,Carmela.Vacuva@yopmail.com,Carmela Vacuva,32,Female,Mold; Pollen,None
+860,Margarette.Dorothy@yopmail.com,Margarette Dorothy,54,Male,None,Heart Disease
+255,Kelly.O'Neill@yopmail.com,Kelly O'Neill,67,Female,Penicillin,Epilepsy; Osteoporosis; Anxiety; COPD
+104,Joane.Yam@yopmail.com,Joane Yam,49,Male,Peanuts,IBS; Liver Disease; Anxiety
+725,Judy.Shanley@yopmail.com,Judy Shanley,67,Male,Alcohol,Thyroid Disorder; Osteoporosis
+157,Yetty.Shanley@yopmail.com,Yetty Shanley,50,Female,Soy; Sulfa Drugs,None
+703,Janenna.Uund@yopmail.com,Janenna Uund,19,Female,None,Arthritis; Heart Disease
+696,Grier.Noam@yopmail.com,Grier Noam,51,Female,Alcohol,None
+462,Nickie.Kiersten@yopmail.com,Nickie Kiersten,20,Male,None,None
+941,Farrah.Linehan@yopmail.com,Farrah Linehan,20,Male,Gluten; Insect Stings,None
+393,Concettina.Libna@yopmail.com,Concettina Libna,37,Male,Nickel,Sleep Apnea; Heart Disease
+181,Clarice.Willie@yopmail.com,Clarice Willie,47,Male,NSAIDs; Latex; Sulfa Drugs; Pollen,Obesity; Stroke
+420,Aryn.Evangelia@yopmail.com,Aryn Evangelia,74,Male,Pollen,None
+660,Rochette.Sawtelle@yopmail.com,Rochette Sawtelle,41,Female,Wheat; Milk,COPD; Asthma
+441,Adriana.Gherardo@yopmail.com,Adriana Gherardo,75,Female,None,None
+541,Annaliese.Saree@yopmail.com,Annaliese Saree,20,Female,Peanuts,Arthritis; Heart Disease; COPD
+863,Dulcinea.Hebner@yopmail.com,Dulcinea Hebner,28,Male,None,Epilepsy; Diabetes; COPD; Liver Disease
+488,Dominga.Ventre@yopmail.com,Dominga Ventre,69,Male,None,IBS; Depression; Osteoporosis; Epilepsy
+871,Aeriela.Connelly@yopmail.com,Aeriela Connelly,19,Female,None,COPD
+323,Collen.LaRue@yopmail.com,Collen LaRue,36,Male,Soy; Nickel; Gluten; Sulfa Drugs,Arthritis; High Cholesterol; Sleep Apnea
+602,Tilly.Nahum@yopmail.com,Tilly Nahum,59,Female,None,Migraine; Chronic Kidney Disease
+392,Madeleine.Kussell@yopmail.com,Madeleine Kussell,69,Male,Soy; Eggs; Mold; Nickel,None
+204,Robinia.Earlie@yopmail.com,Robinia Earlie,48,Male,None,Liver Disease
+877,Leanna.Madelene@yopmail.com,Leanna Madelene,42,Male,Peanuts,None
+712,Karly.Lattie@yopmail.com,Karly Lattie,28,Male,None,Thyroid Disorder; Obesity; Diabetes; Stroke
+596,Emelina.Kimmie@yopmail.com,Emelina Kimmie,19,Male,Pollen; Latex; Dust Mites,None
+482,Fidelia.Socha@yopmail.com,Fidelia Socha,67,Female,Wheat; Alcohol; Soy; Eggs,None
+648,Carree.Shama@yopmail.com,Carree Shama,41,Female,Milk,Hypertension
+891,Tressa.Jena@yopmail.com,Tressa Jena,30,Male,None,Asthma; Osteoporosis; Thyroid Disorder
+725,Feliza.Zetta@yopmail.com,Feliza Zetta,71,Female,None,None
+141,Marinna.Bartlett@yopmail.com,Marinna Bartlett,51,Male,Latex,High Cholesterol
+135,Sam.Verger@yopmail.com,Sam Verger,46,Female,Soy; Latex; Mold,None
+961,Elka.Huggins@yopmail.com,Elka Huggins,74,Male,None,None
+464,Delilah.Liebermann@yopmail.com,Delilah Liebermann,44,Male,Milk,None
+569,Jinny.Stav@yopmail.com,Jinny Stav,64,Female,Dust Mites; Latex; Pet Dander; Fragrances,Depression; Arthritis; Epilepsy
+117,Madelle.Milde@yopmail.com,Madelle Milde,42,Male,None,Osteoporosis; Depression
+151,Sheree.Desai@yopmail.com,Sheree Desai,69,Male,Alcohol; Milk,IBS
+729,Britte.Joli@yopmail.com,Britte Joli,51,Male,None,High Cholesterol; Hypertension; Thyroid Disorder; Liver Disease
+174,Etta.Bergman@yopmail.com,Etta Bergman,45,Female,None,Thyroid Disorder; Sleep Apnea; Anxiety; High Cholesterol
+171,Wynne.Silvan@yopmail.com,Wynne Silvan,53,Female,Peanuts; Alcohol; NSAIDs,Heart Disease
+226,Sashenka.Pernick@yopmail.com,Sashenka Pernick,19,Female,None,Stroke; Depression; Diabetes
+749,Sallie.Hunfredo@yopmail.com,Sallie Hunfredo,26,Female,Mold; Pet Dander; Eggs; NSAIDs,Arthritis; High Cholesterol; Liver Disease; Osteoporosis
+740,Iseabal.Leopold@yopmail.com,Iseabal Leopold,62,Male,None,Arthritis
+637,Elfreda.Lacombe@yopmail.com,Elfreda Lacombe,45,Female,Penicillin; Aspirin,None
+796,Talya.Jacqui@yopmail.com,Talya Jacqui,36,Female,None,IBS
+981,Corly.Artie@yopmail.com,Corly Artie,52,Female,None,Anxiety; Cancer
+160,Leia.Diann@yopmail.com,Leia Diann,62,Male,Latex; Gluten; Penicillin; Insect Stings,Epilepsy
+692,Tamqrah.Orelee@yopmail.com,Tamqrah Orelee,44,Female,None,Heart Disease
+229,Sybille.Esmaria@yopmail.com,Sybille Esmaria,68,Male,Pet Dander; Insect Stings; NSAIDs,Hypertension; Migraine
+227,Ileana.Mullane@yopmail.com,Ileana Mullane,30,Female,Shellfish,Obesity
+470,Michaelina.Gale@yopmail.com,Michaelina Gale,71,Female,NSAIDs,Thyroid Disorder; Chronic Kidney Disease; High Cholesterol; Hypertension
+639,Therine.Hortensia@yopmail.com,Therine Hortensia,68,Female,None,Epilepsy; Arthritis; Anxiety
+571,Daune.Wildermuth@yopmail.com,Daune Wildermuth,58,Female,Peanuts,None
+894,Kaja.Bach@yopmail.com,Kaja Bach,53,Female,Wheat,None
+784,Anallese.Knowling@yopmail.com,Anallese Knowling,60,Female,None,Diabetes; Epilepsy; Migraine
+576,Hannis.Wyn@yopmail.com,Hannis Wyn,72,Female,None,Migraine
+135,Mamie.Loleta@yopmail.com,Mamie Loleta,71,Male,Penicillin; Milk; Alcohol; Gluten,Arthritis; COPD; Epilepsy
+262,Laure.Lumbard@yopmail.com,Laure Lumbard,75,Female,NSAIDs,None
+766,Mellicent.Zaslow@yopmail.com,Mellicent Zaslow,19,Female,Aspirin; Penicillin; Mold; Nickel,Heart Disease
+216,Stephanie.Japeth@yopmail.com,Stephanie Japeth,31,Female,None,Migraine
+462,Doralynne.Rolf@yopmail.com,Doralynne Rolf,75,Male,Nickel; Eggs; Sulfa Drugs; Dust Mites,None
+256,Brietta.Socha@yopmail.com,Brietta Socha,63,Female,Latex,Chronic Kidney Disease; Obesity; COPD
+195,Etta.Joeann@yopmail.com,Etta Joeann,46,Female,None,High Cholesterol; Depression; Hypertension
+324,Hollie.Calhoun@yopmail.com,Hollie Calhoun,71,Male,Pet Dander; Wheat; Fragrances; Aspirin,None
+620,Ardenia.Modie@yopmail.com,Ardenia Modie,52,Male,Dust Mites,None
+104,Chere.Maisey@yopmail.com,Chere Maisey,65,Male,None,Heart Disease
+681,Celestyna.Berl@yopmail.com,Celestyna Berl,18,Female,Pollen,Cancer; High Cholesterol; Depression
+698,Rubie.Marden@yopmail.com,Rubie Marden,51,Female,Shellfish; Latex; Aspirin; Peanuts,Sleep Apnea
+354,Oona.Chesna@yopmail.com,Oona Chesna,55,Male,Fragrances,IBS; Heart Disease
+394,Gui.Modie@yopmail.com,Gui Modie,56,Male,Penicillin; Peanuts; Nickel,Sleep Apnea
+858,Halette.Jillane@yopmail.com,Halette Jillane,52,Female,None,Diabetes
+621,Ekaterina.Woodberry@yopmail.com,Ekaterina Woodberry,35,Male,Peanuts,Cancer; Anxiety
+632,Paule.Zola@yopmail.com,Paule Zola,46,Female,Penicillin,Sleep Apnea; Obesity; Migraine
+274,Hayley.Stuart@yopmail.com,Hayley Stuart,62,Female,None,Obesity
+128,Elka.Orpah@yopmail.com,Elka Orpah,44,Male,None,Anxiety; Asthma; Depression; Migraine
+645,Janis.Pierette@yopmail.com,Janis Pierette,20,Female,Peanuts; Fragrances; Sulfa Drugs; Mold,Migraine
+755,Nyssa.Ietta@yopmail.com,Nyssa Ietta,75,Male,Alcohol; Pollen; Insect Stings; Milk,None
+466,Regina.Roumell@yopmail.com,Regina Roumell,58,Female,Sulfa Drugs,None
+700,Mignon.Waldron@yopmail.com,Mignon Waldron,66,Male,Aspirin,IBS; Stroke
+349,Bertine.Aprile@yopmail.com,Bertine Aprile,30,Female,None,Anxiety
+839,Hettie.Ursulette@yopmail.com,Hettie Ursulette,34,Male,None,Obesity
+255,Alyssa.Abram@yopmail.com,Alyssa Abram,45,Male,Soy,Diabetes
+773,Addia.Halla@yopmail.com,Addia Halla,72,Male,Peanuts,None
+796,Asia.Gherardo@yopmail.com,Asia Gherardo,42,Female,None,Chronic Kidney Disease; High Cholesterol; Osteoporosis; Anxiety
+522,Gusella.Ailyn@yopmail.com,Gusella Ailyn,75,Male,None,None
+856,Lelah.Toni@yopmail.com,Lelah Toni,75,Male,Pet Dander; Eggs; Alcohol,Thyroid Disorder
+333,Kore.Linskey@yopmail.com,Kore Linskey,24,Female,Eggs; Penicillin; Alcohol,Obesity
+430,Margette.Wesle@yopmail.com,Margette Wesle,68,Male,Nickel; Mold; Shellfish; Milk,None
+325,Vevay.Holbrook@yopmail.com,Vevay Holbrook,33,Male,None,Hypertension
+662,Josephine.Jenness@yopmail.com,Josephine Jenness,65,Female,None,Cancer
+248,Bettine.Duwalt@yopmail.com,Bettine Duwalt,69,Female,None,Arthritis
+488,Alisha.Elephus@yopmail.com,Alisha Elephus,71,Female,Mold,Heart Disease; Osteoporosis; Depression; High Cholesterol
+987,Vanessa.Kendrick@yopmail.com,Vanessa Kendrick,44,Male,Milk; Soy,Hypertension
+500,Dennie.Ruvolo@yopmail.com,Dennie Ruvolo,23,Male,Gluten,Heart Disease; Osteoporosis; Chronic Kidney Disease; Cancer
+729,Ileana.Zenas@yopmail.com,Ileana Zenas,56,Male,Peanuts,None
+172,Ann-Marie.Gwenore@yopmail.com,Ann-Marie Gwenore,54,Male,None,Hypertension
+873,Mariann.Holtz@yopmail.com,Mariann Holtz,34,Female,Aspirin; Fragrances; Alcohol; Insect Stings,None
+960,Cissiee.Lytton@yopmail.com,Cissiee Lytton,65,Male,Alcohol,None
+625,Caryl.Han@yopmail.com,Caryl Han,65,Male,None,Chronic Kidney Disease; Asthma; High Cholesterol
+273,Doralynne.Dowski@yopmail.com,Doralynne Dowski,55,Male,Penicillin; Dust Mites; Pet Dander; Alcohol,Anxiety
+969,Tonia.Shields@yopmail.com,Tonia Shields,47,Female,Latex,Liver Disease; Arthritis; Hypertension
+468,Agathe.Eldrid@yopmail.com,Agathe Eldrid,36,Male,NSAIDs,None
+381,Chickie.Hazlett@yopmail.com,Chickie Hazlett,48,Male,Eggs; Peanuts,None
+147,Jessy.Shelba@yopmail.com,Jessy Shelba,73,Female,Pollen; Gluten; Fragrances; Insect Stings,Depression
+422,Carree.Cynar@yopmail.com,Carree Cynar,49,Female,None,Depression; Obesity; Hypertension
+257,Desirae.Primalia@yopmail.com,Desirae Primalia,56,Male,Dust Mites; Soy; Aspirin; Insect Stings,None
+328,Sissy.Auberbach@yopmail.com,Sissy Auberbach,36,Female,None,Cancer
+444,Nataline.Dituri@yopmail.com,Nataline Dituri,50,Male,Soy; Shellfish; Milk; Sulfa Drugs,Thyroid Disorder; Depression; Epilepsy; Arthritis
+953,Britte.Helfand@yopmail.com,Britte Helfand,42,Male,Peanuts; Mold; Shellfish,Depression
+732,Miquela.Reidar@yopmail.com,Miquela Reidar,53,Female,NSAIDs,Liver Disease; Anxiety
+261,Annecorinne.Papageno@yopmail.com,Annecorinne Papageno,62,Female,Pollen; Dust Mites; Gluten,Depression; Diabetes; Thyroid Disorder
+495,Adriana.Delp@yopmail.com,Adriana Delp,45,Male,Wheat,High Cholesterol; IBS
+594,Debee.Kenwood@yopmail.com,Debee Kenwood,55,Female,None,High Cholesterol; Obesity; IBS
+812,Patricia.Ventre@yopmail.com,Patricia Ventre,69,Male,Latex,None
+256,Consuela.Annabella@yopmail.com,Consuela Annabella,29,Female,Shellfish,Asthma
+571,Henriette.Janith@yopmail.com,Henriette Janith,42,Female,NSAIDs; Nickel; Fragrances,IBS
+790,Rhoda.Latini@yopmail.com,Rhoda Latini,49,Female,Dust Mites; Eggs,Osteoporosis
+627,Kelly.Stoller@yopmail.com,Kelly Stoller,74,Female,Penicillin; Gluten; Wheat,Epilepsy; Obesity; Sleep Apnea
+608,Rosene.Lynn@yopmail.com,Rosene Lynn,42,Female,None,None
+358,Talya.Bettine@yopmail.com,Talya Bettine,56,Female,None,Arthritis; Diabetes
+937,Sashenka.Even@yopmail.com,Sashenka Even,42,Female,NSAIDs; Penicillin; Insect Stings,Stroke
+176,Mariann.Stoller@yopmail.com,Mariann Stoller,57,Male,Insect Stings,None
+977,Carree.Bach@yopmail.com,Carree Bach,52,Female,Milk; Dust Mites,None
+710,Heida.Erich@yopmail.com,Heida Erich,37,Male,Milk,None
+677,Aubrie.Belanger@yopmail.com,Aubrie Belanger,28,Female,None,Cancer
+505,Therine.Love@yopmail.com,Therine Love,71,Female,None,None
+719,Cecile.Lytton@yopmail.com,Cecile Lytton,35,Female,Milk,Hypertension; Migraine; Diabetes; Heart Disease
+958,Beatriz.Hylan@yopmail.com,Beatriz Hylan,66,Female,None,None
+217,Agathe.Shaddock@yopmail.com,Agathe Shaddock,46,Male,Nickel; Eggs; Penicillin; Pollen,Hypertension; Chronic Kidney Disease; Obesity; IBS
+876,Taffy.Rese@yopmail.com,Taffy Rese,38,Female,Alcohol,Asthma; Epilepsy; Thyroid Disorder
+730,Sabina.Tillford@yopmail.com,Sabina Tillford,57,Female,None,Arthritis; Hypertension; Asthma
+171,Sean.Dituri@yopmail.com,Sean Dituri,50,Female,None,None
+106,Petronia.Tamsky@yopmail.com,Petronia Tamsky,57,Female,Milk,None
+482,Sashenka.Fry@yopmail.com,Sashenka Fry,32,Female,None,Osteoporosis
+628,Angelique.Justinn@yopmail.com,Angelique Justinn,67,Male,Mold,None
+176,Sybille.Brunell@yopmail.com,Sybille Brunell,43,Male,Wheat,None
+909,Lily.Cherianne@yopmail.com,Lily Cherianne,25,Female,NSAIDs,Diabetes; Arthritis; Migraine; Depression
+405,Elora.Hermes@yopmail.com,Elora Hermes,49,Female,Pet Dander,Liver Disease; Anxiety; High Cholesterol; Hypertension
+761,Dania.Rolf@yopmail.com,Dania Rolf,69,Male,None,IBS
+534,Edith.Malina@yopmail.com,Edith Malina,20,Male,None,Chronic Kidney Disease
+174,Ekaterina.Kenney@yopmail.com,Ekaterina Kenney,38,Female,Insect Stings; Aspirin,None
+443,Trixi.Carmena@yopmail.com,Trixi Carmena,33,Male,Wheat,Obesity
+794,Demetris.Ade@yopmail.com,Demetris Ade,46,Male,Pollen; Latex,Depression; Anxiety; Diabetes
+385,Mamie.Prouty@yopmail.com,Mamie Prouty,39,Female,Milk; Dust Mites,None
+461,Kirbee.Calhoun@yopmail.com,Kirbee Calhoun,19,Female,Milk,Liver Disease
+527,Fernande.McNully@yopmail.com,Fernande McNully,39,Male,Latex,Epilepsy; Hypertension; Heart Disease; Asthma
+566,Livvyy.Decato@yopmail.com,Livvyy Decato,73,Female,Sulfa Drugs; Nickel; Shellfish,Obesity; Asthma; Arthritis; Hypertension
+853,Justinn.Krystle@yopmail.com,Justinn Krystle,26,Male,Eggs,Obesity; Heart Disease; Osteoporosis; Cancer
+349,Jaclyn.Schlosser@yopmail.com,Jaclyn Schlosser,25,Male,None,Diabetes
+383,Lory.Kosey@yopmail.com,Lory Kosey,54,Female,Penicillin; Latex; Eggs; Peanuts,None
+359,Misha.Garek@yopmail.com,Misha Garek,66,Male,None,Hypertension
+456,Madelle.Westphal@yopmail.com,Madelle Westphal,69,Female,Insect Stings; Fragrances; Sulfa Drugs; Wheat,None
+631,Roseline.Newell@yopmail.com,Roseline Newell,75,Female,Latex; Wheat,Cancer
+894,Tatiania.Carri@yopmail.com,Tatiania Carri,52,Male,None,Hypertension
+406,Bertine.Clywd@yopmail.com,Bertine Clywd,72,Female,Soy; Peanuts; Mold,Chronic Kidney Disease; Obesity; Cancer; Diabetes
+163,Nananne.Rodmann@yopmail.com,Nananne Rodmann,59,Female,None,None
+576,Coral.Raama@yopmail.com,Coral Raama,25,Male,Gluten,Cancer
+300,Willetta.Quent@yopmail.com,Willetta Quent,55,Male,Pet Dander; Shellfish; Gluten; Insect Stings,Asthma
+376,Dode.Vilma@yopmail.com,Dode Vilma,62,Male,None,None
+434,Gabriellia.Darbie@yopmail.com,Gabriellia Darbie,29,Male,Latex,None
+475,Blinni.Fitzsimmons@yopmail.com,Blinni Fitzsimmons,57,Male,Insect Stings,None
+322,Gianina.Ingra@yopmail.com,Gianina Ingra,63,Female,Peanuts,Hypertension
+857,Glenda.Damarra@yopmail.com,Glenda Damarra,69,Female,Dust Mites; Penicillin; Peanuts,IBS
+906,Aaren.Rustice@yopmail.com,Aaren Rustice,75,Male,Sulfa Drugs; Alcohol; Shellfish; Aspirin,Depression; Thyroid Disorder; COPD; Liver Disease
+166,Lyssa.Irmine@yopmail.com,Lyssa Irmine,68,Male,Eggs; Shellfish; Pet Dander,Arthritis
+248,Jinny.Klotz@yopmail.com,Jinny Klotz,42,Male,Eggs; Aspirin; Wheat,None
+940,Cassondra.Olympium@yopmail.com,Cassondra Olympium,50,Male,Sulfa Drugs,None
+885,Nariko.Wattenberg@yopmail.com,Nariko Wattenberg,56,Male,Penicillin,None
+502,Cacilie.Camden@yopmail.com,Cacilie Camden,26,Female,Gluten,Migraine; Chronic Kidney Disease; Depression; Cancer
+843,Jessamyn.Friede@yopmail.com,Jessamyn Friede,37,Male,None,Asthma; Arthritis; Liver Disease
+178,Jaclyn.Kenwood@yopmail.com,Jaclyn Kenwood,36,Female,Pollen,Obesity
+657,Heida.Birdella@yopmail.com,Heida Birdella,32,Male,Soy; Fragrances; Shellfish,Heart Disease
+588,Kassey.Liebermann@yopmail.com,Kassey Liebermann,73,Male,Latex; Soy; Pollen; Gluten,Heart Disease; Depression
+364,Estell.Zuzana@yopmail.com,Estell Zuzana,68,Male,None,Cancer
+582,Courtnay.Marijo@yopmail.com,Courtnay Marijo,67,Female,Pollen; Nickel; Fragrances; Aspirin,None
+384,Ninnetta.Old@yopmail.com,Ninnetta Old,62,Female,Dust Mites,Migraine; Heart Disease; Osteoporosis; Asthma
+466,Elka.Juan@yopmail.com,Elka Juan,63,Male,Mold,Migraine
+195,Eve.Keily@yopmail.com,Eve Keily,30,Male,None,Obesity
+386,Hallie.Wu@yopmail.com,Hallie Wu,28,Female,None,Thyroid Disorder
+636,Tonia.Knowling@yopmail.com,Tonia Knowling,56,Male,Peanuts,None
+438,Valli.Blisse@yopmail.com,Valli Blisse,42,Female,Fragrances; Shellfish,None
+690,Maud.Swigart@yopmail.com,Maud Swigart,75,Female,Wheat; Fragrances,Heart Disease
+358,Brietta.Pattin@yopmail.com,Brietta Pattin,74,Male,None,None
+364,Jenilee.Greyson@yopmail.com,Jenilee Greyson,62,Female,None,Osteoporosis; Obesity; Depression; IBS
+893,Cordi.Dielu@yopmail.com,Cordi Dielu,66,Female,Fragrances,None
+481,Neila.Pyle@yopmail.com,Neila Pyle,28,Female,Mold; Insect Stings; Nickel; Fragrances,Diabetes; Depression; Cancer
+473,Doro.Brodench@yopmail.com,Doro Brodench,69,Female,Shellfish; Dust Mites,Epilepsy; High Cholesterol; Thyroid Disorder
+378,Karly.McGrody@yopmail.com,Karly McGrody,23,Male,Mold,Migraine; Asthma; Heart Disease
+438,Christy.O'Carroll@yopmail.com,Christy O'Carroll,75,Female,None,None
+697,Esmeralda.Travax@yopmail.com,Esmeralda Travax,41,Male,None,Heart Disease
+980,Emilia.Rad@yopmail.com,Emilia Rad,23,Male,Dust Mites,Chronic Kidney Disease; Stroke; Liver Disease
+328,Sissy.Yorick@yopmail.com,Sissy Yorick,25,Male,Soy,Obesity; Liver Disease
+646,Jerry.Burkle@yopmail.com,Jerry Burkle,41,Female,None,Sleep Apnea
+761,Nyssa.Libna@yopmail.com,Nyssa Libna,30,Female,Nickel; Soy; Pet Dander,Thyroid Disorder; Epilepsy; Chronic Kidney Disease
+374,Konstance.Ricki@yopmail.com,Konstance Ricki,35,Male,Penicillin,Asthma; COPD
+431,Caressa.Herrera@yopmail.com,Caressa Herrera,47,Male,Wheat,None
+656,Etta.Dalli@yopmail.com,Etta Dalli,53,Male,Peanuts,None
+877,Imojean.Hashim@yopmail.com,Imojean Hashim,33,Female,None,High Cholesterol; Epilepsy; Asthma
+339,Mellicent.Viddah@yopmail.com,Mellicent Viddah,19,Male,Sulfa Drugs,Sleep Apnea
+469,Ashlee.Annabella@yopmail.com,Ashlee Annabella,70,Female,Eggs; Dust Mites; Mold; Milk,None
+613,Caritta.Jefferey@yopmail.com,Caritta Jefferey,67,Male,Aspirin; Latex; Alcohol,Thyroid Disorder
+202,Etta.Septima@yopmail.com,Etta Septima,72,Male,None,COPD
+408,Heddie.Edvard@yopmail.com,Heddie Edvard,57,Female,Soy; Milk,None
+696,Jackie.Jena@yopmail.com,Jackie Jena,66,Male,Aspirin,None
+827,Charlena.Breed@yopmail.com,Charlena Breed,53,Male,Mold,Anxiety
+975,Evita.Stacy@yopmail.com,Evita Stacy,34,Female,Latex; Milk; Penicillin; Eggs,High Cholesterol; Epilepsy; Migraine
+807,Emmey.Maxi@yopmail.com,Emmey Maxi,74,Female,Pollen,None
+212,Bibby.Tannie@yopmail.com,Bibby Tannie,36,Female,None,Liver Disease; Heart Disease; Sleep Apnea; Epilepsy
+130,Rivalee.Bandeen@yopmail.com,Rivalee Bandeen,61,Male,Insect Stings,Heart Disease; Asthma; Cancer
+903,Tabbatha.Peti@yopmail.com,Tabbatha Peti,18,Female,None,Osteoporosis; Thyroid Disorder
+182,Silvana.Judye@yopmail.com,Silvana Judye,40,Male,Wheat; Nickel; Insect Stings,Diabetes; Epilepsy; Migraine
+907,Nyssa.Esmaria@yopmail.com,Nyssa Esmaria,73,Female,None,None
+966,Silvana.Sophronia@yopmail.com,Silvana Sophronia,70,Male,None,Hypertension
+921,Linet.Kirstin@yopmail.com,Linet Kirstin,43,Female,Eggs,COPD; Thyroid Disorder; Anxiety
+778,Anica.Rurik@yopmail.com,Anica Rurik,19,Male,Soy; Eggs; Nickel,None
+581,Isa.Hylan@yopmail.com,Isa Hylan,44,Male,None,None
+953,Lonnie.Auberbach@yopmail.com,Lonnie Auberbach,35,Male,Nickel,None
+286,Morganica.Buttaro@yopmail.com,Morganica Buttaro,18,Female,Soy,Hypertension; Asthma
+312,Roberta.Keelia@yopmail.com,Roberta Keelia,72,Male,None,Hypertension; Asthma; Arthritis; Sleep Apnea
+280,Suzette.Anton@yopmail.com,Suzette Anton,62,Female,Peanuts,Chronic Kidney Disease
+371,Ricky.Amand@yopmail.com,Ricky Amand,18,Female,None,Cancer; Depression; Obesity; Stroke
+390,Jenda.Montgomery@yopmail.com,Jenda Montgomery,59,Male,Insect Stings,None
+103,Jennica.Ashely@yopmail.com,Jennica Ashely,28,Male,Shellfish; Sulfa Drugs,COPD
+674,Kittie.Fax@yopmail.com,Kittie Fax,19,Male,Shellfish,IBS; Heart Disease; Epilepsy
+518,Donetta.Kauppi@yopmail.com,Donetta Kauppi,50,Female,None,Migraine
+398,Joceline.Ursulette@yopmail.com,Joceline Ursulette,32,Female,None,Hypertension
+955,Dari.Hermes@yopmail.com,Dari Hermes,59,Male,Nickel; Alcohol; Pet Dander,None
+900,Rebeca.Lynn@yopmail.com,Rebeca Lynn,27,Male,Sulfa Drugs,Arthritis; Obesity
+674,Cam.Michella@yopmail.com,Cam Michella,74,Female,Mold; Fragrances; Sulfa Drugs,IBS; Sleep Apnea
+636,Gretal.Tamsky@yopmail.com,Gretal Tamsky,18,Male,Mold; Peanuts,Cancer
+990,Nessie.Agle@yopmail.com,Nessie Agle,22,Female,Pet Dander; Penicillin; Shellfish,Osteoporosis
+273,Anallese.Auberbach@yopmail.com,Anallese Auberbach,71,Male,Dust Mites; NSAIDs; Pet Dander; Wheat,Migraine; Osteoporosis; Hypertension
+542,Zsa Zsa.Bari@yopmail.com,Zsa Zsa Bari,39,Female,NSAIDs,IBS; Thyroid Disorder; Migraine; Heart Disease
+360,Loree.Elvyn@yopmail.com,Loree Elvyn,37,Male,Sulfa Drugs; Gluten; Pollen,Obesity
+479,Ileana.Merriott@yopmail.com,Ileana Merriott,55,Female,None,High Cholesterol
+591,Inga.Bibi@yopmail.com,Inga Bibi,45,Female,Pet Dander,Thyroid Disorder; COPD; Osteoporosis
+401,Aimil.Andrel@yopmail.com,Aimil Andrel,57,Female,Penicillin; Alcohol; Sulfa Drugs,Depression
+551,Hermione.Rubie@yopmail.com,Hermione Rubie,37,Female,Shellfish; Eggs; Alcohol; Wheat,Heart Disease
+652,Sashenka.Joni@yopmail.com,Sashenka Joni,45,Male,None,Thyroid Disorder
+542,Celisse.Shaver@yopmail.com,Celisse Shaver,51,Male,Wheat,Obesity
+414,Marcy.Sophronia@yopmail.com,Marcy Sophronia,64,Female,None,Migraine; Epilepsy; Liver Disease
+912,Petronia.Seagraves@yopmail.com,Petronia Seagraves,55,Male,Pollen; Dust Mites; Penicillin; Nickel,Migraine
+420,Peri.Uund@yopmail.com,Peri Uund,56,Female,Nickel; Sulfa Drugs,None
+681,Adelle.Kussell@yopmail.com,Adelle Kussell,74,Female,Eggs,IBS; Hypertension; Epilepsy; Liver Disease
+567,Trixi.Oriana@yopmail.com,Trixi Oriana,19,Female,Pollen,Osteoporosis; Hypertension; Thyroid Disorder; Heart Disease
+582,Heida.Duwalt@yopmail.com,Heida Duwalt,62,Female,Shellfish,Arthritis
+913,Cissiee.Kare@yopmail.com,Cissiee Kare,27,Female,Alcohol; Insect Stings; Sulfa Drugs; Dust Mites,Thyroid Disorder
+605,Juliane.Pip@yopmail.com,Juliane Pip,42,Male,Pet Dander,Chronic Kidney Disease; Epilepsy; High Cholesterol
+950,Agnese.Manolo@yopmail.com,Agnese Manolo,62,Female,Alcohol,Heart Disease; Obesity; Migraine; Osteoporosis
+442,Selma.McCutcheon@yopmail.com,Selma McCutcheon,48,Male,None,Sleep Apnea; Depression; Liver Disease
+395,Nonnah.Delila@yopmail.com,Nonnah Delila,29,Female,Latex; Dust Mites; Soy,Arthritis; Cancer; Obesity
+640,Zia.Ovid@yopmail.com,Zia Ovid,59,Female,Pet Dander,Diabetes
+194,Monika.Fulmer@yopmail.com,Monika Fulmer,49,Female,Penicillin; Pet Dander; Latex,COPD
+187,Corry.McClimans@yopmail.com,Corry McClimans,19,Male,Shellfish,None
+847,Miquela.Timon@yopmail.com,Miquela Timon,53,Male,Fragrances; Wheat; Aspirin; Shellfish,Stroke
+618,Susette.Alarise@yopmail.com,Susette Alarise,73,Female,None,None
+261,Genovera.Chrystel@yopmail.com,Genovera Chrystel,22,Male,None,None
+837,Teddie.Cristi@yopmail.com,Teddie Cristi,49,Female,Aspirin; Shellfish,Thyroid Disorder; Depression; Hypertension; High Cholesterol
+896,Dode.Chinua@yopmail.com,Dode Chinua,46,Male,None,Thyroid Disorder
+624,Benita.Germann@yopmail.com,Benita Germann,38,Female,Fragrances,Epilepsy
+763,Clarice.Niccolo@yopmail.com,Clarice Niccolo,46,Male,Soy,None
+158,Katleen.Parette@yopmail.com,Katleen Parette,31,Female,None,Thyroid Disorder; Diabetes
+862,Jorry.Ax@yopmail.com,Jorry Ax,46,Female,Insect Stings,None
+622,Ezmeralda.Stefa@yopmail.com,Ezmeralda Stefa,19,Female,None,Stroke
+865,Alejandra.Cornelia@yopmail.com,Alejandra Cornelia,44,Female,None,Arthritis
+343,Minda.Rugen@yopmail.com,Minda Rugen,36,Female,Insect Stings; Pet Dander; Nickel; Penicillin,Thyroid Disorder; Sleep Apnea; Hypertension; Osteoporosis
+192,Di.Lowry@yopmail.com,Di Lowry,69,Female,Nickel; Fragrances; Sulfa Drugs,Arthritis
+666,Bee.Atonsah@yopmail.com,Bee Atonsah,65,Male,Mold; Milk,Chronic Kidney Disease
+482,Carmela.Fancie@yopmail.com,Carmela Fancie,20,Male,None,None
+180,Ruthe.Weaks@yopmail.com,Ruthe Weaks,59,Male,NSAIDs,Chronic Kidney Disease; Sleep Apnea; Depression
+219,Mildrid.Dorine@yopmail.com,Mildrid Dorine,41,Female,None,Liver Disease; Thyroid Disorder
+269,Taffy.Ciro@yopmail.com,Taffy Ciro,37,Male,None,High Cholesterol
+698,Glynnis.Leopold@yopmail.com,Glynnis Leopold,48,Male,Eggs; Wheat; Latex,None
+909,Elfreda.Klotz@yopmail.com,Elfreda Klotz,40,Male,Penicillin; Wheat; Eggs,Obesity
+182,Trixi.Gemini@yopmail.com,Trixi Gemini,23,Male,Nickel; Aspirin; Shellfish,Osteoporosis; Cancer
+117,Christal.Marcellus@yopmail.com,Christal Marcellus,39,Female,Shellfish,None
+517,Frances.Korey@yopmail.com,Frances Korey,73,Male,Nickel; Gluten,Thyroid Disorder
+159,Kylynn.Uund@yopmail.com,Kylynn Uund,75,Male,None,None
+526,Charissa.McAdams@yopmail.com,Charissa McAdams,33,Male,Peanuts; Latex; NSAIDs,Diabetes; Anxiety
+106,Kara-Lynn.Shanley@yopmail.com,Kara-Lynn Shanley,28,Male,Sulfa Drugs; Soy,None
+687,Shaine.Durware@yopmail.com,Shaine Durware,25,Female,None,Obesity
+132,Goldie.Kare@yopmail.com,Goldie Kare,48,Male,Sulfa Drugs,None
+805,Deedee.Corilla@yopmail.com,Deedee Corilla,25,Female,None,Cancer
+575,Selma.Verger@yopmail.com,Selma Verger,29,Female,Insect Stings; Shellfish; Fragrances; Soy,Cancer; Chronic Kidney Disease; Anxiety
+496,Daphne.Lareena@yopmail.com,Daphne Lareena,62,Male,Insect Stings; Pollen,None
+332,Lindie.Kaja@yopmail.com,Lindie Kaja,63,Male,None,Anxiety; Chronic Kidney Disease; COPD; Liver Disease
+408,Pearline.Chapland@yopmail.com,Pearline Chapland,41,Male,Penicillin,None
+979,Helsa.Gunn@yopmail.com,Helsa Gunn,48,Female,Soy; Sulfa Drugs; Alcohol; Nickel,IBS; Diabetes; Epilepsy
+668,Di.McClimans@yopmail.com,Di McClimans,39,Male,Milk,None
+671,Adore.Kamaria@yopmail.com,Adore Kamaria,36,Male,None,Depression
+136,Gabriellia.Krystle@yopmail.com,Gabriellia Krystle,72,Female,Insect Stings; Alcohol; Milk; Nickel,Obesity
+442,Lanae.Judye@yopmail.com,Lanae Judye,69,Female,None,None
+276,Cristine.Aurelio@yopmail.com,Cristine Aurelio,38,Male,None,Anxiety; Migraine; Liver Disease
+996,Margarette.McCutcheon@yopmail.com,Margarette McCutcheon,31,Male,None,Liver Disease
+217,Meghann.Azeria@yopmail.com,Meghann Azeria,27,Female,Shellfish; Latex; Aspirin; Penicillin,Anxiety; Heart Disease
+223,Rori.Bashemeth@yopmail.com,Rori Bashemeth,38,Female,Alcohol; Aspirin; Fragrances,Liver Disease; Diabetes; Osteoporosis; High Cholesterol
+548,Barbi.Percy@yopmail.com,Barbi Percy,70,Male,Soy; Milk,None
+993,Dari.Soneson@yopmail.com,Dari Soneson,59,Male,Aspirin,Stroke; Hypertension; Liver Disease; COPD
+182,Regina.Nikaniki@yopmail.com,Regina Nikaniki,58,Female,Latex,Sleep Apnea
+328,Roslyn.Gunn@yopmail.com,Roslyn Gunn,55,Male,Penicillin,Depression
+320,Molli.Zaslow@yopmail.com,Molli Zaslow,60,Male,None,Thyroid Disorder; Sleep Apnea; COPD; Hypertension
+744,Averyl.Hutchison@yopmail.com,Averyl Hutchison,75,Female,Wheat,Cancer
+523,Leeanne.Trace@yopmail.com,Leeanne Trace,56,Female,NSAIDs,Thyroid Disorder
+542,Eolanda.Sheng@yopmail.com,Eolanda Sheng,56,Female,Latex; Eggs; Peanuts,Asthma; Osteoporosis; Epilepsy; Diabetes
+258,Zsa Zsa.Natica@yopmail.com,Zsa Zsa Natica,56,Female,Mold,Anxiety
+202,Minda.Pattin@yopmail.com,Minda Pattin,39,Female,Shellfish,Diabetes; Arthritis; Thyroid Disorder; Asthma
+851,Willetta.Belldas@yopmail.com,Willetta Belldas,60,Male,Fragrances,Cancer
+137,Roz.Ardeha@yopmail.com,Roz Ardeha,29,Female,Eggs; Fragrances,None
+552,Sabina.Rosemary@yopmail.com,Sabina Rosemary,25,Female,None,None
+717,Tybie.Latini@yopmail.com,Tybie Latini,67,Female,Fragrances,High Cholesterol
+862,Britni.Eliathas@yopmail.com,Britni Eliathas,51,Female,Nickel; Dust Mites,None
+994,Gui.Turne@yopmail.com,Gui Turne,73,Male,Pet Dander,None
+729,Bobinette.Demitria@yopmail.com,Bobinette Demitria,52,Male,Nickel; Fragrances; Pet Dander; Aspirin,None
+610,Cissiee.Zamora@yopmail.com,Cissiee Zamora,19,Male,None,Thyroid Disorder
+734,Sibella.Nadia@yopmail.com,Sibella Nadia,22,Male,Sulfa Drugs; Wheat; Pet Dander,COPD
+302,Florie.Delp@yopmail.com,Florie Delp,39,Male,None,Stroke
+961,Steffane.Bigner@yopmail.com,Steffane Bigner,43,Male,Shellfish; NSAIDs; Mold,None
+754,Merry.Kermit@yopmail.com,Merry Kermit,70,Male,Soy,IBS
+787,Elbertina.Tice@yopmail.com,Elbertina Tice,49,Male,Peanuts,Epilepsy
+496,Cyb.Docilla@yopmail.com,Cyb Docilla,31,Female,Fragrances,Sleep Apnea; Liver Disease; Cancer; Depression
+349,Rhea.Viddah@yopmail.com,Rhea Viddah,54,Female,Shellfish; Eggs; Nickel; Sulfa Drugs,None
+995,Josephine.Morrill@yopmail.com,Josephine Morrill,30,Male,Sulfa Drugs; Aspirin; Mold,None
+408,Cyb.Burkle@yopmail.com,Cyb Burkle,34,Male,Fragrances,None
+179,Donetta.Docilla@yopmail.com,Donetta Docilla,68,Female,Wheat; Eggs; Fragrances; NSAIDs,Chronic Kidney Disease; Osteoporosis; Asthma; COPD
+246,Joeann.Ball@yopmail.com,Joeann Ball,44,Male,None,None
+178,Arlina.Tryck@yopmail.com,Arlina Tryck,33,Female,None,Obesity
+233,Carree.Pozzy@yopmail.com,Carree Pozzy,69,Female,None,Obesity; Liver Disease
+689,Joceline.Catie@yopmail.com,Joceline Catie,55,Female,None,Hypertension
+127,Dacia.Silvan@yopmail.com,Dacia Silvan,75,Female,Nickel,Liver Disease; Arthritis
+419,Donetta.Bennie@yopmail.com,Donetta Bennie,59,Female,None,Cancer
+494,Maisey.Pyle@yopmail.com,Maisey Pyle,46,Female,Aspirin; Wheat; Milk; Dust Mites,Thyroid Disorder
+298,Elvira.Maroney@yopmail.com,Elvira Maroney,48,Female,NSAIDs,Thyroid Disorder
+963,Augustine.Francyne@yopmail.com,Augustine Francyne,70,Female,Shellfish; Mold; Pollen,Diabetes; Depression; Asthma; Epilepsy
+974,Sheelagh.Ezar@yopmail.com,Sheelagh Ezar,55,Male,Fragrances,Hypertension
+165,Tarra.Fillbert@yopmail.com,Tarra Fillbert,68,Female,Aspirin,Liver Disease
+729,Amalie.Mathilde@yopmail.com,Amalie Mathilde,26,Female,Peanuts,None
+140,Reeba.Autrey@yopmail.com,Reeba Autrey,73,Female,Soy,Arthritis
+403,Lita.Swanhildas@yopmail.com,Lita Swanhildas,53,Female,None,IBS; Obesity; Thyroid Disorder
+530,Carree.Daegal@yopmail.com,Carree Daegal,42,Female,None,Migraine
+836,Briney.Hertzfeld@yopmail.com,Briney Hertzfeld,37,Female,Alcohol; Mold,None
+884,Adele.Hanshaw@yopmail.com,Adele Hanshaw,31,Female,None,COPD; Liver Disease
+437,Ann-Marie.Breed@yopmail.com,Ann-Marie Breed,30,Male,Dust Mites,Sleep Apnea; Diabetes
+122,Frieda.Douglass@yopmail.com,Frieda Douglass,75,Male,Aspirin; Fragrances,Liver Disease
+995,Jaclyn.Tarrant@yopmail.com,Jaclyn Tarrant,39,Female,None,Sleep Apnea; Anxiety; Heart Disease
+144,Jorry.Aida@yopmail.com,Jorry Aida,37,Female,Shellfish,Arthritis; Osteoporosis; Liver Disease; COPD
+890,Angelique.Auberbach@yopmail.com,Angelique Auberbach,46,Male,Shellfish,None
+588,Andree.Suk@yopmail.com,Andree Suk,37,Male,Pet Dander; NSAIDs; Eggs; Aspirin,Migraine; Diabetes; Anxiety
+263,Sheelagh.Fancie@yopmail.com,Sheelagh Fancie,61,Female,Fragrances,Asthma
+975,Angela.Bearnard@yopmail.com,Angela Bearnard,37,Male,NSAIDs; Latex,Depression
+890,Marylou.Seessel@yopmail.com,Marylou Seessel,71,Female,Wheat; Latex,None
+693,Lucy.Merna@yopmail.com,Lucy Merna,35,Female,None,Osteoporosis
+415,Doralynne.Harl@yopmail.com,Doralynne Harl,54,Female,None,None
+560,Karlee.Meli@yopmail.com,Karlee Meli,45,Female,None,Migraine
+673,Gretal.Jotham@yopmail.com,Gretal Jotham,31,Female,Pollen; Fragrances; Gluten,Obesity
+725,Andeee.Anselmi@yopmail.com,Andeee Anselmi,51,Male,Wheat; Shellfish; Pet Dander,Diabetes; Anxiety
+589,Elena.Richers@yopmail.com,Elena Richers,52,Female,None,Thyroid Disorder
+996,Nariko.Adlare@yopmail.com,Nariko Adlare,21,Male,None,Asthma; COPD; Sleep Apnea; Stroke
+229,Christy.Cordi@yopmail.com,Christy Cordi,60,Male,Mold; Fragrances,None
+400,Selia.Toni@yopmail.com,Selia Toni,24,Male,None,None
+115,Blondelle.Riordan@yopmail.com,Blondelle Riordan,58,Female,Gluten,Hypertension; Diabetes; Anxiety; COPD
+498,Danika.Quinn@yopmail.com,Danika Quinn,38,Male,Penicillin; Pollen; Pet Dander,Obesity; Liver Disease; Depression; Osteoporosis
+882,Althea.Hunfredo@yopmail.com,Althea Hunfredo,72,Female,Dust Mites,High Cholesterol; Heart Disease
+751,Margalo.Vorster@yopmail.com,Margalo Vorster,72,Female,Fragrances; Gluten; Pet Dander,None
+983,Amara.Beebe@yopmail.com,Amara Beebe,71,Female,None,Anxiety; High Cholesterol; Chronic Kidney Disease
+509,Frances.Lipson@yopmail.com,Frances Lipson,70,Male,None,None
+242,Frieda.Bonilla@yopmail.com,Frieda Bonilla,51,Female,Pet Dander; Shellfish,High Cholesterol; Anxiety
+805,Mallory.Pulsifer@yopmail.com,Mallory Pulsifer,18,Male,Aspirin; Fragrances; Mold; Soy,None
+379,Candi.Bohlin@yopmail.com,Candi Bohlin,51,Female,Shellfish,Thyroid Disorder
+992,Roxane.Margarete@yopmail.com,Roxane Margarete,37,Female,Pet Dander,Chronic Kidney Disease; Sleep Apnea; Liver Disease
+725,Allyce.Cleo@yopmail.com,Allyce Cleo,30,Female,Nickel; Gluten,Migraine
+886,Lindie.Daniele@yopmail.com,Lindie Daniele,43,Male,None,None
+675,Devina.Ioab@yopmail.com,Devina Ioab,38,Female,Pet Dander,None
+901,Belva.Levey@yopmail.com,Belva Levey,28,Male,None,None
+445,Collen.Ophelia@yopmail.com,Collen Ophelia,42,Male,Alcohol; Peanuts; NSAIDs; Nickel,None
+566,Donnie.Faria@yopmail.com,Donnie Faria,34,Female,None,Thyroid Disorder
+824,Elise.Ulphia@yopmail.com,Elise Ulphia,46,Female,Latex,Asthma; Hypertension; Diabetes
+386,Vonny.Hathaway@yopmail.com,Vonny Hathaway,28,Male,None,Chronic Kidney Disease
+637,Lenna.Barrus@yopmail.com,Lenna Barrus,28,Male,Soy,None
+504,Ekaterina.Sallyann@yopmail.com,Ekaterina Sallyann,49,Male,None,None
+807,Carlie.Bettine@yopmail.com,Carlie Bettine,35,Male,Mold; Pollen,Obesity; COPD; Heart Disease
+422,Annecorinne.Jefferey@yopmail.com,Annecorinne Jefferey,52,Female,Fragrances; Soy,Epilepsy; Stroke; Chronic Kidney Disease
+376,Nonnah.Mullane@yopmail.com,Nonnah Mullane,64,Female,None,None
+724,Elora.Tatianas@yopmail.com,Elora Tatianas,37,Male,None,Liver Disease; Obesity; Thyroid Disorder
+303,Jinny.Fiester@yopmail.com,Jinny Fiester,33,Male,Insect Stings,Sleep Apnea; IBS; Thyroid Disorder; Liver Disease
+924,Edyth.Argus@yopmail.com,Edyth Argus,23,Female,None,Heart Disease; Depression
+586,Gerianna.Sibyls@yopmail.com,Gerianna Sibyls,73,Male,Latex,Sleep Apnea
+955,Dione.Rustice@yopmail.com,Dione Rustice,34,Female,Peanuts; Shellfish; Sulfa Drugs,COPD
+322,Sophia.Bertold@yopmail.com,Sophia Bertold,18,Female,Eggs,Sleep Apnea; Migraine; Chronic Kidney Disease; Diabetes
+183,Coral.Evvie@yopmail.com,Coral Evvie,62,Female,None,None
+122,Romona.Vorster@yopmail.com,Romona Vorster,32,Female,NSAIDs; Pollen; Insect Stings,High Cholesterol; Diabetes
+673,Andree.Estella@yopmail.com,Andree Estella,70,Male,Gluten,Stroke; COPD; IBS
+802,Nanete.Alabaster@yopmail.com,Nanete Alabaster,56,Male,Dust Mites; Alcohol; Penicillin,None
+522,Brynna.Guildroy@yopmail.com,Brynna Guildroy,31,Male,Soy; Sulfa Drugs,Thyroid Disorder; Cancer
+346,Libbie.Wyn@yopmail.com,Libbie Wyn,41,Female,None,High Cholesterol
+664,Laurene.Helfand@yopmail.com,Laurene Helfand,62,Male,None,IBS
+101,Ira.Eachern@yopmail.com,Ira Eachern,41,Male,Aspirin,Asthma
+568,Fernande.Pandolfi@yopmail.com,Fernande Pandolfi,46,Male,Insect Stings,None
+134,Sue.Tice@yopmail.com,Sue Tice,61,Female,Alcohol,Hypertension; Sleep Apnea; Osteoporosis; Arthritis
+249,Nicoli.Doig@yopmail.com,Nicoli Doig,32,Male,None,Anxiety; Liver Disease
+283,Chloris.Hazlett@yopmail.com,Chloris Hazlett,70,Female,None,Depression
+457,Silvana.Zachary@yopmail.com,Silvana Zachary,21,Female,Penicillin,Heart Disease; Anxiety; Obesity; Liver Disease
+667,Mireielle.Koziara@yopmail.com,Mireielle Koziara,50,Male,Fragrances; Insect Stings,Stroke
+666,Myrtice.Chandler@yopmail.com,Myrtice Chandler,54,Female,None,Migraine; Hypertension
+438,Blake.Belldas@yopmail.com,Blake Belldas,49,Male,None,Chronic Kidney Disease; Stroke; Arthritis; Asthma
+663,Ninnetta.Deegan@yopmail.com,Ninnetta Deegan,65,Male,Mold; Pollen; Soy; Sulfa Drugs,None
+371,Wendi.Richers@yopmail.com,Wendi Richers,64,Male,Mold; Dust Mites,None
+546,Aimil.Suzetta@yopmail.com,Aimil Suzetta,51,Male,None,Hypertension; Osteoporosis
+380,Blinni.Zamora@yopmail.com,Blinni Zamora,64,Female,Soy,Liver Disease
+663,Corly.Goode@yopmail.com,Corly Goode,19,Male,Aspirin,Liver Disease
+920,Susan.Adore@yopmail.com,Susan Adore,47,Male,Insect Stings; Penicillin; Soy,Stroke
+456,Allis.Urias@yopmail.com,Allis Urias,46,Female,Gluten; Nickel,None
+923,Stevana.Henebry@yopmail.com,Stevana Henebry,49,Male,None,None
+567,Alie.Podvin@yopmail.com,Alie Podvin,21,Female,Fragrances,Sleep Apnea
+209,Abbie.Thunell@yopmail.com,Abbie Thunell,29,Female,None,None
+714,Marylou.Mozelle@yopmail.com,Marylou Mozelle,65,Male,Latex; Wheat; Aspirin,Epilepsy; IBS; Diabetes; Depression
+334,Althea.Santoro@yopmail.com,Althea Santoro,27,Female,None,Osteoporosis
+914,Alexine.Ophelia@yopmail.com,Alexine Ophelia,34,Female,None,None
+566,Merci.Torray@yopmail.com,Merci Torray,53,Male,None,Arthritis
+833,Odessa.Rillings@yopmail.com,Odessa Rillings,56,Male,Fragrances; Aspirin; Wheat,IBS
+484,Nataline.Rosette@yopmail.com,Nataline Rosette,39,Male,Peanuts; Mold; Wheat; Nickel,None
+289,Blinni.Kermit@yopmail.com,Blinni Kermit,63,Male,None,Epilepsy; Anxiety
+594,Willetta.Sparhawk@yopmail.com,Willetta Sparhawk,57,Male,Alcohol,Obesity
+849,Stacey.Jaylene@yopmail.com,Stacey Jaylene,46,Female,None,Migraine
+581,Jordan.Loring@yopmail.com,Jordan Loring,31,Female,Milk; Pet Dander; Peanuts,None
+732,Fredericka.Gabrielli@yopmail.com,Fredericka Gabrielli,45,Male,Alcohol; NSAIDs; Mold; Nickel,Asthma
+202,Estell.Crudden@yopmail.com,Estell Crudden,37,Female,None,Hypertension; IBS; Osteoporosis
+330,Dacia.LaRue@yopmail.com,Dacia LaRue,42,Female,None,Chronic Kidney Disease
+167,Viki.Skell@yopmail.com,Viki Skell,40,Female,Dust Mites,Chronic Kidney Disease; Stroke; Diabetes; Migraine
+817,Trixi.Skurnik@yopmail.com,Trixi Skurnik,70,Female,Pollen; Latex; Eggs,Osteoporosis
+680,Jere.Roxanna@yopmail.com,Jere Roxanna,19,Male,Insect Stings,Liver Disease
+733,Glenda.LaRue@yopmail.com,Glenda LaRue,64,Male,None,None
+434,Kirstin.Etom@yopmail.com,Kirstin Etom,43,Female,Fragrances; Milk,Epilepsy
+928,Tani.Greenwald@yopmail.com,Tani Greenwald,55,Female,None,None
+954,Shell.Ortrude@yopmail.com,Shell Ortrude,40,Female,Mold,High Cholesterol; COPD; IBS; Diabetes
+606,Ardenia.Ventre@yopmail.com,Ardenia Ventre,22,Male,Aspirin,Thyroid Disorder
+908,Reeba.Fulmer@yopmail.com,Reeba Fulmer,31,Male,Fragrances,COPD; Chronic Kidney Disease
+854,Mariann.Hedve@yopmail.com,Mariann Hedve,37,Male,Pollen; Wheat; Shellfish; Milk,None
+484,Letizia.Margret@yopmail.com,Letizia Margret,36,Male,Penicillin; Insect Stings,None
+307,Starla.Bari@yopmail.com,Starla Bari,70,Male,Peanuts; Insect Stings; Mold; Latex,Heart Disease; Epilepsy; Hypertension; Asthma
+697,Maridel.Clywd@yopmail.com,Maridel Clywd,56,Male,Pet Dander,Epilepsy; Anxiety; Hypertension
+596,Aili.Marcellus@yopmail.com,Aili Marcellus,38,Male,None,Arthritis
+305,Chloris.Ferrell@yopmail.com,Chloris Ferrell,24,Female,Penicillin,COPD; Osteoporosis; Obesity; Epilepsy
+306,Doralynne.Chem@yopmail.com,Doralynne Chem,44,Male,Eggs; NSAIDs; Pollen; Peanuts,Hypertension
+305,Coral.Armanda@yopmail.com,Coral Armanda,38,Female,None,Epilepsy; Diabetes; Cancer
+308,Joeann.Jerald@yopmail.com,Joeann Jerald,50,Male,Latex; Shellfish; Peanuts,None
+291,Vere.Brunell@yopmail.com,Vere Brunell,66,Male,None,IBS
+674,Alexine.Moina@yopmail.com,Alexine Moina,72,Female,None,Migraine
+185,Lynnea.Sikorski@yopmail.com,Lynnea Sikorski,24,Female,None,Diabetes; Arthritis; Chronic Kidney Disease
+315,Rayna.Thar@yopmail.com,Rayna Thar,32,Female,Aspirin,Stroke
+917,Harrietta.Maisey@yopmail.com,Harrietta Maisey,32,Male,Eggs,IBS
+375,Mady.Yuille@yopmail.com,Mady Yuille,44,Male,None,None
+939,Sue.Medrek@yopmail.com,Sue Medrek,73,Male,None,Chronic Kidney Disease
+151,Orsola.Martguerita@yopmail.com,Orsola Martguerita,51,Male,Shellfish,Cancer
+628,Aimil.Ovid@yopmail.com,Aimil Ovid,32,Female,None,IBS
+771,Hannis.Terencio@yopmail.com,Hannis Terencio,64,Male,None,Depression; IBS
+473,Ayn.Garek@yopmail.com,Ayn Garek,24,Male,None,None
+368,Robinia.Cecile@yopmail.com,Robinia Cecile,67,Female,Sulfa Drugs; Nickel; Milk,None
+411,Gaylene.Robertson@yopmail.com,Gaylene Robertson,52,Male,None,Sleep Apnea
+388,Devina.Lilas@yopmail.com,Devina Lilas,52,Male,None,Osteoporosis; Epilepsy
+969,Bertine.Bultman@yopmail.com,Bertine Bultman,53,Male,None,High Cholesterol
+474,Penelopa.Borrell@yopmail.com,Penelopa Borrell,53,Female,None,IBS; COPD
+388,Alia.Elephus@yopmail.com,Alia Elephus,48,Male,Penicillin,None
+634,Linzy.Tamar@yopmail.com,Linzy Tamar,48,Female,Pollen; Insect Stings; Aspirin,Liver Disease; Arthritis
+449,Myrtice.Bebe@yopmail.com,Myrtice Bebe,42,Male,Soy,None
+879,Kylynn.Thomasina@yopmail.com,Kylynn Thomasina,38,Female,Alcohol; Shellfish; Sulfa Drugs; Soy,None
+392,Jacenta.Tarrant@yopmail.com,Jacenta Tarrant,21,Female,None,High Cholesterol; Stroke; Migraine; COPD
+560,Annice.Cyrie@yopmail.com,Annice Cyrie,29,Male,Penicillin,Migraine; COPD; Asthma
+371,Grier.Gaulin@yopmail.com,Grier Gaulin,43,Female,Milk; NSAIDs,IBS
+731,Blinni.Margret@yopmail.com,Blinni Margret,22,Male,Soy,Asthma; Sleep Apnea; Chronic Kidney Disease; Heart Disease
+289,Angela.Kristi@yopmail.com,Angela Kristi,33,Female,Gluten; Penicillin; Mold,Epilepsy; Chronic Kidney Disease; Osteoporosis
+431,Mariele.Judye@yopmail.com,Mariele Judye,63,Female,None,Arthritis
+782,Nadine.Llovera@yopmail.com,Nadine Llovera,32,Female,None,Stroke
+463,Gusella.Eno@yopmail.com,Gusella Eno,24,Female,Shellfish,Heart Disease; High Cholesterol
+495,Elsie.Lucienne@yopmail.com,Elsie Lucienne,61,Female,None,Cancer; Depression; Stroke; Chronic Kidney Disease
+737,Tersina.Louanna@yopmail.com,Tersina Louanna,43,Female,Nickel,None
