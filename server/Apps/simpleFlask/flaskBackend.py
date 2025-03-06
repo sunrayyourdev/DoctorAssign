@@ -10,9 +10,32 @@ import re
 import nltk
 from nltk.corpus import stopwords
 from dotenv import load_dotenv
-from llama_index.core import VectorStoreIndex, SimpleDirectoryReader, StorageContext, ServiceContext, Document
+from llama_index.core import VectorStoreIndex, StorageContext, ServiceContext, Document
 from llama_index.embeddings.openai import OpenAIEmbedding
-from llama_index.core.vector_stores.simple import SimpleVectorStore
+from llama_index.core.vector_stores import FaissVectorStore
+import time
+from collections import OrderedDict
+
+# Simple in-memory cache to store chatbot responses
+chatbot_cache = OrderedDict()
+CACHE_SIZE = 100  # Max number of cached responses
+CACHE_TTL = 300  # Cache expiry time in seconds
+
+def get_cached_response(patient_id, message):
+    """Retrieve cached response if available and not expired."""
+    cache_key = f"{patient_id}:{message}"
+    if cache_key in chatbot_cache:
+        timestamp, response = chatbot_cache[cache_key]
+        if time.time() - timestamp < CACHE_TTL:  # Check if cache is still valid
+            return response
+    return None
+
+def cache_response(patient_id, message, response):
+    """Store response in cache."""
+    cache_key = f"{patient_id}:{message}"
+    chatbot_cache[cache_key] = (time.time(), response)
+    if len(chatbot_cache) > CACHE_SIZE:
+        chatbot_cache.popitem(last=False)  # Remove oldest entry if cache limit is reached
 
 # Download stopwords for NLP preprocessing 
 nltk.download('stopwords')
@@ -55,7 +78,7 @@ if not openai.api_key:
 embedding_fn = OpenAIEmbedding(model_name="text-embedding-ada-002")  # Uses OpenAI for embeddings
 
 # Vector Store Setup
-vector_store = SimpleVectorStore()
+vector_store = FaissVectorStore()
 service_context = ServiceContext.from_defaults(embed_model=embedding_fn)
 storage_context = StorageContext.from_defaults(vector_store=vector_store)
 
@@ -80,7 +103,7 @@ def build_doctor_index():
 
         # Convert embedding_vector from string (JSON) to list
         try:
-            embedding_vector = json.loads(doctor[7]) if doctor[7] else [0] * 384
+            embedding_vector = list(map(float, doctor[7].strip("[]").split(","))) if doctor[7] else [0] * 384
         except json.JSONDecodeError:
             print(f"Warning: Invalid embedding vector format for Doctor ID {doctor[0]}")
             embedding_vector = [0] * 384
@@ -263,33 +286,30 @@ def insert():
 # ---- AI-POWERED DOCTOR RECOMMENDATION ----
 @app.route('/recommend_doctor', methods=['POST'])
 def recommend_doctor():
-    """Finds the best matching doctor based on patient symptoms using LlamaIndex."""
+    """Finds the best matching doctor based on symptoms using IRIS SQL Vector Search."""
     data = request.json
     symptoms = data.get('symptoms', '')
 
-    # Ensure index is built
-    if index is None:
-        return jsonify({"response": "Doctor index is not built yet."}), 500
+    # Convert symptoms into embedding
+    embedding_vector = model.encode(symptoms).tolist()
+    embedding_str = ",".join(map(str, embedding_vector))  
 
-    # Query the index
-    query_engine = index.as_query_engine()
-    response = query_engine.query(symptoms)
+    # Query IRIS SQL
+    query = f"""
+    SELECT * FROM SQLUser.Doctor 
+    ORDER BY VECTOR_COSINE(embedding_vector, TO_VECTOR('{embedding_str}', DOUBLE, 384)) DESC 
+    LIMIT 1;
+    """
+    
+    conn = get_iris_connection()
+    cursor = conn.cursor()
+    cursor.execute(query)
+    doctor = cursor.fetchone()
+    cursor.close()
+    conn.close()
+    
+    return jsonify({"doctor": doctor})
 
-    # Extract structured doctor information
-    best_match = response.response
-    for doctor in doctors:
-        if best_match in doctor[1]:  # Match doctor name
-            return jsonify({
-                "doctorId": doctor[0],
-                "name": doctor[1],
-                "specialty": doctor[2],
-                "locationId": doctor[3],
-                "experience_years": doctor[4],
-                "available_hours": doctor[5],
-                "description": doctor[6]
-            })
-
-    return jsonify({"message": "No suitable doctor found"})
 
 # ---- AI CHATBOT RESPONSE (WITH PREPROCESSING) ----
 def preprocess_text(text):
@@ -301,37 +321,64 @@ def preprocess_text(text):
 
 @app.route('/chatbot_response', methods=['POST'])
 def chatbot_response():
-    """Processes chatbot responses and stores conversation in IRIS."""
+    """
+    Processes chatbot responses by:
+      - Fetching past chat history from IRIS for context.
+      - Checking a local cache to reduce repeated OpenAI API calls.
+      - Storing the conversation in IRIS.
+    """
     data = request.json
-    patient_id = data.get('patientId', None)
+    patient_id = data.get('patientId')
     patient_input = data.get('message', '')
 
-    cleaned_input = preprocess_text(patient_input)  # Preprocess before sending
+    if not patient_id or not patient_input:
+        return jsonify({"response": "Invalid request"}), 400
 
-    response = openai.ChatCompletion.create(
-        model="gpt-4",
-        messages=[{"role": "system", "content": "You are a healthcare chatbot assisting patients."},
-                  {"role": "user", "content": cleaned_input}]
-    )
+    # Check if response is already cached
+    cached = get_cached_response(patient_id, patient_input)
+    if cached:
+        return jsonify({"response": cached})
 
-    chatbot_reply = response['choices'][0]['message']['content']
+    # Preprocess the input before sending (your existing preprocess_text function)
+    cleaned_input = preprocess_text(patient_input)
 
-    # Store messages in IRIS
+    # Retrieve the last 5 patient messages from IRIS to add context
     conn = get_iris_connection()
     cursor = conn.cursor()
-
-    # Insert patient message
+    cursor.execute("""
+        SELECT content FROM SQLUser.ChatMessage 
+        WHERE chatId = (SELECT chatId FROM SQLUser.PatientChat WHERE patientId = ?)
+        ORDER BY timestamp DESC LIMIT 5
+    """, (patient_id,))
+    # Get past messages (most recent first) and then reverse them to preserve chronological order
+    past_messages = [row[0] for row in cursor.fetchall()]
+    cursor.close()
+    conn.close()
+    
+    chat_history = [{"role": "user", "content": msg} for msg in reversed(past_messages)]
+    chat_history.append({"role": "user", "content": cleaned_input})
+    
+    # Call OpenAI API with system prompt and chat history
+    response = openai.ChatCompletion.create(
+        model="gpt-4",
+        messages=[{"role": "system", "content": "You are a healthcare chatbot assisting patients."}] + chat_history
+    )
+    chatbot_reply = response['choices'][0]['message']['content']
+    
+    # Cache the new response for future use
+    cache_response(patient_id, patient_input, chatbot_reply)
+    
+    # Store the new patient message and chatbot response in IRIS
+    conn = get_iris_connection()    
+    cursor = conn.cursor()
     cursor.execute("INSERT INTO SQLUser.ChatMessage (chatId, content, timestamp) VALUES (?, ?, NOW())",
                    (patient_id, cleaned_input))
-
-    # Insert chatbot response
     cursor.execute("INSERT INTO SQLUser.ChatResponse (chatId, content, timestamp) VALUES (?, ?, NOW())",
                    (patient_id, chatbot_reply))
-
-    cursor.close()
     conn.commit()
+    cursor.close()
     conn.close()
-
+    
     return jsonify({"response": chatbot_reply})
 
 if __name__ == '__main__':
