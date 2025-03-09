@@ -2,3 +2,4 @@
 server/.env.dev
 *.dev
 server/.env.dev
+/server/Apps/simpleFlask/cleaned_data

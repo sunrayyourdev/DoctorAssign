@@ -10,11 +10,13 @@ import re
 import nltk
 from nltk.corpus import stopwords
 from dotenv import load_dotenv
-from llama_index.core import VectorStoreIndex, StorageContext, ServiceContext, Document
+from llama_index.core import VectorStoreIndex, StorageContext, Document
+from llama_index.vector_stores.faiss import FaissVectorStore
 from llama_index.embeddings.openai import OpenAIEmbedding
-from llama_index.core.vector_stores import FaissVectorStore
+from llama_index.core.settings import Settings
 import time
 from collections import OrderedDict
+import faiss # Faiss for vector similarity search
 
 # Simple in-memory cache to store chatbot responses
 chatbot_cache = OrderedDict()
@@ -66,20 +68,23 @@ def get_iris_connection():
         print(f"IRIS Connection Error: {e}")
         return None
 
-# ---- AI EMBEDDING MODEL CONFIG ----
-embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
-
 # ---- OPENAI CONFIG ----
 openai.api_key = os.getenv("OPENAI_API_KEY")
 if not openai.api_key:
     raise ValueError("Missing required environment variable: OPENAI_API_KEY")
 
-# ---- LlamaIndex Vector Search Setup ----
-embedding_fn = OpenAIEmbedding(model_name="text-embedding-ada-002")  # Uses OpenAI for embeddings
+# ---- Free Llama embedding model ----
+#embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
 
-# Vector Store Setup
-vector_store = FaissVectorStore()
-service_context = ServiceContext.from_defaults(embed_model=embedding_fn)
+# ---- LlamaIndex+OpenAI Vector Search Setup ----
+embedding_fn = OpenAIEmbedding(model_name="text-embedding-ada-002")
+
+# Create a FAISS index for 1536-dimensional vectors
+faiss_index = faiss.IndexFlatL2(1536)
+vector_store = FaissVectorStore(faiss_index=faiss_index)
+
+# Instead of ServiceContext, create a Settings object
+Settings.embed_model = embedding_fn
 storage_context = StorageContext.from_defaults(vector_store=vector_store)
 
 # ---- Build Doctor Index on Startup ----
@@ -103,10 +108,10 @@ def build_doctor_index():
 
         # Convert embedding_vector from string (JSON) to list
         try:
-            embedding_vector = list(map(float, doctor[7].strip("[]").split(","))) if doctor[7] else [0] * 384
+            embedding_vector = list(map(float, doctor[7].strip("[]").split(","))) if doctor[7] else [0] * 1536
         except json.JSONDecodeError:
             print(f"Warning: Invalid embedding vector format for Doctor ID {doctor[0]}")
-            embedding_vector = [0] * 384
+            embedding_vector = [0] * 1536
 
         # Create document with structured metadata
         doc = Document(text=doc_text, metadata={
@@ -123,7 +128,7 @@ def build_doctor_index():
 
     # Build the index with doctor data
     if documents:
-        index = VectorStoreIndex.from_documents(documents, storage_context=storage_context, service_context=service_context)
+        index = VectorStoreIndex.from_documents(documents, storage_context=storage_context, settings=Settings)
         print("Doctor Index Built Successfully")
         return index
     else:
@@ -291,13 +296,13 @@ def recommend_doctor():
     symptoms = data.get('symptoms', '')
 
     # Convert symptoms into embedding
-    embedding_vector = model.encode(symptoms).tolist()
+    embedding_vector = embedding_fn.embed_query(symptoms)
     embedding_str = ",".join(map(str, embedding_vector))  
 
     # Query IRIS SQL
     query = f"""
     SELECT * FROM SQLUser.Doctor 
-    ORDER BY VECTOR_COSINE(embedding_vector, TO_VECTOR('{embedding_str}', DOUBLE, 384)) DESC 
+    ORDER BY VECTOR_COSINE(embedding_vector, TO_VECTOR('{embedding_str}', DOUBLE, 1536)) DESC 
     LIMIT 1;
     """
     
