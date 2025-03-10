@@ -217,14 +217,19 @@ df_patient_chat = pd.DataFrame(patient_chat_data)
 df_chat_message = pd.DataFrame(chat_message_data)
 df_chat_response = pd.DataFrame(chat_response_data)
 
-# Save to Excel
-excel_output_path = os.path.join(output_folder, "PatientChats.xlsx")
-with pd.ExcelWriter(excel_output_path) as writer:
-    df_patient_chat.to_excel(writer, sheet_name="PatientChat", index=False)
-    df_chat_message.to_excel(writer, sheet_name="ChatMessage", index=False)
-    df_chat_response.to_excel(writer, sheet_name="ChatResponse", index=False)
+# Save each DataFrame to CSV files
+patient_chat_output_path = os.path.join(output_folder, "PatientChat.csv")
+df_patient_chat.to_csv(patient_chat_output_path, index=False, encoding="utf-8")
 
-print(f"✅ Patient chat data generated and saved to {excel_output_path}")
+chat_message_output_path = os.path.join(output_folder, "ChatMessage.csv")
+df_chat_message.to_csv(chat_message_output_path, index=False, encoding="utf-8")
+
+chat_response_output_path = os.path.join(output_folder, "ChatResponse.csv")
+df_chat_response.to_csv(chat_response_output_path, index=False, encoding="utf-8")
+
+print(f"✅ Patient chat data generated and saved to {patient_chat_output_path}")
+print(f"✅ Chat message data generated and saved to {chat_message_output_path}")
+print(f"✅ Chat response data generated and saved to {chat_response_output_path}")
 
 # Generate Admin data
 admin_roles = [

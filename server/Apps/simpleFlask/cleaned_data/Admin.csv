@@ -1,4 +1,4 @@
-adminId,name,role
+adminId,name,admin_role
 1,admin1,System Administrator
 2,admin2,Database Administrator
 3,admin3,Network Administrator
