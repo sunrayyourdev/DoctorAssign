@@ -18,15 +18,15 @@ export default function Navbar() {
       <div className="flex items-center">
         <Link href="/" className="flex items-center gap-2 font-bold text-gray-800">
           <div className="flex h-8 w-8 items-center justify-center rounded-md bg-primary text-primary-foreground">
-            <span className="text-lg font-bold">A</span>
+            <span className="text-lg font-bold">D</span>
           </div>
-          <span className="hidden md:inline-block">AppointmentPro</span>
+          <span className="hidden md:inline-block">DoctorAssign</span>
         </Link>
       </div>
 
       {/* Navigation Tabs */}
       <div className="flex items-center gap-1 md:gap-2">
-        <NavItem href="/dashboard" active={pathname === "/dashboard"}>
+        <NavItem href="/admin" active={pathname === "/admin"}>
           Dashboard
         </NavItem>
         <NavItem href="/new-appointment" active={pathname === "/new-appointment"}>
@@ -36,11 +36,13 @@ export default function Navbar() {
 
       {/* User Profile */}
       <div className="flex items-center">
+      <NavItem href="/profile" active={pathname === "/profile"}>
         <Avatar className="h-8 w-8 cursor-pointer transition-transform hover:scale-110">
           <AvatarFallback className="bg-primary text-primary-foreground">
             <User className="h-4 w-4" />
           </AvatarFallback>
         </Avatar>
+      </NavItem>
       </div>
     </nav>
   )
