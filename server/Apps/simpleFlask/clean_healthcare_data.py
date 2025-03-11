@@ -1,7 +1,14 @@
+from dotenv import load_dotenv
 import pandas as pd
 import os
 import random
 from datetime import datetime, timedelta, timezone
+import openai
+import json
+import time
+
+load_dotenv()
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 # Define input and output paths
 base_path = "./"
@@ -14,31 +21,78 @@ os.makedirs(output_folder, exist_ok=True)
 
 # Sample list of 20 real clinics in Singapore
 clinics = [
-    {"Clinic Name": "CHANG CLINIC & SURGERY", "Address": "7 Everton Park #01-21", "Postal Code": "080007"},
-    {"Clinic Name": "CHANGI CLINIC", "Address": "848 Sims Avenue #01-734 Eunosville", "Postal Code": "400848"},
-    {"Clinic Name": "SUNBEAM MEDICAL CLINIC", "Address": "443C Fajar Road #01-76", "Postal Code": "673443"},
-    {"Clinic Name": "TANG FAMILY CLINIC", "Address": "84 Jalan Jurong Kechil", "Postal Code": "598593"},
-    {"Clinic Name": "FRONTIER PEOPLE'S CLINIC PTE LTD", "Address": "Blk 123 Bedok North Street 2 #01-152", "Postal Code": "460123"},
-    {"Clinic Name": "Central 24-HR Clinic (Bedok)", "Address": "219 Bedok Central, #01-124", "Postal Code": "460219"},
-    {"Clinic Name": "Central 24-HR Clinic (Clementi)", "Address": "450 Clementi Ave 3 #01-291", "Postal Code": "120450"},
-    {"Clinic Name": "Central 24-HR Clinic (Hougang)", "Address": "681 Hougang Ave 8, #01-829", "Postal Code": "530681"},
-    {"Clinic Name": "Central 24-HR Clinic (Jurong)", "Address": "492 Jurong West Street 41, #01-54", "Postal Code": "640492"},
-    {"Clinic Name": "Central 24-HR Clinic (Yishun)", "Address": "701A Yishun Ave 5, #01-04", "Postal Code": "761701"},
-    {"Clinic Name": "OneCare Clinic Yishun", "Address": "846 Yishun Ring Rd #01-3669", "Postal Code": "760846"},
-    {"Clinic Name": "Acumed Medical Group", "Address": "Blk 727 Ang Mo Kio Ave 6", "Postal Code": "560727"},
-    {"Clinic Name": "Bukit Batok Medical Clinic", "Address": "632 Bukit Batok Central", "Postal Code": "650632"},
-    {"Clinic Name": "East Coast Family Clinic", "Address": "121 Bedok Reservoir Rd #01-202", "Postal Code": "470121"},
-    {"Clinic Name": "Everhealth Clinic & Surgery", "Address": "201D Tampines Street 21 #01-1171", "Postal Code": "524201"},
-    {"Clinic Name": "Healthway Medical", "Address": "446 Clementi Ave 3 #01-201", "Postal Code": "120446"},
-    {"Clinic Name": "Silver Cross Family Clinic", "Address": "2 Lorong Lew Lian #01-50", "Postal Code": "531002"},
-    {"Clinic Name": "The Clinic Group", "Address": "1 Raffles Quay #09-02", "Postal Code": "048583"},
-    {"Clinic Name": "Trucare Medical", "Address": "Blk 682 Hougang Ave 4 #01-320", "Postal Code": "530682"},
-    {"Clinic Name": "Zion Medical Centre", "Address": "Blk 502 Jurong West Ave 1 #01-815", "Postal Code": "640502"}
+    {"clinicName": "CHANG CLINIC & SURGERY", "Address": "7 Everton Park #01-21", "postalCode": "080007"},
+    {"clinicName": "CHANGI CLINIC", "Address": "848 Sims Avenue #01-734 Eunosville", "postalCode": "400848"},
+    {"clinicName": "SUNBEAM MEDICAL CLINIC", "Address": "443C Fajar Road #01-76", "postalCode": "673443"},
+    {"clinicName": "TANG FAMILY CLINIC", "Address": "84 Jalan Jurong Kechil", "postalCode": "598593"},
+    {"clinicName": "FRONTIER PEOPLE'S CLINIC PTE LTD", "Address": "Blk 123 Bedok North Street 2 #01-152", "postalCode": "460123"},
+    {"clinicName": "Central 24-HR Clinic (Bedok)", "Address": "219 Bedok Central, #01-124", "postalCode": "460219"},
+    {"clinicName": "Central 24-HR Clinic (Clementi)", "Address": "450 Clementi Ave 3 #01-291", "postalCode": "120450"},
+    {"clinicName": "Central 24-HR Clinic (Hougang)", "Address": "681 Hougang Ave 8, #01-829", "postalCode": "530681"},
+    {"clinicName": "Central 24-HR Clinic (Jurong)", "Address": "492 Jurong West Street 41, #01-54", "postalCode": "640492"},
+    {"clinicName": "Central 24-HR Clinic (Yishun)", "Address": "701A Yishun Ave 5, #01-04", "postalCode": "761701"},
+    {"clinicName": "OneCare Clinic Yishun", "Address": "846 Yishun Ring Rd #01-3669", "postalCode": "760846"},
+    {"clinicName": "Acumed Medical Group", "Address": "Blk 727 Ang Mo Kio Ave 6", "postalCode": "560727"},
+    {"clinicName": "Bukit Batok Medical Clinic", "Address": "632 Bukit Batok Central", "postalCode": "650632"},
+    {"clinicName": "East Coast Family Clinic", "Address": "121 Bedok Reservoir Rd #01-202", "postalCode": "470121"},
+    {"clinicName": "Everhealth Clinic & Surgery", "Address": "201D Tampines Street 21 #01-1171", "postalCode": "524201"},
+    {"clinicName": "Healthway Medical", "Address": "446 Clementi Ave 3 #01-201", "postalCode": "120446"},
+    {"clinicName": "Silver Cross Family Clinic", "Address": "2 Lorong Lew Lian #01-50", "postalCode": "531002"},
+    {"clinicName": "The Clinic Group", "Address": "1 Raffles Quay #09-02", "postalCode": "048583"},
+    {"clinicName": "Trucare Medical", "Address": "Blk 682 Hougang Ave 4 #01-320", "postalCode": "530682"},
+    {"clinicName": "Zion Medical Centre", "Address": "Blk 502 Jurong West Ave 1 #01-815", "postalCode": "640502"}
 ]
 
 # Lists of medications and procedures
 medications_list = ["Paracetamol", "Ibuprofen", "Amoxicillin", "Metformin", "Amlodipine", "Omeprazole", "Atorvastatin", "Salbutamol", "Lisinopril", "Simvastatin"]
 procedures_list = ["Blood Test", "ECG", "X-Ray", "Vaccination", "Minor Surgery", "Health Screening", "Physiotherapy", "Endoscopy", "Ultrasound", "Wound Dressing"]
+
+def generate_batch_embeddings(text_list, batch_size=50):
+    """Generate embeddings for a batch of texts using OpenAI API with batch handling."""
+    all_embeddings = []
+
+    # Ensure OpenAI API key is correctly set
+    api_key = os.getenv("OPENAI_API_KEY")
+    if not api_key:
+        print("❌ OpenAI API key missing.")
+        return [json.dumps([0.0] * 1536)] * len(text_list)  # Return default vectors
+
+    openai.api_key = api_key
+
+    for i in range(0, len(text_list), batch_size):
+        batch = text_list[i: i + batch_size]
+        print(f"🔄 Requesting embeddings for batch {i // batch_size + 1}/{(len(text_list) // batch_size) + 1}...")
+
+        try:
+            response = openai.embeddings.create(
+                model="text-embedding-ada-002",
+                input=batch
+            )
+
+            # Ensure embeddings are properly stored as JSON strings
+            embeddings = [json.dumps(data.embedding) for data in response.data] if response.data else \
+                         [json.dumps([0.0] * 1536)] * len(batch)
+
+            # Ensure correct length
+            if len(embeddings) != len(batch):
+                print(f"⚠️ Mismatch in embeddings count: Expected {len(batch)}, got {len(embeddings)}")
+                embeddings = [json.dumps([0.0] * 1536)] * len(batch)
+
+            all_embeddings.extend(embeddings)
+
+        except Exception as e:
+            print(f"⚠️ Error generating embeddings: {e}")
+            all_embeddings.extend([json.dumps([0.0] * 1536)] * len(batch))  # Default empty vector
+
+        time.sleep(1)  # Delay to prevent API rate limits
+
+    # Ensure the length of the output matches the input
+    if len(all_embeddings) != len(text_list):
+        print(f"⚠️ Final length mismatch: Expected {len(text_list)}, got {len(all_embeddings)}")
+        while len(all_embeddings) < len(text_list):
+            all_embeddings.append(json.dumps([0.0] * 1536))
+
+    return all_embeddings
 
 # Function to assign random medications and procedures
 def assign_services(services_list):
@@ -62,15 +116,26 @@ def generate_available_hours():
 
 # Function to clean Doctor data
 def clean_doctor_data(df):
-    """Format Doctor data to match the suggested schema."""
+    """Format Doctor data to match the schema and pre-generate embeddings."""
     df.rename(columns={"DoctorID": "doctorId", "DoctorName": "name", "Specialization": "specialty"}, inplace=True)
 
-    # Add missing fields
-    df["locationId"] = range(1, len(df) + 1)  # Sequential location IDs starting from 1
-    df["experience_years"] = [random.randint(1, 30) for _ in range(len(df))]  # Random experience between 1-30 years
-    df["available_hours"] = [generate_available_hours() for _ in range(len(df))]  # Randomized working hours
+    df["locationId"] = range(1, len(df) + 1)  # Assign location IDs
+    df["experience_years"] = [random.randint(1, 30) for _ in range(len(df))]  # Random experience
+    df["available_hours"] = [generate_available_hours() for _ in range(len(df))]  # Random working hours
     df["description"] = "Experienced in " + df["specialty"]  # Auto-generate based on specialty
-    df["embedding_vector"] = None  # Placeholder for AI-powered search
+
+    # Ensure no NaN values before generating embeddings
+    df["description"] = df["description"].fillna("Unknown")
+
+    # Generate embeddings and ensure correct alignment
+    embeddings = generate_batch_embeddings(df["description"].tolist())
+
+    # Ensure embeddings list matches the number of rows
+    if len(embeddings) == len(df):
+        df["embedding_vector"] = embeddings
+    else:
+        print("⚠️ Embedding length mismatch, using default vectors.")
+        df["embedding_vector"] = [json.dumps([0.0] * 1536)] * len(df)
 
     return df
 
@@ -87,9 +152,9 @@ location_data = []
 for i, clinic in enumerate(clinics_extended):
     location_entry = {
         "locationId": i + 1,
-        "Clinic Name": clinic["Clinic Name"],
+        "clinicName": clinic["clinicName"],
         "Address": clinic["Address"],
-        "Postal Code": clinic["Postal Code"],
+        "postalCode": clinic["postalCode"],
         "medications": assign_services(medications_list),
         "procedures": assign_services(procedures_list)
     }
@@ -148,6 +213,9 @@ for name, file in input_files.items():
     try:
         df = pd.read_csv(file)
         cleaned_df = cleaning_functions[name](df)
+
+        # Drop any accidental extra columns before saving
+        cleaned_df = cleaned_df.loc[:, ~cleaned_df.columns.str.contains("^Unnamed")]
 
         # Save cleaned file
         output_path = os.path.join(output_folder, f"{name}_Cleaned.csv")
@@ -243,7 +311,7 @@ for i in range(10):
     admin_data.append({
         "adminId": i + 1,
         "name": f"admin{i + 1}",
-        "role": admin_roles[i]
+        "admin_role": admin_roles[i]
     })
 
 df_admin = pd.DataFrame(admin_data)

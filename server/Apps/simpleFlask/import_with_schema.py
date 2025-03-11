@@ -1,6 +1,8 @@
+from dotenv import load_dotenv
 import iris
 import pandas as pd
 import os
+import json
 
 # IRIS Database Connection Details
 IRIS_HOST = "localhost"
@@ -15,7 +17,7 @@ def get_iris_connection():
         conn = iris.connect(f"{IRIS_HOST}:{IRIS_PORT}/{IRIS_NAMESPACE}", IRIS_USERNAME, IRIS_PASSWORD)
         return conn
     except Exception as e:
-        print(f"❌ Error connecting to IRIS: {e}")
+        print(f"Error connecting to IRIS: {e}")
         return None
 
 # Function to manually create tables with PK & FK constraints
@@ -38,7 +40,7 @@ def create_tables():
                 experience_years INT,
                 available_hours VARCHAR(255),
                 description TEXT,
-                embedding_vector VECTOR(DOUBLE, 3)  -- Updated type
+                embedding_vector TEXT
             )
         """)
 
@@ -108,34 +110,53 @@ def create_tables():
         """)
 
         conn.commit()
-        print("✅ All tables created successfully with PK & FK.")
+        print("All tables created successfully with PK & FK.")
     
     except Exception as e:
-        print(f"❌ Error creating tables: {e}")
+        print(f"Error creating tables: {e}")
 
     cursor.close()
     conn.close()
 
-# Function to insert CSV data into the structured tables
 def insert_csv_to_iris(csv_path, table_name, columns):
-    """Reads a CSV and inserts data into the specified IRIS table."""
+    """Reads a CSV and inserts data into the IRIS table with pre-generated embeddings."""
     conn = get_iris_connection()
     if not conn:
         return
-    
+
     df = pd.read_csv(csv_path)
-    df = df[columns]  # Ensure correct column order
+
+    # ✅ Drop any accidental extra columns before inserting into IRIS
+    df = df.loc[:, df.columns.intersection(columns)]
+
+    # ✅ Ensure correct column order
+    df = df[columns]  
 
     cursor = conn.cursor()
     placeholders = ", ".join(["?" for _ in columns])
     query = f"INSERT INTO {table_name} ({', '.join(columns)}) VALUES ({placeholders})"
 
-    values = [tuple(row) for row in df.to_numpy()]
-    
+    values = []
+    for row in df.itertuples(index=False, name=None):
+        row = list(row)
+
+        # ✅ Ensure the embedding vector remains a valid JSON array (not a double-encoded string)
+        if "embedding_vector" in columns:
+            idx = columns.index("embedding_vector")
+            if isinstance(row[idx], str):  # Check if it's already a string
+                row[idx] = row[idx]  # Keep it as-is (assuming CSV is correctly formatted)
+            else:
+                row[idx] = json.dumps(row[idx])  # Only convert if it's a raw list
+
+        values.append(tuple(row))
+
+    print(f"📝 SQL Query: {query}")
+    print(f"📊 First Row Processed: {values[0] if values else 'No Data'}")
+
     try:
         cursor.executemany(query, values)
         conn.commit()
-        print(f"✅ Inserted {len(df)} rows into {table_name}")
+        print(f"✅ Successfully inserted {len(df)} rows into {table_name}")
     except Exception as e:
         print(f"❌ Error inserting into {table_name}: {e}")
     finally:
@@ -163,7 +184,7 @@ if __name__ == "__main__":
     for csv_file, (table_name, columns) in CSV_TABLE_MAPPING.items():
         csv_path = os.path.join(CLEANED_DATA_DIR, csv_file)
         if os.path.exists(csv_path):
-            print(f"📂 Importing {csv_file} into {table_name}...")
+            print(f"Importing {csv_file} into {table_name}...")
             insert_csv_to_iris(csv_path, table_name, columns)
         else:
-            print(f"⚠️ Skipping {csv_file}, file not found.")
+            print(f"Skipping {csv_file}, file not found.")
