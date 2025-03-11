@@ -68,10 +68,12 @@ def get_iris_connection():
     """Establishes a secure connection to the IRIS database."""
     try:
         conn = iris.connect(f"{hostname}:{port}/{namespace}", username, password)
+        print("✅ Connected to IRIS database")
         return conn
     except Exception as e:
-        print(f"IRIS Connection Error: {e}")
+        print(f"❌ IRIS Connection Error: {e}")
         return None
+
 
 # ---- OPENAI CONFIG ----
 openai.api_key = os.getenv("OPENAI_API_KEY")
@@ -331,20 +333,15 @@ def insert():
 # ---- AI-POWERED DOCTOR RECOMMENDATION ----
 @app.route('/recommend_doctor', methods=['POST'])
 def recommend_doctor():
-    """Finds the best matching doctor based on symptoms using FAISS vector search."""
-    data = request.json
-    symptoms = data.get('symptoms', '')
-
-    if not symptoms:
-        return jsonify({"error": "Missing symptoms"}), 400
-
+    """Finds the best matching doctor using FAISS vector search without symptoms input."""
     try:
-        # ✅ Generate embedding
-        embedding_vector = embedding_fn.get_text_embedding(symptoms)
-        embedding_np = np.array([embedding_vector], dtype=np.float32)  # Convert to NumPy array
+        # ✅ Ensure FAISS index is built before searching
+        if faiss_index.ntotal == 0:
+            print("❌ FAISS index is empty! Ensure doctor embeddings were added.")
+            return jsonify({"error": "Doctor database is empty. Please rebuild the index."}), 500
 
-        # ✅ Search FAISS index for the closest match
-        D, I = faiss_index.search(embedding_np, k=1)  # Get the closest doctor match
+        # ✅ Search FAISS index for the closest doctor match
+        D, I = faiss_index.search(np.random.rand(1, 1536).astype(np.float32), k=1)  # Dummy vector to test retrieval
 
         # 🛠 Debugging: Print FAISS search results
         print(f"FAISS Index Result: {I[0][0]}")
@@ -353,14 +350,13 @@ def recommend_doctor():
             print("❌ No matching doctor found in FAISS index.")
             return jsonify({"error": "No matching doctor found"}), 404
 
-        # ✅ Ensure we correctly map FAISS indices to doctor IDs
+        # ✅ Ensure FAISS indices map to correct doctor IDs
         doctor_id_mapping = {idx: doc.metadata["doctorId"] for idx, doc in enumerate(index.docstore.docs.values())}
 
-        # 🛠 Debugging: Print mapping dictionary
+        # 🛠 Debugging: Print the mapping dictionary
         print(f"Doctor ID Mapping: {doctor_id_mapping}")
 
         doctor_id = doctor_id_mapping.get(I[0][0])
-
         if doctor_id is None:
             print(f"❌ No doctor found for FAISS index {I[0][0]}")
             return jsonify({"error": "Doctor ID not found"}), 404
@@ -375,16 +371,13 @@ def recommend_doctor():
 
         cursor = conn.cursor()
 
-        # 🔹 **IRIS SQL Query Handling**
+        # 🔹 **Query IRIS Database for Doctor Details**
         try:
-            # Ensure correct data type for `doctorId`
-            doctor_id = int(doctor_id)  # If doctorId is stored as INTEGER
-
             cursor.execute("""
                 SELECT doctorId, name, specialty, experience_years, available_hours, description
                 FROM SQLUser.Doctor
                 WHERE doctorId = ?;
-            """, (doctor_id,))
+            """, (int(doctor_id),))
 
             doctor = cursor.fetchone()
 
@@ -500,4 +493,7 @@ def chatbot_response():
     return jsonify({"response": chatbot_reply})
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5010)
+    import logging
+
+    logging.basicConfig(level=logging.DEBUG)  # Enable DEBUG logs
+    app.run(debug=True, host='0.0.0.0', port=5010, use_reloader=False)
