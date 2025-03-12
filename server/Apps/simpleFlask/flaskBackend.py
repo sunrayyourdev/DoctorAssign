@@ -365,36 +365,28 @@ def chatbot_response():
         
         cursor = conn.cursor()
 
-        cursor.execute("SELECT chatId FROM SQLUser.PatientChat WHERE patientId = ?", (patient_id,))
+        cursor.execute("SELECT chatId, messages, responses FROM SQLUser.PatientChat WHERE patientId = ?", (patient_id,))
         chat_row = cursor.fetchone()
 
         if not chat_row:
-            cursor.execute("INSERT INTO SQLUser.PatientChat (patientId, Title) VALUES (?, ?)", (patient_id, "New Chat"))
+            cursor.execute("INSERT INTO SQLUser.PatientChat (patientId, Title, chat_timestamp, messages, responses) VALUES (?, ?, NOW(), ?, ?)", 
+                           (patient_id, "New Chat", json.dumps([]), json.dumps([])))
             conn.commit()
             cursor.execute("SELECT LAST_IDENTITY() FROM SQLUser.PatientChat")
             chat_id_row = cursor.fetchone()
             chat_id = chat_id_row[0] if chat_id_row else None
+            messages = []
+            responses = []
         else:
             chat_id = chat_row[0]
+            messages = json.loads(chat_row[1]) if chat_row[1] else []
+            responses = json.loads(chat_row[2]) if chat_row[2] else []
 
-        cursor.execute("SELECT MAX(messageId) FROM SQLUser.ChatMessage")
-        last_message_id = cursor.fetchone()[0] or 0  # Default to 0 if no messages exist
-        new_message_id = last_message_id + 1
-        
-        try:
-            logging.info(f"Inserting message: messageId={new_message_id}, chatId={chat_id}, content={patient_input}")
-            cursor.execute("INSERT INTO SQLUser.ChatMessage (messageId, chatId, content, timestamp) VALUES (?, ?, ?, NOW())",
-                        (new_message_id, chat_id, patient_input))
-            conn.commit()
-            logging.info(f"Message successfully inserted for chatId={chat_id}")
-        except Exception as e:
-            logging.error(f"Error inserting chat message: {e}", exc_info=True)
+        # Append the new message
+        messages.append({"content": patient_input, "timestamp": time.strftime('%Y-%m-%d %H:%M:%S')})
 
-        cursor.execute("SELECT TOP 5 content FROM SQLUser.ChatMessage WHERE chatId = ? ORDER BY timestamp DESC", (chat_id,))
-        past_messages = cursor.fetchall()
-        past_messages = [row[0] for row in past_messages] if past_messages else []
-
-        chat_history = [{"role": "user", "content": msg} for msg in reversed(past_messages)]
+        # Generate chatbot response
+        chat_history = [{"role": "user", "content": msg["content"]} for msg in messages]
         chat_history.append({"role": "user", "content": patient_input})
 
         response = client.chat.completions.create(
@@ -405,10 +397,13 @@ def chatbot_response():
             timeout=10
         )
         chatbot_reply = response.choices[0].message.content
-        cursor.execute("SELECT MAX(responseId) FROM SQLUser.ChatResponse")
-        last_response_id = cursor.fetchone()[0] or 0  # Default to 0 if no messages exist
-        new_response_id = last_response_id + 1
-        cursor.execute("INSERT INTO SQLUser.ChatResponse (responseId, chatId, content, timestamp) VALUES (?, ?, ?, NOW())", (new_response_id, chat_id, chatbot_reply))
+
+        # Append the new response
+        responses.append({"content": chatbot_reply, "timestamp": time.strftime('%Y-%m-%d %H:%M:%S')})
+
+        # Update the PatientChat table with the new messages and responses
+        cursor.execute("UPDATE SQLUser.PatientChat SET messages = ?, responses = ?, chat_timestamp = NOW() WHERE chatId = ?", 
+                       (json.dumps(messages), json.dumps(responses), chat_id))
         conn.commit()
 
         # Check if a doctor should be recommended
@@ -454,7 +449,41 @@ def chatbot_response():
 
     except Exception as e:
         return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
+    
+@app.route('/get_chat_log/<int:patient_id>', methods=['GET'])
+def get_chat_log(patient_id):
+    """Fetches the chat log for a specific patient."""
+    try:
+        conn = get_iris_connection()
+        if not conn:
+            return jsonify({"error": "Database connection failed"}), 500
+        
+        cursor = conn.cursor()
 
+        cursor.execute("SELECT * FROM SQLUser.PatientChat WHERE patientId = ?", (patient_id,))
+        chat_row = cursor.fetchone()
+
+        if not chat_row:
+            return jsonify({"error": "No chat log found for the specified patient ID"}), 404
+
+        # Get column names
+        columns = [desc[0] for desc in cursor.description]
+
+        # Convert the row to a dictionary
+        chat_log = dict(zip(columns, chat_row))
+
+        # Parse messages and responses if they exist
+        chat_log['messages'] = json.loads(chat_log['messages']) if chat_log['messages'] else []
+        chat_log['responses'] = json.loads(chat_log['responses']) if chat_log['responses'] else []
+
+        cursor.close()
+        conn.close()
+
+        return jsonify({"chat_log": chat_log})
+
+    except Exception as e:
+        return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
+    
 if __name__ == '__main__':
     import logging
     logging.basicConfig(level=logging.DEBUG)  # Enable DEBUG logs
