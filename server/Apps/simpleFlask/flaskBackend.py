@@ -345,7 +345,7 @@ def recommend_doctor():
         conn = get_iris_connection()
         cursor = conn.cursor()
 
-        # Fetch the latest chat messages for the patient (extracted symptoms)
+        # Fetch latest chat messages for the patient
         cursor.execute("""
             SELECT content FROM (
                 SELECT CM.content, ROW_NUMBER() OVER (ORDER BY CM.timestamp DESC) AS row_num
@@ -360,28 +360,47 @@ def recommend_doctor():
         if not chat_data:
             return jsonify({"error": "No recent chat messages found for patient"}), 404
 
-        # Combine multiple messages into a single string for symptom extraction
+        # Combine messages into one input string
         patient_input = " ".join([row[0] for row in chat_data])
         print(f"Extracted Patient Input: {patient_input}")
 
         # Generate an embedding for the extracted text
         embedding_vector = embedding_fn.get_text_embedding(patient_input)
+
+        # Ensure embedding vector is correct dimension
+        if len(embedding_vector) != 1536:
+            return jsonify({"error": "Embedding dimension mismatch"}), 500
+
         embedding_np = np.array([embedding_vector], dtype=np.float32)
+
+        # Check if FAISS index has stored doctor embeddings
+        if faiss_index.ntotal == 0:
+            return jsonify({"error": "No doctor embeddings found in FAISS index"}), 500
 
         # Search FAISS for the closest doctor match
         D, I = faiss_index.search(embedding_np, k=1)
 
+        # Debugging: Log FAISS search results
+        print(f"FAISS Search Results: D={D}, I={I}")
+
         if I[0][0] == -1:
             return jsonify({"error": "No matching doctor found"}), 404
 
+        # Ensure FAISS result is valid
+        if I[0][0] >= len(index.docstore.docs):
+            return jsonify({"error": "FAISS returned an invalid index"}), 500
+
         # Get doctor ID mapping
-        doctor_id_mapping = {idx: doc.metadata["doctorId"] for idx, doc in enumerate(index.docstore.docs.values())}
-        doctor_id = doctor_id_mapping.get(I[0][0])
+        try:
+            doctor_id_mapping = {idx: doc.metadata["doctorId"] for idx, doc in enumerate(index.docstore.docs.values())}
+            doctor_id = doctor_id_mapping.get(I[0][0], None)
 
-        if not doctor_id:
-            return jsonify({"error": "Doctor ID not found"}), 404
+            if not doctor_id:
+                return jsonify({"error": "Doctor ID not found"}), 404
+        except Exception as mapping_error:
+            return jsonify({"error": f"Doctor ID mapping error: {str(mapping_error)}"}), 500
 
-        # Fetch doctor details
+        # Fetch doctor details from database
         cursor.execute("""
             SELECT doctorId, name, specialty, experience_years, available_hours, description, doctorContact
             FROM SQLUser.Doctor WHERE doctorId = ?
@@ -402,7 +421,7 @@ def recommend_doctor():
                 "doctorContact": doctor[6]
             })
         else:
-            return jsonify({"error": "Doctor not found"}), 404
+            return jsonify({"error": "Doctor not found in database"}), 404
 
     except Exception as e:
         return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
