@@ -68,10 +68,10 @@ def get_iris_connection():
     """Establishes a secure connection to the IRIS database."""
     try:
         conn = iris.connect(f"{hostname}:{port}/{namespace}", username, password)
-        print("✅ Connected to IRIS database")
+        print(" Connected to IRIS database")
         return conn
     except Exception as e:
-        print(f"❌ IRIS Connection Error: {e}")
+        print(f" IRIS Connection Error: {e}")
         return None
 
 
@@ -110,7 +110,7 @@ def build_doctor_index():
     conn.close()
 
     # Debug: Confirm FAISS index initialization
-    print(f"✅ FAISS Index Initialized with {faiss_index.d} dimensions")  # Should print 1536
+    print(f" FAISS Index Initialized with {faiss_index.d} dimensions")  # Should print 1536
 
     documents = []
     embeddings = []  # Separate list for FAISS embeddings
@@ -132,11 +132,11 @@ def build_doctor_index():
                 embedding_vector = [0] * 1536  # Default vector if missing
 
             # Debug: Check retrieved embedding length
-            print(f"🔍 Doctor ID: {doctor[0]}, Embedding Length: {len(embedding_vector)}")  # Should print 1536
+            print(f" Doctor ID: {doctor[0]}, Embedding Length: {len(embedding_vector)}")  # Should print 1536
 
             doc_text = f"Doctor: {doctor[1]}\nSpecialty: {doctor[2]}\nExperience: {doctor[4]} years\nDescription: {doctor[6]}"
 
-            doc = Document(text=doc_text, metadata={  # ✅ REMOVE embeddings from metadata
+            doc = Document(text=doc_text, metadata={  #  REMOVE embeddings from metadata
                 "doctorId": doctor[0],
                 "name": doctor[1],
                 "specialty": doctor[2],
@@ -153,20 +153,20 @@ def build_doctor_index():
             metadata_list.append({"doctorId": doctor[0], "name": doctor[1], "specialty": doctor[2]})
 
         except (ValueError, json.JSONDecodeError) as e:
-            print(f"⚠️ Warning: Invalid embedding vector format for Doctor ID {doctor[0]} - {e}")
+            print(f" Warning: Invalid embedding vector format for Doctor ID {doctor[0]} - {e}")
 
     # Insert all embeddings into FAISS
     if embeddings:
-        faiss_index.add(np.vstack(embeddings))  # ✅ Efficient batch insertion
-        print(f"✅ Successfully inserted {len(embeddings)} embeddings into FAISS.")
+        faiss_index.add(np.vstack(embeddings))  #  Efficient batch insertion
+        print(f" Successfully inserted {len(embeddings)} embeddings into FAISS.")
 
     # Build the index with doctor data
     if documents:
         index = VectorStoreIndex.from_documents(documents, storage_context=storage_context, settings=Settings)
-        print("✅ Doctor Index Built Successfully")
+        print(" Doctor Index Built Successfully")
         return index
     else:
-        print("⚠️ Warning: No doctors found in the database.")
+        print(" Warning: No doctors found in the database.")
         return None
 
 # Initialize index on startup
@@ -333,89 +333,92 @@ def insert():
 # ---- AI-POWERED DOCTOR RECOMMENDATION ----
 @app.route('/recommend_doctor', methods=['POST'])
 def recommend_doctor():
-    """Finds the best matching doctor using FAISS vector search without symptoms input."""
+    """Finds the best matching doctor based on the patient's latest chat message and medical conditions."""
+    data = request.json
+    patient_id = data.get('patientId')
+
+    if not patient_id:
+        return jsonify({"error": "Missing patientId"}), 400
+
     try:
-        # ✅ Ensure FAISS index is built before searching
-        if faiss_index.ntotal == 0:
-            print("❌ FAISS index is empty! Ensure doctor embeddings were added.")
-            return jsonify({"error": "Doctor database is empty. Please rebuild the index."}), 500
-
-        # ✅ Search FAISS index for the closest doctor match
-        D, I = faiss_index.search(np.random.rand(1, 1536).astype(np.float32), k=1)  # Dummy vector to test retrieval
-
-        # 🛠 Debugging: Print FAISS search results
-        print(f"FAISS Index Result: {I[0][0]}")
-
-        if I[0][0] == -1:  # If FAISS returns -1, no match was found
-            print("❌ No matching doctor found in FAISS index.")
-            return jsonify({"error": "No matching doctor found"}), 404
-
-        # ✅ Ensure FAISS indices map to correct doctor IDs
-        doctor_id_mapping = {idx: doc.metadata["doctorId"] for idx, doc in enumerate(index.docstore.docs.values())}
-
-        # 🛠 Debugging: Print the mapping dictionary
-        print(f"Doctor ID Mapping: {doctor_id_mapping}")
-
-        doctor_id = doctor_id_mapping.get(I[0][0])
-        if doctor_id is None:
-            print(f"❌ No doctor found for FAISS index {I[0][0]}")
-            return jsonify({"error": "Doctor ID not found"}), 404
-
-        print(f"✅ Matched Doctor ID: {doctor_id}")
-
-        # ✅ Retrieve doctor details from the database
         conn = get_iris_connection()
-        if not conn:
-            print("❌ Failed to connect to IRIS database.")
-            return jsonify({"error": "Failed to connect to IRIS database"}), 500
-
         cursor = conn.cursor()
 
-        # 🔹 **Query IRIS Database for Doctor Details**
-        try:
-            cursor.execute("""
-                SELECT doctorId, name, specialty, experience_years, available_hours, description
-                FROM SQLUser.Doctor
-                WHERE doctorId = ?;
-            """, (int(doctor_id),))
+        # Check if patient has chat history
+        cursor.execute("SELECT chatId FROM SQLUser.PatientChat WHERE patientId = ?", (patient_id,))
+        chat_id_result = cursor.fetchone()
 
-            doctor = cursor.fetchone()
+        if not chat_id_result:
+            return jsonify({"error": "No chat history found for this patient"}), 404
 
-        except Exception as db_error:
-            print(f"❌ IRIS Query Failed: {db_error}")
-            return jsonify({"error": f"Database query failed: {str(db_error)}"}), 500
+        # Fetch latest chat messages for symptoms
+        cursor.execute("""
+            SELECT CM.content FROM SQLUser.ChatMessage CM
+            JOIN SQLUser.PatientChat PC ON CM.chatId = PC.chatId
+            WHERE PC.patientId = ?
+            ORDER BY CM.timestamp DESC
+            LIMIT 5
+        """, (patient_id,))
+        chat_data = cursor.fetchall()
 
-        finally:
-            cursor.close()
-            conn.close()
+        # Check if messages exist
+        if not chat_data:
+            return jsonify({"error": "No recent chat messages found for patient"}), 404
 
-        # ✅ Ensure doctor data is properly formatted
+        # Merge messages into one text block
+        symptoms_text = " ".join([row[0] for row in chat_data])
+
+        # Fetch patient medical conditions for better matching
+        cursor.execute("SELECT medical_conditions FROM SQLUser.Patient WHERE patientId = ?", (patient_id,))
+        patient_data = cursor.fetchone()
+        medical_conditions = patient_data[0] if patient_data else ""
+
+        # Combine symptoms and medical conditions
+        search_text = f"Symptoms: {symptoms_text}\nConditions: {medical_conditions}"
+        print(f"Extracted Patient Data: {search_text}")
+
+        # Generate an embedding for the extracted symptoms + conditions
+        embedding_vector = embedding_fn.get_text_embedding(search_text)
+        embedding_np = np.array([embedding_vector], dtype=np.float32)
+
+        # Search FAISS for the closest doctor match
+        D, I = faiss_index.search(embedding_np, k=1)
+
+        if I[0][0] == -1:
+            return jsonify({"error": "No matching doctor found"}), 404
+
+        # Get doctor ID mapping
+        doctor_id_mapping = {idx: doc.metadata["doctorId"] for idx, doc in enumerate(index.docstore.docs.values())}
+        doctor_id = doctor_id_mapping.get(I[0][0])
+
+        if not doctor_id:
+            return jsonify({"error": "Doctor ID not found"}), 404
+
+        # Fetch doctor details
+        cursor.execute("""
+            SELECT doctorId, name, specialty, experience_years, available_hours, description
+            FROM SQLUser.Doctor WHERE doctorId = ?
+        """, (doctor_id,))
+        doctor = cursor.fetchone()
+
+        cursor.close()
+        conn.close()
+
         if doctor:
-            try:
-                # Convert IRIS `DataRow` object into a Python list
-                doctor = list(doctor)
-                print(f"✅ Doctor Found: {doctor}")  # Debugging: Check actual values
-
-                return jsonify({
-                    "doctorId": int(doctor[0]),
-                    "name": str(doctor[1]),
-                    "specialty": str(doctor[2]),
-                    "experience": int(doctor[3]),
-                    "available_hours": str(doctor[4]),
-                    "description": str(doctor[5]) if doctor[5] else "No description available"
-                })
-
-            except Exception as parse_error:
-                print(f"❌ Data Parsing Error: {parse_error}")
-                return jsonify({"error": f"Data processing failed: {str(parse_error)}"}), 500
-
+            return jsonify({
+                "doctorId": doctor[0],
+                "name": doctor[1],
+                "specialty": doctor[2],
+                "experience": doctor[3],
+                "available_hours": doctor[4],
+                "description": doctor[5]
+            })
         else:
-            print("❌ Doctor not found in database.")
-            return jsonify({"error": "Doctor not found in database"}), 404
+            return jsonify({"error": "Doctor not found"}), 404
 
     except Exception as e:
-        print(f"❌ Unexpected Error: {str(e)}")  # Log unexpected errors
         return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
+
 
 # ---- AI CHATBOT RESPONSE (WITH PREPROCESSING) ----
 def preprocess_text(text):
