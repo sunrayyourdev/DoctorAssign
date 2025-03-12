@@ -331,101 +331,6 @@ def insert():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-# ---- AI-POWERED DOCTOR RECOMMENDATION ----
-@app.route('/recommend_doctor', methods=['POST'])
-def recommend_doctor():
-    """Finds the best matching doctor based on patient's latest chat message."""
-    data = request.json
-    patient_id = data.get('patientId')
-
-    if not patient_id:
-        return jsonify({"error": "Missing patientId"}), 400
-
-    try:
-        conn = get_iris_connection()
-        cursor = conn.cursor()
-
-        # Fetch latest chat messages for the patient
-        cursor.execute("""
-            SELECT content FROM (
-                SELECT CM.content, ROW_NUMBER() OVER (ORDER BY CM.timestamp DESC) AS row_num
-                FROM SQLUser.ChatMessage CM
-                JOIN SQLUser.PatientChat PC ON CM.chatId = PC.chatId
-                WHERE PC.patientId = ?
-            ) AS subquery
-            WHERE row_num <= 5
-        """, (patient_id,))
-        chat_data = cursor.fetchall()
-
-        if not chat_data:
-            return jsonify({"error": "No recent chat messages found for patient"}), 404
-
-        # Combine messages into one input string
-        patient_input = " ".join([row[0] for row in chat_data])
-        print(f"Extracted Patient Input: {patient_input}")
-
-        # Generate an embedding for the extracted text
-        embedding_vector = embedding_fn.get_text_embedding(patient_input)
-
-        # Ensure embedding vector is correct dimension
-        if len(embedding_vector) != 1536:
-            return jsonify({"error": "Embedding dimension mismatch"}), 500
-
-        embedding_np = np.array([embedding_vector], dtype=np.float32)
-
-        # Check if FAISS index has stored doctor embeddings
-        if faiss_index.ntotal == 0:
-            return jsonify({"error": "No doctor embeddings found in FAISS index"}), 500
-
-        # Search FAISS for the closest doctor match
-        D, I = faiss_index.search(embedding_np, k=1)
-
-        # Debugging: Log FAISS search results
-        print(f"FAISS Search Results: D={D}, I={I}")
-
-        if I[0][0] == -1:
-            return jsonify({"error": "No matching doctor found"}), 404
-
-        # Ensure FAISS result is valid
-        if I[0][0] >= len(index.docstore.docs):
-            return jsonify({"error": "FAISS returned an invalid index"}), 500
-
-        # Get doctor ID mapping
-        try:
-            doctor_id_mapping = {idx: doc.metadata["doctorId"] for idx, doc in enumerate(index.docstore.docs.values())}
-            doctor_id = doctor_id_mapping.get(I[0][0], None)
-
-            if not doctor_id:
-                return jsonify({"error": "Doctor ID not found"}), 404
-        except Exception as mapping_error:
-            return jsonify({"error": f"Doctor ID mapping error: {str(mapping_error)}"}), 500
-
-        # Fetch doctor details from database
-        cursor.execute("""
-            SELECT doctorId, name, specialty, experience_years, available_hours, description, doctorContact
-            FROM SQLUser.Doctor WHERE doctorId = ?
-        """, (doctor_id,))
-        doctor = cursor.fetchone()
-
-        cursor.close()
-        conn.close()
-
-        if doctor:
-            return jsonify({
-                "doctorId": doctor[0],
-                "name": doctor[1],
-                "specialty": doctor[2],
-                "experience": doctor[3],
-                "available_hours": doctor[4],
-                "description": doctor[5],
-                "doctorContact": doctor[6]
-            })
-        else:
-            return jsonify({"error": "Doctor not found in database"}), 404
-
-    except Exception as e:
-        return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
-
 # ---- AI CHATBOT RESPONSE (WITH PREPROCESSING) ----
 def preprocess_text(text):
     text = text.lower().strip()  # Lowercase and trim spaces
@@ -440,134 +345,103 @@ def preprocess_text(text):
 
 @app.route('/chatbot_response', methods=['POST'])
 def chatbot_response():
-    """Processes chatbot responses and ensures symptom extraction for doctor recommendation."""
+    """Processes chatbot responses and determines if a doctor should be recommended."""
     try:
-        start_time = time.time()  # Track execution time
-
-        # Log request data
+        start_time = time.time()
         data = request.json
-        logging.debug(f"Received request: {data}")
 
         if not data:
-            logging.error("Request JSON is empty or missing")
             return jsonify({"error": "Invalid request. No data received."}), 400
 
         patient_id = data.get('patientId')
         patient_input = data.get('content', '')
 
         if not patient_id or not patient_input:
-            logging.error("Missing required fields: patientId or content")
             return jsonify({"error": "Invalid request. Missing patientId or content."}), 400
 
-        # Connect to IRIS
         conn = get_iris_connection()
         if not conn:
-            logging.error("Database connection failed.")
             return jsonify({"error": "Database connection failed"}), 500
         
         cursor = conn.cursor()
 
-        #  Check if patient has an existing chat session
         cursor.execute("SELECT chatId FROM SQLUser.PatientChat WHERE patientId = ?", (patient_id,))
         chat_row = cursor.fetchone()
 
         if not chat_row:
-            logging.info(f"No existing chat session found for patientId {patient_id}. Creating new chat session.")
-
-            # Create a new chat session
             cursor.execute("INSERT INTO SQLUser.PatientChat (patientId, Title) VALUES (?, ?)", (patient_id, "New Chat"))
             conn.commit()
-
-            # Retrieve the newly created chatId
             cursor.execute("SELECT LAST_IDENTITY() FROM SQLUser.PatientChat")
             chat_id_row = cursor.fetchone()
             chat_id = chat_id_row[0] if chat_id_row else None
-
-            if not chat_id:
-                logging.error("Failed to retrieve chatId after inserting new chat.")
-                return jsonify({"error": "Failed to generate chatId"}), 500
-
         else:
             chat_id = chat_row[0]
-            logging.debug(f"Existing chat session found. chatId: {chat_id}")
 
-        #  Store patient input in chat history
-        try:
-            cursor.execute("INSERT INTO SQLUser.ChatMessage (chatId, content, timestamp) VALUES (?, ?, NOW())",
-                           (chat_id, patient_input))
-            conn.commit()
-            logging.info(f"Stored patient input for chatId {chat_id}")
-        except Exception as e:
-            logging.error(f"Error storing patient message: {str(e)}", exc_info=True)
-            return jsonify({"error": "Failed to store patient message"}), 500
+        cursor.execute("INSERT INTO SQLUser.ChatMessage (chatId, content, timestamp) VALUES (?, ?, NOW())", (chat_id, patient_input))
+        conn.commit()
 
-        #  Fetch latest chat history (IRIS-Compatible Query)
-        try:
-            cursor.execute("""
-                SELECT TOP 5 content FROM SQLUser.ChatMessage 
-                WHERE chatId = ? 
-                ORDER BY timestamp DESC
-            """, (chat_id,))
-            
-            past_messages = cursor.fetchall()
-            if not past_messages:
-                logging.warning(f"No past messages found for chatId {chat_id}")
-                past_messages = []
+        cursor.execute("SELECT TOP 5 content FROM SQLUser.ChatMessage WHERE chatId = ? ORDER BY timestamp DESC", (chat_id,))
+        past_messages = cursor.fetchall()
+        past_messages = [row[0] for row in past_messages] if past_messages else []
 
-            # Convert result to list
-            past_messages = [row[0] for row in past_messages]
-            logging.debug(f"Past Messages Retrieved: {past_messages}")
-
-        except Exception as e:
-            logging.error(f"Error fetching chat history: {str(e)}", exc_info=True)
-            return jsonify({"error": "Failed to retrieve chat history"}), 500
-
-        #  Add context and send request to OpenAI
         chat_history = [{"role": "user", "content": msg} for msg in reversed(past_messages)]
         chat_history.append({"role": "user", "content": patient_input})
 
-        try:
-            response = client.chat.completions.create(
-                model="gpt-4",
-                messages=[
-                    {"role": "system", "content": "You are a healthcare chatbot. Always ask about symptoms before recommending a doctor."}
-                ] + chat_history,
-                timeout=10
-            )
-            chatbot_reply = response.choices[0].message.content  # Corrected new OpenAI response format
-            logging.info("Received chatbot response from OpenAI.")
-        except Exception as openai_error:
-            logging.error(f"Error calling OpenAI API: {openai_error}", exc_info=True)
-            chatbot_reply = "Sorry, I couldn't process your request at the moment."
+        response = client.chat.completions.create(
+            model="gpt-4",
+            messages=[
+                {"role": "system", "content": "You are a healthcare chatbot. Ask about symptoms before recommending a doctor."}
+            ] + chat_history,
+            timeout=10
+        )
+        chatbot_reply = response.choices[0].message.content
 
-        #  Store chatbot response
-        try:
-            cursor.execute("INSERT INTO SQLUser.ChatResponse (chatId, content, timestamp) VALUES (?, ?, NOW())",
-                           (chat_id, chatbot_reply))
-            conn.commit()
-            logging.info("Chatbot response stored in database.")
+        cursor.execute("INSERT INTO SQLUser.ChatResponse (chatId, content, timestamp) VALUES (?, ?, NOW())", (chat_id, chatbot_reply))
+        conn.commit()
 
-        except Exception as e:
-            logging.error(f"Error storing chatbot response: {str(e)}", exc_info=True)
-            return jsonify({"error": "Failed to store chatbot response"}), 500
+        # Check if a doctor should be recommended
+        if "recommend a doctor" in chatbot_reply.lower() or "need a doctor" in chatbot_reply.lower():
+            cursor.execute("""
+                SELECT content FROM (
+                    SELECT CM.content, ROW_NUMBER() OVER (ORDER BY CM.timestamp DESC) AS row_num
+                    FROM SQLUser.ChatMessage CM
+                    JOIN SQLUser.PatientChat PC ON CM.chatId = PC.chatId
+                    WHERE PC.patientId = ?
+                ) AS subquery
+                WHERE row_num <= 5
+            """, (patient_id,))
+            chat_data = cursor.fetchall()
 
-        #  Ensure connections are closed properly
+            if chat_data:
+                patient_input = " ".join([row[0] for row in chat_data])
+                embedding_vector = embedding_fn.get_text_embedding(patient_input)
+
+                if len(embedding_vector) == 1536 and faiss_index.ntotal > 0:
+                    embedding_np = np.array([embedding_vector], dtype=np.float32)
+                    D, I = faiss_index.search(embedding_np, k=1)
+
+                    if I[0][0] != -1:
+                        doctor_id_mapping = {idx: doc.metadata["doctorId"] for idx, doc in enumerate(index.docstore.docs.values())}
+                        doctor_id = doctor_id_mapping.get(I[0][0], None)
+                        if doctor_id:
+                            cursor.execute("""
+                                SELECT doctorId, name, specialty, experience_years, available_hours, description, doctorContact
+                                FROM SQLUser.Doctor WHERE doctorId = ?
+                            """, (doctor_id,))
+                            doctor = cursor.fetchone()
+
+                            if doctor:
+                                doctor_recommendation = f"I recommend Dr. {doctor[1]}, a specialist in {doctor[2]} with {doctor[3]} years of experience. Available hours: {doctor[4]}. Contact: {doctor[6]}."
+                                chatbot_reply += f"\n\n{doctor_recommendation}"
+
         cursor.close()
         conn.close()
 
-        #  Track and log total execution time
         total_time = time.time() - start_time
-        logging.info(f"Request processed successfully in {total_time:.2f} seconds.")
-
         return jsonify({"response": chatbot_reply})
 
     except Exception as e:
-        logging.error(f"Unexpected error in chatbot_response: {str(e)}", exc_info=True)
-        return jsonify({"error": "An unexpected error occurred. Please check the logs for details."}), 500
-    except Exception as e:
-        logging.error(f"Unexpected error in chatbot_response: {str(e)}", exc_info=True)
-        return jsonify({"error": "An unexpected error occurred. Please check the logs for details."}), 500
-
+        return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
 
 if __name__ == '__main__':
     import logging
