@@ -333,7 +333,7 @@ def insert():
 # ---- AI-POWERED DOCTOR RECOMMENDATION ----
 @app.route('/recommend_doctor', methods=['POST'])
 def recommend_doctor():
-    """Finds the best matching doctor based on the patient's latest chat message (symptoms)."""
+    """Finds the best matching doctor based on patient's latest chat message."""
     data = request.json
     patient_id = data.get('patientId')
 
@@ -344,7 +344,7 @@ def recommend_doctor():
         conn = get_iris_connection()
         cursor = conn.cursor()
 
-        # Fetch the latest chat messages for the patient (symptoms)
+        # Fetch the latest chat messages for the patient (extracted symptoms)
         cursor.execute("""
             SELECT content FROM (
                 SELECT CM.content, ROW_NUMBER() OVER (ORDER BY CM.timestamp DESC) AS row_num
@@ -360,11 +360,11 @@ def recommend_doctor():
             return jsonify({"error": "No recent chat messages found for patient"}), 404
 
         # Combine multiple messages into a single string for symptom extraction
-        symptoms_text = " ".join([row[0] for row in chat_data])
-        print(f"Extracted Symptoms: {symptoms_text}")
+        patient_input = " ".join([row[0] for row in chat_data])
+        print(f"Extracted Patient Input: {patient_input}")
 
-        # Generate an embedding for the extracted symptoms
-        embedding_vector = embedding_fn.get_text_embedding(symptoms_text)
+        # Generate an embedding for the extracted text
+        embedding_vector = embedding_fn.get_text_embedding(patient_input)
         embedding_np = np.array([embedding_vector], dtype=np.float32)
 
         # Search FAISS for the closest doctor match
@@ -382,7 +382,7 @@ def recommend_doctor():
 
         # Fetch doctor details
         cursor.execute("""
-            SELECT doctorId, name, specialty, experience_years, available_hours, description
+            SELECT doctorId, name, specialty, experience_years, available_hours, description, doctorContact
             FROM SQLUser.Doctor WHERE doctorId = ?
         """, (doctor_id,))
         doctor = cursor.fetchone()
@@ -397,7 +397,8 @@ def recommend_doctor():
                 "specialty": doctor[2],
                 "experience": doctor[3],
                 "available_hours": doctor[4],
-                "description": doctor[5]
+                "description": doctor[5],
+                "doctorContact": doctor[6]
             })
         else:
             return jsonify({"error": "Doctor not found"}), 404
@@ -417,15 +418,9 @@ def preprocess_text(text):
     
     return " ".join(words)
 
-
 @app.route('/chatbot_response', methods=['POST'])
 def chatbot_response():
-    """
-    Processes chatbot responses by:
-      - Fetching past chat history from IRIS for context.
-      - Checking a local cache to reduce repeated OpenAI API calls.
-      - Storing the conversation in IRIS.
-    """
+    """Processes chatbot responses and ensures symptom extraction for doctor recommendation."""
     data = request.json
     patient_id = data.get('patientId')
     patient_input = data.get('message', '')
@@ -433,51 +428,61 @@ def chatbot_response():
     if not patient_id or not patient_input:
         return jsonify({"response": "Invalid request"}), 400
 
-    # Check if response is already cached
-    cached = get_cached_response(patient_id, patient_input)
-    if cached:
-        return jsonify({"response": cached})
-
-    # Preprocess the input before sending (your existing preprocess_text function)
-    cleaned_input = preprocess_text(patient_input)
-
-    # Retrieve the last 5 patient messages from IRIS to add context
     conn = get_iris_connection()
     cursor = conn.cursor()
+
+    # Check if patient has an existing chat session
+    cursor.execute("SELECT chatId FROM SQLUser.PatientChat WHERE patientId = ?", (patient_id,))
+    chat_row = cursor.fetchone()
+
+    if not chat_row:
+        # ✅ Correct way to fetch the next sequence value in IRIS
+        cursor.execute("SELECT NEXTVAL('SQLUser.ChatIdSeq') FROM %SYSTEM.DUMMY")
+        chat_id_row = cursor.fetchone()
+        chat_id = chat_id_row[0] if chat_id_row else None
+
+        if not chat_id:
+            return jsonify({"error": "Failed to generate chatId"}), 500
+
+        # Insert new chat session with generated chatId
+        cursor.execute("INSERT INTO SQLUser.PatientChat (chatId, patientId, Title) VALUES (?, ?, ?)", 
+                       (chat_id, patient_id, "New Chat"))
+        conn.commit()
+    else:
+        chat_id = chat_row[0]
+
+    # Store patient input in chat history
+    cursor.execute("INSERT INTO SQLUser.ChatMessage (chatId, content, timestamp) VALUES (?, ?, NOW())",
+                   (chat_id, patient_input))
+    conn.commit()
+
+    # Fetch latest chat history
     cursor.execute("""
         SELECT content FROM SQLUser.ChatMessage 
-        WHERE chatId = (SELECT chatId FROM SQLUser.PatientChat WHERE patientId = ?)
-        ORDER BY timestamp DESC LIMIT 5
-    """, (patient_id,))
-    # Get past messages (most recent first) and then reverse them to preserve chronological order
+        WHERE chatId = ? ORDER BY timestamp DESC LIMIT 5
+    """, (chat_id,))
     past_messages = [row[0] for row in cursor.fetchall()]
-    cursor.close()
-    conn.close()
-    
+
+    # Add context and send request to OpenAI
     chat_history = [{"role": "user", "content": msg} for msg in reversed(past_messages)]
-    chat_history.append({"role": "user", "content": cleaned_input})
-    
-    # Call OpenAI API with system prompt and chat history
+    chat_history.append({"role": "user", "content": patient_input})
+
     response = openai.ChatCompletion.create(
         model="gpt-4",
-        messages=[{"role": "system", "content": "You are a healthcare chatbot assisting patients."}] + chat_history
+        messages=[
+            {"role": "system", "content": "You are a healthcare chatbot. Always ask about symptoms before recommending a doctor."}
+        ] + chat_history
     )
     chatbot_reply = response['choices'][0]['message']['content']
-    
-    # Cache the new response for future use
-    cache_response(patient_id, patient_input, chatbot_reply)
-    
-    # Store the new patient message and chatbot response in IRIS
-    conn = get_iris_connection()    
-    cursor = conn.cursor()
-    cursor.execute("INSERT INTO SQLUser.ChatMessage (chatId, content, timestamp) VALUES (?, ?, NOW())",
-                   (patient_id, cleaned_input))
+
+    # Store chatbot response
     cursor.execute("INSERT INTO SQLUser.ChatResponse (chatId, content, timestamp) VALUES (?, ?, NOW())",
-                   (patient_id, chatbot_reply))
+                   (chat_id, chatbot_reply))
     conn.commit()
+
     cursor.close()
     conn.close()
-    
+
     return jsonify({"response": chatbot_reply})
 
 if __name__ == '__main__':
