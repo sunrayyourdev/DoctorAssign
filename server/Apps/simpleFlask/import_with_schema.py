@@ -92,29 +92,10 @@ def create_tables():
                 chatId SERIAL PRIMARY KEY,
                 patientId INT,
                 Title VARCHAR(255),
+                chat_timestamp DATETIME,
+                messages VARCHAR(MAX),
+                responses VARCHAR(MAX),
                 FOREIGN KEY (patientId) REFERENCES SQLUser.Patient(patientId) ON DELETE CASCADE
-            )
-        """)
-
-        # ChatMessage Table
-        cursor.execute("""
-            CREATE TABLE SQLUser.ChatMessage (
-                messageId SERIAL PRIMARY KEY,
-                chatId INT,
-                content TEXT,
-                timestamp DATETIME,
-                FOREIGN KEY (chatId) REFERENCES SQLUser.PatientChat(chatId) ON DELETE CASCADE
-            )
-        """)
-
-        # ChatResponse Table
-        cursor.execute("""
-            CREATE TABLE SQLUser.ChatResponse (
-                responseId SERIAL PRIMARY KEY,
-                chatId INT,
-                content TEXT,
-                timestamp DATETIME,
-                FOREIGN KEY (chatId) REFERENCES SQLUser.PatientChat(chatId) ON DELETE CASCADE
             )
         """)
 
@@ -189,6 +170,46 @@ def insert_csv_to_iris(csv_path, table_name, columns):
         cursor.close()
         conn.close()
 
+def insert_patientchat_data(patientchat_csv, chatmessage_csv, chatresponse_csv):
+    """Reads CSV files and inserts data into the PatientChat table."""
+    conn = get_iris_connection()
+    if not conn:
+        return
+
+    df_patientchat = pd.read_csv(patientchat_csv)
+    df_chatmessage = pd.read_csv(chatmessage_csv)
+    df_chatresponse = pd.read_csv(chatresponse_csv)
+
+    # Merge chat message and response data into the patient chat DataFrame
+    df_patientchat = df_patientchat.merge(df_chatmessage[['chatId', 'content', 'timestamp']], on='chatId', how='left')
+    df_patientchat = df_patientchat.merge(df_chatresponse[['chatId', 'content', 'timestamp']], on='chatId', how='left', suffixes=('_message', '_response'))
+
+    # Combine messages and responses into lists
+    df_patientchat['messages'] = df_patientchat.apply(lambda row: json.dumps([{"content": row['content_message'], "timestamp": row['timestamp_message']}]), axis=1)
+    df_patientchat['responses'] = df_patientchat.apply(lambda row: json.dumps([{"content": row['content_response'], "timestamp": row['timestamp_response']}]), axis=1)
+
+    # Use the first message timestamp as the chat timestamp
+    df_patientchat['chat_timestamp'] = df_patientchat['timestamp_message']
+
+    # Drop unnecessary columns
+    df_patientchat.drop(columns=['content_message', 'timestamp_message', 'content_response', 'timestamp_response'], inplace=True)
+
+    cursor = conn.cursor()
+    placeholders = ", ".join(["?" for _ in df_patientchat.columns])
+    query = f"INSERT INTO SQLUser.PatientChat ({', '.join(df_patientchat.columns)}) VALUES ({placeholders})"
+
+    values = [tuple(row) for row in df_patientchat.itertuples(index=False, name=None)]
+
+    try:
+        cursor.executemany(query, values)
+        conn.commit()
+        print(f"✅ Inserted {len(df_patientchat)} rows into SQLUser.PatientChat")
+    except Exception as e:
+        print(f"❌ Error inserting into SQLUser.PatientChat: {e}")
+    finally:
+        cursor.close()
+        conn.close()
+
 # Directory where cleaned CSVs are stored
 CLEANED_DATA_DIR = "cleaned_data"
 
@@ -196,9 +217,6 @@ CLEANED_DATA_DIR = "cleaned_data"
 CSV_TABLE_MAPPING = {
     "Doctor_Cleaned.csv": ("SQLUser.Doctor", ["doctorId", "name", "specialty", "DoctorContact", "locationId", "experience_years", "available_hours", "description", "embedding_vector"]),
     "Patient_Cleaned.csv": ("SQLUser.Patient", ["patientId", "email", "name", "age", "gender", "drug_allergies", "medical_conditions"]),
-    "PatientChat.csv": ("SQLUser.PatientChat", ["chatId", "patientId", "Title"]),
-    "ChatMessage.csv": ("SQLUser.ChatMessage", ["messageId", "chatId", "content", "timestamp"]),
-    "ChatResponse.csv": ("SQLUser.ChatResponse", ["responseId", "chatId", "content", "timestamp"]),
     "Location.csv": ("SQLUser.Location", ["locationId", "clinicName", "postalCode", "medications", "procedures"]),
     "Admin.csv": ("SQLUser.Admin", ["adminId", "name", "admin_role"]),
 }
@@ -216,3 +234,14 @@ if __name__ == "__main__":
             insert_csv_to_iris(csv_path, table_name, columns)
         else:
             print(f"Skipping {csv_file}, file not found.")
+
+    # Step 4: Insert data into the PatientChat table
+    patientchat_csv = os.path.join(CLEANED_DATA_DIR, "PatientChat.csv")
+    chatmessage_csv = os.path.join(CLEANED_DATA_DIR, "ChatMessage.csv")
+    chatresponse_csv = os.path.join(CLEANED_DATA_DIR, "ChatResponse.csv")
+
+    if os.path.exists(patientchat_csv) and os.path.exists(chatmessage_csv) and os.path.exists(chatresponse_csv):
+        print(f"Importing data into SQLUser.PatientChat...")
+        insert_patientchat_data(patientchat_csv, chatmessage_csv, chatresponse_csv)
+    else:
+        print(f"Skipping import, one or more files not found.")

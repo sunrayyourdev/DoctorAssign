@@ -377,8 +377,18 @@ def chatbot_response():
         else:
             chat_id = chat_row[0]
 
-        cursor.execute("INSERT INTO SQLUser.ChatMessage (chatId, content, timestamp) VALUES (?, ?, NOW())", (chat_id, patient_input))
-        conn.commit()
+        cursor.execute("SELECT MAX(messageId) FROM SQLUser.ChatMessage")
+        last_message_id = cursor.fetchone()[0] or 0  # Default to 0 if no messages exist
+        new_message_id = last_message_id + 1
+        
+        try:
+            logging.info(f"Inserting message: messageId={new_message_id}, chatId={chat_id}, content={patient_input}")
+            cursor.execute("INSERT INTO SQLUser.ChatMessage (messageId, chatId, content, timestamp) VALUES (?, ?, ?, NOW())",
+                        (new_message_id, chat_id, patient_input))
+            conn.commit()
+            logging.info(f"Message successfully inserted for chatId={chat_id}")
+        except Exception as e:
+            logging.error(f"Error inserting chat message: {e}", exc_info=True)
 
         cursor.execute("SELECT TOP 5 content FROM SQLUser.ChatMessage WHERE chatId = ? ORDER BY timestamp DESC", (chat_id,))
         past_messages = cursor.fetchall()
@@ -395,8 +405,10 @@ def chatbot_response():
             timeout=10
         )
         chatbot_reply = response.choices[0].message.content
-
-        cursor.execute("INSERT INTO SQLUser.ChatResponse (chatId, content, timestamp) VALUES (?, ?, NOW())", (chat_id, chatbot_reply))
+        cursor.execute("SELECT MAX(responseId) FROM SQLUser.ChatResponse")
+        last_response_id = cursor.fetchone()[0] or 0  # Default to 0 if no messages exist
+        new_response_id = last_response_id + 1
+        cursor.execute("INSERT INTO SQLUser.ChatResponse (responseId, chatId, content, timestamp) VALUES (?, ?, ?, NOW())", (new_response_id, chat_id, chatbot_reply))
         conn.commit()
 
         # Check if a doctor should be recommended
