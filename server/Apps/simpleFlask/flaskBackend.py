@@ -333,7 +333,7 @@ def insert():
 # ---- AI-POWERED DOCTOR RECOMMENDATION ----
 @app.route('/recommend_doctor', methods=['POST'])
 def recommend_doctor():
-    """Finds the best matching doctor based on the patient's latest chat message and medical conditions."""
+    """Finds the best matching doctor based on the patient's latest chat message (symptoms)."""
     data = request.json
     patient_id = data.get('patientId')
 
@@ -344,41 +344,27 @@ def recommend_doctor():
         conn = get_iris_connection()
         cursor = conn.cursor()
 
-        # Check if patient has chat history
-        cursor.execute("SELECT chatId FROM SQLUser.PatientChat WHERE patientId = ?", (patient_id,))
-        chat_id_result = cursor.fetchone()
-
-        if not chat_id_result:
-            return jsonify({"error": "No chat history found for this patient"}), 404
-
-        # Fetch latest chat messages for symptoms
+        # Fetch the latest chat messages for the patient (symptoms)
         cursor.execute("""
-            SELECT CM.content FROM SQLUser.ChatMessage CM
-            JOIN SQLUser.PatientChat PC ON CM.chatId = PC.chatId
-            WHERE PC.patientId = ?
-            ORDER BY CM.timestamp DESC
-            LIMIT 5
+            SELECT content FROM (
+                SELECT CM.content, ROW_NUMBER() OVER (ORDER BY CM.timestamp DESC) AS row_num
+                FROM SQLUser.ChatMessage CM
+                JOIN SQLUser.PatientChat PC ON CM.chatId = PC.chatId
+                WHERE PC.patientId = ?
+            ) AS subquery
+            WHERE row_num <= 5
         """, (patient_id,))
         chat_data = cursor.fetchall()
 
-        # Check if messages exist
         if not chat_data:
             return jsonify({"error": "No recent chat messages found for patient"}), 404
 
-        # Merge messages into one text block
+        # Combine multiple messages into a single string for symptom extraction
         symptoms_text = " ".join([row[0] for row in chat_data])
+        print(f"Extracted Symptoms: {symptoms_text}")
 
-        # Fetch patient medical conditions for better matching
-        cursor.execute("SELECT medical_conditions FROM SQLUser.Patient WHERE patientId = ?", (patient_id,))
-        patient_data = cursor.fetchone()
-        medical_conditions = patient_data[0] if patient_data else ""
-
-        # Combine symptoms and medical conditions
-        search_text = f"Symptoms: {symptoms_text}\nConditions: {medical_conditions}"
-        print(f"Extracted Patient Data: {search_text}")
-
-        # Generate an embedding for the extracted symptoms + conditions
-        embedding_vector = embedding_fn.get_text_embedding(search_text)
+        # Generate an embedding for the extracted symptoms
+        embedding_vector = embedding_fn.get_text_embedding(symptoms_text)
         embedding_np = np.array([embedding_vector], dtype=np.float32)
 
         # Search FAISS for the closest doctor match
@@ -418,7 +404,6 @@ def recommend_doctor():
 
     except Exception as e:
         return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
-
 
 # ---- AI CHATBOT RESPONSE (WITH PREPROCESSING) ----
 def preprocess_text(text):
