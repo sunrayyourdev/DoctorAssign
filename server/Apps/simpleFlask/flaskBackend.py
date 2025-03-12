@@ -20,6 +20,7 @@ import time
 from collections import OrderedDict
 import faiss # Faiss for vector similarity search
 
+client = openai.OpenAI(api_key="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")
 
 # Simple in-memory cache to store chatbot responses
 chatbot_cache = OrderedDict()
@@ -421,72 +422,135 @@ def preprocess_text(text):
 @app.route('/chatbot_response', methods=['POST'])
 def chatbot_response():
     """Processes chatbot responses and ensures symptom extraction for doctor recommendation."""
-    data = request.json
-    patient_id = data.get('patientId')
-    patient_input = data.get('message', '')
+    try:
+        start_time = time.time()  # Track execution time
 
-    if not patient_id or not patient_input:
-        return jsonify({"response": "Invalid request"}), 400
+        # Log request data
+        data = request.json
+        logging.debug(f"Received request: {data}")
 
-    conn = get_iris_connection()
-    cursor = conn.cursor()
+        if not data:
+            logging.error("Request JSON is empty or missing")
+            return jsonify({"error": "Invalid request. No data received."}), 400
 
-    # Check if patient has an existing chat session
-    cursor.execute("SELECT chatId FROM SQLUser.PatientChat WHERE patientId = ?", (patient_id,))
-    chat_row = cursor.fetchone()
+        patient_id = data.get('patientId')
+        patient_input = data.get('content', '')
 
-    if not chat_row:
-        # ✅ Correct way to fetch the next sequence value in IRIS
-        cursor.execute("SELECT NEXTVAL('SQLUser.ChatIdSeq') FROM %SYSTEM.DUMMY")
-        chat_id_row = cursor.fetchone()
-        chat_id = chat_id_row[0] if chat_id_row else None
+        if not patient_id or not patient_input:
+            logging.error("Missing required fields: patientId or content")
+            return jsonify({"error": "Invalid request. Missing patientId or content."}), 400
 
-        if not chat_id:
-            return jsonify({"error": "Failed to generate chatId"}), 500
+        # Connect to IRIS
+        conn = get_iris_connection()
+        if not conn:
+            logging.error("Database connection failed.")
+            return jsonify({"error": "Database connection failed"}), 500
+        
+        cursor = conn.cursor()
 
-        # Insert new chat session with generated chatId
-        cursor.execute("INSERT INTO SQLUser.PatientChat (chatId, patientId, Title) VALUES (?, ?, ?)", 
-                       (chat_id, patient_id, "New Chat"))
-        conn.commit()
-    else:
-        chat_id = chat_row[0]
+        #  Check if patient has an existing chat session
+        cursor.execute("SELECT chatId FROM SQLUser.PatientChat WHERE patientId = ?", (patient_id,))
+        chat_row = cursor.fetchone()
 
-    # Store patient input in chat history
-    cursor.execute("INSERT INTO SQLUser.ChatMessage (chatId, content, timestamp) VALUES (?, ?, NOW())",
-                   (chat_id, patient_input))
-    conn.commit()
+        if not chat_row:
+            logging.info(f"No existing chat session found for patientId {patient_id}. Creating new chat session.")
 
-    # Fetch latest chat history
-    cursor.execute("""
-        SELECT content FROM SQLUser.ChatMessage 
-        WHERE chatId = ? ORDER BY timestamp DESC LIMIT 5
-    """, (chat_id,))
-    past_messages = [row[0] for row in cursor.fetchall()]
+            # Create a new chat session
+            cursor.execute("INSERT INTO SQLUser.PatientChat (patientId, Title) VALUES (?, ?)", (patient_id, "New Chat"))
+            conn.commit()
 
-    # Add context and send request to OpenAI
-    chat_history = [{"role": "user", "content": msg} for msg in reversed(past_messages)]
-    chat_history.append({"role": "user", "content": patient_input})
+            # Retrieve the newly created chatId
+            cursor.execute("SELECT LAST_IDENTITY() FROM SQLUser.PatientChat")
+            chat_id_row = cursor.fetchone()
+            chat_id = chat_id_row[0] if chat_id_row else None
 
-    response = openai.ChatCompletion.create(
-        model="gpt-4",
-        messages=[
-            {"role": "system", "content": "You are a healthcare chatbot. Always ask about symptoms before recommending a doctor."}
-        ] + chat_history
-    )
-    chatbot_reply = response['choices'][0]['message']['content']
+            if not chat_id:
+                logging.error("Failed to retrieve chatId after inserting new chat.")
+                return jsonify({"error": "Failed to generate chatId"}), 500
 
-    # Store chatbot response
-    cursor.execute("INSERT INTO SQLUser.ChatResponse (chatId, content, timestamp) VALUES (?, ?, NOW())",
-                   (chat_id, chatbot_reply))
-    conn.commit()
+        else:
+            chat_id = chat_row[0]
+            logging.debug(f"Existing chat session found. chatId: {chat_id}")
 
-    cursor.close()
-    conn.close()
+        #  Store patient input in chat history
+        try:
+            cursor.execute("INSERT INTO SQLUser.ChatMessage (chatId, content, timestamp) VALUES (?, ?, NOW())",
+                           (chat_id, patient_input))
+            conn.commit()
+            logging.info(f"Stored patient input for chatId {chat_id}")
+        except Exception as e:
+            logging.error(f"Error storing patient message: {str(e)}", exc_info=True)
+            return jsonify({"error": "Failed to store patient message"}), 500
 
-    return jsonify({"response": chatbot_reply})
+        #  Fetch latest chat history (IRIS-Compatible Query)
+        try:
+            cursor.execute("""
+                SELECT TOP 5 content FROM SQLUser.ChatMessage 
+                WHERE chatId = ? 
+                ORDER BY timestamp DESC
+            """, (chat_id,))
+            
+            past_messages = cursor.fetchall()
+            if not past_messages:
+                logging.warning(f"No past messages found for chatId {chat_id}")
+                past_messages = []
+
+            # Convert result to list
+            past_messages = [row[0] for row in past_messages]
+            logging.debug(f"Past Messages Retrieved: {past_messages}")
+
+        except Exception as e:
+            logging.error(f"Error fetching chat history: {str(e)}", exc_info=True)
+            return jsonify({"error": "Failed to retrieve chat history"}), 500
+
+        #  Add context and send request to OpenAI
+        chat_history = [{"role": "user", "content": msg} for msg in reversed(past_messages)]
+        chat_history.append({"role": "user", "content": patient_input})
+
+        try:
+            response = client.chat.completions.create(
+                model="gpt-4",
+                messages=[
+                    {"role": "system", "content": "You are a healthcare chatbot. Always ask about symptoms before recommending a doctor."}
+                ] + chat_history,
+                timeout=10
+            )
+            chatbot_reply = response.choices[0].message.content  # Corrected new OpenAI response format
+            logging.info("Received chatbot response from OpenAI.")
+        except Exception as openai_error:
+            logging.error(f"Error calling OpenAI API: {openai_error}", exc_info=True)
+            chatbot_reply = "Sorry, I couldn't process your request at the moment."
+
+        #  Store chatbot response
+        try:
+            cursor.execute("INSERT INTO SQLUser.ChatResponse (chatId, content, timestamp) VALUES (?, ?, NOW())",
+                           (chat_id, chatbot_reply))
+            conn.commit()
+            logging.info("Chatbot response stored in database.")
+
+        except Exception as e:
+            logging.error(f"Error storing chatbot response: {str(e)}", exc_info=True)
+            return jsonify({"error": "Failed to store chatbot response"}), 500
+
+        #  Ensure connections are closed properly
+        cursor.close()
+        conn.close()
+
+        #  Track and log total execution time
+        total_time = time.time() - start_time
+        logging.info(f"Request processed successfully in {total_time:.2f} seconds.")
+
+        return jsonify({"response": chatbot_reply})
+
+    except Exception as e:
+        logging.error(f"Unexpected error in chatbot_response: {str(e)}", exc_info=True)
+        return jsonify({"error": "An unexpected error occurred. Please check the logs for details."}), 500
+    except Exception as e:
+        logging.error(f"Unexpected error in chatbot_response: {str(e)}", exc_info=True)
+        return jsonify({"error": "An unexpected error occurred. Please check the logs for details."}), 500
+
 
 if __name__ == '__main__':
     import logging
-
     logging.basicConfig(level=logging.DEBUG)  # Enable DEBUG logs
     app.run(debug=True, host='0.0.0.0', port=5010, use_reloader=False)
