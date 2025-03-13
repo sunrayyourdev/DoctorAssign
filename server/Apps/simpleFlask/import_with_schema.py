@@ -37,6 +37,7 @@ def drop_tables():
         cursor.execute("DROP TABLE IF EXISTS SQLUser.Doctor CASCADE;")
         cursor.execute("DROP TABLE IF EXISTS SQLUser.Location CASCADE;")
         cursor.execute("DROP TABLE IF EXISTS SQLUser.Admin CASCADE;")
+        cursor.execute("DROP TABLE IF EXISTS SQLUser.DoctorApproval CASCADE;")
         
         conn.commit()
         print("All tables dropped successfully.")
@@ -116,6 +117,19 @@ def create_tables():
                 adminId SERIAL PRIMARY KEY,
                 name VARCHAR(255),
                 admin_role VARCHAR(50)
+            )
+        """)
+
+        # DoctorApproval Table
+        cursor.execute("""
+            CREATE TABLE SQLUser.DoctorApproval (
+                doctorId INT NULL,
+                chatId INT,
+                patientId INT,
+                approval BIT DEFAULT 0,
+                FOREIGN KEY (doctorId) REFERENCES SQLUser.Doctor(doctorId) ON DELETE CASCADE,
+                FOREIGN KEY (chatId) REFERENCES SQLUser.PatientChat(chatId) ON DELETE CASCADE,
+                FOREIGN KEY (patientId) REFERENCES SQLUser.Patient(patientId) ON DELETE CASCADE
             )
         """)
 
@@ -210,6 +224,33 @@ def insert_patientchat_data(patientchat_csv, chatmessage_csv, chatresponse_csv):
         cursor.close()
         conn.close()
 
+def populate_doctorapproval_table():
+    """Populates the DoctorApproval table with data from the PatientChat table."""
+    conn = get_iris_connection()
+    if not conn:
+        return
+
+    cursor = conn.cursor()
+
+    try:
+        print("Populating DoctorApproval table...")
+
+        cursor.execute("SELECT chatId, patientId FROM SQLUser.PatientChat")
+        patient_chats = cursor.fetchall()
+
+        for chat in patient_chats:
+            chat_id, patient_id = chat
+            cursor.execute("INSERT INTO SQLUser.DoctorApproval (chatId, patientId) VALUES (?, ?)", (chat_id, patient_id))
+
+        conn.commit()
+        print("DoctorApproval table populated successfully.")
+    
+    except Exception as e:
+        print(f"Error populating DoctorApproval table: {e}")
+
+    cursor.close()
+    conn.close()
+
 # Directory where cleaned CSVs are stored
 CLEANED_DATA_DIR = "cleaned_data"
 
@@ -245,3 +286,6 @@ if __name__ == "__main__":
         insert_patientchat_data(patientchat_csv, chatmessage_csv, chatresponse_csv)
     else:
         print(f"Skipping import, one or more files not found.")
+
+    # Step 5: Populate the DoctorApproval table
+    populate_doctorapproval_table()

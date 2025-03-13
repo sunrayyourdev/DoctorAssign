@@ -114,21 +114,82 @@ def insert_patientchat_data(patientchat_csv, chatmessage_csv, chatresponse_csv):
         cursor.close()
         conn.close()
 
+# Function to create the DoctorApproval table
+def create_doctorapproval_table():
+    conn = get_iris_connection()
+    if not conn:
+        return
+
+    cursor = conn.cursor()
+
+    try:
+        print("Creating DoctorApproval table...")
+
+        # DoctorApproval Table
+        cursor.execute("""
+            CREATE TABLE SQLUser.DoctorApproval (
+                doctorId INT NULL,
+                chatId INT,
+                patientId INT,
+                approval BIT DEFAULT 0,
+                FOREIGN KEY (doctorId) REFERENCES SQLUser.Doctor(doctorId) ON DELETE CASCADE,
+                FOREIGN KEY (chatId) REFERENCES SQLUser.PatientChat(chatId) ON DELETE CASCADE,
+                FOREIGN KEY (patientId) REFERENCES SQLUser.Patient(patientId) ON DELETE CASCADE
+            )
+        """)
+
+        conn.commit()
+        print("DoctorApproval table created successfully.")
+    
+    except Exception as e:
+        print(f"Error creating DoctorApproval table: {e}")
+
+    cursor.close()
+    conn.close()
+
+def populate_doctorapproval_table():
+    conn = get_iris_connection()
+    if not conn:
+        return
+
+    cursor = conn.cursor()
+
+    try:
+        print("Populating DoctorApproval table...")
+
+        cursor.execute("SELECT chatId, patientId FROM SQLUser.PatientChat")
+        patient_chats = cursor.fetchall()
+
+        for chat in patient_chats:
+            chat_id, patient_id = chat
+            cursor.execute("INSERT INTO SQLUser.DoctorApproval (chatId, patientId) VALUES (?, ?)", (chat_id, patient_id))
+
+        conn.commit()
+        print("DoctorApproval table populated successfully.")
+    
+    except Exception as e:
+        print(f"Error populating DoctorApproval table: {e}")
+
+    cursor.close()
+    conn.close()
+
 # Directory where cleaned CSVs are stored
 CLEANED_DATA_DIR = "cleaned_data"
 
 # Run the import process
 if __name__ == "__main__":
-    drop_patientchat_table()  # Step 1: Drop the PatientChat table
-    create_patientchat_table()  # Step 2: Recreate the PatientChat table
+    # drop_patientchat_table()  # Step 1: Drop the PatientChat table
+    # create_patientchat_table()  # Step 2: Recreate the PatientChat table
+    create_doctorapproval_table()  # Step 3: Create the DoctorApproval table
+    populate_doctorapproval_table()  # Step 4: Populate the DoctorApproval table
 
-    # Step 3: Insert data into the PatientChat table
-    patientchat_csv = os.path.join(CLEANED_DATA_DIR, "PatientChat.csv")
-    chatmessage_csv = os.path.join(CLEANED_DATA_DIR, "ChatMessage.csv")
-    chatresponse_csv = os.path.join(CLEANED_DATA_DIR, "ChatResponse.csv")
+    # Step 5: Insert data into the PatientChat table
+    # patientchat_csv = os.path.join(CLEANED_DATA_DIR, "PatientChat.csv")
+    # chatmessage_csv = os.path.join(CLEANED_DATA_DIR, "ChatMessage.csv")
+    # chatresponse_csv = os.path.join(CLEANED_DATA_DIR, "ChatResponse.csv")
 
-    if os.path.exists(patientchat_csv) and os.path.exists(chatmessage_csv) and os.path.exists(chatresponse_csv):
-        print(f"Importing data into SQLUser.PatientChat...")
-        insert_patientchat_data(patientchat_csv, chatmessage_csv, chatresponse_csv)
-    else:
-        print(f"Skipping import, one or more files not found.")
+    # if os.path.exists(patientchat_csv) and os.path.exists(chatmessage_csv) and os.path.exists(chatresponse_csv):
+    #     print(f"Importing data into SQLUser.PatientChat...")
+    #     insert_patientchat_data(patientchat_csv, chatmessage_csv, chatresponse_csv)
+    # else:
+    #     print(f"Skipping import, one or more files not found.")

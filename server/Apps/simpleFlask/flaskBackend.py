@@ -409,13 +409,7 @@ def chatbot_response():
         # Check if a doctor should be recommended
         if "recommend a doctor" in chatbot_reply.lower() or "need a doctor" in chatbot_reply.lower():
             cursor.execute("""
-                SELECT content FROM (
-                    SELECT CM.content, ROW_NUMBER() OVER (ORDER BY CM.timestamp DESC) AS row_num
-                    FROM SQLUser.ChatMessage CM
-                    JOIN SQLUser.PatientChat PC ON CM.chatId = PC.chatId
-                    WHERE PC.patientId = ?
-                ) AS subquery
-                WHERE row_num <= 5
+                SELECT content SQLUser.PatientChat WHERE patientId = ? AND row_num <= 5 ORDER BY chat_timestamp DESC
             """, (patient_id,))
             chat_data = cursor.fetchall()
 
@@ -438,7 +432,7 @@ def chatbot_response():
                             doctor = cursor.fetchone()
 
                             if doctor:
-                                doctor_recommendation = f"I recommend Dr. {doctor[1]}, a specialist in {doctor[2]} with {doctor[3]} years of experience. Available hours: {doctor[4]}. Contact: {doctor[6]}."
+                                doctor_recommendation = f"I recommend Dr. {doctor[1]}, a specialist in {doctor[2]} with {doctor[3]} years of experience. Available hours: {doctor[4]}. Contact: {doctor[1]}{doctor[6]}."
                                 chatbot_reply += f"\n\n{doctor_recommendation}"
 
         cursor.close()
