@@ -130,8 +130,8 @@ export default function DoctorMatchingChat() {
       <div className="bg-white rounded-lg shadow-lg flex flex-col h-full">
         {/* Chat header */}
         <div className="p-2 sm:p-3 border-b">
-          <h1 className="text-base sm:text-lg font-semibold text-primary">Doctor Matching</h1>
-          <p className="text-xs text-muted-foreground">Describe your symptoms to find the right specialist</p>
+          <h1 className="text-base sm:text-lg font-semibold text-primary">DoctorAssign</h1>
+          <p className="text-xs text-muted-foreground">How are you feeling today? Describe your symptoms and we'll find the best doctor for you.</p>
         </div>
 
         {/* Messages container */}
