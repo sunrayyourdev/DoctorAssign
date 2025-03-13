@@ -343,6 +343,174 @@ def preprocess_text(text):
     
     return " ".join(words)
 
+
+# ---- AI-POWERED DOCTOR RECOMMENDATION ----
+from openai import OpenAI
+
+@app.route('/recommend_doctor', methods=['POST'])
+def recommend_doctor():
+    """Finds the best matching doctor and validates it with OpenAI before responding."""
+    data = request.json
+    patient_id = data.get('patientId')
+
+    if not patient_id:
+        return jsonify({"error": "Missing patientId"}), 400
+
+    try:
+        conn = get_iris_connection()
+        cursor = conn.cursor()
+
+        # Fetch latest chat messages for the patient
+        cursor.execute("""
+            SELECT messages FROM SQLUser.PatientChat WHERE patientId = ?
+        """, (patient_id,))
+        chat_row = cursor.fetchone()
+
+        if not chat_row:
+            return jsonify({"error": "No recent chat messages found for patient"}), 404
+
+        # Combine messages into one input string
+        messages = json.loads(chat_row[0]) if chat_row[0] else []
+        patient_input = " ".join([msg["content"] for msg in messages])
+        print(f"Extracted Patient Input: {patient_input}")
+
+        # Generate an embedding for the extracted text
+        embedding_vector = embedding_fn.get_text_embedding(patient_input)
+
+        # Ensure embedding vector is correct dimension
+        if len(embedding_vector) != 1536:
+            return jsonify({"error": "Embedding dimension mismatch"}), 500
+
+        embedding_np = np.array([embedding_vector], dtype=np.float32)
+
+        # Check if FAISS index has stored doctor embeddings
+        if faiss_index.ntotal == 0:
+            return jsonify({"error": "No doctor embeddings found in FAISS index"}), 500
+
+        # Search FAISS for the closest doctor match
+        D, I = faiss_index.search(embedding_np, k=1)
+
+        # Debugging: Log FAISS search results
+        print(f"FAISS Search Results: D={D}, I={I}")
+
+        if I[0][0] == -1:
+            return jsonify({"error": "No matching doctor found"}), 404
+
+        # Ensure FAISS result is valid
+        if I[0][0] >= len(index.docstore.docs):
+            return jsonify({"error": "FAISS returned an invalid index"}), 500
+
+        # Get doctor ID mapping
+        try:
+            doctor_id_mapping = {idx: doc.metadata["doctorId"] for idx, doc in enumerate(index.docstore.docs.values())}
+            doctor_id = doctor_id_mapping.get(I[0][0], None)
+
+            # Debugging: Log doctor ID mapping
+            print(f"Doctor ID Mapping: {doctor_id_mapping}")
+            print(f"Selected Doctor ID: {doctor_id}")
+
+            if not doctor_id:
+                return jsonify({"error": "Doctor ID not found"}), 404
+        except Exception as mapping_error:
+            return jsonify({"error": f"Doctor ID mapping error: {str(mapping_error)}"}), 500
+
+        # Fetch doctor details from database
+        cursor.execute("""
+            SELECT doctorId, name, specialty, experience_years, available_hours, description, doctorContact
+            FROM SQLUser.Doctor WHERE doctorId = ?
+        """, (doctor_id,))
+        doctor = cursor.fetchone()
+        print(f"Recommended Doctor Details: {doctor}")
+
+        if not doctor:
+            return jsonify({"error": "Doctor not found in database"}), 404
+
+        # Get column names from the cursor
+        columns = [desc[0] for desc in cursor.description]
+
+        # Convert DataRow to dictionary
+        doctor_dict = dict(zip(columns, doctor))
+
+        # --- OpenAI ChatGPT Validation ---
+        client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
+        # Prompt to analyze patient symptoms and validate recommendation
+        prompt = f"""
+        Patient's reported symptoms: "{patient_input}"
+
+        Recommended Doctor:
+        - Name: {doctor_dict['name']}
+        - Specialty: {doctor_dict['specialty']}
+        - Experience: {doctor_dict['experience_years']} years
+        - Available Hours: {doctor_dict['available_hours']}
+        - Description: {doctor_dict['description']}
+
+        Answer the following:
+        1. Based on the symptoms provided, is there enough information to determine if this doctor is a good fit? Answer ONLY "Yes" or "No".
+        2. If "Yes", provide a structured response covering:
+            - **Possible conditions** the patient might have.
+            - **Why this doctor is a good match** for the symptoms.
+            - **A patient-friendly explanation** recommending the doctor.
+        """
+
+        # Make OpenAI API call
+        openai_response = client.chat.completions.create(
+            model="gpt-4",
+            messages=[
+                {"role": "system", "content": "You are a medical AI assistant. Provide responsible and accurate medical insights."},
+                {"role": "user", "content": prompt}
+            ]
+        )
+
+        # Extract GPT response
+        gpt_reply = openai_response.choices[0].message.content
+        print(f"OpenAI Response: {gpt_reply}")
+
+        # Extract first answer (Yes/No) and explanation
+        lines = gpt_reply.split("\n")
+
+        first_answer = lines[0].strip()  # First line should be "Yes" or "No"
+
+
+        # If ChatGPT determines there's not enough data, return an appropriate response
+        if "no" in first_answer.strip().lower():
+            return jsonify({
+                "error": "Not enough data reported on the patient's symptoms to be confident in the recommended doctor."
+            })
+        
+        # Remove numbered points (1., 2., etc.) from explanation parts
+        cleaned_explanation = [
+            re.sub(r"^\d+\.\s*", "", line).strip()  # Remove leading "1. ", "2. ", etc.
+            for line in lines[1:] if line.strip()  # Ignore empty lines
+        ]
+
+        # Format explanation with bullet points
+        formatted_explanation = f"""
+        Possible Conditions:
+        {cleaned_explanation[0]}
+
+        Why this doctor is a good fit: 
+        {cleaned_explanation[1]}
+
+        Patient-friendly recommendation:  
+        {cleaned_explanation[2]}
+        """
+
+        # Combine ChatGPT explanation with doctor details
+        response_data = {
+            "doctor_details": doctor_dict,
+            "chatgpt_analysis": formatted_explanation
+        }
+
+        cursor.close()
+        conn.close()
+        
+        return jsonify(response_data)  # Return enriched recommendation
+    
+    except Exception as e:
+        return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
+
+    
 @app.route('/chatbot_response', methods=['POST'])
 def chatbot_response():
     """Processes chatbot responses and determines if a doctor should be recommended."""
@@ -405,36 +573,6 @@ def chatbot_response():
         cursor.execute("UPDATE SQLUser.PatientChat SET messages = ?, responses = ?, chat_timestamp = NOW() WHERE chatId = ?", 
                        (json.dumps(messages), json.dumps(responses), chat_id))
         conn.commit()
-
-        # Check if a doctor should be recommended
-        if "recommend a doctor" in chatbot_reply.lower() or "need a doctor" in chatbot_reply.lower():
-            cursor.execute("""
-                SELECT content SQLUser.PatientChat WHERE patientId = ? AND row_num <= 5 ORDER BY chat_timestamp DESC
-            """, (patient_id,))
-            chat_data = cursor.fetchall()
-
-            if chat_data:
-                patient_input = " ".join([row[0] for row in chat_data])
-                embedding_vector = embedding_fn.get_text_embedding(patient_input)
-
-                if len(embedding_vector) == 1536 and faiss_index.ntotal > 0:
-                    embedding_np = np.array([embedding_vector], dtype=np.float32)
-                    D, I = faiss_index.search(embedding_np, k=1)
-
-                    if I[0][0] != -1:
-                        doctor_id_mapping = {idx: doc.metadata["doctorId"] for idx, doc in enumerate(index.docstore.docs.values())}
-                        doctor_id = doctor_id_mapping.get(I[0][0], None)
-                        if doctor_id:
-                            cursor.execute("""
-                                SELECT doctorId, name, specialty, experience_years, available_hours, description, doctorContact
-                                FROM SQLUser.Doctor WHERE doctorId = ?
-                            """, (doctor_id,))
-                            doctor = cursor.fetchone()
-
-                            if doctor:
-                                doctor_recommendation = f"I recommend Dr. {doctor[1]}, a specialist in {doctor[2]} with {doctor[3]} years of experience. Available hours: {doctor[4]}. Contact: {doctor[1]}{doctor[6]}."
-                                chatbot_reply += f"\n\n{doctor_recommendation}"
-
         cursor.close()
         conn.close()
 
@@ -443,7 +581,31 @@ def chatbot_response():
 
     except Exception as e:
         return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
-    
+
+# For reseting the tested patient chat
+@app.route('/resetPatientChat/<int:patient_id>', methods=['POST'])
+def resetPatientChat(patient_id):
+    """Reset the patient chat log by deleting all messages and responses."""
+    conn = get_iris_connection()
+    if not conn:
+        return jsonify({"error": "Database connection failed"}), 500
+
+    cursor = conn.cursor()
+    cursor.execute("SELECT chatId FROM SQLUser.PatientChat WHERE patientId = ?", (patient_id,))
+    chat_row = cursor.fetchone()
+
+    if not chat_row:
+        return jsonify({"error": "No chat log found for the specified patient ID"}), 404
+
+    chat_id = chat_row[0]
+
+    cursor.execute("UPDATE SQLUser.PatientChat SET messages = ?, responses = ? WHERE chatId = ?", (json.dumps([]), json.dumps([]), chat_id))
+    conn.commit()
+    cursor.close()
+    conn.close()
+
+    return jsonify({"response": "Patient chat log has been reset successfully"})
+
 @app.route('/get_chat_log/<int:patient_id>', methods=['GET'])
 def get_chat_log(patient_id):
     """Fetches the chat log for a specific patient."""
