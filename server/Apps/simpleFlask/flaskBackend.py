@@ -6,6 +6,7 @@ import json
 import numpy as np
 from sentence_transformers import SentenceTransformer
 import openai
+from openai import OpenAI
 import re
 import nltk
 from nltk.corpus import stopwords
@@ -345,8 +346,6 @@ def preprocess_text(text):
 
 
 # ---- AI-POWERED DOCTOR RECOMMENDATION ----
-from openai import OpenAI
-
 @app.route('/recommend_doctor', methods=['POST'])
 def recommend_doctor():
     """Finds the best matching doctor and validates it with OpenAI before responding."""
@@ -362,15 +361,16 @@ def recommend_doctor():
 
         # Fetch latest chat messages for the patient
         cursor.execute("""
-            SELECT messages FROM SQLUser.PatientChat WHERE patientId = ?
+            SELECT chatId, messages FROM SQLUser.PatientChat WHERE patientId = ?
         """, (patient_id,))
         chat_row = cursor.fetchone()
 
         if not chat_row:
             return jsonify({"error": "No recent chat messages found for patient"}), 404
 
+        chat_id = chat_row[0]
         # Combine messages into one input string
-        messages = json.loads(chat_row[0]) if chat_row[0] else []
+        messages = json.loads(chat_row[1]) if chat_row[1] else []
         patient_input = " ".join([msg["content"] for msg in messages])
         print(f"Extracted Patient Input: {patient_input}")
 
@@ -471,13 +471,12 @@ def recommend_doctor():
 
         first_answer = lines[0].strip()  # First line should be "Yes" or "No"
 
-
         # If ChatGPT determines there's not enough data, return an appropriate response
         if "no" in first_answer.strip().lower():
             return jsonify({
                 "error": "Not enough data reported on the patient's symptoms to be confident in the recommended doctor."
             })
-        
+
         # Remove numbered points (1., 2., etc.) from explanation parts
         cleaned_explanation = [
             re.sub(r"^\d+\.\s*", "", line).strip()  # Remove leading "1. ", "2. ", etc.
@@ -502,11 +501,19 @@ def recommend_doctor():
             "chatgpt_analysis": formatted_explanation
         }
 
+        # Update the DoctorApproval table
+        cursor.execute("""
+            UPDATE SQLUser.DoctorApproval
+            SET doctorId = ?, approval = 1
+            WHERE chatId = ?
+        """, (doctor_id, chat_id))
+        conn.commit()
+
         cursor.close()
         conn.close()
-        
+
         return jsonify(response_data)  # Return enriched recommendation
-    
+
     except Exception as e:
         return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
 
@@ -545,6 +552,10 @@ def chatbot_response():
             chat_id = chat_id_row[0] if chat_id_row else None
             messages = []
             responses = []
+
+            # Insert a new row into the DoctorApproval table
+            cursor.execute("INSERT INTO SQLUser.DoctorApproval (chatId, patientId, approval) VALUES (?, ?, 0)", (chat_id, patient_id))
+            conn.commit()
         else:
             chat_id = chat_row[0]
             messages = json.loads(chat_row[1]) if chat_row[1] else []
@@ -636,6 +647,38 @@ def get_chat_log(patient_id):
         conn.close()
 
         return jsonify({"chat_log": chat_log})
+
+    except Exception as e:
+        return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
+
+@app.route('/update_doctor_approval/<int:chat_id>', methods=['POST'])
+def update_doctor_approval(chat_id):
+    """Updates the approval status of a doctor for a specific patient and chat."""
+    data = request.json
+    approval = data.get('approval')
+
+    if not chat_id or approval is None:
+        return jsonify({"error": "Missing required fields (chatId and approval)"}), 400
+
+    try:
+        conn = get_iris_connection()
+        if not conn:
+            return jsonify({"error": "Database connection failed"}), 500
+
+        cursor = conn.cursor()
+
+        # Update the approval status in the DoctorApproval table
+        cursor.execute("""
+            UPDATE SQLUser.DoctorApproval
+            SET approval = ?
+            WHERE chatId = ?
+        """, (approval, chat_id))
+        conn.commit()
+
+        cursor.close()
+        conn.close()
+
+        return jsonify({"response": "Doctor approval status updated successfully"})
 
     except Exception as e:
         return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
