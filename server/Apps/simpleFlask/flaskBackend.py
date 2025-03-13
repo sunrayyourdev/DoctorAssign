@@ -520,7 +520,14 @@ def recommend_doctor():
     
 @app.route('/chatbot_response', methods=['POST'])
 def chatbot_response():
-    """Processes chatbot responses and determines if a doctor should be recommended."""
+    """
+    Processes chatbot responses while maintaining full conversation history in two lists:
+      - messages (user messages)
+      - responses (assistant responses)
+
+    Uses a sliding window to provide GPT-4 with recent context. Also integrates
+    doctor approval initialization if needed, without requiring 'role' in the database.
+    """
     try:
         start_time = time.time()
         data = request.json
@@ -534,18 +541,23 @@ def chatbot_response():
         if not patient_id or not patient_input:
             return jsonify({"error": "Invalid request. Missing patientId or content."}), 400
 
+        # Connect to the IRIS database
         conn = get_iris_connection()
         if not conn:
             return jsonify({"error": "Database connection failed"}), 500
         
         cursor = conn.cursor()
 
+        # Retrieve existing chat history if it exists
         cursor.execute("SELECT chatId, messages, responses FROM SQLUser.PatientChat WHERE patientId = ?", (patient_id,))
         chat_row = cursor.fetchone()
 
         if not chat_row:
-            cursor.execute("INSERT INTO SQLUser.PatientChat (patientId, Title, chat_timestamp, messages, responses) VALUES (?, ?, NOW(), ?, ?)", 
-                           (patient_id, "New Chat", json.dumps([]), json.dumps([])))
+            # Create a new chat record if none exists
+            cursor.execute(
+                "INSERT INTO SQLUser.PatientChat (patientId, Title, chat_timestamp, messages, responses) VALUES (?, ?, NOW(), ?, ?)",
+                (patient_id, "New Chat", json.dumps([]), json.dumps([]))
+            )
             conn.commit()
             cursor.execute("SELECT LAST_IDENTITY() FROM SQLUser.PatientChat")
             chat_id_row = cursor.fetchone()
@@ -553,45 +565,88 @@ def chatbot_response():
             messages = []
             responses = []
 
-            # Insert a new row into the DoctorApproval table
-            cursor.execute("INSERT INTO SQLUser.DoctorApproval (chatId, patientId, approval) VALUES (?, ?, 0)", (chat_id, patient_id))
+            # Also create a new record in DoctorApproval table
+            cursor.execute(
+                "INSERT INTO SQLUser.DoctorApproval (chatId, patientId, approval) VALUES (?, ?, 0)",
+                (chat_id, patient_id)
+            )
             conn.commit()
         else:
             chat_id = chat_row[0]
             messages = json.loads(chat_row[1]) if chat_row[1] else []
             responses = json.loads(chat_row[2]) if chat_row[2] else []
 
-        # Append the new message
-        messages.append({"content": patient_input, "timestamp": time.strftime('%Y-%m-%d %H:%M:%S')})
+        # 1) Append the new user message to messages
+        new_user_message = {
+            "content": patient_input,
+            "timestamp": time.strftime('%Y-%m-%d %H:%M:%S')
+        }
+        messages.append(new_user_message)
 
-        # Generate chatbot response
-        chat_history = [{"role": "user", "content": msg["content"]} for msg in messages]
-        chat_history.append({"role": "user", "content": patient_input})
+        # 2) Build a combined conversation by weaving user messages & assistant responses
+        def build_conversation(user_msgs, assistant_msgs):
+            """
+            Merge user and assistant entries into a single conversation list with 'role' keys,
+            so GPT-4 knows which text is from the user vs. from the assistant.
+            """
+            conversation = []
+            # Loop up to the longer of the two lists
+            for i in range(max(len(user_msgs), len(assistant_msgs))):
+                if i < len(user_msgs):
+                    conversation.append({
+                        "role": "user",
+                        "content": user_msgs[i]["content"]
+                    })
+                if i < len(assistant_msgs):
+                    conversation.append({
+                        "role": "assistant",
+                        "content": assistant_msgs[i]["content"]
+                    })
+            return conversation
+        
+        full_conversation = build_conversation(messages, responses)
 
-        response = client.chat.completions.create(
+        # 3) Use a sliding window (e.g., last 5 exchanges) for GPT context
+        window_size = 5 * 2  # 5 user messages + 5 assistant replies => 10 total
+        limited_conversation = full_conversation[-window_size:]
+
+        # 4) Call GPT-4 with the system prompt and limited conversation
+        gpt_response = client.chat.completions.create(
             model="gpt-4",
             messages=[
-                {"role": "system", "content": "You are a healthcare chatbot. Ask about symptoms before recommending a doctor."}
-            ] + chat_history,
+                {"role": "system", "content": "You are a healthcare chatbot. Maintain conversation history while assisting the patient."}
+            ] + limited_conversation,
             timeout=10
         )
-        chatbot_reply = response.choices[0].message.content
+        chatbot_reply = gpt_response.choices[0].message.content
 
-        # Append the new response
-        responses.append({"content": chatbot_reply, "timestamp": time.strftime('%Y-%m-%d %H:%M:%S')})
+        # 5) Append the new assistant message to responses
+        new_assistant_message = {
+            "content": chatbot_reply,
+            "timestamp": time.strftime('%Y-%m-%d %H:%M:%S')
+        }
+        responses.append(new_assistant_message)
 
-        # Update the PatientChat table with the new messages and responses
-        cursor.execute("UPDATE SQLUser.PatientChat SET messages = ?, responses = ?, chat_timestamp = NOW() WHERE chatId = ?", 
-                       (json.dumps(messages), json.dumps(responses), chat_id))
+        # 6) (Optional) Trim the size of responses to match the sliding window, if desired
+        # This is not strictly necessary; it just keeps the DB smaller.
+        # responses = responses[-5:]  # Keep last 5 assistant replies
+        # messages = messages[-5:]    # Keep last 5 user messages
+
+        # 7) Update the chat record in the database
+        cursor.execute(
+            "UPDATE SQLUser.PatientChat SET messages = ?, responses = ?, chat_timestamp = NOW() WHERE chatId = ?",
+            (json.dumps(messages), json.dumps(responses), chat_id)
+        )
         conn.commit()
         cursor.close()
         conn.close()
 
-        total_time = time.time() - start_time
-        return jsonify({"response": chatbot_reply})
-
+        # 8) Return the chatbot reply + the limited conversation for client display
+        return jsonify({"response": chatbot_reply, "chat_history": limited_conversation})
+    
     except Exception as e:
         return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
+
 
 # For reseting the tested patient chat
 @app.route('/resetPatientChat/<int:patient_id>', methods=['POST'])
@@ -683,6 +738,133 @@ def update_doctor_approval(chat_id):
     except Exception as e:
         return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
     
+# --- Helper Function to Extract Symptoms ---
+def extract_symptoms(text):
+    """
+    Extracts potential symptoms from the provided text using a keyword-based approach.
+    Can be expanded with more advanced NLP techniques.
+    """
+    common_symptoms = [
+    "fever", "chills", "sweating", "cough", "shortness of breath", "wheezing",
+    "sore throat", "runny nose", "nasal congestion", "headache", "migraine",
+    "dizziness", "lightheadedness", "nausea", "vomiting", "diarrhea", "constipation",
+    "abdominal pain", "stomach cramps", "back pain", "muscle pain", "joint pain",
+    "fatigue", "weakness", "swelling", "edema", "rash", "itching", "hives",
+    "redness", "blurred vision", "double vision", "light sensitivity", "loss of taste",
+    "loss of smell", "palpitations", "chest pain", "chest tightness", "anxiety",
+    "insomnia", "confusion", "memory loss", "tingling", "numbness", "seizures",
+    "weight loss", "weight gain", "frequent urination", "painful urination",
+    "urinary urgency", "heartburn", "acid reflux", "malaise"
+    ]
+    found = []
+    lower_text = text.lower()
+    for symptom in common_symptoms:
+        if symptom in lower_text:
+            found.append(symptom)
+    return list(set(found))  # Ensure unique symptoms
+
+@app.route('/get_patient_chat/<int:doctor_id>/<int:patient_id>', methods=['GET'])
+def get_patient_chat(doctor_id, patient_id):
+    """
+    Securely retrieves a patient's chat history, including messages and chatbot responses.
+    Also extracts potential symptoms from patient messages.
+    """
+    try:
+        conn = get_iris_connection()
+        if not conn:
+            return jsonify({"error": "Database connection failed"}), 500
+
+        cursor = conn.cursor()
+
+        #  Security Check: Ensure the doctor is assigned to this patient and approved
+        cursor.execute("""
+            SELECT doctorId FROM SQLUser.DoctorApproval WHERE patientId = ? AND doctorId = ? AND approval = 1
+        """, (patient_id, doctor_id))
+        assignment = cursor.fetchone()
+
+        if not assignment:
+            return jsonify({"error": "Access denied. You are not assigned to this patient or approval is pending."}), 403
+
+        # Fetch chat logs
+        cursor.execute("""
+            SELECT chatId, messages, responses FROM SQLUser.PatientChat WHERE patientId = ?
+        """, (patient_id,))
+        chat_row = cursor.fetchone()
+
+        if not chat_row:
+            return jsonify({"error": "No chat log found for this patient"}), 404
+
+        chat_id = chat_row[0]
+        messages = json.loads(chat_row[1]) if chat_row[1] else []
+        responses = json.loads(chat_row[2]) if chat_row[2] else []
+
+        # Extract Symptoms from Patient Messages
+        patient_text = " ".join([msg["content"] for msg in messages])
+        symptoms = extract_symptoms(patient_text)
+
+        cursor.close()
+        conn.close()
+
+        return jsonify({
+            "chatId": chat_id,
+            "messages": messages,
+            "responses": responses,
+            "extracted_symptoms": symptoms  # Added symptom analysis
+        })
+
+    except Exception as e:
+        return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
+    
+@app.route('/get_all_patient_chats/<int:doctor_id>', methods=['GET'])
+def get_all_patient_chats(doctor_id):
+    """
+    Retrieves all patient chat logs that the doctor is approved to view.
+    """
+    try:
+        conn = get_iris_connection()
+        if not conn:
+            return jsonify({"error": "Database connection failed"}), 500
+
+        cursor = conn.cursor()
+
+        # Get all chat IDs where the doctor is approved to view
+        cursor.execute("""
+            SELECT chatId FROM SQLUser.DoctorApproval
+            WHERE doctorId = ? AND approval = 1
+        """, (doctor_id,))
+        chat_ids = cursor.fetchall()
+
+        if not chat_ids:
+            return jsonify({"error": "No approved chats found for this doctor"}), 404
+
+        # Flatten chat_ids to a list of integers
+        chat_ids = [chat[0] for chat in chat_ids]
+
+        # Retrieve chat logs for the approved chat IDs
+        placeholders = ','.join(['?'] * len(chat_ids))
+        query = f"SELECT * FROM SQLUser.PatientChat WHERE chatId IN ({placeholders})"
+        cursor.execute(query, chat_ids)
+        chat_rows = cursor.fetchall()
+
+        if not chat_rows:
+            return jsonify({"error": "No chat logs found"}), 404
+
+        # Map each chat row to a dictionary
+        columns = [desc[0] for desc in cursor.description]
+        chat_logs = []
+        for row in chat_rows:
+            chat_log = dict(zip(columns, row))
+            chat_log['messages'] = json.loads(chat_log.get('messages', '[]'))
+            chat_log['responses'] = json.loads(chat_log.get('responses', '[]'))
+            chat_logs.append(chat_log)
+
+        cursor.close()
+        conn.close()
+
+        return jsonify({"chat_logs": chat_logs})
+    except Exception as e:
+        return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
+
 if __name__ == '__main__':
     import logging
     logging.basicConfig(level=logging.DEBUG)  # Enable DEBUG logs
