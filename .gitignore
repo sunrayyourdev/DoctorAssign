@@ -1,3 +1,4 @@
 /server/doctorassign-env
 server/.env.dev
 *.dev
+/client/node_modules

@@ -1,4 +1,3 @@
-
 ## simpleFlask
 
 1. Change directory to the project folder:
@@ -15,12 +14,17 @@
     
     Also make sure that you have followed step 5 to install the db-api driver from [`README.md`](../README.md) 
     
-3. Start the Flask application:
+3. Freeze new dependencies:
+    ```bash
+    pip freeze > requirements.txt
+    ```
+
+4. Start the Flask application:
    ```bash
    python flaskBackend.py
    ```
 
-4. Open your browser and go to:
+5. Open your browser and go to:
 
     [http://localhost:5010](http://localhost:5010)
 

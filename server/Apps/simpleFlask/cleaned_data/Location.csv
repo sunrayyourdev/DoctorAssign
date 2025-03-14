@@ -1,0 +1,1001 @@
+locationId,clinicName,Address,postalCode,medications,procedures
+1,Silver Cross Family Clinic,2 Lorong Lew Lian #01-50,531002,Omeprazole; Ibuprofen,Vaccination; Minor Surgery; ECG
+2,Acumed Medical Group,Blk 727 Ang Mo Kio Ave 6,560727,Amlodipine; Amoxicillin,X-Ray; Blood Test; Minor Surgery
+3,Zion Medical Centre,Blk 502 Jurong West Ave 1 #01-815,640502,Amoxicillin; Atorvastatin; Lisinopril; Ibuprofen,Minor Surgery; Health Screening
+4,Zion Medical Centre,Blk 502 Jurong West Ave 1 #01-815,640502,Amoxicillin; Amlodipine; Lisinopril; Salbutamol,ECG; Ultrasound; Blood Test; Physiotherapy; X-Ray
+5,FRONTIER PEOPLE'S CLINIC PTE LTD,Blk 123 Bedok North Street 2 #01-152,460123,Ibuprofen,Minor Surgery; Wound Dressing; Ultrasound; Vaccination
+6,Everhealth Clinic & Surgery,201D Tampines Street 21 #01-1171,524201,Amlodipine; Amoxicillin,Minor Surgery; Physiotherapy
+7,Zion Medical Centre,Blk 502 Jurong West Ave 1 #01-815,640502,Ibuprofen; Amoxicillin; Simvastatin; Lisinopril; Omeprazole,ECG; X-Ray; Minor Surgery; Blood Test
+8,CHANGI CLINIC,848 Sims Avenue #01-734 Eunosville,400848,Salbutamol; Amoxicillin; Ibuprofen,Health Screening
+9,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Salbutamol; Ibuprofen; Atorvastatin,Vaccination
+10,Bukit Batok Medical Clinic,632 Bukit Batok Central,650632,Salbutamol; Omeprazole; Amoxicillin,Minor Surgery
+11,The Clinic Group,1 Raffles Quay #09-02,048583,Ibuprofen; Amlodipine; Amoxicillin,Physiotherapy; ECG; X-Ray
+12,TANG FAMILY CLINIC,84 Jalan Jurong Kechil,598593,Ibuprofen; Amlodipine; Atorvastatin,Blood Test; Health Screening; X-Ray
+13,Central 24-HR Clinic (Hougang),"681 Hougang Ave 8, #01-829",530681,Paracetamol; Metformin; Simvastatin,Ultrasound; Physiotherapy; ECG; Wound Dressing
+14,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Amoxicillin; Amlodipine; Ibuprofen,Minor Surgery; Physiotherapy; X-Ray
+15,Bukit Batok Medical Clinic,632 Bukit Batok Central,650632,Salbutamol,Endoscopy; Minor Surgery
+16,OneCare Clinic Yishun,846 Yishun Ring Rd #01-3669,760846,Lisinopril; Paracetamol; Simvastatin,Blood Test
+17,Trucare Medical,Blk 682 Hougang Ave 4 #01-320,530682,Salbutamol; Amlodipine,Physiotherapy
+18,Central 24-HR Clinic (Yishun),"701A Yishun Ave 5, #01-04",761701,Atorvastatin; Paracetamol; Amoxicillin; Salbutamol,ECG; Wound Dressing
+19,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Metformin; Amlodipine; Atorvastatin; Lisinopril,Minor Surgery; X-Ray; Physiotherapy; Blood Test; Health Screening
+20,Central 24-HR Clinic (Hougang),"681 Hougang Ave 8, #01-829",530681,Metformin; Ibuprofen; Omeprazole; Salbutamol,ECG; Endoscopy
+21,Acumed Medical Group,Blk 727 Ang Mo Kio Ave 6,560727,Ibuprofen; Metformin,Health Screening
+22,Trucare Medical,Blk 682 Hougang Ave 4 #01-320,530682,Lisinopril; Omeprazole; Salbutamol; Amoxicillin; Amlodipine,Vaccination
+23,Central 24-HR Clinic (Hougang),"681 Hougang Ave 8, #01-829",530681,Ibuprofen; Omeprazole,X-Ray; Endoscopy; Physiotherapy
+24,Central 24-HR Clinic (Clementi),450 Clementi Ave 3 #01-291,120450,Ibuprofen; Atorvastatin,ECG; Blood Test; Ultrasound; Endoscopy; Minor Surgery
+25,TANG FAMILY CLINIC,84 Jalan Jurong Kechil,598593,Paracetamol; Amlodipine; Amoxicillin; Simvastatin; Atorvastatin,Ultrasound; Wound Dressing; Endoscopy; Minor Surgery; Health Screening
+26,Everhealth Clinic & Surgery,201D Tampines Street 21 #01-1171,524201,Omeprazole; Simvastatin,Blood Test; Ultrasound; Vaccination; Minor Surgery; Physiotherapy
+27,Bukit Batok Medical Clinic,632 Bukit Batok Central,650632,Amlodipine; Ibuprofen; Omeprazole; Atorvastatin; Paracetamol,Blood Test; Ultrasound
+28,CHANG CLINIC & SURGERY,7 Everton Park #01-21,080007,Salbutamol; Lisinopril; Ibuprofen; Omeprazole,Physiotherapy; Endoscopy; Ultrasound; Health Screening
+29,Zion Medical Centre,Blk 502 Jurong West Ave 1 #01-815,640502,Amlodipine; Simvastatin; Salbutamol; Atorvastatin,Ultrasound; Endoscopy; Vaccination; Physiotherapy; Health Screening
+30,Bukit Batok Medical Clinic,632 Bukit Batok Central,650632,Paracetamol; Amoxicillin; Metformin; Ibuprofen,Wound Dressing; Health Screening
+31,Silver Cross Family Clinic,2 Lorong Lew Lian #01-50,531002,Metformin; Amlodipine,Health Screening; Minor Surgery; Wound Dressing; Vaccination
+32,CHANG CLINIC & SURGERY,7 Everton Park #01-21,080007,Omeprazole,Blood Test; Endoscopy; Health Screening; Minor Surgery
+33,Acumed Medical Group,Blk 727 Ang Mo Kio Ave 6,560727,Amoxicillin; Metformin,Wound Dressing; Minor Surgery; Endoscopy
+34,Trucare Medical,Blk 682 Hougang Ave 4 #01-320,530682,Atorvastatin,Endoscopy; Ultrasound; Blood Test; Wound Dressing; Vaccination
+35,Central 24-HR Clinic (Yishun),"701A Yishun Ave 5, #01-04",761701,Salbutamol; Ibuprofen; Simvastatin; Amoxicillin; Omeprazole,Health Screening; Minor Surgery; Ultrasound; X-Ray; Wound Dressing
+36,Trucare Medical,Blk 682 Hougang Ave 4 #01-320,530682,Lisinopril; Simvastatin; Ibuprofen,Vaccination; Endoscopy; Physiotherapy; ECG; Minor Surgery
+37,Everhealth Clinic & Surgery,201D Tampines Street 21 #01-1171,524201,Amoxicillin; Amlodipine,X-Ray; Vaccination
+38,Trucare Medical,Blk 682 Hougang Ave 4 #01-320,530682,Ibuprofen; Simvastatin; Salbutamol; Omeprazole,Wound Dressing; Blood Test; X-Ray; Vaccination; Physiotherapy
+39,East Coast Family Clinic,121 Bedok Reservoir Rd #01-202,470121,Omeprazole; Amlodipine; Simvastatin; Salbutamol,Vaccination; Minor Surgery; Physiotherapy; Health Screening
+40,OneCare Clinic Yishun,846 Yishun Ring Rd #01-3669,760846,Paracetamol,Vaccination; Blood Test; Wound Dressing
+41,TANG FAMILY CLINIC,84 Jalan Jurong Kechil,598593,Amlodipine,Blood Test; Endoscopy; Health Screening; Ultrasound
+42,FRONTIER PEOPLE'S CLINIC PTE LTD,Blk 123 Bedok North Street 2 #01-152,460123,Omeprazole; Lisinopril; Salbutamol; Paracetamol,Vaccination; Ultrasound; Minor Surgery
+43,Zion Medical Centre,Blk 502 Jurong West Ave 1 #01-815,640502,Amlodipine; Omeprazole; Atorvastatin,X-Ray; Health Screening; Vaccination; Blood Test
+44,OneCare Clinic Yishun,846 Yishun Ring Rd #01-3669,760846,Amlodipine; Paracetamol; Omeprazole; Atorvastatin; Metformin,Ultrasound
+45,Acumed Medical Group,Blk 727 Ang Mo Kio Ave 6,560727,Paracetamol,Wound Dressing
+46,Central 24-HR Clinic (Hougang),"681 Hougang Ave 8, #01-829",530681,Simvastatin; Lisinopril; Ibuprofen; Metformin,ECG; Vaccination; Blood Test; Ultrasound; Wound Dressing
+47,CHANG CLINIC & SURGERY,7 Everton Park #01-21,080007,Salbutamol,Blood Test
+48,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Simvastatin; Atorvastatin; Salbutamol,Wound Dressing; ECG; Vaccination
+49,FRONTIER PEOPLE'S CLINIC PTE LTD,Blk 123 Bedok North Street 2 #01-152,460123,Lisinopril; Atorvastatin; Amlodipine; Paracetamol; Simvastatin,Minor Surgery; Endoscopy
+50,FRONTIER PEOPLE'S CLINIC PTE LTD,Blk 123 Bedok North Street 2 #01-152,460123,Omeprazole; Paracetamol; Amlodipine,Endoscopy; Health Screening; Minor Surgery
+51,CHANGI CLINIC,848 Sims Avenue #01-734 Eunosville,400848,Ibuprofen; Paracetamol; Amoxicillin,Vaccination
+52,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Salbutamol; Metformin; Simvastatin; Atorvastatin,Wound Dressing
+53,CHANGI CLINIC,848 Sims Avenue #01-734 Eunosville,400848,Atorvastatin; Paracetamol; Amoxicillin,Blood Test; ECG; Physiotherapy; Health Screening; Minor Surgery
+54,Central 24-HR Clinic (Clementi),450 Clementi Ave 3 #01-291,120450,Omeprazole; Amoxicillin; Simvastatin,Minor Surgery; Health Screening
+55,Zion Medical Centre,Blk 502 Jurong West Ave 1 #01-815,640502,Ibuprofen; Atorvastatin; Amoxicillin,X-Ray; ECG; Physiotherapy; Health Screening; Minor Surgery
+56,SUNBEAM MEDICAL CLINIC,443C Fajar Road #01-76,673443,Paracetamol,Health Screening; ECG; Endoscopy; Vaccination; X-Ray
+57,Acumed Medical Group,Blk 727 Ang Mo Kio Ave 6,560727,Paracetamol; Omeprazole; Salbutamol; Amlodipine; Atorvastatin,Vaccination
+58,Zion Medical Centre,Blk 502 Jurong West Ave 1 #01-815,640502,Amoxicillin; Amlodipine; Lisinopril; Salbutamol,Physiotherapy; Ultrasound; ECG
+59,East Coast Family Clinic,121 Bedok Reservoir Rd #01-202,470121,Metformin; Salbutamol; Paracetamol,Physiotherapy; Minor Surgery; Vaccination; Ultrasound
+60,Central 24-HR Clinic (Hougang),"681 Hougang Ave 8, #01-829",530681,Ibuprofen; Amoxicillin; Lisinopril; Atorvastatin,Endoscopy; Minor Surgery; Health Screening
+61,CHANG CLINIC & SURGERY,7 Everton Park #01-21,080007,Metformin; Amoxicillin; Simvastatin; Atorvastatin,Wound Dressing
+62,Bukit Batok Medical Clinic,632 Bukit Batok Central,650632,Omeprazole,Blood Test; Health Screening; Physiotherapy; Wound Dressing; Endoscopy
+63,Central 24-HR Clinic (Clementi),450 Clementi Ave 3 #01-291,120450,Ibuprofen; Simvastatin,Minor Surgery; Blood Test; Vaccination; X-Ray; Wound Dressing
+64,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Paracetamol; Simvastatin; Amlodipine,Ultrasound
+65,OneCare Clinic Yishun,846 Yishun Ring Rd #01-3669,760846,Simvastatin; Paracetamol; Amoxicillin; Atorvastatin; Salbutamol,X-Ray
+66,TANG FAMILY CLINIC,84 Jalan Jurong Kechil,598593,Metformin; Simvastatin; Amlodipine; Amoxicillin,Health Screening; Vaccination; ECG
+67,FRONTIER PEOPLE'S CLINIC PTE LTD,Blk 123 Bedok North Street 2 #01-152,460123,Atorvastatin; Amoxicillin; Paracetamol; Simvastatin; Lisinopril,Health Screening; ECG
+68,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Lisinopril,ECG; Physiotherapy; Endoscopy
+69,CHANG CLINIC & SURGERY,7 Everton Park #01-21,080007,Amoxicillin,X-Ray
+70,Central 24-HR Clinic (Clementi),450 Clementi Ave 3 #01-291,120450,Simvastatin; Paracetamol; Amlodipine; Lisinopril,Vaccination; X-Ray; Blood Test
+71,CHANG CLINIC & SURGERY,7 Everton Park #01-21,080007,Salbutamol,Wound Dressing; Blood Test
+72,Bukit Batok Medical Clinic,632 Bukit Batok Central,650632,Atorvastatin; Amlodipine; Simvastatin; Lisinopril; Ibuprofen,Blood Test; ECG; Minor Surgery; Health Screening
+73,Silver Cross Family Clinic,2 Lorong Lew Lian #01-50,531002,Omeprazole; Ibuprofen; Amlodipine; Paracetamol,Minor Surgery
+74,Zion Medical Centre,Blk 502 Jurong West Ave 1 #01-815,640502,Atorvastatin; Simvastatin; Metformin; Salbutamol,Endoscopy
+75,Acumed Medical Group,Blk 727 Ang Mo Kio Ave 6,560727,Metformin,Physiotherapy; Ultrasound; Endoscopy; X-Ray
+76,CHANG CLINIC & SURGERY,7 Everton Park #01-21,080007,Lisinopril; Omeprazole,Ultrasound; Blood Test; Wound Dressing; X-Ray
+77,Central 24-HR Clinic (Hougang),"681 Hougang Ave 8, #01-829",530681,Salbutamol; Atorvastatin; Amoxicillin; Omeprazole; Paracetamol,Ultrasound; Wound Dressing; X-Ray; Endoscopy; Physiotherapy
+78,Everhealth Clinic & Surgery,201D Tampines Street 21 #01-1171,524201,Salbutamol; Amlodipine; Metformin; Lisinopril,Wound Dressing; Ultrasound; Minor Surgery
+79,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Amoxicillin; Atorvastatin; Ibuprofen,Minor Surgery
+80,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Paracetamol; Lisinopril; Omeprazole,Minor Surgery; Endoscopy; ECG; X-Ray; Ultrasound
+81,Healthway Medical,446 Clementi Ave 3 #01-201,120446,Metformin; Amlodipine,Blood Test
+82,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Amoxicillin; Ibuprofen; Simvastatin; Salbutamol; Amlodipine,Wound Dressing; Minor Surgery; Vaccination; X-Ray; Health Screening
+83,Central 24-HR Clinic (Hougang),"681 Hougang Ave 8, #01-829",530681,Amlodipine; Paracetamol; Metformin; Salbutamol,Minor Surgery
+84,OneCare Clinic Yishun,846 Yishun Ring Rd #01-3669,760846,Paracetamol; Atorvastatin; Lisinopril,Physiotherapy
+85,SUNBEAM MEDICAL CLINIC,443C Fajar Road #01-76,673443,Atorvastatin; Amlodipine,Minor Surgery; Vaccination; Wound Dressing; Blood Test; ECG
+86,CHANG CLINIC & SURGERY,7 Everton Park #01-21,080007,Paracetamol; Metformin; Omeprazole; Salbutamol; Amoxicillin,Blood Test; ECG; Wound Dressing
+87,Central 24-HR Clinic (Clementi),450 Clementi Ave 3 #01-291,120450,Amoxicillin; Atorvastatin; Paracetamol; Ibuprofen,Wound Dressing
+88,Zion Medical Centre,Blk 502 Jurong West Ave 1 #01-815,640502,Simvastatin,Physiotherapy; Vaccination
+89,Zion Medical Centre,Blk 502 Jurong West Ave 1 #01-815,640502,Lisinopril,Health Screening; X-Ray; Vaccination; Ultrasound
+90,OneCare Clinic Yishun,846 Yishun Ring Rd #01-3669,760846,Amlodipine; Paracetamol; Amoxicillin; Lisinopril,X-Ray
+91,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Salbutamol; Paracetamol; Ibuprofen; Atorvastatin,Ultrasound; Vaccination; Wound Dressing; Blood Test
+92,Central 24-HR Clinic (Hougang),"681 Hougang Ave 8, #01-829",530681,Salbutamol; Lisinopril; Atorvastatin,Minor Surgery; Wound Dressing; Endoscopy
+93,CHANGI CLINIC,848 Sims Avenue #01-734 Eunosville,400848,Ibuprofen; Amoxicillin; Amlodipine; Salbutamol,Minor Surgery; Ultrasound; Vaccination; Wound Dressing; ECG
+94,Central 24-HR Clinic (Yishun),"701A Yishun Ave 5, #01-04",761701,Omeprazole; Atorvastatin; Metformin; Salbutamol; Ibuprofen,Ultrasound; Physiotherapy; Minor Surgery; ECG; Vaccination
+95,Trucare Medical,Blk 682 Hougang Ave 4 #01-320,530682,Omeprazole; Amoxicillin; Atorvastatin,Blood Test; Ultrasound; X-Ray; Minor Surgery; Vaccination
+96,Healthway Medical,446 Clementi Ave 3 #01-201,120446,Metformin; Paracetamol,Health Screening; ECG; Endoscopy; Vaccination; Blood Test
+97,Zion Medical Centre,Blk 502 Jurong West Ave 1 #01-815,640502,Metformin; Ibuprofen; Paracetamol,Blood Test
+98,CHANGI CLINIC,848 Sims Avenue #01-734 Eunosville,400848,Lisinopril,Blood Test; Vaccination; ECG; Wound Dressing
+99,Silver Cross Family Clinic,2 Lorong Lew Lian #01-50,531002,Metformin,Endoscopy
+100,Zion Medical Centre,Blk 502 Jurong West Ave 1 #01-815,640502,Lisinopril; Salbutamol,Physiotherapy; Minor Surgery; X-Ray
+101,FRONTIER PEOPLE'S CLINIC PTE LTD,Blk 123 Bedok North Street 2 #01-152,460123,Omeprazole; Amoxicillin; Salbutamol; Metformin,Health Screening
+102,Bukit Batok Medical Clinic,632 Bukit Batok Central,650632,Amoxicillin; Salbutamol; Atorvastatin; Lisinopril,X-Ray; Minor Surgery; Vaccination; Blood Test
+103,TANG FAMILY CLINIC,84 Jalan Jurong Kechil,598593,Salbutamol,Ultrasound; Minor Surgery; Vaccination
+104,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Atorvastatin; Paracetamol,Blood Test; Physiotherapy
+105,OneCare Clinic Yishun,846 Yishun Ring Rd #01-3669,760846,Atorvastatin,Physiotherapy; Ultrasound; Blood Test; Endoscopy
+106,Everhealth Clinic & Surgery,201D Tampines Street 21 #01-1171,524201,Simvastatin; Ibuprofen; Paracetamol,Health Screening
+107,Acumed Medical Group,Blk 727 Ang Mo Kio Ave 6,560727,Metformin; Amoxicillin,Vaccination; Blood Test
+108,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Amlodipine,Endoscopy; Blood Test; X-Ray
+109,The Clinic Group,1 Raffles Quay #09-02,048583,Lisinopril; Metformin; Simvastatin; Ibuprofen,Ultrasound; ECG; Wound Dressing; Blood Test; X-Ray
+110,Bukit Batok Medical Clinic,632 Bukit Batok Central,650632,Simvastatin; Omeprazole; Atorvastatin; Lisinopril; Paracetamol,Wound Dressing; ECG; Vaccination; Ultrasound; Blood Test
+111,Silver Cross Family Clinic,2 Lorong Lew Lian #01-50,531002,Amlodipine,Physiotherapy
+112,Healthway Medical,446 Clementi Ave 3 #01-201,120446,Metformin; Ibuprofen; Simvastatin; Amoxicillin; Paracetamol,Physiotherapy; Vaccination; Endoscopy; Ultrasound; Wound Dressing
+113,FRONTIER PEOPLE'S CLINIC PTE LTD,Blk 123 Bedok North Street 2 #01-152,460123,Amoxicillin; Paracetamol; Omeprazole; Amlodipine,Health Screening; X-Ray; ECG
+114,OneCare Clinic Yishun,846 Yishun Ring Rd #01-3669,760846,Amlodipine; Salbutamol; Amoxicillin; Metformin,Minor Surgery; Physiotherapy; Health Screening
+115,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Ibuprofen; Omeprazole; Paracetamol; Amlodipine; Salbutamol,Ultrasound; Physiotherapy; Blood Test
+116,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Atorvastatin; Paracetamol; Metformin; Amoxicillin; Amlodipine,Ultrasound; Endoscopy; Health Screening; Blood Test; Wound Dressing
+117,Healthway Medical,446 Clementi Ave 3 #01-201,120446,Lisinopril; Ibuprofen; Metformin; Salbutamol,Endoscopy; Vaccination
+118,Healthway Medical,446 Clementi Ave 3 #01-201,120446,Amoxicillin,Blood Test; Wound Dressing; ECG
+119,SUNBEAM MEDICAL CLINIC,443C Fajar Road #01-76,673443,Amlodipine,Health Screening; Vaccination; Minor Surgery; Physiotherapy; Endoscopy
+120,Everhealth Clinic & Surgery,201D Tampines Street 21 #01-1171,524201,Ibuprofen; Omeprazole,X-Ray; Wound Dressing; Health Screening
+121,The Clinic Group,1 Raffles Quay #09-02,048583,Paracetamol,Minor Surgery; Ultrasound; Wound Dressing; Physiotherapy; ECG
+122,Zion Medical Centre,Blk 502 Jurong West Ave 1 #01-815,640502,Metformin,Wound Dressing; Physiotherapy; X-Ray; Ultrasound
+123,Central 24-HR Clinic (Yishun),"701A Yishun Ave 5, #01-04",761701,Simvastatin; Metformin; Lisinopril; Omeprazole; Amlodipine,Physiotherapy; Health Screening; Endoscopy; Blood Test; Vaccination
+124,CHANG CLINIC & SURGERY,7 Everton Park #01-21,080007,Amlodipine; Ibuprofen; Metformin; Lisinopril; Salbutamol,ECG; Physiotherapy; Vaccination
+125,SUNBEAM MEDICAL CLINIC,443C Fajar Road #01-76,673443,Amlodipine; Atorvastatin; Lisinopril; Simvastatin,X-Ray; Physiotherapy; ECG; Blood Test
+126,TANG FAMILY CLINIC,84 Jalan Jurong Kechil,598593,Amoxicillin; Omeprazole,X-Ray; Blood Test; ECG; Endoscopy; Physiotherapy
+127,CHANGI CLINIC,848 Sims Avenue #01-734 Eunosville,400848,Omeprazole; Amoxicillin; Lisinopril; Metformin,ECG; X-Ray; Minor Surgery
+128,Central 24-HR Clinic (Yishun),"701A Yishun Ave 5, #01-04",761701,Omeprazole; Lisinopril; Atorvastatin; Amlodipine; Metformin,Physiotherapy; Wound Dressing; Ultrasound; Vaccination; Endoscopy
+129,Acumed Medical Group,Blk 727 Ang Mo Kio Ave 6,560727,Amoxicillin; Simvastatin; Metformin,Health Screening
+130,Central 24-HR Clinic (Hougang),"681 Hougang Ave 8, #01-829",530681,Amoxicillin; Simvastatin; Atorvastatin,Health Screening; Vaccination; X-Ray; Endoscopy
+131,Central 24-HR Clinic (Clementi),450 Clementi Ave 3 #01-291,120450,Paracetamol; Amlodipine; Simvastatin; Lisinopril; Salbutamol,Wound Dressing
+132,Central 24-HR Clinic (Hougang),"681 Hougang Ave 8, #01-829",530681,Metformin; Paracetamol,Endoscopy; X-Ray; Wound Dressing; Minor Surgery
+133,Zion Medical Centre,Blk 502 Jurong West Ave 1 #01-815,640502,Amlodipine; Atorvastatin; Omeprazole; Paracetamol,Physiotherapy
+134,East Coast Family Clinic,121 Bedok Reservoir Rd #01-202,470121,Amlodipine,Wound Dressing; Blood Test; Health Screening
+135,Bukit Batok Medical Clinic,632 Bukit Batok Central,650632,Atorvastatin; Salbutamol; Amlodipine,Health Screening; Ultrasound; Minor Surgery; X-Ray
+136,CHANG CLINIC & SURGERY,7 Everton Park #01-21,080007,Omeprazole; Lisinopril; Metformin,Endoscopy; Minor Surgery; Wound Dressing; ECG
+137,Silver Cross Family Clinic,2 Lorong Lew Lian #01-50,531002,Paracetamol,X-Ray; Health Screening; Wound Dressing; Minor Surgery
+138,Central 24-HR Clinic (Hougang),"681 Hougang Ave 8, #01-829",530681,Amoxicillin; Lisinopril; Atorvastatin,X-Ray; Endoscopy
+139,Everhealth Clinic & Surgery,201D Tampines Street 21 #01-1171,524201,Paracetamol,Blood Test; Health Screening
+140,FRONTIER PEOPLE'S CLINIC PTE LTD,Blk 123 Bedok North Street 2 #01-152,460123,Metformin,Health Screening
+141,Everhealth Clinic & Surgery,201D Tampines Street 21 #01-1171,524201,Omeprazole; Paracetamol; Atorvastatin; Lisinopril,Physiotherapy; ECG; X-Ray; Ultrasound; Blood Test
+142,CHANG CLINIC & SURGERY,7 Everton Park #01-21,080007,Omeprazole; Lisinopril; Atorvastatin; Amlodipine; Salbutamol,X-Ray; Vaccination
+143,FRONTIER PEOPLE'S CLINIC PTE LTD,Blk 123 Bedok North Street 2 #01-152,460123,Paracetamol,Health Screening; ECG; Wound Dressing; Physiotherapy
+144,Everhealth Clinic & Surgery,201D Tampines Street 21 #01-1171,524201,Amlodipine; Atorvastatin; Salbutamol; Paracetamol; Amoxicillin,Health Screening; Wound Dressing; Blood Test
+145,Central 24-HR Clinic (Hougang),"681 Hougang Ave 8, #01-829",530681,Amlodipine; Atorvastatin; Salbutamol; Ibuprofen,Endoscopy; X-Ray; ECG
+146,Acumed Medical Group,Blk 727 Ang Mo Kio Ave 6,560727,Lisinopril; Omeprazole; Simvastatin; Amlodipine; Salbutamol,Ultrasound; Physiotherapy; X-Ray; ECG; Wound Dressing
+147,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Lisinopril; Metformin; Atorvastatin; Salbutamol,Health Screening; X-Ray
+148,Acumed Medical Group,Blk 727 Ang Mo Kio Ave 6,560727,Metformin; Atorvastatin; Simvastatin,Health Screening
+149,FRONTIER PEOPLE'S CLINIC PTE LTD,Blk 123 Bedok North Street 2 #01-152,460123,Amlodipine; Salbutamol; Amoxicillin; Omeprazole; Ibuprofen,Minor Surgery
+150,Central 24-HR Clinic (Clementi),450 Clementi Ave 3 #01-291,120450,Amlodipine; Ibuprofen; Lisinopril; Atorvastatin; Simvastatin,ECG; Minor Surgery
+151,CHANG CLINIC & SURGERY,7 Everton Park #01-21,080007,Metformin; Amlodipine; Salbutamol; Amoxicillin,Minor Surgery; X-Ray; Health Screening; Endoscopy
+152,Everhealth Clinic & Surgery,201D Tampines Street 21 #01-1171,524201,Lisinopril; Ibuprofen,Endoscopy; Physiotherapy; Blood Test; Health Screening; ECG
+153,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Metformin; Amoxicillin; Simvastatin; Lisinopril,Health Screening; Endoscopy; Ultrasound; Blood Test; X-Ray
+154,Trucare Medical,Blk 682 Hougang Ave 4 #01-320,530682,Amoxicillin; Atorvastatin; Ibuprofen; Salbutamol; Lisinopril,ECG; Wound Dressing
+155,OneCare Clinic Yishun,846 Yishun Ring Rd #01-3669,760846,Amlodipine; Simvastatin; Paracetamol; Metformin; Omeprazole,X-Ray; ECG; Health Screening
+156,East Coast Family Clinic,121 Bedok Reservoir Rd #01-202,470121,Omeprazole; Atorvastatin; Salbutamol; Metformin; Amlodipine,Physiotherapy; Blood Test; Vaccination; Wound Dressing; Ultrasound
+157,CHANGI CLINIC,848 Sims Avenue #01-734 Eunosville,400848,Atorvastatin; Amoxicillin; Metformin; Ibuprofen,X-Ray; Vaccination; Wound Dressing; Ultrasound
+158,Central 24-HR Clinic (Clementi),450 Clementi Ave 3 #01-291,120450,Ibuprofen; Metformin,Vaccination; Blood Test; Minor Surgery
+159,CHANG CLINIC & SURGERY,7 Everton Park #01-21,080007,Ibuprofen; Salbutamol; Amoxicillin; Atorvastatin,X-Ray; Endoscopy; Blood Test; Health Screening
+160,Zion Medical Centre,Blk 502 Jurong West Ave 1 #01-815,640502,Amoxicillin,Minor Surgery; X-Ray
+161,OneCare Clinic Yishun,846 Yishun Ring Rd #01-3669,760846,Omeprazole,Minor Surgery
+162,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Amoxicillin; Ibuprofen; Amlodipine; Simvastatin; Paracetamol,Ultrasound
+163,Silver Cross Family Clinic,2 Lorong Lew Lian #01-50,531002,Amoxicillin; Metformin,Physiotherapy; ECG; Health Screening; Wound Dressing
+164,Healthway Medical,446 Clementi Ave 3 #01-201,120446,Metformin; Ibuprofen,Ultrasound; X-Ray; Physiotherapy; Endoscopy
+165,Zion Medical Centre,Blk 502 Jurong West Ave 1 #01-815,640502,Paracetamol; Omeprazole; Ibuprofen; Salbutamol,Vaccination
+166,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Atorvastatin; Ibuprofen,Wound Dressing; Vaccination; Health Screening
+167,SUNBEAM MEDICAL CLINIC,443C Fajar Road #01-76,673443,Ibuprofen,Blood Test; Vaccination; ECG
+168,Trucare Medical,Blk 682 Hougang Ave 4 #01-320,530682,Omeprazole,Ultrasound
+169,Silver Cross Family Clinic,2 Lorong Lew Lian #01-50,531002,Salbutamol; Simvastatin; Amoxicillin; Amlodipine; Paracetamol,Minor Surgery; Blood Test; Vaccination; Ultrasound
+170,Bukit Batok Medical Clinic,632 Bukit Batok Central,650632,Omeprazole,Blood Test; Minor Surgery; Ultrasound; Health Screening
+171,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Ibuprofen,X-Ray; Minor Surgery; Blood Test
+172,Central 24-HR Clinic (Yishun),"701A Yishun Ave 5, #01-04",761701,Simvastatin; Ibuprofen; Lisinopril; Metformin,Wound Dressing
+173,Silver Cross Family Clinic,2 Lorong Lew Lian #01-50,531002,Paracetamol; Lisinopril; Simvastatin; Omeprazole; Amoxicillin,Physiotherapy; Endoscopy
+174,FRONTIER PEOPLE'S CLINIC PTE LTD,Blk 123 Bedok North Street 2 #01-152,460123,Ibuprofen; Paracetamol,Vaccination; Minor Surgery; Ultrasound; X-Ray; Physiotherapy
+175,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Amoxicillin; Paracetamol; Amlodipine; Salbutamol,ECG; Ultrasound
+176,Central 24-HR Clinic (Hougang),"681 Hougang Ave 8, #01-829",530681,Amoxicillin; Metformin; Paracetamol,Ultrasound; X-Ray; Wound Dressing
+177,TANG FAMILY CLINIC,84 Jalan Jurong Kechil,598593,Paracetamol; Amoxicillin; Ibuprofen; Salbutamol; Lisinopril,Physiotherapy; Blood Test
+178,Central 24-HR Clinic (Yishun),"701A Yishun Ave 5, #01-04",761701,Amoxicillin; Ibuprofen; Lisinopril; Metformin; Atorvastatin,X-Ray; Wound Dressing; Endoscopy
+179,Central 24-HR Clinic (Clementi),450 Clementi Ave 3 #01-291,120450,Salbutamol; Atorvastatin,Blood Test; ECG; Physiotherapy; X-Ray
+180,SUNBEAM MEDICAL CLINIC,443C Fajar Road #01-76,673443,Ibuprofen; Atorvastatin; Lisinopril; Amoxicillin,ECG; Vaccination
+181,Central 24-HR Clinic (Yishun),"701A Yishun Ave 5, #01-04",761701,Ibuprofen; Omeprazole; Amoxicillin,Wound Dressing; Endoscopy; X-Ray; Vaccination
+182,Trucare Medical,Blk 682 Hougang Ave 4 #01-320,530682,Simvastatin; Metformin; Amoxicillin,X-Ray; Minor Surgery
+183,Zion Medical Centre,Blk 502 Jurong West Ave 1 #01-815,640502,Amoxicillin; Amlodipine,Ultrasound; Endoscopy; Blood Test
+184,Bukit Batok Medical Clinic,632 Bukit Batok Central,650632,Salbutamol; Ibuprofen; Simvastatin; Lisinopril,Blood Test
+185,Central 24-HR Clinic (Hougang),"681 Hougang Ave 8, #01-829",530681,Paracetamol; Amlodipine; Atorvastatin; Omeprazole,Blood Test; ECG
+186,CHANG CLINIC & SURGERY,7 Everton Park #01-21,080007,Paracetamol; Atorvastatin; Ibuprofen; Omeprazole,Endoscopy; Vaccination; Minor Surgery; Physiotherapy
+187,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Paracetamol; Salbutamol; Ibuprofen; Metformin,Blood Test; ECG
+188,FRONTIER PEOPLE'S CLINIC PTE LTD,Blk 123 Bedok North Street 2 #01-152,460123,Amlodipine; Paracetamol; Ibuprofen; Atorvastatin,Minor Surgery; Wound Dressing; Physiotherapy; Health Screening
+189,CHANGI CLINIC,848 Sims Avenue #01-734 Eunosville,400848,Amoxicillin; Lisinopril; Amlodipine; Salbutamol; Ibuprofen,Vaccination; ECG; Health Screening
+190,Acumed Medical Group,Blk 727 Ang Mo Kio Ave 6,560727,Ibuprofen; Metformin; Paracetamol,ECG; Physiotherapy; Vaccination; Wound Dressing
+191,Central 24-HR Clinic (Yishun),"701A Yishun Ave 5, #01-04",761701,Lisinopril; Amoxicillin; Amlodipine; Paracetamol; Ibuprofen,Ultrasound; Minor Surgery; Wound Dressing; ECG; X-Ray
+192,CHANG CLINIC & SURGERY,7 Everton Park #01-21,080007,Paracetamol; Amlodipine,ECG; Minor Surgery; Ultrasound
+193,Acumed Medical Group,Blk 727 Ang Mo Kio Ave 6,560727,Paracetamol; Metformin; Amoxicillin,Wound Dressing; X-Ray; Health Screening; Blood Test
+194,Healthway Medical,446 Clementi Ave 3 #01-201,120446,Amoxicillin; Ibuprofen; Atorvastatin; Omeprazole,Blood Test; X-Ray; Wound Dressing
+195,Silver Cross Family Clinic,2 Lorong Lew Lian #01-50,531002,Metformin; Salbutamol; Amoxicillin,Ultrasound; X-Ray; Physiotherapy
+196,OneCare Clinic Yishun,846 Yishun Ring Rd #01-3669,760846,Paracetamol; Amoxicillin; Metformin,Wound Dressing; Blood Test; Physiotherapy; Endoscopy
+197,CHANG CLINIC & SURGERY,7 Everton Park #01-21,080007,Paracetamol; Salbutamol,Physiotherapy; Endoscopy
+198,Trucare Medical,Blk 682 Hougang Ave 4 #01-320,530682,Ibuprofen; Amoxicillin,Wound Dressing; Minor Surgery; X-Ray
+199,East Coast Family Clinic,121 Bedok Reservoir Rd #01-202,470121,Omeprazole; Simvastatin; Amlodipine; Metformin,Endoscopy; Wound Dressing; ECG
+200,Everhealth Clinic & Surgery,201D Tampines Street 21 #01-1171,524201,Atorvastatin,Minor Surgery
+201,Silver Cross Family Clinic,2 Lorong Lew Lian #01-50,531002,Salbutamol,Blood Test; Vaccination
+202,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Lisinopril,Health Screening; Vaccination; Endoscopy; X-Ray
+203,Central 24-HR Clinic (Yishun),"701A Yishun Ave 5, #01-04",761701,Metformin; Paracetamol; Ibuprofen; Amoxicillin,Vaccination; ECG
+204,CHANGI CLINIC,848 Sims Avenue #01-734 Eunosville,400848,Amoxicillin; Salbutamol,Physiotherapy; Blood Test; Minor Surgery; Health Screening
+205,The Clinic Group,1 Raffles Quay #09-02,048583,Lisinopril; Paracetamol; Ibuprofen; Simvastatin; Amoxicillin,ECG
+206,Central 24-HR Clinic (Hougang),"681 Hougang Ave 8, #01-829",530681,Simvastatin; Ibuprofen,Wound Dressing
+207,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Metformin; Lisinopril,Vaccination; Ultrasound
+208,The Clinic Group,1 Raffles Quay #09-02,048583,Metformin; Lisinopril; Amlodipine; Ibuprofen,ECG; Endoscopy
+209,OneCare Clinic Yishun,846 Yishun Ring Rd #01-3669,760846,Simvastatin; Amlodipine,Physiotherapy; Health Screening; Blood Test; ECG; Minor Surgery
+210,Trucare Medical,Blk 682 Hougang Ave 4 #01-320,530682,Paracetamol; Omeprazole; Atorvastatin,Physiotherapy; Minor Surgery; Ultrasound; Health Screening; Wound Dressing
+211,Zion Medical Centre,Blk 502 Jurong West Ave 1 #01-815,640502,Metformin; Simvastatin; Amlodipine; Ibuprofen,X-Ray; ECG; Vaccination; Endoscopy; Wound Dressing
+212,Acumed Medical Group,Blk 727 Ang Mo Kio Ave 6,560727,Amoxicillin,X-Ray; ECG; Vaccination; Minor Surgery; Wound Dressing
+213,Healthway Medical,446 Clementi Ave 3 #01-201,120446,Paracetamol; Amoxicillin; Omeprazole; Lisinopril; Simvastatin,Minor Surgery; Endoscopy
+214,OneCare Clinic Yishun,846 Yishun Ring Rd #01-3669,760846,Salbutamol,Wound Dressing; X-Ray
+215,Central 24-HR Clinic (Hougang),"681 Hougang Ave 8, #01-829",530681,Amoxicillin; Ibuprofen; Omeprazole; Metformin,X-Ray; Endoscopy; ECG
+216,Bukit Batok Medical Clinic,632 Bukit Batok Central,650632,Atorvastatin; Salbutamol; Metformin,Blood Test
+217,Healthway Medical,446 Clementi Ave 3 #01-201,120446,Paracetamol; Amlodipine; Salbutamol; Omeprazole,ECG; Blood Test; Wound Dressing
+218,OneCare Clinic Yishun,846 Yishun Ring Rd #01-3669,760846,Omeprazole; Lisinopril,Minor Surgery; Wound Dressing; Health Screening
+219,Everhealth Clinic & Surgery,201D Tampines Street 21 #01-1171,524201,Paracetamol; Amlodipine,Minor Surgery
+220,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Amoxicillin; Omeprazole; Paracetamol; Simvastatin,Physiotherapy; Wound Dressing; X-Ray; ECG
+221,CHANG CLINIC & SURGERY,7 Everton Park #01-21,080007,Metformin; Salbutamol; Ibuprofen; Amoxicillin,ECG; Health Screening; Wound Dressing
+222,East Coast Family Clinic,121 Bedok Reservoir Rd #01-202,470121,Paracetamol; Atorvastatin; Salbutamol; Simvastatin,X-Ray; Endoscopy; Health Screening; ECG; Vaccination
+223,SUNBEAM MEDICAL CLINIC,443C Fajar Road #01-76,673443,Salbutamol; Atorvastatin; Paracetamol; Metformin; Amlodipine,X-Ray; ECG; Blood Test; Wound Dressing
+224,Central 24-HR Clinic (Clementi),450 Clementi Ave 3 #01-291,120450,Atorvastatin; Simvastatin; Ibuprofen; Amlodipine; Amoxicillin,Minor Surgery; Physiotherapy
+225,Bukit Batok Medical Clinic,632 Bukit Batok Central,650632,Amoxicillin,Wound Dressing
+226,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Salbutamol; Metformin; Simvastatin; Lisinopril; Atorvastatin,Ultrasound; Blood Test; Wound Dressing
+227,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Metformin; Amoxicillin; Amlodipine; Paracetamol,ECG; X-Ray; Health Screening; Vaccination; Endoscopy
+228,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Amoxicillin; Atorvastatin,Physiotherapy; Endoscopy
+229,East Coast Family Clinic,121 Bedok Reservoir Rd #01-202,470121,Lisinopril; Omeprazole; Ibuprofen,ECG; Ultrasound
+230,The Clinic Group,1 Raffles Quay #09-02,048583,Ibuprofen; Amlodipine; Lisinopril; Amoxicillin; Salbutamol,X-Ray; Physiotherapy; Blood Test; Health Screening
+231,Bukit Batok Medical Clinic,632 Bukit Batok Central,650632,Simvastatin; Amoxicillin; Atorvastatin,Minor Surgery; Physiotherapy; Wound Dressing; Blood Test; ECG
+232,OneCare Clinic Yishun,846 Yishun Ring Rd #01-3669,760846,Salbutamol; Ibuprofen; Amoxicillin; Metformin; Lisinopril,Health Screening; Wound Dressing; Blood Test
+233,CHANGI CLINIC,848 Sims Avenue #01-734 Eunosville,400848,Salbutamol; Ibuprofen; Amoxicillin; Atorvastatin; Lisinopril,Blood Test; Wound Dressing; Vaccination; Minor Surgery
+234,Zion Medical Centre,Blk 502 Jurong West Ave 1 #01-815,640502,Salbutamol; Lisinopril; Metformin; Amlodipine; Omeprazole,Minor Surgery; Blood Test; Health Screening
+235,CHANG CLINIC & SURGERY,7 Everton Park #01-21,080007,Salbutamol; Simvastatin; Paracetamol; Omeprazole; Amoxicillin,ECG; Endoscopy; Health Screening; Wound Dressing
+236,Trucare Medical,Blk 682 Hougang Ave 4 #01-320,530682,Lisinopril; Ibuprofen,Health Screening; X-Ray
+237,OneCare Clinic Yishun,846 Yishun Ring Rd #01-3669,760846,Metformin; Omeprazole,Physiotherapy; Vaccination; Ultrasound; Minor Surgery
+238,The Clinic Group,1 Raffles Quay #09-02,048583,Simvastatin,Ultrasound; Minor Surgery; Vaccination; X-Ray; Blood Test
+239,Trucare Medical,Blk 682 Hougang Ave 4 #01-320,530682,Simvastatin,ECG; Endoscopy; Blood Test
+240,Everhealth Clinic & Surgery,201D Tampines Street 21 #01-1171,524201,Lisinopril; Ibuprofen; Amoxicillin; Simvastatin,Vaccination; Wound Dressing; Blood Test; X-Ray; Ultrasound
+241,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Atorvastatin; Omeprazole; Ibuprofen,Vaccination; ECG; Wound Dressing; Ultrasound; Physiotherapy
+242,The Clinic Group,1 Raffles Quay #09-02,048583,Amoxicillin; Simvastatin; Omeprazole; Amlodipine,Endoscopy
+243,Everhealth Clinic & Surgery,201D Tampines Street 21 #01-1171,524201,Amlodipine; Atorvastatin; Metformin,Vaccination; ECG; Endoscopy; Wound Dressing
+244,CHANGI CLINIC,848 Sims Avenue #01-734 Eunosville,400848,Simvastatin; Atorvastatin; Lisinopril; Amoxicillin; Metformin,Ultrasound; Blood Test; ECG
+245,Central 24-HR Clinic (Hougang),"681 Hougang Ave 8, #01-829",530681,Paracetamol; Omeprazole; Atorvastatin; Amlodipine; Simvastatin,Ultrasound; ECG; Wound Dressing
+246,Acumed Medical Group,Blk 727 Ang Mo Kio Ave 6,560727,Salbutamol; Metformin; Amoxicillin,Wound Dressing
+247,CHANG CLINIC & SURGERY,7 Everton Park #01-21,080007,Amlodipine; Omeprazole; Salbutamol; Ibuprofen; Metformin,Blood Test; Health Screening; Ultrasound; Wound Dressing; X-Ray
+248,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Atorvastatin; Paracetamol; Metformin,Blood Test; Minor Surgery
+249,Bukit Batok Medical Clinic,632 Bukit Batok Central,650632,Salbutamol; Amlodipine; Metformin; Ibuprofen,ECG
+250,CHANG CLINIC & SURGERY,7 Everton Park #01-21,080007,Amlodipine; Ibuprofen,Blood Test
+251,The Clinic Group,1 Raffles Quay #09-02,048583,Atorvastatin; Paracetamol; Ibuprofen,Minor Surgery; Vaccination; Blood Test; X-Ray; Ultrasound
+252,Healthway Medical,446 Clementi Ave 3 #01-201,120446,Paracetamol; Atorvastatin; Amoxicillin; Metformin; Ibuprofen,Endoscopy; ECG; Blood Test; Minor Surgery
+253,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Omeprazole; Amoxicillin; Amlodipine,Minor Surgery; Blood Test; Ultrasound; Physiotherapy; Health Screening
+254,East Coast Family Clinic,121 Bedok Reservoir Rd #01-202,470121,Lisinopril; Omeprazole; Metformin,Blood Test; Ultrasound
+255,Zion Medical Centre,Blk 502 Jurong West Ave 1 #01-815,640502,Salbutamol; Ibuprofen; Simvastatin; Amlodipine; Amoxicillin,Blood Test; Vaccination; Physiotherapy; Health Screening; X-Ray
+256,Central 24-HR Clinic (Hougang),"681 Hougang Ave 8, #01-829",530681,Amlodipine; Simvastatin; Metformin; Paracetamol; Omeprazole,Wound Dressing; Vaccination; Ultrasound
+257,FRONTIER PEOPLE'S CLINIC PTE LTD,Blk 123 Bedok North Street 2 #01-152,460123,Ibuprofen; Atorvastatin,Endoscopy
+258,Acumed Medical Group,Blk 727 Ang Mo Kio Ave 6,560727,Paracetamol,X-Ray; Wound Dressing; Endoscopy; Health Screening; Physiotherapy
+259,CHANG CLINIC & SURGERY,7 Everton Park #01-21,080007,Simvastatin; Metformin,Vaccination
+260,Healthway Medical,446 Clementi Ave 3 #01-201,120446,Amlodipine; Omeprazole; Amoxicillin,Physiotherapy; X-Ray; Wound Dressing; ECG; Blood Test
+261,FRONTIER PEOPLE'S CLINIC PTE LTD,Blk 123 Bedok North Street 2 #01-152,460123,Ibuprofen; Amlodipine; Salbutamol; Metformin,ECG; Ultrasound
+262,Trucare Medical,Blk 682 Hougang Ave 4 #01-320,530682,Metformin; Omeprazole; Simvastatin; Salbutamol,Ultrasound; Endoscopy; Health Screening; X-Ray
+263,CHANG CLINIC & SURGERY,7 Everton Park #01-21,080007,Ibuprofen; Omeprazole,Blood Test
+264,Trucare Medical,Blk 682 Hougang Ave 4 #01-320,530682,Atorvastatin; Salbutamol; Amoxicillin; Simvastatin; Omeprazole,Physiotherapy; Endoscopy; Wound Dressing; Vaccination
+265,CHANGI CLINIC,848 Sims Avenue #01-734 Eunosville,400848,Metformin; Amlodipine; Salbutamol; Ibuprofen,Blood Test
+266,Silver Cross Family Clinic,2 Lorong Lew Lian #01-50,531002,Atorvastatin; Amlodipine; Salbutamol,Physiotherapy; Minor Surgery; Blood Test; Ultrasound
+267,Central 24-HR Clinic (Clementi),450 Clementi Ave 3 #01-291,120450,Ibuprofen,ECG
+268,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Omeprazole,Endoscopy; Ultrasound
+269,FRONTIER PEOPLE'S CLINIC PTE LTD,Blk 123 Bedok North Street 2 #01-152,460123,Amoxicillin; Atorvastatin; Ibuprofen; Metformin; Lisinopril,Vaccination; X-Ray; Wound Dressing; Blood Test; Health Screening
+270,Trucare Medical,Blk 682 Hougang Ave 4 #01-320,530682,Salbutamol; Simvastatin,Blood Test; Vaccination; Health Screening; ECG; Minor Surgery
+271,CHANGI CLINIC,848 Sims Avenue #01-734 Eunosville,400848,Atorvastatin; Ibuprofen; Simvastatin; Metformin; Lisinopril,Minor Surgery; Vaccination
+272,The Clinic Group,1 Raffles Quay #09-02,048583,Ibuprofen; Salbutamol; Amoxicillin; Amlodipine,X-Ray; Physiotherapy; Blood Test; Health Screening
+273,The Clinic Group,1 Raffles Quay #09-02,048583,Ibuprofen; Lisinopril; Salbutamol; Metformin,Health Screening
+274,OneCare Clinic Yishun,846 Yishun Ring Rd #01-3669,760846,Amoxicillin; Amlodipine; Salbutamol,ECG; Blood Test; Physiotherapy; X-Ray
+275,Trucare Medical,Blk 682 Hougang Ave 4 #01-320,530682,Amlodipine; Omeprazole; Paracetamol,Minor Surgery; ECG; X-Ray; Ultrasound; Health Screening
+276,Healthway Medical,446 Clementi Ave 3 #01-201,120446,Amlodipine; Lisinopril,ECG
+277,CHANG CLINIC & SURGERY,7 Everton Park #01-21,080007,Omeprazole,Endoscopy; X-Ray; Blood Test; Ultrasound; Vaccination
+278,Central 24-HR Clinic (Hougang),"681 Hougang Ave 8, #01-829",530681,Simvastatin; Ibuprofen,ECG; X-Ray; Vaccination; Physiotherapy; Endoscopy
+279,The Clinic Group,1 Raffles Quay #09-02,048583,Metformin; Salbutamol; Amoxicillin; Ibuprofen; Omeprazole,Ultrasound; Blood Test; Wound Dressing; Endoscopy; Health Screening
+280,Central 24-HR Clinic (Yishun),"701A Yishun Ave 5, #01-04",761701,Simvastatin; Salbutamol; Amlodipine,Blood Test
+281,Central 24-HR Clinic (Clementi),450 Clementi Ave 3 #01-291,120450,Ibuprofen; Atorvastatin; Salbutamol; Lisinopril,Vaccination; X-Ray; Physiotherapy; Minor Surgery
+282,SUNBEAM MEDICAL CLINIC,443C Fajar Road #01-76,673443,Amlodipine; Ibuprofen; Amoxicillin; Omeprazole; Salbutamol,Blood Test
+283,Silver Cross Family Clinic,2 Lorong Lew Lian #01-50,531002,Simvastatin; Omeprazole,X-Ray; ECG
+284,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Atorvastatin,X-Ray; Minor Surgery
+285,The Clinic Group,1 Raffles Quay #09-02,048583,Simvastatin,Wound Dressing; Endoscopy; Health Screening
+286,FRONTIER PEOPLE'S CLINIC PTE LTD,Blk 123 Bedok North Street 2 #01-152,460123,Omeprazole; Metformin; Ibuprofen; Atorvastatin; Simvastatin,Blood Test; Vaccination; Health Screening; X-Ray
+287,The Clinic Group,1 Raffles Quay #09-02,048583,Amlodipine; Omeprazole; Lisinopril; Salbutamol; Metformin,Health Screening; ECG; Ultrasound; Vaccination
+288,Central 24-HR Clinic (Hougang),"681 Hougang Ave 8, #01-829",530681,Amlodipine; Lisinopril; Salbutamol,Endoscopy; X-Ray; Wound Dressing; Minor Surgery
+289,Everhealth Clinic & Surgery,201D Tampines Street 21 #01-1171,524201,Ibuprofen; Omeprazole; Salbutamol; Lisinopril,Wound Dressing; Endoscopy; Vaccination; Blood Test
+290,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Metformin,Blood Test
+291,Acumed Medical Group,Blk 727 Ang Mo Kio Ave 6,560727,Omeprazole; Amoxicillin; Simvastatin; Ibuprofen; Lisinopril,Health Screening; Endoscopy
+292,Bukit Batok Medical Clinic,632 Bukit Batok Central,650632,Ibuprofen; Metformin,Ultrasound
+293,Silver Cross Family Clinic,2 Lorong Lew Lian #01-50,531002,Metformin,Minor Surgery
+294,FRONTIER PEOPLE'S CLINIC PTE LTD,Blk 123 Bedok North Street 2 #01-152,460123,Omeprazole; Amoxicillin; Atorvastatin; Salbutamol,Endoscopy
+295,East Coast Family Clinic,121 Bedok Reservoir Rd #01-202,470121,Lisinopril; Simvastatin; Ibuprofen; Omeprazole; Amoxicillin,Minor Surgery; Vaccination
+296,Trucare Medical,Blk 682 Hougang Ave 4 #01-320,530682,Lisinopril,Endoscopy; X-Ray; Ultrasound; Minor Surgery; Vaccination
+297,Silver Cross Family Clinic,2 Lorong Lew Lian #01-50,531002,Paracetamol; Atorvastatin; Amlodipine; Lisinopril; Ibuprofen,Wound Dressing; Ultrasound
+298,Healthway Medical,446 Clementi Ave 3 #01-201,120446,Metformin,Physiotherapy; ECG; Wound Dressing
+299,Central 24-HR Clinic (Clementi),450 Clementi Ave 3 #01-291,120450,Amoxicillin; Salbutamol; Atorvastatin; Amlodipine; Paracetamol,Health Screening; Endoscopy; ECG; Ultrasound
+300,Central 24-HR Clinic (Hougang),"681 Hougang Ave 8, #01-829",530681,Salbutamol; Paracetamol; Atorvastatin; Metformin,Physiotherapy
+301,TANG FAMILY CLINIC,84 Jalan Jurong Kechil,598593,Omeprazole; Simvastatin; Salbutamol; Lisinopril; Amlodipine,Wound Dressing; Endoscopy; X-Ray
+302,Everhealth Clinic & Surgery,201D Tampines Street 21 #01-1171,524201,Ibuprofen; Lisinopril; Paracetamol; Simvastatin; Salbutamol,Minor Surgery; ECG; Endoscopy; Health Screening
+303,CHANGI CLINIC,848 Sims Avenue #01-734 Eunosville,400848,Ibuprofen; Omeprazole; Amoxicillin; Amlodipine; Paracetamol,Endoscopy; Wound Dressing; Ultrasound; Health Screening; Physiotherapy
+304,FRONTIER PEOPLE'S CLINIC PTE LTD,Blk 123 Bedok North Street 2 #01-152,460123,Lisinopril; Omeprazole; Salbutamol,Physiotherapy; X-Ray; Health Screening
+305,Central 24-HR Clinic (Yishun),"701A Yishun Ave 5, #01-04",761701,Amlodipine; Metformin; Paracetamol; Salbutamol,Vaccination; Wound Dressing
+306,Central 24-HR Clinic (Yishun),"701A Yishun Ave 5, #01-04",761701,Ibuprofen; Metformin; Paracetamol; Amoxicillin; Lisinopril,Endoscopy; Ultrasound
+307,Silver Cross Family Clinic,2 Lorong Lew Lian #01-50,531002,Atorvastatin; Simvastatin,X-Ray; Vaccination; ECG; Blood Test
+308,Silver Cross Family Clinic,2 Lorong Lew Lian #01-50,531002,Lisinopril; Paracetamol,Minor Surgery; ECG; Wound Dressing
+309,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Atorvastatin,Minor Surgery; Ultrasound
+310,OneCare Clinic Yishun,846 Yishun Ring Rd #01-3669,760846,Atorvastatin; Amlodipine; Salbutamol; Simvastatin,X-Ray; ECG; Blood Test
+311,Central 24-HR Clinic (Yishun),"701A Yishun Ave 5, #01-04",761701,Simvastatin; Metformin; Amlodipine,Health Screening; Blood Test; Wound Dressing; ECG
+312,FRONTIER PEOPLE'S CLINIC PTE LTD,Blk 123 Bedok North Street 2 #01-152,460123,Paracetamol; Simvastatin; Omeprazole; Ibuprofen; Lisinopril,Blood Test
+313,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Amlodipine; Metformin; Simvastatin; Salbutamol,Ultrasound
+314,Zion Medical Centre,Blk 502 Jurong West Ave 1 #01-815,640502,Simvastatin; Lisinopril; Amlodipine; Amoxicillin; Paracetamol,Endoscopy; X-Ray; Vaccination
+315,SUNBEAM MEDICAL CLINIC,443C Fajar Road #01-76,673443,Omeprazole; Metformin; Amlodipine,X-Ray
+316,OneCare Clinic Yishun,846 Yishun Ring Rd #01-3669,760846,Metformin,X-Ray; Ultrasound; Health Screening; Wound Dressing; Endoscopy
+317,TANG FAMILY CLINIC,84 Jalan Jurong Kechil,598593,Ibuprofen; Metformin; Salbutamol; Atorvastatin,Wound Dressing; Blood Test; Endoscopy
+318,Trucare Medical,Blk 682 Hougang Ave 4 #01-320,530682,Salbutamol; Simvastatin; Lisinopril; Omeprazole; Atorvastatin,Minor Surgery; ECG
+319,OneCare Clinic Yishun,846 Yishun Ring Rd #01-3669,760846,Amlodipine; Omeprazole; Ibuprofen; Metformin; Lisinopril,Ultrasound; ECG
+320,Everhealth Clinic & Surgery,201D Tampines Street 21 #01-1171,524201,Paracetamol; Atorvastatin; Ibuprofen; Metformin,ECG; X-Ray
+321,TANG FAMILY CLINIC,84 Jalan Jurong Kechil,598593,Amoxicillin; Metformin; Amlodipine,Blood Test
+322,East Coast Family Clinic,121 Bedok Reservoir Rd #01-202,470121,Atorvastatin; Ibuprofen,X-Ray; Health Screening; Endoscopy; Wound Dressing
+323,Central 24-HR Clinic (Hougang),"681 Hougang Ave 8, #01-829",530681,Amlodipine; Metformin; Salbutamol; Omeprazole,X-Ray; Minor Surgery; Health Screening; Endoscopy; Wound Dressing
+324,Trucare Medical,Blk 682 Hougang Ave 4 #01-320,530682,Metformin; Lisinopril; Ibuprofen; Paracetamol,X-Ray; Minor Surgery; Blood Test
+325,Central 24-HR Clinic (Clementi),450 Clementi Ave 3 #01-291,120450,Ibuprofen; Omeprazole; Simvastatin; Amlodipine,X-Ray; Minor Surgery; Wound Dressing
+326,Acumed Medical Group,Blk 727 Ang Mo Kio Ave 6,560727,Paracetamol; Amoxicillin; Salbutamol; Omeprazole; Amlodipine,Health Screening; Endoscopy; Vaccination; Physiotherapy; Ultrasound
+327,CHANGI CLINIC,848 Sims Avenue #01-734 Eunosville,400848,Metformin,Blood Test; Endoscopy; Minor Surgery
+328,Healthway Medical,446 Clementi Ave 3 #01-201,120446,Salbutamol; Metformin,Wound Dressing; Vaccination; Health Screening; Endoscopy
+329,Silver Cross Family Clinic,2 Lorong Lew Lian #01-50,531002,Amlodipine; Ibuprofen; Paracetamol; Amoxicillin,Physiotherapy; Minor Surgery; Wound Dressing; Ultrasound
+330,SUNBEAM MEDICAL CLINIC,443C Fajar Road #01-76,673443,Amoxicillin; Atorvastatin; Paracetamol; Amlodipine; Lisinopril,X-Ray; Blood Test; Health Screening
+331,Trucare Medical,Blk 682 Hougang Ave 4 #01-320,530682,Lisinopril,Blood Test; Wound Dressing
+332,Trucare Medical,Blk 682 Hougang Ave 4 #01-320,530682,Simvastatin; Atorvastatin; Metformin; Lisinopril; Ibuprofen,Physiotherapy; Minor Surgery; Blood Test; Endoscopy
+333,Central 24-HR Clinic (Clementi),450 Clementi Ave 3 #01-291,120450,Metformin; Paracetamol; Simvastatin; Omeprazole; Salbutamol,ECG; Endoscopy; Ultrasound; Blood Test; Health Screening
+334,Healthway Medical,446 Clementi Ave 3 #01-201,120446,Amlodipine; Amoxicillin; Metformin; Salbutamol,X-Ray; Ultrasound
+335,Central 24-HR Clinic (Yishun),"701A Yishun Ave 5, #01-04",761701,Omeprazole; Lisinopril; Simvastatin,Physiotherapy
+336,Zion Medical Centre,Blk 502 Jurong West Ave 1 #01-815,640502,Metformin,Health Screening; X-Ray
+337,East Coast Family Clinic,121 Bedok Reservoir Rd #01-202,470121,Amoxicillin; Paracetamol; Ibuprofen,Minor Surgery; Vaccination; Blood Test; X-Ray
+338,Trucare Medical,Blk 682 Hougang Ave 4 #01-320,530682,Simvastatin; Amoxicillin; Amlodipine,X-Ray; ECG
+339,Central 24-HR Clinic (Clementi),450 Clementi Ave 3 #01-291,120450,Amoxicillin; Salbutamol,Minor Surgery
+340,Bukit Batok Medical Clinic,632 Bukit Batok Central,650632,Paracetamol; Atorvastatin; Amlodipine; Simvastatin,Blood Test; Vaccination; Wound Dressing; X-Ray; Ultrasound
+341,Central 24-HR Clinic (Clementi),450 Clementi Ave 3 #01-291,120450,Lisinopril; Salbutamol; Ibuprofen; Amlodipine; Simvastatin,Health Screening; Physiotherapy; ECG; Vaccination
+342,Central 24-HR Clinic (Yishun),"701A Yishun Ave 5, #01-04",761701,Amlodipine; Metformin,ECG; X-Ray; Ultrasound
+343,Central 24-HR Clinic (Hougang),"681 Hougang Ave 8, #01-829",530681,Ibuprofen,Blood Test
+344,TANG FAMILY CLINIC,84 Jalan Jurong Kechil,598593,Lisinopril; Simvastatin; Amlodipine; Amoxicillin,Minor Surgery; Endoscopy; Ultrasound
+345,Acumed Medical Group,Blk 727 Ang Mo Kio Ave 6,560727,Metformin; Paracetamol; Omeprazole; Simvastatin; Amlodipine,Endoscopy; Minor Surgery; Ultrasound; Wound Dressing
+346,TANG FAMILY CLINIC,84 Jalan Jurong Kechil,598593,Ibuprofen; Omeprazole,Wound Dressing; Endoscopy; Vaccination; Blood Test; Ultrasound
+347,Silver Cross Family Clinic,2 Lorong Lew Lian #01-50,531002,Paracetamol; Amoxicillin,Vaccination; Health Screening; Wound Dressing; Minor Surgery
+348,Central 24-HR Clinic (Clementi),450 Clementi Ave 3 #01-291,120450,Salbutamol,Physiotherapy
+349,SUNBEAM MEDICAL CLINIC,443C Fajar Road #01-76,673443,Paracetamol,Blood Test; Ultrasound; Endoscopy
+350,East Coast Family Clinic,121 Bedok Reservoir Rd #01-202,470121,Paracetamol,Minor Surgery; Physiotherapy; X-Ray; Ultrasound
+351,FRONTIER PEOPLE'S CLINIC PTE LTD,Blk 123 Bedok North Street 2 #01-152,460123,Metformin; Amlodipine,ECG
+352,Healthway Medical,446 Clementi Ave 3 #01-201,120446,Amoxicillin; Salbutamol,Wound Dressing; X-Ray; Blood Test; Health Screening
+353,The Clinic Group,1 Raffles Quay #09-02,048583,Amlodipine; Amoxicillin; Simvastatin,ECG; Vaccination; Endoscopy; X-Ray; Blood Test
+354,SUNBEAM MEDICAL CLINIC,443C Fajar Road #01-76,673443,Amoxicillin; Paracetamol; Simvastatin,Endoscopy; ECG
+355,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Salbutamol; Amlodipine; Ibuprofen; Lisinopril,Wound Dressing; Blood Test; Ultrasound
+356,Bukit Batok Medical Clinic,632 Bukit Batok Central,650632,Omeprazole; Atorvastatin,Wound Dressing; Health Screening; X-Ray; ECG; Blood Test
+357,Trucare Medical,Blk 682 Hougang Ave 4 #01-320,530682,Omeprazole,Wound Dressing; Health Screening; X-Ray; Ultrasound; Blood Test
+358,Central 24-HR Clinic (Yishun),"701A Yishun Ave 5, #01-04",761701,Salbutamol; Amlodipine; Atorvastatin; Simvastatin,Ultrasound; X-Ray; ECG; Physiotherapy
+359,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Paracetamol; Salbutamol; Omeprazole; Atorvastatin; Amoxicillin,Endoscopy
+360,Silver Cross Family Clinic,2 Lorong Lew Lian #01-50,531002,Atorvastatin; Metformin; Ibuprofen; Lisinopril; Omeprazole,Minor Surgery; Health Screening; X-Ray
+361,FRONTIER PEOPLE'S CLINIC PTE LTD,Blk 123 Bedok North Street 2 #01-152,460123,Salbutamol,Physiotherapy; Minor Surgery; Ultrasound; X-Ray
+362,Trucare Medical,Blk 682 Hougang Ave 4 #01-320,530682,Ibuprofen; Simvastatin,Ultrasound
+363,SUNBEAM MEDICAL CLINIC,443C Fajar Road #01-76,673443,Simvastatin; Lisinopril; Metformin; Ibuprofen,Wound Dressing; Blood Test; Endoscopy; X-Ray; ECG
+364,Silver Cross Family Clinic,2 Lorong Lew Lian #01-50,531002,Amlodipine; Omeprazole; Salbutamol; Paracetamol; Ibuprofen,Health Screening; X-Ray; Ultrasound
+365,Central 24-HR Clinic (Hougang),"681 Hougang Ave 8, #01-829",530681,Simvastatin; Metformin; Lisinopril; Ibuprofen,ECG; X-Ray; Blood Test
+366,Acumed Medical Group,Blk 727 Ang Mo Kio Ave 6,560727,Ibuprofen,Vaccination; Endoscopy; Blood Test; Physiotherapy
+367,Central 24-HR Clinic (Hougang),"681 Hougang Ave 8, #01-829",530681,Metformin; Ibuprofen,ECG; Vaccination; Minor Surgery; Endoscopy
+368,SUNBEAM MEDICAL CLINIC,443C Fajar Road #01-76,673443,Salbutamol; Lisinopril,Endoscopy; Health Screening; ECG
+369,East Coast Family Clinic,121 Bedok Reservoir Rd #01-202,470121,Omeprazole; Simvastatin; Ibuprofen,Ultrasound; Endoscopy; ECG; Minor Surgery; Physiotherapy
+370,Zion Medical Centre,Blk 502 Jurong West Ave 1 #01-815,640502,Amoxicillin; Salbutamol; Simvastatin; Metformin,Endoscopy; Health Screening; Blood Test; ECG; X-Ray
+371,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Salbutamol; Amoxicillin; Simvastatin,Vaccination; ECG; Health Screening; Minor Surgery
+372,SUNBEAM MEDICAL CLINIC,443C Fajar Road #01-76,673443,Atorvastatin,Ultrasound; ECG; Vaccination; Wound Dressing; Physiotherapy
+373,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Simvastatin,ECG
+374,The Clinic Group,1 Raffles Quay #09-02,048583,Omeprazole,Vaccination; ECG; Endoscopy
+375,OneCare Clinic Yishun,846 Yishun Ring Rd #01-3669,760846,Simvastatin; Amlodipine; Paracetamol; Ibuprofen; Amoxicillin,Wound Dressing; Ultrasound; ECG; Physiotherapy; Endoscopy
+376,Bukit Batok Medical Clinic,632 Bukit Batok Central,650632,Metformin; Ibuprofen; Simvastatin; Lisinopril,Health Screening; Wound Dressing
+377,CHANG CLINIC & SURGERY,7 Everton Park #01-21,080007,Ibuprofen; Lisinopril; Amoxicillin; Paracetamol; Amlodipine,Health Screening; Minor Surgery; Ultrasound
+378,Zion Medical Centre,Blk 502 Jurong West Ave 1 #01-815,640502,Simvastatin; Ibuprofen; Atorvastatin,Health Screening; Blood Test; ECG; X-Ray; Vaccination
+379,TANG FAMILY CLINIC,84 Jalan Jurong Kechil,598593,Lisinopril; Metformin; Paracetamol,Blood Test
+380,Healthway Medical,446 Clementi Ave 3 #01-201,120446,Omeprazole; Paracetamol; Lisinopril; Simvastatin,Endoscopy; Health Screening; Wound Dressing; ECG; Blood Test
+381,Zion Medical Centre,Blk 502 Jurong West Ave 1 #01-815,640502,Amlodipine,Physiotherapy; ECG; Minor Surgery; Wound Dressing
+382,Central 24-HR Clinic (Hougang),"681 Hougang Ave 8, #01-829",530681,Paracetamol,Blood Test; Endoscopy; Wound Dressing; X-Ray
+383,FRONTIER PEOPLE'S CLINIC PTE LTD,Blk 123 Bedok North Street 2 #01-152,460123,Simvastatin; Omeprazole; Metformin,Health Screening; ECG
+384,Bukit Batok Medical Clinic,632 Bukit Batok Central,650632,Lisinopril; Ibuprofen,Endoscopy; Ultrasound; Minor Surgery; Physiotherapy
+385,Central 24-HR Clinic (Clementi),450 Clementi Ave 3 #01-291,120450,Salbutamol; Amoxicillin; Omeprazole; Lisinopril; Paracetamol,X-Ray; Blood Test; Vaccination
+386,Zion Medical Centre,Blk 502 Jurong West Ave 1 #01-815,640502,Ibuprofen,Vaccination
+387,CHANGI CLINIC,848 Sims Avenue #01-734 Eunosville,400848,Metformin; Omeprazole; Paracetamol; Atorvastatin; Ibuprofen,Minor Surgery; Wound Dressing
+388,Healthway Medical,446 Clementi Ave 3 #01-201,120446,Ibuprofen; Amlodipine,X-Ray
+389,Zion Medical Centre,Blk 502 Jurong West Ave 1 #01-815,640502,Omeprazole; Atorvastatin; Amoxicillin; Metformin; Simvastatin,Endoscopy
+390,East Coast Family Clinic,121 Bedok Reservoir Rd #01-202,470121,Paracetamol; Metformin; Amoxicillin; Atorvastatin,Vaccination; Health Screening
+391,The Clinic Group,1 Raffles Quay #09-02,048583,Amlodipine; Omeprazole; Paracetamol,X-Ray
+392,Central 24-HR Clinic (Yishun),"701A Yishun Ave 5, #01-04",761701,Ibuprofen; Paracetamol; Salbutamol; Amoxicillin; Atorvastatin,Physiotherapy
+393,Bukit Batok Medical Clinic,632 Bukit Batok Central,650632,Omeprazole; Paracetamol; Metformin,Blood Test; Vaccination; X-Ray; ECG; Ultrasound
+394,Everhealth Clinic & Surgery,201D Tampines Street 21 #01-1171,524201,Lisinopril; Atorvastatin; Salbutamol; Metformin,Blood Test; Endoscopy
+395,Bukit Batok Medical Clinic,632 Bukit Batok Central,650632,Amlodipine; Lisinopril; Omeprazole; Amoxicillin; Salbutamol,X-Ray; Minor Surgery; Health Screening; Ultrasound; Blood Test
+396,SUNBEAM MEDICAL CLINIC,443C Fajar Road #01-76,673443,Paracetamol; Omeprazole,Wound Dressing; Health Screening; Endoscopy; Vaccination
+397,East Coast Family Clinic,121 Bedok Reservoir Rd #01-202,470121,Salbutamol; Ibuprofen; Amoxicillin,ECG; Physiotherapy; Wound Dressing
+398,SUNBEAM MEDICAL CLINIC,443C Fajar Road #01-76,673443,Metformin; Amoxicillin; Salbutamol,Health Screening
+399,CHANG CLINIC & SURGERY,7 Everton Park #01-21,080007,Simvastatin; Omeprazole; Lisinopril; Metformin,Ultrasound
+400,Everhealth Clinic & Surgery,201D Tampines Street 21 #01-1171,524201,Omeprazole; Amoxicillin; Salbutamol; Atorvastatin; Amlodipine,X-Ray; Endoscopy; Blood Test
+401,CHANG CLINIC & SURGERY,7 Everton Park #01-21,080007,Omeprazole; Atorvastatin; Ibuprofen,X-Ray; Ultrasound; Vaccination; Endoscopy
+402,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Simvastatin,Endoscopy; ECG; Minor Surgery; X-Ray
+403,Healthway Medical,446 Clementi Ave 3 #01-201,120446,Omeprazole; Amoxicillin,Ultrasound; Physiotherapy; X-Ray; Health Screening; Minor Surgery
+404,The Clinic Group,1 Raffles Quay #09-02,048583,Ibuprofen; Salbutamol; Metformin,Blood Test; Health Screening; Minor Surgery
+405,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Amoxicillin; Simvastatin; Salbutamol,Vaccination; Endoscopy; Physiotherapy; Minor Surgery
+406,The Clinic Group,1 Raffles Quay #09-02,048583,Amlodipine; Lisinopril,Blood Test
+407,Central 24-HR Clinic (Clementi),450 Clementi Ave 3 #01-291,120450,Metformin,Ultrasound; X-Ray; Wound Dressing; Vaccination; Minor Surgery
+408,Bukit Batok Medical Clinic,632 Bukit Batok Central,650632,Atorvastatin; Amoxicillin; Omeprazole,ECG; Ultrasound
+409,Healthway Medical,446 Clementi Ave 3 #01-201,120446,Amoxicillin; Ibuprofen,Endoscopy
+410,Central 24-HR Clinic (Hougang),"681 Hougang Ave 8, #01-829",530681,Atorvastatin,Endoscopy; Ultrasound; Minor Surgery; Vaccination
+411,The Clinic Group,1 Raffles Quay #09-02,048583,Paracetamol; Amoxicillin; Ibuprofen; Lisinopril,Endoscopy; ECG
+412,Central 24-HR Clinic (Clementi),450 Clementi Ave 3 #01-291,120450,Metformin,Wound Dressing; Physiotherapy; Health Screening; Endoscopy; X-Ray
+413,Everhealth Clinic & Surgery,201D Tampines Street 21 #01-1171,524201,Omeprazole,Health Screening; Physiotherapy
+414,The Clinic Group,1 Raffles Quay #09-02,048583,Ibuprofen; Salbutamol; Metformin; Amlodipine; Amoxicillin,Blood Test; Physiotherapy; Health Screening; Wound Dressing
+415,Bukit Batok Medical Clinic,632 Bukit Batok Central,650632,Simvastatin; Atorvastatin; Ibuprofen; Omeprazole; Salbutamol,Physiotherapy
+416,TANG FAMILY CLINIC,84 Jalan Jurong Kechil,598593,Ibuprofen,Minor Surgery; Health Screening
+417,Central 24-HR Clinic (Yishun),"701A Yishun Ave 5, #01-04",761701,Lisinopril; Atorvastatin; Metformin,Minor Surgery; Blood Test; Vaccination; Wound Dressing
+418,Central 24-HR Clinic (Clementi),450 Clementi Ave 3 #01-291,120450,Ibuprofen; Amoxicillin; Paracetamol; Metformin; Simvastatin,X-Ray; Minor Surgery; ECG; Blood Test
+419,CHANG CLINIC & SURGERY,7 Everton Park #01-21,080007,Paracetamol; Simvastatin; Atorvastatin; Omeprazole,ECG; Blood Test; Physiotherapy; Health Screening; Endoscopy
+420,Acumed Medical Group,Blk 727 Ang Mo Kio Ave 6,560727,Salbutamol; Lisinopril,Blood Test; Vaccination; ECG
+421,Trucare Medical,Blk 682 Hougang Ave 4 #01-320,530682,Lisinopril; Simvastatin; Atorvastatin; Paracetamol; Omeprazole,Health Screening; X-Ray; Wound Dressing; Blood Test
+422,Acumed Medical Group,Blk 727 Ang Mo Kio Ave 6,560727,Omeprazole; Atorvastatin; Simvastatin,Health Screening; Vaccination; Endoscopy; Ultrasound; X-Ray
+423,The Clinic Group,1 Raffles Quay #09-02,048583,Atorvastatin; Amoxicillin; Omeprazole; Paracetamol; Amlodipine,ECG; Ultrasound; Blood Test; Wound Dressing
+424,Zion Medical Centre,Blk 502 Jurong West Ave 1 #01-815,640502,Lisinopril,Endoscopy; Ultrasound; Minor Surgery; Health Screening
+425,Everhealth Clinic & Surgery,201D Tampines Street 21 #01-1171,524201,Ibuprofen; Lisinopril,Health Screening; Minor Surgery; Endoscopy; ECG; Vaccination
+426,East Coast Family Clinic,121 Bedok Reservoir Rd #01-202,470121,Paracetamol; Lisinopril; Simvastatin; Omeprazole,Blood Test
+427,Silver Cross Family Clinic,2 Lorong Lew Lian #01-50,531002,Simvastatin; Salbutamol; Ibuprofen; Amoxicillin,Health Screening; Blood Test
+428,Everhealth Clinic & Surgery,201D Tampines Street 21 #01-1171,524201,Metformin,ECG; Endoscopy; X-Ray; Health Screening; Wound Dressing
+429,Central 24-HR Clinic (Clementi),450 Clementi Ave 3 #01-291,120450,Paracetamol; Amoxicillin; Ibuprofen; Salbutamol; Simvastatin,Physiotherapy; Endoscopy; Health Screening
+430,Zion Medical Centre,Blk 502 Jurong West Ave 1 #01-815,640502,Omeprazole; Simvastatin; Metformin; Ibuprofen; Amlodipine,Vaccination; Health Screening; X-Ray; Minor Surgery; Ultrasound
+431,CHANGI CLINIC,848 Sims Avenue #01-734 Eunosville,400848,Lisinopril; Ibuprofen,Wound Dressing; Ultrasound
+432,Trucare Medical,Blk 682 Hougang Ave 4 #01-320,530682,Salbutamol; Amlodipine; Metformin; Ibuprofen,Wound Dressing; ECG; X-Ray
+433,OneCare Clinic Yishun,846 Yishun Ring Rd #01-3669,760846,Atorvastatin; Amlodipine,Minor Surgery; Health Screening; Blood Test
+434,Central 24-HR Clinic (Yishun),"701A Yishun Ave 5, #01-04",761701,Simvastatin; Atorvastatin; Lisinopril,Ultrasound; Minor Surgery; Health Screening; X-Ray; Vaccination
+435,Bukit Batok Medical Clinic,632 Bukit Batok Central,650632,Amlodipine,Health Screening; Physiotherapy; Vaccination; X-Ray
+436,Central 24-HR Clinic (Yishun),"701A Yishun Ave 5, #01-04",761701,Amlodipine,Endoscopy; Ultrasound; Wound Dressing
+437,Central 24-HR Clinic (Hougang),"681 Hougang Ave 8, #01-829",530681,Metformin; Simvastatin; Omeprazole; Amlodipine; Amoxicillin,Physiotherapy
+438,Bukit Batok Medical Clinic,632 Bukit Batok Central,650632,Atorvastatin; Salbutamol; Paracetamol; Amlodipine; Metformin,Ultrasound; Blood Test; ECG; Minor Surgery; Wound Dressing
+439,The Clinic Group,1 Raffles Quay #09-02,048583,Amoxicillin; Amlodipine; Lisinopril; Atorvastatin; Ibuprofen,Blood Test; Ultrasound; Endoscopy
+440,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Amlodipine; Metformin,ECG; Vaccination
+441,Bukit Batok Medical Clinic,632 Bukit Batok Central,650632,Amlodipine; Amoxicillin,Health Screening; ECG; Endoscopy; Ultrasound; Physiotherapy
+442,Silver Cross Family Clinic,2 Lorong Lew Lian #01-50,531002,Ibuprofen,Blood Test; Endoscopy
+443,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Amoxicillin; Omeprazole; Paracetamol; Amlodipine; Lisinopril,Health Screening; Endoscopy
+444,CHANG CLINIC & SURGERY,7 Everton Park #01-21,080007,Simvastatin; Salbutamol; Omeprazole; Lisinopril; Metformin,Blood Test; Ultrasound; Minor Surgery; ECG; Endoscopy
+445,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Atorvastatin; Omeprazole,Wound Dressing; Physiotherapy; Vaccination; Ultrasound
+446,Central 24-HR Clinic (Clementi),450 Clementi Ave 3 #01-291,120450,Atorvastatin; Amlodipine; Ibuprofen,Physiotherapy; Wound Dressing; Blood Test
+447,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Salbutamol; Ibuprofen; Simvastatin; Atorvastatin,X-Ray
+448,Acumed Medical Group,Blk 727 Ang Mo Kio Ave 6,560727,Omeprazole; Amlodipine,Blood Test; ECG
+449,FRONTIER PEOPLE'S CLINIC PTE LTD,Blk 123 Bedok North Street 2 #01-152,460123,Amoxicillin; Paracetamol,Wound Dressing
+450,FRONTIER PEOPLE'S CLINIC PTE LTD,Blk 123 Bedok North Street 2 #01-152,460123,Lisinopril; Ibuprofen; Omeprazole; Simvastatin; Metformin,Wound Dressing; Vaccination; Health Screening; X-Ray; Blood Test
+451,Trucare Medical,Blk 682 Hougang Ave 4 #01-320,530682,Metformin; Omeprazole; Atorvastatin; Ibuprofen; Amlodipine,Minor Surgery; Vaccination
+452,Everhealth Clinic & Surgery,201D Tampines Street 21 #01-1171,524201,Atorvastatin; Simvastatin; Lisinopril,Ultrasound; Minor Surgery
+453,FRONTIER PEOPLE'S CLINIC PTE LTD,Blk 123 Bedok North Street 2 #01-152,460123,Metformin; Lisinopril,ECG; Minor Surgery; Vaccination
+454,East Coast Family Clinic,121 Bedok Reservoir Rd #01-202,470121,Simvastatin; Omeprazole; Salbutamol; Atorvastatin,ECG; Minor Surgery; Health Screening; Wound Dressing; X-Ray
+455,Zion Medical Centre,Blk 502 Jurong West Ave 1 #01-815,640502,Metformin; Amoxicillin; Atorvastatin; Ibuprofen; Salbutamol,Ultrasound; Vaccination
+456,Healthway Medical,446 Clementi Ave 3 #01-201,120446,Amoxicillin; Ibuprofen,Minor Surgery; Health Screening; Ultrasound; X-Ray; Vaccination
+457,Healthway Medical,446 Clementi Ave 3 #01-201,120446,Simvastatin; Lisinopril,Health Screening; Endoscopy; Vaccination; Ultrasound; Blood Test
+458,Central 24-HR Clinic (Hougang),"681 Hougang Ave 8, #01-829",530681,Paracetamol; Salbutamol; Metformin,Ultrasound; Endoscopy; Health Screening
+459,East Coast Family Clinic,121 Bedok Reservoir Rd #01-202,470121,Salbutamol; Amlodipine; Lisinopril,Vaccination; Wound Dressing; Minor Surgery; Physiotherapy; Blood Test
+460,Bukit Batok Medical Clinic,632 Bukit Batok Central,650632,Ibuprofen,ECG; Wound Dressing
+461,SUNBEAM MEDICAL CLINIC,443C Fajar Road #01-76,673443,Simvastatin,Wound Dressing
+462,OneCare Clinic Yishun,846 Yishun Ring Rd #01-3669,760846,Simvastatin; Ibuprofen,Physiotherapy; X-Ray; ECG; Minor Surgery; Endoscopy
+463,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Simvastatin,Minor Surgery; ECG; Physiotherapy
+464,Zion Medical Centre,Blk 502 Jurong West Ave 1 #01-815,640502,Salbutamol; Amlodipine; Simvastatin,Wound Dressing; Minor Surgery; Endoscopy
+465,TANG FAMILY CLINIC,84 Jalan Jurong Kechil,598593,Omeprazole; Amoxicillin; Atorvastatin; Metformin,ECG
+466,CHANGI CLINIC,848 Sims Avenue #01-734 Eunosville,400848,Omeprazole; Amlodipine; Simvastatin,Physiotherapy
+467,The Clinic Group,1 Raffles Quay #09-02,048583,Simvastatin; Metformin; Amoxicillin,Health Screening; X-Ray; Ultrasound
+468,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Paracetamol; Amlodipine; Lisinopril,Ultrasound; Physiotherapy; Wound Dressing
+469,CHANGI CLINIC,848 Sims Avenue #01-734 Eunosville,400848,Amlodipine; Omeprazole; Simvastatin; Lisinopril; Salbutamol,Endoscopy; Ultrasound; Wound Dressing; X-Ray
+470,Silver Cross Family Clinic,2 Lorong Lew Lian #01-50,531002,Paracetamol; Ibuprofen; Omeprazole,ECG
+471,Central 24-HR Clinic (Hougang),"681 Hougang Ave 8, #01-829",530681,Simvastatin; Lisinopril,Health Screening; Wound Dressing; Endoscopy
+472,Trucare Medical,Blk 682 Hougang Ave 4 #01-320,530682,Ibuprofen; Atorvastatin; Amoxicillin; Paracetamol,Wound Dressing; Blood Test; Health Screening; Vaccination
+473,CHANGI CLINIC,848 Sims Avenue #01-734 Eunosville,400848,Ibuprofen; Amoxicillin; Salbutamol; Simvastatin; Atorvastatin,ECG; Health Screening; Wound Dressing; Vaccination
+474,CHANGI CLINIC,848 Sims Avenue #01-734 Eunosville,400848,Salbutamol; Atorvastatin; Metformin,Wound Dressing; Vaccination; Endoscopy
+475,The Clinic Group,1 Raffles Quay #09-02,048583,Salbutamol; Omeprazole; Amlodipine; Metformin; Ibuprofen,Physiotherapy; Ultrasound
+476,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Metformin,Wound Dressing; Physiotherapy
+477,The Clinic Group,1 Raffles Quay #09-02,048583,Metformin,Ultrasound
+478,CHANGI CLINIC,848 Sims Avenue #01-734 Eunosville,400848,Salbutamol; Lisinopril; Amoxicillin; Amlodipine; Paracetamol,Endoscopy; ECG
+479,Everhealth Clinic & Surgery,201D Tampines Street 21 #01-1171,524201,Paracetamol,Vaccination; Endoscopy; Blood Test; Ultrasound; ECG
+480,The Clinic Group,1 Raffles Quay #09-02,048583,Metformin,Health Screening; Blood Test; Endoscopy; Physiotherapy
+481,Everhealth Clinic & Surgery,201D Tampines Street 21 #01-1171,524201,Omeprazole; Amlodipine; Ibuprofen; Salbutamol; Metformin,ECG
+482,OneCare Clinic Yishun,846 Yishun Ring Rd #01-3669,760846,Simvastatin; Salbutamol,Health Screening; X-Ray; Endoscopy; Ultrasound; Minor Surgery
+483,Central 24-HR Clinic (Yishun),"701A Yishun Ave 5, #01-04",761701,Amlodipine; Atorvastatin; Lisinopril; Ibuprofen,Wound Dressing; Physiotherapy; Health Screening; Blood Test
+484,Zion Medical Centre,Blk 502 Jurong West Ave 1 #01-815,640502,Lisinopril; Paracetamol; Salbutamol,Minor Surgery
+485,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Amoxicillin; Ibuprofen; Paracetamol,Blood Test
+486,The Clinic Group,1 Raffles Quay #09-02,048583,Omeprazole,Minor Surgery; Health Screening; Vaccination; Wound Dressing; Ultrasound
+487,Healthway Medical,446 Clementi Ave 3 #01-201,120446,Ibuprofen,Ultrasound
+488,TANG FAMILY CLINIC,84 Jalan Jurong Kechil,598593,Omeprazole; Ibuprofen,Ultrasound; Physiotherapy; Vaccination; ECG
+489,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Metformin,Blood Test
+490,East Coast Family Clinic,121 Bedok Reservoir Rd #01-202,470121,Amoxicillin,X-Ray; Endoscopy
+491,CHANG CLINIC & SURGERY,7 Everton Park #01-21,080007,Amoxicillin; Lisinopril,Health Screening
+492,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Salbutamol,Ultrasound
+493,Central 24-HR Clinic (Hougang),"681 Hougang Ave 8, #01-829",530681,Lisinopril,ECG; Minor Surgery; Wound Dressing
+494,CHANG CLINIC & SURGERY,7 Everton Park #01-21,080007,Amlodipine,Endoscopy; Physiotherapy
+495,Central 24-HR Clinic (Hougang),"681 Hougang Ave 8, #01-829",530681,Ibuprofen; Salbutamol; Amlodipine; Simvastatin,Vaccination; Health Screening
+496,Acumed Medical Group,Blk 727 Ang Mo Kio Ave 6,560727,Metformin; Atorvastatin; Simvastatin; Omeprazole,Vaccination; X-Ray
+497,CHANG CLINIC & SURGERY,7 Everton Park #01-21,080007,Lisinopril; Amoxicillin; Ibuprofen; Atorvastatin,ECG; Vaccination; Blood Test; Physiotherapy; Wound Dressing
+498,Zion Medical Centre,Blk 502 Jurong West Ave 1 #01-815,640502,Amlodipine,Endoscopy; ECG; Minor Surgery; X-Ray; Wound Dressing
+499,TANG FAMILY CLINIC,84 Jalan Jurong Kechil,598593,Salbutamol; Omeprazole; Metformin,Endoscopy; Health Screening; X-Ray
+500,Healthway Medical,446 Clementi Ave 3 #01-201,120446,Amlodipine; Metformin; Omeprazole; Atorvastatin,Physiotherapy; Health Screening; Wound Dressing; Minor Surgery; Ultrasound
+501,CHANGI CLINIC,848 Sims Avenue #01-734 Eunosville,400848,Metformin,Wound Dressing; X-Ray; Ultrasound
+502,Healthway Medical,446 Clementi Ave 3 #01-201,120446,Salbutamol,Ultrasound; Endoscopy; Vaccination; X-Ray
+503,Silver Cross Family Clinic,2 Lorong Lew Lian #01-50,531002,Amlodipine; Atorvastatin; Paracetamol; Lisinopril,X-Ray; ECG; Vaccination
+504,Acumed Medical Group,Blk 727 Ang Mo Kio Ave 6,560727,Simvastatin,Health Screening
+505,Silver Cross Family Clinic,2 Lorong Lew Lian #01-50,531002,Atorvastatin; Simvastatin,Wound Dressing; Ultrasound; Vaccination; Blood Test
+506,Everhealth Clinic & Surgery,201D Tampines Street 21 #01-1171,524201,Atorvastatin; Omeprazole; Amlodipine,Endoscopy
+507,Silver Cross Family Clinic,2 Lorong Lew Lian #01-50,531002,Metformin; Lisinopril; Amoxicillin; Simvastatin; Omeprazole,ECG
+508,Healthway Medical,446 Clementi Ave 3 #01-201,120446,Simvastatin; Paracetamol; Lisinopril,Wound Dressing; Health Screening; Blood Test
+509,Bukit Batok Medical Clinic,632 Bukit Batok Central,650632,Amoxicillin; Metformin; Lisinopril; Ibuprofen; Paracetamol,Health Screening; X-Ray; Blood Test; Ultrasound
+510,Zion Medical Centre,Blk 502 Jurong West Ave 1 #01-815,640502,Amoxicillin,Physiotherapy; Health Screening; X-Ray; Wound Dressing; Minor Surgery
+511,Healthway Medical,446 Clementi Ave 3 #01-201,120446,Salbutamol; Omeprazole,Ultrasound; Physiotherapy; ECG; Vaccination; Minor Surgery
+512,CHANG CLINIC & SURGERY,7 Everton Park #01-21,080007,Ibuprofen,Blood Test; Ultrasound; X-Ray; Endoscopy
+513,OneCare Clinic Yishun,846 Yishun Ring Rd #01-3669,760846,Omeprazole; Amoxicillin; Salbutamol; Simvastatin; Atorvastatin,Wound Dressing; Endoscopy; Health Screening
+514,CHANG CLINIC & SURGERY,7 Everton Park #01-21,080007,Ibuprofen,Endoscopy; Ultrasound; Physiotherapy
+515,Central 24-HR Clinic (Yishun),"701A Yishun Ave 5, #01-04",761701,Lisinopril; Amlodipine; Simvastatin; Paracetamol,Blood Test; Minor Surgery; Vaccination; ECG; Physiotherapy
+516,Acumed Medical Group,Blk 727 Ang Mo Kio Ave 6,560727,Atorvastatin; Salbutamol; Simvastatin; Amoxicillin; Lisinopril,Minor Surgery; Blood Test; X-Ray
+517,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Lisinopril; Omeprazole; Amlodipine,Vaccination; ECG; Wound Dressing; Blood Test; Physiotherapy
+518,Trucare Medical,Blk 682 Hougang Ave 4 #01-320,530682,Metformin; Omeprazole; Ibuprofen; Lisinopril,Health Screening; Ultrasound; Vaccination; X-Ray
+519,The Clinic Group,1 Raffles Quay #09-02,048583,Amlodipine; Omeprazole; Atorvastatin; Amoxicillin; Metformin,Minor Surgery; Wound Dressing; Vaccination; Ultrasound
+520,The Clinic Group,1 Raffles Quay #09-02,048583,Atorvastatin; Metformin,Blood Test
+521,CHANG CLINIC & SURGERY,7 Everton Park #01-21,080007,Omeprazole; Amoxicillin; Metformin,Vaccination; Blood Test; Ultrasound; X-Ray; Health Screening
+522,Central 24-HR Clinic (Hougang),"681 Hougang Ave 8, #01-829",530681,Simvastatin; Ibuprofen,Physiotherapy; X-Ray; Health Screening; ECG; Ultrasound
+523,Bukit Batok Medical Clinic,632 Bukit Batok Central,650632,Amoxicillin; Omeprazole; Amlodipine,Physiotherapy; Endoscopy
+524,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Amoxicillin,X-Ray; Physiotherapy; ECG; Ultrasound; Minor Surgery
+525,Central 24-HR Clinic (Yishun),"701A Yishun Ave 5, #01-04",761701,Omeprazole; Lisinopril; Metformin,Wound Dressing; Endoscopy; Physiotherapy; X-Ray; Vaccination
+526,CHANG CLINIC & SURGERY,7 Everton Park #01-21,080007,Simvastatin; Amlodipine; Amoxicillin; Paracetamol,Wound Dressing; Blood Test; Physiotherapy; Minor Surgery
+527,Bukit Batok Medical Clinic,632 Bukit Batok Central,650632,Amlodipine; Metformin,Wound Dressing; Endoscopy; X-Ray; Minor Surgery
+528,TANG FAMILY CLINIC,84 Jalan Jurong Kechil,598593,Ibuprofen; Amoxicillin; Paracetamol; Salbutamol,Ultrasound; ECG; Physiotherapy; Wound Dressing
+529,CHANG CLINIC & SURGERY,7 Everton Park #01-21,080007,Metformin; Ibuprofen; Lisinopril; Omeprazole,Ultrasound; Vaccination; Physiotherapy; Endoscopy; Minor Surgery
+530,CHANG CLINIC & SURGERY,7 Everton Park #01-21,080007,Paracetamol; Metformin,ECG
+531,The Clinic Group,1 Raffles Quay #09-02,048583,Amoxicillin,Ultrasound; Wound Dressing
+532,Healthway Medical,446 Clementi Ave 3 #01-201,120446,Ibuprofen; Simvastatin,Health Screening; Vaccination
+533,Central 24-HR Clinic (Clementi),450 Clementi Ave 3 #01-291,120450,Paracetamol,Physiotherapy
+534,Healthway Medical,446 Clementi Ave 3 #01-201,120446,Lisinopril; Simvastatin,X-Ray; Endoscopy
+535,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Lisinopril; Amoxicillin; Ibuprofen; Simvastatin,Minor Surgery
+536,Acumed Medical Group,Blk 727 Ang Mo Kio Ave 6,560727,Paracetamol,Minor Surgery; Vaccination; Wound Dressing; Health Screening; Blood Test
+537,OneCare Clinic Yishun,846 Yishun Ring Rd #01-3669,760846,Metformin; Atorvastatin,Physiotherapy; Ultrasound; Health Screening; X-Ray; Wound Dressing
+538,Zion Medical Centre,Blk 502 Jurong West Ave 1 #01-815,640502,Atorvastatin,Ultrasound; Health Screening; Physiotherapy; X-Ray; Blood Test
+539,East Coast Family Clinic,121 Bedok Reservoir Rd #01-202,470121,Atorvastatin,Minor Surgery; ECG; Endoscopy; Vaccination; X-Ray
+540,Silver Cross Family Clinic,2 Lorong Lew Lian #01-50,531002,Paracetamol; Amoxicillin; Atorvastatin,Endoscopy; Blood Test; Vaccination; Health Screening
+541,Central 24-HR Clinic (Yishun),"701A Yishun Ave 5, #01-04",761701,Omeprazole; Salbutamol; Amoxicillin; Paracetamol,Physiotherapy; Vaccination
+542,Silver Cross Family Clinic,2 Lorong Lew Lian #01-50,531002,Lisinopril; Omeprazole,Minor Surgery
+543,FRONTIER PEOPLE'S CLINIC PTE LTD,Blk 123 Bedok North Street 2 #01-152,460123,Amoxicillin; Metformin,Blood Test; Vaccination; Endoscopy; Minor Surgery; Health Screening
+544,FRONTIER PEOPLE'S CLINIC PTE LTD,Blk 123 Bedok North Street 2 #01-152,460123,Lisinopril; Atorvastatin; Amoxicillin; Metformin,Blood Test; ECG; Endoscopy
+545,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Amoxicillin,Vaccination; Wound Dressing; Health Screening; X-Ray
+546,OneCare Clinic Yishun,846 Yishun Ring Rd #01-3669,760846,Ibuprofen; Metformin; Salbutamol; Amoxicillin; Simvastatin,Minor Surgery; Blood Test; X-Ray; Ultrasound; Wound Dressing
+547,Acumed Medical Group,Blk 727 Ang Mo Kio Ave 6,560727,Metformin,Health Screening
+548,The Clinic Group,1 Raffles Quay #09-02,048583,Simvastatin; Metformin,X-Ray; Vaccination
+549,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Lisinopril; Omeprazole; Amlodipine; Metformin,Vaccination; Ultrasound; Minor Surgery
+550,East Coast Family Clinic,121 Bedok Reservoir Rd #01-202,470121,Ibuprofen; Lisinopril,Wound Dressing; Ultrasound; X-Ray; ECG
+551,SUNBEAM MEDICAL CLINIC,443C Fajar Road #01-76,673443,Atorvastatin; Ibuprofen; Salbutamol,Minor Surgery; Health Screening; Ultrasound
+552,East Coast Family Clinic,121 Bedok Reservoir Rd #01-202,470121,Amlodipine; Metformin; Paracetamol,Wound Dressing; Ultrasound; Minor Surgery; Blood Test; Endoscopy
+553,Trucare Medical,Blk 682 Hougang Ave 4 #01-320,530682,Amlodipine; Paracetamol; Atorvastatin; Amoxicillin; Salbutamol,ECG; Endoscopy; Blood Test; Vaccination; X-Ray
+554,Trucare Medical,Blk 682 Hougang Ave 4 #01-320,530682,Salbutamol; Amoxicillin; Ibuprofen,Ultrasound; ECG; Physiotherapy
+555,CHANGI CLINIC,848 Sims Avenue #01-734 Eunosville,400848,Lisinopril,Physiotherapy; Health Screening; Blood Test; X-Ray; Wound Dressing
+556,Zion Medical Centre,Blk 502 Jurong West Ave 1 #01-815,640502,Amoxicillin; Lisinopril; Ibuprofen; Paracetamol; Simvastatin,Physiotherapy; Minor Surgery; Endoscopy; X-Ray
+557,Everhealth Clinic & Surgery,201D Tampines Street 21 #01-1171,524201,Atorvastatin,Physiotherapy; Ultrasound
+558,The Clinic Group,1 Raffles Quay #09-02,048583,Amlodipine; Ibuprofen,Wound Dressing; X-Ray; Ultrasound; Vaccination; Physiotherapy
+559,Everhealth Clinic & Surgery,201D Tampines Street 21 #01-1171,524201,Amoxicillin; Omeprazole; Paracetamol; Atorvastatin,Wound Dressing
+560,Acumed Medical Group,Blk 727 Ang Mo Kio Ave 6,560727,Paracetamol; Simvastatin; Metformin; Amlodipine,ECG; Ultrasound; Health Screening
+561,TANG FAMILY CLINIC,84 Jalan Jurong Kechil,598593,Amlodipine,Ultrasound; Endoscopy; Wound Dressing; X-Ray
+562,CHANGI CLINIC,848 Sims Avenue #01-734 Eunosville,400848,Salbutamol,Physiotherapy
+563,Acumed Medical Group,Blk 727 Ang Mo Kio Ave 6,560727,Omeprazole; Simvastatin; Lisinopril; Amlodipine,Physiotherapy; Wound Dressing; X-Ray
+564,Silver Cross Family Clinic,2 Lorong Lew Lian #01-50,531002,Simvastatin; Paracetamol; Salbutamol; Amoxicillin; Amlodipine,Minor Surgery
+565,Bukit Batok Medical Clinic,632 Bukit Batok Central,650632,Ibuprofen; Omeprazole,Minor Surgery; Vaccination
+566,Bukit Batok Medical Clinic,632 Bukit Batok Central,650632,Metformin; Paracetamol; Amoxicillin,Vaccination; Wound Dressing; Physiotherapy
+567,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Ibuprofen; Atorvastatin,Blood Test
+568,Silver Cross Family Clinic,2 Lorong Lew Lian #01-50,531002,Lisinopril; Amlodipine; Metformin; Simvastatin,Endoscopy; X-Ray; Vaccination; ECG; Minor Surgery
+569,The Clinic Group,1 Raffles Quay #09-02,048583,Metformin; Omeprazole; Ibuprofen; Salbutamol,ECG; X-Ray
+570,TANG FAMILY CLINIC,84 Jalan Jurong Kechil,598593,Amlodipine; Paracetamol; Lisinopril; Simvastatin; Metformin,Endoscopy; Ultrasound; Blood Test
+571,Acumed Medical Group,Blk 727 Ang Mo Kio Ave 6,560727,Amlodipine; Paracetamol; Simvastatin,Endoscopy; ECG; Health Screening; X-Ray; Minor Surgery
+572,East Coast Family Clinic,121 Bedok Reservoir Rd #01-202,470121,Ibuprofen; Simvastatin; Paracetamol,Physiotherapy; Wound Dressing; ECG; Health Screening; Endoscopy
+573,Central 24-HR Clinic (Clementi),450 Clementi Ave 3 #01-291,120450,Paracetamol; Omeprazole; Atorvastatin; Amlodipine; Metformin,Wound Dressing
+574,CHANG CLINIC & SURGERY,7 Everton Park #01-21,080007,Omeprazole; Amoxicillin,Blood Test
+575,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Paracetamol; Amoxicillin; Simvastatin; Omeprazole; Metformin,Health Screening; Vaccination; Minor Surgery; Blood Test
+576,Central 24-HR Clinic (Hougang),"681 Hougang Ave 8, #01-829",530681,Lisinopril; Simvastatin,Vaccination; Blood Test; Physiotherapy; Endoscopy
+577,Zion Medical Centre,Blk 502 Jurong West Ave 1 #01-815,640502,Salbutamol; Simvastatin; Omeprazole; Lisinopril,X-Ray; Health Screening; Blood Test; ECG; Physiotherapy
+578,Everhealth Clinic & Surgery,201D Tampines Street 21 #01-1171,524201,Simvastatin; Omeprazole; Salbutamol; Metformin,Wound Dressing; Health Screening; Vaccination; Minor Surgery; Blood Test
+579,Silver Cross Family Clinic,2 Lorong Lew Lian #01-50,531002,Atorvastatin; Ibuprofen; Simvastatin; Omeprazole; Metformin,Ultrasound; Physiotherapy
+580,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Atorvastatin; Amlodipine; Paracetamol; Metformin,ECG; X-Ray; Vaccination; Blood Test
+581,Central 24-HR Clinic (Hougang),"681 Hougang Ave 8, #01-829",530681,Metformin,X-Ray; Physiotherapy; Blood Test; Health Screening
+582,FRONTIER PEOPLE'S CLINIC PTE LTD,Blk 123 Bedok North Street 2 #01-152,460123,Paracetamol; Amlodipine; Metformin,Wound Dressing; X-Ray; Vaccination; Minor Surgery
+583,Healthway Medical,446 Clementi Ave 3 #01-201,120446,Paracetamol,X-Ray
+584,TANG FAMILY CLINIC,84 Jalan Jurong Kechil,598593,Atorvastatin; Simvastatin; Paracetamol; Omeprazole,Minor Surgery; ECG; X-Ray
+585,Trucare Medical,Blk 682 Hougang Ave 4 #01-320,530682,Omeprazole; Atorvastatin,Vaccination; Minor Surgery
+586,Central 24-HR Clinic (Clementi),450 Clementi Ave 3 #01-291,120450,Metformin; Atorvastatin; Simvastatin; Amoxicillin; Amlodipine,Vaccination
+587,Silver Cross Family Clinic,2 Lorong Lew Lian #01-50,531002,Amoxicillin; Atorvastatin,Vaccination; Endoscopy; Blood Test; Wound Dressing; Physiotherapy
+588,FRONTIER PEOPLE'S CLINIC PTE LTD,Blk 123 Bedok North Street 2 #01-152,460123,Amlodipine,Wound Dressing; X-Ray; Ultrasound
+589,FRONTIER PEOPLE'S CLINIC PTE LTD,Blk 123 Bedok North Street 2 #01-152,460123,Salbutamol; Atorvastatin; Lisinopril; Paracetamol; Ibuprofen,Endoscopy; X-Ray; Physiotherapy; Ultrasound; Wound Dressing
+590,Silver Cross Family Clinic,2 Lorong Lew Lian #01-50,531002,Paracetamol; Ibuprofen; Lisinopril,Physiotherapy; Ultrasound; Endoscopy; Wound Dressing
+591,Everhealth Clinic & Surgery,201D Tampines Street 21 #01-1171,524201,Amoxicillin; Amlodipine; Lisinopril; Salbutamol; Simvastatin,Ultrasound; ECG
+592,Bukit Batok Medical Clinic,632 Bukit Batok Central,650632,Lisinopril; Omeprazole,Vaccination; Minor Surgery; ECG; Wound Dressing
+593,Central 24-HR Clinic (Clementi),450 Clementi Ave 3 #01-291,120450,Metformin; Omeprazole; Amoxicillin; Salbutamol,Endoscopy; Health Screening; X-Ray; Wound Dressing
+594,OneCare Clinic Yishun,846 Yishun Ring Rd #01-3669,760846,Paracetamol; Metformin; Omeprazole,Minor Surgery; X-Ray
+595,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Salbutamol; Atorvastatin; Omeprazole; Amoxicillin,Blood Test; Endoscopy
+596,CHANGI CLINIC,848 Sims Avenue #01-734 Eunosville,400848,Amlodipine; Simvastatin,Physiotherapy; Endoscopy; Health Screening
+597,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Atorvastatin; Salbutamol; Metformin; Lisinopril; Ibuprofen,Blood Test; ECG; Physiotherapy; X-Ray
+598,Silver Cross Family Clinic,2 Lorong Lew Lian #01-50,531002,Ibuprofen; Paracetamol,Physiotherapy
+599,SUNBEAM MEDICAL CLINIC,443C Fajar Road #01-76,673443,Amlodipine; Salbutamol; Paracetamol,ECG; Vaccination
+600,Everhealth Clinic & Surgery,201D Tampines Street 21 #01-1171,524201,Amoxicillin,ECG; X-Ray; Minor Surgery; Endoscopy; Ultrasound
+601,Central 24-HR Clinic (Yishun),"701A Yishun Ave 5, #01-04",761701,Paracetamol; Metformin,Vaccination; X-Ray; Minor Surgery; Health Screening; Blood Test
+602,The Clinic Group,1 Raffles Quay #09-02,048583,Amoxicillin; Ibuprofen; Metformin,Minor Surgery
+603,TANG FAMILY CLINIC,84 Jalan Jurong Kechil,598593,Atorvastatin; Paracetamol; Ibuprofen; Lisinopril; Amoxicillin,Wound Dressing; Blood Test
+604,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Amlodipine; Salbutamol; Amoxicillin,Ultrasound; Endoscopy; Vaccination; Blood Test
+605,FRONTIER PEOPLE'S CLINIC PTE LTD,Blk 123 Bedok North Street 2 #01-152,460123,Lisinopril; Omeprazole; Amoxicillin; Paracetamol,Physiotherapy; Ultrasound; ECG
+606,East Coast Family Clinic,121 Bedok Reservoir Rd #01-202,470121,Amlodipine; Amoxicillin; Metformin,Physiotherapy
+607,TANG FAMILY CLINIC,84 Jalan Jurong Kechil,598593,Lisinopril,Vaccination
+608,East Coast Family Clinic,121 Bedok Reservoir Rd #01-202,470121,Omeprazole; Paracetamol,X-Ray; ECG; Blood Test; Vaccination
+609,Zion Medical Centre,Blk 502 Jurong West Ave 1 #01-815,640502,Amoxicillin,Wound Dressing; Vaccination; Physiotherapy; Health Screening
+610,Healthway Medical,446 Clementi Ave 3 #01-201,120446,Amoxicillin,Blood Test
+611,Central 24-HR Clinic (Yishun),"701A Yishun Ave 5, #01-04",761701,Lisinopril,Endoscopy; Ultrasound; Minor Surgery; X-Ray; Vaccination
+612,Central 24-HR Clinic (Yishun),"701A Yishun Ave 5, #01-04",761701,Atorvastatin; Simvastatin; Amlodipine; Ibuprofen,Endoscopy; Vaccination; Wound Dressing; Ultrasound; Physiotherapy
+613,Bukit Batok Medical Clinic,632 Bukit Batok Central,650632,Paracetamol; Metformin,Endoscopy; ECG; Minor Surgery; Blood Test; Vaccination
+614,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Simvastatin,Health Screening; Wound Dressing
+615,CHANG CLINIC & SURGERY,7 Everton Park #01-21,080007,Ibuprofen,Health Screening
+616,Everhealth Clinic & Surgery,201D Tampines Street 21 #01-1171,524201,Metformin; Amoxicillin; Simvastatin,X-Ray; Endoscopy
+617,Trucare Medical,Blk 682 Hougang Ave 4 #01-320,530682,Ibuprofen; Lisinopril,Endoscopy; X-Ray
+618,Everhealth Clinic & Surgery,201D Tampines Street 21 #01-1171,524201,Metformin; Ibuprofen; Simvastatin; Salbutamol; Atorvastatin,Endoscopy; Ultrasound; Wound Dressing; Health Screening; Vaccination
+619,OneCare Clinic Yishun,846 Yishun Ring Rd #01-3669,760846,Lisinopril,Minor Surgery; ECG; Ultrasound
+620,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Simvastatin,Health Screening; Ultrasound; Wound Dressing
+621,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Amlodipine,Health Screening
+622,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Simvastatin; Ibuprofen; Lisinopril,Blood Test; Health Screening; Endoscopy; Ultrasound; X-Ray
+623,TANG FAMILY CLINIC,84 Jalan Jurong Kechil,598593,Amlodipine,X-Ray; Minor Surgery
+624,CHANG CLINIC & SURGERY,7 Everton Park #01-21,080007,Lisinopril; Simvastatin; Atorvastatin; Omeprazole; Amlodipine,Minor Surgery; Blood Test; Health Screening
+625,Everhealth Clinic & Surgery,201D Tampines Street 21 #01-1171,524201,Amlodipine; Amoxicillin; Metformin; Paracetamol,Health Screening
+626,FRONTIER PEOPLE'S CLINIC PTE LTD,Blk 123 Bedok North Street 2 #01-152,460123,Amlodipine; Lisinopril; Simvastatin,Endoscopy
+627,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Metformin,Ultrasound; Blood Test; Wound Dressing
+628,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Paracetamol; Salbutamol,Ultrasound; ECG; Wound Dressing; Physiotherapy
+629,Bukit Batok Medical Clinic,632 Bukit Batok Central,650632,Simvastatin,Health Screening; Endoscopy; Ultrasound; X-Ray; Wound Dressing
+630,The Clinic Group,1 Raffles Quay #09-02,048583,Amoxicillin; Lisinopril; Paracetamol,X-Ray; Vaccination; Ultrasound
+631,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Ibuprofen; Metformin; Amlodipine; Salbutamol; Omeprazole,Physiotherapy; X-Ray; Blood Test
+632,Central 24-HR Clinic (Hougang),"681 Hougang Ave 8, #01-829",530681,Metformin; Ibuprofen; Amlodipine,Health Screening; X-Ray; Physiotherapy; Minor Surgery
+633,CHANGI CLINIC,848 Sims Avenue #01-734 Eunosville,400848,Amoxicillin; Atorvastatin,Vaccination; Wound Dressing
+634,Zion Medical Centre,Blk 502 Jurong West Ave 1 #01-815,640502,Lisinopril; Salbutamol,Wound Dressing; Blood Test; Physiotherapy; X-Ray; Health Screening
+635,Central 24-HR Clinic (Hougang),"681 Hougang Ave 8, #01-829",530681,Salbutamol; Amoxicillin; Atorvastatin; Ibuprofen; Metformin,Wound Dressing; Physiotherapy
+636,TANG FAMILY CLINIC,84 Jalan Jurong Kechil,598593,Ibuprofen; Salbutamol; Omeprazole,Blood Test; Physiotherapy
+637,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Amoxicillin; Amlodipine; Omeprazole,Endoscopy; Physiotherapy; Minor Surgery
+638,SUNBEAM MEDICAL CLINIC,443C Fajar Road #01-76,673443,Amoxicillin; Atorvastatin; Metformin; Amlodipine,Minor Surgery; Wound Dressing; ECG; Physiotherapy; Endoscopy
+639,CHANG CLINIC & SURGERY,7 Everton Park #01-21,080007,Amlodipine; Salbutamol; Lisinopril,ECG; Blood Test; Health Screening
+640,Central 24-HR Clinic (Hougang),"681 Hougang Ave 8, #01-829",530681,Paracetamol; Simvastatin; Amlodipine,Blood Test; Endoscopy; Physiotherapy; Wound Dressing
+641,Central 24-HR Clinic (Yishun),"701A Yishun Ave 5, #01-04",761701,Omeprazole; Amlodipine,Vaccination; Health Screening; Wound Dressing; Endoscopy
+642,Trucare Medical,Blk 682 Hougang Ave 4 #01-320,530682,Atorvastatin; Salbutamol; Ibuprofen; Amlodipine; Lisinopril,Health Screening
+643,Healthway Medical,446 Clementi Ave 3 #01-201,120446,Amoxicillin; Simvastatin; Amlodipine; Atorvastatin; Omeprazole,Physiotherapy; ECG; Blood Test; Minor Surgery
+644,The Clinic Group,1 Raffles Quay #09-02,048583,Lisinopril; Salbutamol; Omeprazole,Health Screening; Ultrasound; Endoscopy; Wound Dressing
+645,TANG FAMILY CLINIC,84 Jalan Jurong Kechil,598593,Salbutamol; Atorvastatin,Vaccination; Health Screening; Endoscopy
+646,The Clinic Group,1 Raffles Quay #09-02,048583,Metformin; Ibuprofen; Amoxicillin; Omeprazole,X-Ray; Wound Dressing; Physiotherapy; ECG; Minor Surgery
+647,SUNBEAM MEDICAL CLINIC,443C Fajar Road #01-76,673443,Amoxicillin; Omeprazole; Lisinopril; Salbutamol; Ibuprofen,Endoscopy
+648,SUNBEAM MEDICAL CLINIC,443C Fajar Road #01-76,673443,Amoxicillin,Minor Surgery; Health Screening
+649,The Clinic Group,1 Raffles Quay #09-02,048583,Atorvastatin,Health Screening; Minor Surgery; X-Ray
+650,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Amlodipine; Simvastatin; Paracetamol; Amoxicillin; Ibuprofen,Vaccination; Health Screening; ECG; Ultrasound
+651,SUNBEAM MEDICAL CLINIC,443C Fajar Road #01-76,673443,Simvastatin; Lisinopril; Paracetamol; Salbutamol,ECG; Health Screening; Endoscopy; X-Ray
+652,Zion Medical Centre,Blk 502 Jurong West Ave 1 #01-815,640502,Amlodipine; Paracetamol; Amoxicillin; Simvastatin,Endoscopy; ECG
+653,Bukit Batok Medical Clinic,632 Bukit Batok Central,650632,Paracetamol; Amoxicillin,Ultrasound; Vaccination; X-Ray; Minor Surgery
+654,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Simvastatin; Lisinopril; Atorvastatin,Minor Surgery; Ultrasound
+655,Zion Medical Centre,Blk 502 Jurong West Ave 1 #01-815,640502,Omeprazole,Minor Surgery; Vaccination
+656,CHANG CLINIC & SURGERY,7 Everton Park #01-21,080007,Amoxicillin; Simvastatin,Endoscopy
+657,Trucare Medical,Blk 682 Hougang Ave 4 #01-320,530682,Salbutamol; Metformin; Atorvastatin; Simvastatin; Amoxicillin,ECG; Wound Dressing
+658,Central 24-HR Clinic (Clementi),450 Clementi Ave 3 #01-291,120450,Atorvastatin; Simvastatin,Minor Surgery; Physiotherapy; X-Ray; Wound Dressing; Endoscopy
+659,Central 24-HR Clinic (Yishun),"701A Yishun Ave 5, #01-04",761701,Paracetamol,Minor Surgery; Physiotherapy; X-Ray
+660,Healthway Medical,446 Clementi Ave 3 #01-201,120446,Amoxicillin,Minor Surgery; Physiotherapy; X-Ray; Ultrasound
+661,Bukit Batok Medical Clinic,632 Bukit Batok Central,650632,Ibuprofen; Paracetamol,Minor Surgery; Vaccination; Health Screening
+662,CHANG CLINIC & SURGERY,7 Everton Park #01-21,080007,Simvastatin,Blood Test; Physiotherapy; Minor Surgery
+663,East Coast Family Clinic,121 Bedok Reservoir Rd #01-202,470121,Amlodipine; Metformin; Lisinopril; Salbutamol,ECG; Endoscopy
+664,CHANG CLINIC & SURGERY,7 Everton Park #01-21,080007,Amlodipine; Atorvastatin,Vaccination; Health Screening; Minor Surgery; Endoscopy; X-Ray
+665,Central 24-HR Clinic (Clementi),450 Clementi Ave 3 #01-291,120450,Omeprazole,X-Ray; Physiotherapy; Ultrasound
+666,Central 24-HR Clinic (Yishun),"701A Yishun Ave 5, #01-04",761701,Omeprazole; Salbutamol; Amlodipine,Wound Dressing; Ultrasound
+667,CHANGI CLINIC,848 Sims Avenue #01-734 Eunosville,400848,Amlodipine,Vaccination; Blood Test; ECG; X-Ray; Endoscopy
+668,The Clinic Group,1 Raffles Quay #09-02,048583,Lisinopril; Simvastatin; Paracetamol; Amoxicillin; Ibuprofen,Minor Surgery; Health Screening; X-Ray
+669,Everhealth Clinic & Surgery,201D Tampines Street 21 #01-1171,524201,Metformin; Salbutamol; Amoxicillin,Blood Test; Ultrasound
+670,SUNBEAM MEDICAL CLINIC,443C Fajar Road #01-76,673443,Salbutamol; Simvastatin; Atorvastatin; Lisinopril; Amlodipine,Ultrasound; X-Ray; Vaccination
+671,Central 24-HR Clinic (Clementi),450 Clementi Ave 3 #01-291,120450,Atorvastatin; Ibuprofen,X-Ray; ECG
+672,FRONTIER PEOPLE'S CLINIC PTE LTD,Blk 123 Bedok North Street 2 #01-152,460123,Amoxicillin,X-Ray; Physiotherapy
+673,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Amoxicillin,X-Ray; Minor Surgery
+674,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Atorvastatin,Endoscopy; ECG; Blood Test; Physiotherapy
+675,Bukit Batok Medical Clinic,632 Bukit Batok Central,650632,Atorvastatin; Paracetamol; Lisinopril; Metformin,Wound Dressing; X-Ray; Vaccination; Blood Test; Ultrasound
+676,Trucare Medical,Blk 682 Hougang Ave 4 #01-320,530682,Simvastatin; Omeprazole; Amoxicillin,X-Ray
+677,East Coast Family Clinic,121 Bedok Reservoir Rd #01-202,470121,Amoxicillin; Metformin,Minor Surgery; Wound Dressing; Health Screening; Vaccination; Endoscopy
+678,Trucare Medical,Blk 682 Hougang Ave 4 #01-320,530682,Ibuprofen,Ultrasound; ECG; Wound Dressing
+679,CHANGI CLINIC,848 Sims Avenue #01-734 Eunosville,400848,Amoxicillin; Amlodipine; Simvastatin,Blood Test; Ultrasound; Wound Dressing
+680,The Clinic Group,1 Raffles Quay #09-02,048583,Metformin; Omeprazole; Atorvastatin,Vaccination; Minor Surgery; ECG; Health Screening; Ultrasound
+681,OneCare Clinic Yishun,846 Yishun Ring Rd #01-3669,760846,Omeprazole; Metformin,Ultrasound; Wound Dressing
+682,CHANG CLINIC & SURGERY,7 Everton Park #01-21,080007,Amlodipine; Salbutamol; Paracetamol; Omeprazole; Ibuprofen,X-Ray; Physiotherapy; Vaccination; Minor Surgery
+683,Acumed Medical Group,Blk 727 Ang Mo Kio Ave 6,560727,Ibuprofen; Atorvastatin; Amlodipine,X-Ray; Physiotherapy; Health Screening
+684,Healthway Medical,446 Clementi Ave 3 #01-201,120446,Omeprazole; Ibuprofen,ECG; Ultrasound; Minor Surgery; Blood Test; Health Screening
+685,Bukit Batok Medical Clinic,632 Bukit Batok Central,650632,Ibuprofen; Paracetamol; Amoxicillin,ECG
+686,The Clinic Group,1 Raffles Quay #09-02,048583,Lisinopril; Metformin,X-Ray; Endoscopy; Physiotherapy; Ultrasound; Health Screening
+687,Acumed Medical Group,Blk 727 Ang Mo Kio Ave 6,560727,Atorvastatin,Vaccination; Blood Test; ECG; Physiotherapy
+688,Healthway Medical,446 Clementi Ave 3 #01-201,120446,Atorvastatin; Omeprazole; Paracetamol; Amoxicillin; Amlodipine,Endoscopy; Ultrasound
+689,Healthway Medical,446 Clementi Ave 3 #01-201,120446,Lisinopril; Metformin,Physiotherapy
+690,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Salbutamol; Amlodipine; Metformin; Atorvastatin; Omeprazole,Wound Dressing
+691,Everhealth Clinic & Surgery,201D Tampines Street 21 #01-1171,524201,Lisinopril; Paracetamol; Amlodipine; Ibuprofen,Endoscopy
+692,The Clinic Group,1 Raffles Quay #09-02,048583,Simvastatin; Amlodipine; Omeprazole; Salbutamol; Metformin,Endoscopy; Vaccination
+693,Healthway Medical,446 Clementi Ave 3 #01-201,120446,Salbutamol; Simvastatin; Metformin,Blood Test; Physiotherapy; ECG; Vaccination; Health Screening
+694,Trucare Medical,Blk 682 Hougang Ave 4 #01-320,530682,Ibuprofen; Paracetamol; Salbutamol; Amoxicillin,ECG; Endoscopy; Wound Dressing; Health Screening
+695,Everhealth Clinic & Surgery,201D Tampines Street 21 #01-1171,524201,Atorvastatin; Amlodipine; Simvastatin,ECG; X-Ray; Vaccination
+696,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Paracetamol; Metformin; Atorvastatin; Amlodipine,Endoscopy; Vaccination; Wound Dressing; X-Ray; Blood Test
+697,SUNBEAM MEDICAL CLINIC,443C Fajar Road #01-76,673443,Amoxicillin; Lisinopril; Metformin; Atorvastatin,ECG
+698,CHANGI CLINIC,848 Sims Avenue #01-734 Eunosville,400848,Salbutamol; Atorvastatin; Amoxicillin; Omeprazole; Paracetamol,Health Screening; Blood Test; X-Ray
+699,CHANGI CLINIC,848 Sims Avenue #01-734 Eunosville,400848,Omeprazole; Paracetamol; Ibuprofen; Simvastatin; Lisinopril,Minor Surgery
+700,East Coast Family Clinic,121 Bedok Reservoir Rd #01-202,470121,Atorvastatin; Amoxicillin; Salbutamol,Endoscopy; Ultrasound; Wound Dressing; Blood Test; Health Screening
+701,Central 24-HR Clinic (Clementi),450 Clementi Ave 3 #01-291,120450,Simvastatin; Omeprazole; Paracetamol; Amlodipine; Atorvastatin,Ultrasound
+702,Silver Cross Family Clinic,2 Lorong Lew Lian #01-50,531002,Amoxicillin; Lisinopril,Ultrasound
+703,Central 24-HR Clinic (Clementi),450 Clementi Ave 3 #01-291,120450,Salbutamol; Atorvastatin; Amlodipine,Health Screening; Wound Dressing; Blood Test; Endoscopy
+704,FRONTIER PEOPLE'S CLINIC PTE LTD,Blk 123 Bedok North Street 2 #01-152,460123,Simvastatin; Atorvastatin; Salbutamol; Amlodipine; Amoxicillin,Wound Dressing; Minor Surgery; Endoscopy; ECG
+705,OneCare Clinic Yishun,846 Yishun Ring Rd #01-3669,760846,Metformin,Endoscopy; Physiotherapy; Health Screening; Vaccination
+706,Trucare Medical,Blk 682 Hougang Ave 4 #01-320,530682,Atorvastatin; Ibuprofen; Simvastatin; Metformin; Lisinopril,Endoscopy; Health Screening; Wound Dressing
+707,FRONTIER PEOPLE'S CLINIC PTE LTD,Blk 123 Bedok North Street 2 #01-152,460123,Lisinopril; Metformin; Salbutamol; Simvastatin,X-Ray; Physiotherapy; Endoscopy
+708,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Simvastatin; Omeprazole; Amlodipine; Salbutamol,Physiotherapy; Ultrasound; Wound Dressing; Blood Test
+709,Trucare Medical,Blk 682 Hougang Ave 4 #01-320,530682,Amoxicillin; Ibuprofen,Blood Test; Physiotherapy; Vaccination; Health Screening; X-Ray
+710,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Omeprazole; Amoxicillin; Amlodipine,X-Ray; Vaccination; Endoscopy; Wound Dressing
+711,SUNBEAM MEDICAL CLINIC,443C Fajar Road #01-76,673443,Salbutamol,X-Ray; Ultrasound; ECG; Endoscopy; Minor Surgery
+712,Central 24-HR Clinic (Clementi),450 Clementi Ave 3 #01-291,120450,Simvastatin; Omeprazole; Amlodipine; Paracetamol,X-Ray
+713,Central 24-HR Clinic (Yishun),"701A Yishun Ave 5, #01-04",761701,Amlodipine; Ibuprofen; Paracetamol; Amoxicillin; Salbutamol,Physiotherapy
+714,The Clinic Group,1 Raffles Quay #09-02,048583,Metformin; Omeprazole,Physiotherapy; Endoscopy
+715,Everhealth Clinic & Surgery,201D Tampines Street 21 #01-1171,524201,Ibuprofen; Lisinopril; Omeprazole; Metformin,Wound Dressing
+716,Zion Medical Centre,Blk 502 Jurong West Ave 1 #01-815,640502,Paracetamol; Lisinopril; Ibuprofen,Endoscopy; Physiotherapy; X-Ray; Health Screening
+717,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Amoxicillin; Lisinopril; Ibuprofen,Wound Dressing; Minor Surgery; Blood Test; Ultrasound
+718,CHANG CLINIC & SURGERY,7 Everton Park #01-21,080007,Salbutamol; Atorvastatin; Metformin; Omeprazole,Health Screening; Minor Surgery; Physiotherapy; Blood Test
+719,Zion Medical Centre,Blk 502 Jurong West Ave 1 #01-815,640502,Paracetamol; Amoxicillin; Metformin; Amlodipine,Physiotherapy; Endoscopy; Vaccination
+720,East Coast Family Clinic,121 Bedok Reservoir Rd #01-202,470121,Simvastatin,Wound Dressing
+721,Trucare Medical,Blk 682 Hougang Ave 4 #01-320,530682,Omeprazole; Lisinopril; Amlodipine,Vaccination; Ultrasound; Minor Surgery
+722,Silver Cross Family Clinic,2 Lorong Lew Lian #01-50,531002,Paracetamol; Amlodipine; Salbutamol,X-Ray; Endoscopy
+723,Healthway Medical,446 Clementi Ave 3 #01-201,120446,Simvastatin; Metformin; Amlodipine; Amoxicillin,X-Ray
+724,Bukit Batok Medical Clinic,632 Bukit Batok Central,650632,Paracetamol; Ibuprofen; Metformin,Ultrasound
+725,The Clinic Group,1 Raffles Quay #09-02,048583,Ibuprofen; Omeprazole; Metformin; Salbutamol; Amoxicillin,Endoscopy
+726,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Ibuprofen; Lisinopril; Amlodipine,Physiotherapy; Wound Dressing; Blood Test
+727,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Simvastatin,Blood Test; Endoscopy; Ultrasound
+728,Bukit Batok Medical Clinic,632 Bukit Batok Central,650632,Metformin; Omeprazole,Wound Dressing; Blood Test; Health Screening; ECG
+729,Trucare Medical,Blk 682 Hougang Ave 4 #01-320,530682,Paracetamol; Metformin; Ibuprofen,Minor Surgery; Wound Dressing; Ultrasound; Endoscopy
+730,Acumed Medical Group,Blk 727 Ang Mo Kio Ave 6,560727,Amlodipine; Ibuprofen; Paracetamol; Lisinopril; Omeprazole,X-Ray; Wound Dressing
+731,Healthway Medical,446 Clementi Ave 3 #01-201,120446,Atorvastatin; Metformin; Omeprazole,Wound Dressing; Endoscopy
+732,Central 24-HR Clinic (Clementi),450 Clementi Ave 3 #01-291,120450,Omeprazole; Metformin,ECG; X-Ray
+733,Central 24-HR Clinic (Yishun),"701A Yishun Ave 5, #01-04",761701,Paracetamol; Amoxicillin; Omeprazole,Endoscopy; ECG
+734,FRONTIER PEOPLE'S CLINIC PTE LTD,Blk 123 Bedok North Street 2 #01-152,460123,Salbutamol,Minor Surgery
+735,Bukit Batok Medical Clinic,632 Bukit Batok Central,650632,Atorvastatin,Ultrasound; X-Ray; Endoscopy; Blood Test; ECG
+736,TANG FAMILY CLINIC,84 Jalan Jurong Kechil,598593,Salbutamol; Paracetamol,Ultrasound
+737,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Metformin; Amlodipine; Paracetamol,Physiotherapy; Health Screening; Minor Surgery; X-Ray; Ultrasound
+738,East Coast Family Clinic,121 Bedok Reservoir Rd #01-202,470121,Amlodipine; Atorvastatin; Simvastatin; Paracetamol; Lisinopril,Wound Dressing; ECG
+739,TANG FAMILY CLINIC,84 Jalan Jurong Kechil,598593,Metformin; Amlodipine; Salbutamol; Omeprazole,X-Ray; ECG; Vaccination; Wound Dressing; Ultrasound
+740,Healthway Medical,446 Clementi Ave 3 #01-201,120446,Amlodipine; Atorvastatin; Amoxicillin,Endoscopy; Physiotherapy; ECG; Wound Dressing
+741,East Coast Family Clinic,121 Bedok Reservoir Rd #01-202,470121,Paracetamol; Atorvastatin; Amlodipine,Health Screening
+742,Silver Cross Family Clinic,2 Lorong Lew Lian #01-50,531002,Atorvastatin,Physiotherapy; Wound Dressing
+743,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Paracetamol; Amlodipine; Atorvastatin; Lisinopril; Amoxicillin,Ultrasound; Endoscopy
+744,Central 24-HR Clinic (Yishun),"701A Yishun Ave 5, #01-04",761701,Omeprazole; Lisinopril,Health Screening; Minor Surgery; X-Ray; Vaccination; ECG
+745,Central 24-HR Clinic (Clementi),450 Clementi Ave 3 #01-291,120450,Amoxicillin; Amlodipine; Lisinopril; Simvastatin,Endoscopy
+746,Zion Medical Centre,Blk 502 Jurong West Ave 1 #01-815,640502,Salbutamol,ECG; Vaccination; Wound Dressing; X-Ray; Health Screening
+747,CHANG CLINIC & SURGERY,7 Everton Park #01-21,080007,Paracetamol; Omeprazole; Metformin,Health Screening; Ultrasound; Endoscopy; Vaccination; Physiotherapy
+748,Acumed Medical Group,Blk 727 Ang Mo Kio Ave 6,560727,Ibuprofen,Health Screening; Wound Dressing; Physiotherapy
+749,Central 24-HR Clinic (Hougang),"681 Hougang Ave 8, #01-829",530681,Atorvastatin; Metformin; Amoxicillin,Physiotherapy; ECG; Health Screening; Vaccination
+750,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Amoxicillin; Paracetamol; Ibuprofen; Lisinopril; Metformin,Ultrasound; Minor Surgery
+751,Everhealth Clinic & Surgery,201D Tampines Street 21 #01-1171,524201,Paracetamol; Atorvastatin; Salbutamol,Ultrasound
+752,CHANGI CLINIC,848 Sims Avenue #01-734 Eunosville,400848,Salbutamol,Endoscopy; Health Screening
+753,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Amoxicillin; Metformin; Omeprazole; Lisinopril,Physiotherapy; Health Screening; X-Ray; Endoscopy
+754,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Metformin; Atorvastatin; Amlodipine,Health Screening; ECG
+755,East Coast Family Clinic,121 Bedok Reservoir Rd #01-202,470121,Metformin; Salbutamol; Lisinopril,Wound Dressing; Ultrasound; X-Ray
+756,The Clinic Group,1 Raffles Quay #09-02,048583,Lisinopril; Amlodipine; Amoxicillin; Salbutamol; Atorvastatin,Wound Dressing; Physiotherapy; Minor Surgery; Vaccination; X-Ray
+757,CHANGI CLINIC,848 Sims Avenue #01-734 Eunosville,400848,Simvastatin,ECG; X-Ray; Blood Test; Health Screening; Endoscopy
+758,Acumed Medical Group,Blk 727 Ang Mo Kio Ave 6,560727,Lisinopril; Simvastatin; Amoxicillin; Salbutamol; Omeprazole,Ultrasound; Blood Test; Wound Dressing
+759,Central 24-HR Clinic (Clementi),450 Clementi Ave 3 #01-291,120450,Ibuprofen,Wound Dressing; X-Ray; Vaccination
+760,CHANGI CLINIC,848 Sims Avenue #01-734 Eunosville,400848,Lisinopril; Amlodipine; Metformin; Atorvastatin,ECG
+761,Zion Medical Centre,Blk 502 Jurong West Ave 1 #01-815,640502,Amoxicillin,Ultrasound
+762,Central 24-HR Clinic (Yishun),"701A Yishun Ave 5, #01-04",761701,Metformin; Salbutamol; Atorvastatin; Paracetamol,Blood Test
+763,FRONTIER PEOPLE'S CLINIC PTE LTD,Blk 123 Bedok North Street 2 #01-152,460123,Omeprazole; Salbutamol,Physiotherapy; Minor Surgery
+764,Central 24-HR Clinic (Clementi),450 Clementi Ave 3 #01-291,120450,Simvastatin,Vaccination; Ultrasound; X-Ray; Health Screening
+765,Healthway Medical,446 Clementi Ave 3 #01-201,120446,Ibuprofen; Paracetamol; Metformin; Amoxicillin; Omeprazole,Physiotherapy; Wound Dressing; Health Screening; Ultrasound; Blood Test
+766,Central 24-HR Clinic (Hougang),"681 Hougang Ave 8, #01-829",530681,Paracetamol; Amoxicillin,Blood Test; Minor Surgery; ECG; Health Screening
+767,FRONTIER PEOPLE'S CLINIC PTE LTD,Blk 123 Bedok North Street 2 #01-152,460123,Atorvastatin,Physiotherapy; Health Screening; Vaccination; Ultrasound
+768,East Coast Family Clinic,121 Bedok Reservoir Rd #01-202,470121,Simvastatin,Physiotherapy; X-Ray
+769,Acumed Medical Group,Blk 727 Ang Mo Kio Ave 6,560727,Atorvastatin; Metformin,Physiotherapy; X-Ray; Ultrasound; Health Screening; Minor Surgery
+770,The Clinic Group,1 Raffles Quay #09-02,048583,Ibuprofen; Omeprazole; Paracetamol; Lisinopril; Metformin,Endoscopy
+771,Healthway Medical,446 Clementi Ave 3 #01-201,120446,Amlodipine,Wound Dressing; Health Screening; Endoscopy
+772,East Coast Family Clinic,121 Bedok Reservoir Rd #01-202,470121,Omeprazole; Lisinopril; Metformin; Amoxicillin,Ultrasound; Physiotherapy; X-Ray; Vaccination
+773,SUNBEAM MEDICAL CLINIC,443C Fajar Road #01-76,673443,Simvastatin; Paracetamol; Metformin,Blood Test; Vaccination; ECG
+774,Healthway Medical,446 Clementi Ave 3 #01-201,120446,Omeprazole; Atorvastatin,X-Ray; Minor Surgery
+775,Central 24-HR Clinic (Hougang),"681 Hougang Ave 8, #01-829",530681,Simvastatin; Ibuprofen; Omeprazole; Atorvastatin,Physiotherapy; Endoscopy; X-Ray; Wound Dressing
+776,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Amlodipine; Lisinopril; Salbutamol; Omeprazole; Paracetamol,Blood Test; X-Ray; ECG; Health Screening
+777,Central 24-HR Clinic (Clementi),450 Clementi Ave 3 #01-291,120450,Amoxicillin; Metformin; Ibuprofen,X-Ray; Endoscopy; Ultrasound; Minor Surgery; Wound Dressing
+778,SUNBEAM MEDICAL CLINIC,443C Fajar Road #01-76,673443,Omeprazole; Salbutamol; Metformin; Paracetamol; Simvastatin,Wound Dressing; Vaccination; X-Ray
+779,CHANGI CLINIC,848 Sims Avenue #01-734 Eunosville,400848,Paracetamol,Ultrasound
+780,OneCare Clinic Yishun,846 Yishun Ring Rd #01-3669,760846,Metformin; Salbutamol,Endoscopy; Wound Dressing; Ultrasound; Blood Test; Physiotherapy
+781,Bukit Batok Medical Clinic,632 Bukit Batok Central,650632,Simvastatin; Atorvastatin,Blood Test; ECG; X-Ray
+782,Acumed Medical Group,Blk 727 Ang Mo Kio Ave 6,560727,Atorvastatin,Wound Dressing; Endoscopy; X-Ray; Health Screening; Physiotherapy
+783,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Amlodipine,Minor Surgery; Endoscopy; Physiotherapy; Wound Dressing
+784,FRONTIER PEOPLE'S CLINIC PTE LTD,Blk 123 Bedok North Street 2 #01-152,460123,Metformin; Amoxicillin; Salbutamol,Vaccination; Ultrasound
+785,Everhealth Clinic & Surgery,201D Tampines Street 21 #01-1171,524201,Atorvastatin; Lisinopril; Paracetamol; Amoxicillin; Metformin,Blood Test; ECG; Physiotherapy; Health Screening; Wound Dressing
+786,Acumed Medical Group,Blk 727 Ang Mo Kio Ave 6,560727,Salbutamol,Health Screening
+787,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Lisinopril; Salbutamol; Omeprazole; Amoxicillin; Atorvastatin,ECG; Endoscopy
+788,Bukit Batok Medical Clinic,632 Bukit Batok Central,650632,Salbutamol; Paracetamol,Endoscopy; ECG
+789,Central 24-HR Clinic (Clementi),450 Clementi Ave 3 #01-291,120450,Amlodipine; Atorvastatin; Amoxicillin; Lisinopril; Simvastatin,Health Screening; Minor Surgery; Physiotherapy; ECG; Vaccination
+790,OneCare Clinic Yishun,846 Yishun Ring Rd #01-3669,760846,Simvastatin; Lisinopril; Paracetamol; Amlodipine; Salbutamol,ECG; Wound Dressing; Minor Surgery
+791,FRONTIER PEOPLE'S CLINIC PTE LTD,Blk 123 Bedok North Street 2 #01-152,460123,Amoxicillin,Physiotherapy; Health Screening; Endoscopy
+792,Central 24-HR Clinic (Hougang),"681 Hougang Ave 8, #01-829",530681,Amlodipine; Atorvastatin,ECG
+793,CHANGI CLINIC,848 Sims Avenue #01-734 Eunosville,400848,Omeprazole; Lisinopril,Vaccination; Blood Test; Endoscopy; ECG
+794,Trucare Medical,Blk 682 Hougang Ave 4 #01-320,530682,Paracetamol; Amlodipine,ECG; Vaccination; Ultrasound
+795,East Coast Family Clinic,121 Bedok Reservoir Rd #01-202,470121,Omeprazole,Wound Dressing; Ultrasound; Vaccination; X-Ray; Endoscopy
+796,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Amlodipine; Lisinopril,Ultrasound; Health Screening; Wound Dressing; Blood Test; Physiotherapy
+797,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Omeprazole,X-Ray
+798,Central 24-HR Clinic (Clementi),450 Clementi Ave 3 #01-291,120450,Omeprazole; Paracetamol; Atorvastatin; Amoxicillin; Salbutamol,Wound Dressing
+799,SUNBEAM MEDICAL CLINIC,443C Fajar Road #01-76,673443,Ibuprofen,Minor Surgery; Ultrasound; Endoscopy; ECG
+800,FRONTIER PEOPLE'S CLINIC PTE LTD,Blk 123 Bedok North Street 2 #01-152,460123,Paracetamol; Atorvastatin; Metformin; Ibuprofen; Omeprazole,Ultrasound; X-Ray; ECG; Minor Surgery
+801,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Amoxicillin; Metformin,Blood Test; Physiotherapy; X-Ray; ECG; Vaccination
+802,FRONTIER PEOPLE'S CLINIC PTE LTD,Blk 123 Bedok North Street 2 #01-152,460123,Simvastatin; Salbutamol,Ultrasound
+803,Acumed Medical Group,Blk 727 Ang Mo Kio Ave 6,560727,Ibuprofen; Paracetamol; Metformin; Atorvastatin,Vaccination; Physiotherapy; X-Ray; Minor Surgery
+804,Central 24-HR Clinic (Clementi),450 Clementi Ave 3 #01-291,120450,Simvastatin; Metformin; Amlodipine,X-Ray; Vaccination; Ultrasound
+805,Zion Medical Centre,Blk 502 Jurong West Ave 1 #01-815,640502,Amoxicillin; Ibuprofen; Atorvastatin; Simvastatin; Lisinopril,Ultrasound
+806,Central 24-HR Clinic (Yishun),"701A Yishun Ave 5, #01-04",761701,Metformin; Lisinopril; Amlodipine; Simvastatin,Blood Test; Physiotherapy; Health Screening; X-Ray; Ultrasound
+807,Bukit Batok Medical Clinic,632 Bukit Batok Central,650632,Salbutamol; Amlodipine; Amoxicillin,Endoscopy; Ultrasound; Vaccination; Blood Test; Minor Surgery
+808,Acumed Medical Group,Blk 727 Ang Mo Kio Ave 6,560727,Amlodipine; Atorvastatin; Metformin; Lisinopril; Salbutamol,Physiotherapy; Health Screening; Endoscopy; Ultrasound
+809,Zion Medical Centre,Blk 502 Jurong West Ave 1 #01-815,640502,Paracetamol; Metformin,Vaccination; Ultrasound; Minor Surgery
+810,The Clinic Group,1 Raffles Quay #09-02,048583,Amoxicillin,Wound Dressing; Ultrasound; ECG; Health Screening; Endoscopy
+811,FRONTIER PEOPLE'S CLINIC PTE LTD,Blk 123 Bedok North Street 2 #01-152,460123,Atorvastatin; Metformin,X-Ray; Blood Test
+812,TANG FAMILY CLINIC,84 Jalan Jurong Kechil,598593,Amlodipine; Ibuprofen; Omeprazole; Lisinopril,X-Ray; ECG
+813,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Simvastatin; Omeprazole; Lisinopril; Paracetamol,Endoscopy; Ultrasound; ECG; Wound Dressing
+814,East Coast Family Clinic,121 Bedok Reservoir Rd #01-202,470121,Metformin; Salbutamol,Minor Surgery
+815,CHANGI CLINIC,848 Sims Avenue #01-734 Eunosville,400848,Amlodipine; Lisinopril,Endoscopy; Vaccination
+816,Acumed Medical Group,Blk 727 Ang Mo Kio Ave 6,560727,Paracetamol,Minor Surgery; Health Screening; Vaccination; Endoscopy
+817,The Clinic Group,1 Raffles Quay #09-02,048583,Amlodipine; Simvastatin; Amoxicillin; Lisinopril; Salbutamol,Ultrasound; Minor Surgery; Health Screening; Wound Dressing; ECG
+818,Trucare Medical,Blk 682 Hougang Ave 4 #01-320,530682,Salbutamol; Amlodipine; Omeprazole; Ibuprofen; Lisinopril,Minor Surgery; Vaccination
+819,Central 24-HR Clinic (Clementi),450 Clementi Ave 3 #01-291,120450,Paracetamol; Amlodipine; Metformin; Salbutamol; Atorvastatin,X-Ray; Physiotherapy
+820,Central 24-HR Clinic (Hougang),"681 Hougang Ave 8, #01-829",530681,Salbutamol; Omeprazole; Ibuprofen; Amlodipine; Metformin,Ultrasound
+821,FRONTIER PEOPLE'S CLINIC PTE LTD,Blk 123 Bedok North Street 2 #01-152,460123,Amoxicillin; Metformin; Simvastatin; Omeprazole,Wound Dressing; Ultrasound; ECG; Physiotherapy
+822,TANG FAMILY CLINIC,84 Jalan Jurong Kechil,598593,Simvastatin,Vaccination
+823,Silver Cross Family Clinic,2 Lorong Lew Lian #01-50,531002,Amoxicillin; Omeprazole; Metformin,Minor Surgery; Endoscopy
+824,CHANGI CLINIC,848 Sims Avenue #01-734 Eunosville,400848,Amoxicillin; Metformin; Simvastatin,Health Screening; Physiotherapy
+825,Silver Cross Family Clinic,2 Lorong Lew Lian #01-50,531002,Omeprazole; Paracetamol; Amoxicillin,Blood Test; Minor Surgery; ECG; Health Screening; X-Ray
+826,Acumed Medical Group,Blk 727 Ang Mo Kio Ave 6,560727,Simvastatin; Ibuprofen,ECG; Ultrasound; Endoscopy
+827,Zion Medical Centre,Blk 502 Jurong West Ave 1 #01-815,640502,Ibuprofen; Paracetamol; Simvastatin; Atorvastatin,X-Ray
+828,Central 24-HR Clinic (Yishun),"701A Yishun Ave 5, #01-04",761701,Amoxicillin; Simvastatin,Ultrasound; Vaccination; Minor Surgery; Health Screening; Physiotherapy
+829,Everhealth Clinic & Surgery,201D Tampines Street 21 #01-1171,524201,Salbutamol; Omeprazole; Lisinopril; Atorvastatin; Amoxicillin,Endoscopy; Wound Dressing
+830,Central 24-HR Clinic (Yishun),"701A Yishun Ave 5, #01-04",761701,Lisinopril; Paracetamol,X-Ray
+831,Acumed Medical Group,Blk 727 Ang Mo Kio Ave 6,560727,Simvastatin,Vaccination; Minor Surgery; Endoscopy; Blood Test
+832,OneCare Clinic Yishun,846 Yishun Ring Rd #01-3669,760846,Amoxicillin,Endoscopy; Wound Dressing; X-Ray; Physiotherapy; Health Screening
+833,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Amoxicillin; Atorvastatin,Wound Dressing; X-Ray; Physiotherapy
+834,East Coast Family Clinic,121 Bedok Reservoir Rd #01-202,470121,Atorvastatin; Lisinopril; Paracetamol; Omeprazole; Metformin,ECG
+835,Healthway Medical,446 Clementi Ave 3 #01-201,120446,Amlodipine; Omeprazole,Minor Surgery; ECG; Blood Test; Endoscopy
+836,SUNBEAM MEDICAL CLINIC,443C Fajar Road #01-76,673443,Atorvastatin,Ultrasound; Minor Surgery; Endoscopy; Vaccination; Physiotherapy
+837,The Clinic Group,1 Raffles Quay #09-02,048583,Omeprazole; Lisinopril; Simvastatin; Atorvastatin,Endoscopy; Vaccination; Physiotherapy
+838,CHANGI CLINIC,848 Sims Avenue #01-734 Eunosville,400848,Ibuprofen; Salbutamol; Metformin; Simvastatin; Lisinopril,X-Ray; Minor Surgery; Vaccination; Wound Dressing
+839,Central 24-HR Clinic (Clementi),450 Clementi Ave 3 #01-291,120450,Amlodipine; Simvastatin; Atorvastatin; Lisinopril,Ultrasound; Wound Dressing; X-Ray; Blood Test; Vaccination
+840,The Clinic Group,1 Raffles Quay #09-02,048583,Ibuprofen; Amlodipine; Omeprazole; Amoxicillin,Endoscopy; X-Ray; Minor Surgery
+841,OneCare Clinic Yishun,846 Yishun Ring Rd #01-3669,760846,Paracetamol; Omeprazole; Atorvastatin; Simvastatin; Lisinopril,ECG; Vaccination; Endoscopy; Physiotherapy; Minor Surgery
+842,Trucare Medical,Blk 682 Hougang Ave 4 #01-320,530682,Atorvastatin; Simvastatin; Amlodipine,Vaccination
+843,CHANGI CLINIC,848 Sims Avenue #01-734 Eunosville,400848,Metformin,X-Ray; ECG; Blood Test; Physiotherapy
+844,OneCare Clinic Yishun,846 Yishun Ring Rd #01-3669,760846,Amoxicillin; Paracetamol,Minor Surgery; Physiotherapy; Health Screening; X-Ray; Vaccination
+845,Bukit Batok Medical Clinic,632 Bukit Batok Central,650632,Omeprazole; Ibuprofen,Endoscopy; Ultrasound; Wound Dressing
+846,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Ibuprofen,Health Screening
+847,Healthway Medical,446 Clementi Ave 3 #01-201,120446,Paracetamol; Amoxicillin,Wound Dressing; X-Ray; Endoscopy
+848,Silver Cross Family Clinic,2 Lorong Lew Lian #01-50,531002,Salbutamol; Simvastatin,Vaccination; Health Screening; Minor Surgery
+849,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Ibuprofen; Simvastatin,X-Ray; Minor Surgery; Ultrasound; Vaccination
+850,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Ibuprofen; Atorvastatin; Paracetamol; Lisinopril,Physiotherapy; ECG; Endoscopy
+851,CHANGI CLINIC,848 Sims Avenue #01-734 Eunosville,400848,Omeprazole,Endoscopy; Physiotherapy; Minor Surgery; Health Screening
+852,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Simvastatin; Lisinopril; Amlodipine; Salbutamol,Ultrasound; X-Ray; Health Screening
+853,Everhealth Clinic & Surgery,201D Tampines Street 21 #01-1171,524201,Ibuprofen; Metformin; Lisinopril; Amoxicillin,Ultrasound; Vaccination; Blood Test
+854,East Coast Family Clinic,121 Bedok Reservoir Rd #01-202,470121,Lisinopril; Atorvastatin; Amoxicillin,Physiotherapy
+855,SUNBEAM MEDICAL CLINIC,443C Fajar Road #01-76,673443,Amoxicillin; Omeprazole; Amlodipine; Atorvastatin,X-Ray
+856,OneCare Clinic Yishun,846 Yishun Ring Rd #01-3669,760846,Simvastatin; Ibuprofen; Lisinopril; Atorvastatin,ECG; Ultrasound; Vaccination
+857,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Amlodipine; Omeprazole; Paracetamol; Metformin,Blood Test; Wound Dressing
+858,SUNBEAM MEDICAL CLINIC,443C Fajar Road #01-76,673443,Amoxicillin; Ibuprofen,Vaccination; Wound Dressing; Health Screening
+859,OneCare Clinic Yishun,846 Yishun Ring Rd #01-3669,760846,Simvastatin; Lisinopril; Metformin,Physiotherapy; Minor Surgery; Vaccination
+860,Zion Medical Centre,Blk 502 Jurong West Ave 1 #01-815,640502,Ibuprofen,Vaccination; Wound Dressing; Minor Surgery
+861,Central 24-HR Clinic (Hougang),"681 Hougang Ave 8, #01-829",530681,Salbutamol; Ibuprofen; Atorvastatin; Metformin; Paracetamol,Blood Test; Minor Surgery; Endoscopy
+862,Bukit Batok Medical Clinic,632 Bukit Batok Central,650632,Atorvastatin; Paracetamol; Metformin; Ibuprofen,Vaccination; X-Ray; Endoscopy; Wound Dressing
+863,CHANGI CLINIC,848 Sims Avenue #01-734 Eunosville,400848,Metformin; Amlodipine; Paracetamol; Simvastatin,Wound Dressing; Physiotherapy; Endoscopy; Health Screening; ECG
+864,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Metformin; Simvastatin; Amlodipine; Paracetamol,Ultrasound; ECG
+865,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Salbutamol; Paracetamol; Omeprazole; Metformin; Simvastatin,Wound Dressing; Minor Surgery; Blood Test; Vaccination
+866,OneCare Clinic Yishun,846 Yishun Ring Rd #01-3669,760846,Metformin,Blood Test
+867,OneCare Clinic Yishun,846 Yishun Ring Rd #01-3669,760846,Omeprazole; Atorvastatin; Salbutamol,Health Screening; Physiotherapy; Ultrasound
+868,Central 24-HR Clinic (Hougang),"681 Hougang Ave 8, #01-829",530681,Paracetamol; Lisinopril; Salbutamol; Amoxicillin; Atorvastatin,Blood Test; Ultrasound
+869,Zion Medical Centre,Blk 502 Jurong West Ave 1 #01-815,640502,Ibuprofen,Ultrasound; X-Ray; ECG; Endoscopy; Health Screening
+870,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Atorvastatin; Lisinopril; Salbutamol,Blood Test
+871,Everhealth Clinic & Surgery,201D Tampines Street 21 #01-1171,524201,Atorvastatin; Salbutamol; Amoxicillin; Simvastatin,Health Screening; Minor Surgery; Wound Dressing; Ultrasound
+872,Trucare Medical,Blk 682 Hougang Ave 4 #01-320,530682,Ibuprofen; Lisinopril; Paracetamol; Simvastatin; Amlodipine,Physiotherapy; Health Screening
+873,Silver Cross Family Clinic,2 Lorong Lew Lian #01-50,531002,Ibuprofen,X-Ray; Endoscopy; Vaccination; Blood Test; Ultrasound
+874,Zion Medical Centre,Blk 502 Jurong West Ave 1 #01-815,640502,Metformin; Paracetamol,Health Screening; Physiotherapy
+875,Acumed Medical Group,Blk 727 Ang Mo Kio Ave 6,560727,Omeprazole; Salbutamol; Paracetamol,Blood Test; Ultrasound
+876,Acumed Medical Group,Blk 727 Ang Mo Kio Ave 6,560727,Omeprazole; Lisinopril; Simvastatin,Minor Surgery
+877,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Omeprazole; Salbutamol; Atorvastatin; Simvastatin,Endoscopy; Health Screening
+878,Silver Cross Family Clinic,2 Lorong Lew Lian #01-50,531002,Omeprazole,Wound Dressing
+879,Central 24-HR Clinic (Hougang),"681 Hougang Ave 8, #01-829",530681,Amlodipine; Metformin; Atorvastatin,Endoscopy; ECG; Vaccination; Ultrasound
+880,Central 24-HR Clinic (Hougang),"681 Hougang Ave 8, #01-829",530681,Ibuprofen; Simvastatin; Amlodipine; Paracetamol; Atorvastatin,ECG; X-Ray
+881,Everhealth Clinic & Surgery,201D Tampines Street 21 #01-1171,524201,Ibuprofen; Lisinopril,X-Ray; Endoscopy; Minor Surgery
+882,OneCare Clinic Yishun,846 Yishun Ring Rd #01-3669,760846,Amoxicillin; Amlodipine; Salbutamol,Vaccination; X-Ray; Physiotherapy; Endoscopy; Ultrasound
+883,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Paracetamol; Atorvastatin; Metformin; Lisinopril,Physiotherapy; Wound Dressing; Health Screening; Blood Test; ECG
+884,TANG FAMILY CLINIC,84 Jalan Jurong Kechil,598593,Salbutamol,Endoscopy; Minor Surgery; Physiotherapy
+885,CHANG CLINIC & SURGERY,7 Everton Park #01-21,080007,Metformin; Amoxicillin,Blood Test; ECG; X-Ray; Minor Surgery
+886,East Coast Family Clinic,121 Bedok Reservoir Rd #01-202,470121,Simvastatin,Physiotherapy; Endoscopy; Minor Surgery; Blood Test; Health Screening
+887,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Metformin; Amlodipine; Amoxicillin; Lisinopril; Omeprazole,Physiotherapy
+888,FRONTIER PEOPLE'S CLINIC PTE LTD,Blk 123 Bedok North Street 2 #01-152,460123,Salbutamol; Paracetamol,Health Screening; Vaccination; Ultrasound; Minor Surgery; ECG
+889,CHANGI CLINIC,848 Sims Avenue #01-734 Eunosville,400848,Simvastatin,Physiotherapy
+890,Zion Medical Centre,Blk 502 Jurong West Ave 1 #01-815,640502,Paracetamol; Atorvastatin; Ibuprofen; Omeprazole,Wound Dressing; ECG; Blood Test
+891,TANG FAMILY CLINIC,84 Jalan Jurong Kechil,598593,Amlodipine; Lisinopril; Simvastatin; Metformin,Health Screening; ECG; Vaccination; Wound Dressing; Endoscopy
+892,East Coast Family Clinic,121 Bedok Reservoir Rd #01-202,470121,Metformin,Endoscopy; Wound Dressing; Health Screening
+893,Central 24-HR Clinic (Yishun),"701A Yishun Ave 5, #01-04",761701,Atorvastatin; Amoxicillin; Paracetamol; Amlodipine; Lisinopril,Blood Test; Ultrasound; Minor Surgery; Vaccination
+894,CHANGI CLINIC,848 Sims Avenue #01-734 Eunosville,400848,Lisinopril; Amoxicillin; Paracetamol; Amlodipine,Physiotherapy; ECG; Wound Dressing; Minor Surgery; Blood Test
+895,Zion Medical Centre,Blk 502 Jurong West Ave 1 #01-815,640502,Paracetamol; Ibuprofen; Salbutamol; Amlodipine,X-Ray
+896,CHANGI CLINIC,848 Sims Avenue #01-734 Eunosville,400848,Paracetamol,Ultrasound; Health Screening; Minor Surgery
+897,East Coast Family Clinic,121 Bedok Reservoir Rd #01-202,470121,Paracetamol,Vaccination; Health Screening; Endoscopy; ECG; X-Ray
+898,Trucare Medical,Blk 682 Hougang Ave 4 #01-320,530682,Atorvastatin; Ibuprofen,X-Ray; Vaccination; Health Screening
+899,Trucare Medical,Blk 682 Hougang Ave 4 #01-320,530682,Atorvastatin,X-Ray
+900,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Paracetamol; Omeprazole; Metformin; Simvastatin,Minor Surgery; ECG; Physiotherapy
+901,The Clinic Group,1 Raffles Quay #09-02,048583,Simvastatin; Atorvastatin; Omeprazole; Paracetamol; Ibuprofen,X-Ray; Minor Surgery
+902,East Coast Family Clinic,121 Bedok Reservoir Rd #01-202,470121,Ibuprofen,Ultrasound; Health Screening; Vaccination
+903,SUNBEAM MEDICAL CLINIC,443C Fajar Road #01-76,673443,Amlodipine; Lisinopril; Ibuprofen,X-Ray; Vaccination
+904,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Paracetamol; Salbutamol; Omeprazole; Atorvastatin,Vaccination
+905,East Coast Family Clinic,121 Bedok Reservoir Rd #01-202,470121,Paracetamol; Metformin; Amoxicillin,Ultrasound; Health Screening; Wound Dressing; Blood Test
+906,Bukit Batok Medical Clinic,632 Bukit Batok Central,650632,Paracetamol,Minor Surgery; Health Screening; X-Ray; Vaccination
+907,Central 24-HR Clinic (Hougang),"681 Hougang Ave 8, #01-829",530681,Paracetamol; Salbutamol; Amlodipine; Amoxicillin,Ultrasound
+908,Central 24-HR Clinic (Clementi),450 Clementi Ave 3 #01-291,120450,Omeprazole,Vaccination
+909,SUNBEAM MEDICAL CLINIC,443C Fajar Road #01-76,673443,Salbutamol; Ibuprofen,Blood Test; Endoscopy; Wound Dressing; Health Screening; ECG
+910,FRONTIER PEOPLE'S CLINIC PTE LTD,Blk 123 Bedok North Street 2 #01-152,460123,Atorvastatin; Metformin,Endoscopy; Wound Dressing; ECG
+911,FRONTIER PEOPLE'S CLINIC PTE LTD,Blk 123 Bedok North Street 2 #01-152,460123,Simvastatin; Amoxicillin; Paracetamol; Salbutamol,Ultrasound; Blood Test
+912,The Clinic Group,1 Raffles Quay #09-02,048583,Ibuprofen; Metformin; Amoxicillin,Vaccination; X-Ray; Minor Surgery; Wound Dressing; Ultrasound
+913,Central 24-HR Clinic (Yishun),"701A Yishun Ave 5, #01-04",761701,Salbutamol,Endoscopy; Wound Dressing; X-Ray; Minor Surgery
+914,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Amoxicillin,Minor Surgery; Physiotherapy; Health Screening
+915,CHANGI CLINIC,848 Sims Avenue #01-734 Eunosville,400848,Metformin; Paracetamol; Omeprazole; Lisinopril; Amoxicillin,Endoscopy; Vaccination
+916,CHANG CLINIC & SURGERY,7 Everton Park #01-21,080007,Atorvastatin; Ibuprofen; Paracetamol; Amlodipine; Salbutamol,Physiotherapy; Blood Test; ECG
+917,Central 24-HR Clinic (Clementi),450 Clementi Ave 3 #01-291,120450,Amlodipine; Omeprazole; Metformin; Amoxicillin,Physiotherapy; Minor Surgery; Ultrasound; Wound Dressing
+918,East Coast Family Clinic,121 Bedok Reservoir Rd #01-202,470121,Salbutamol; Amoxicillin; Simvastatin; Lisinopril; Ibuprofen,Vaccination; ECG; Physiotherapy; X-Ray; Blood Test
+919,Silver Cross Family Clinic,2 Lorong Lew Lian #01-50,531002,Ibuprofen; Amlodipine; Metformin; Salbutamol; Simvastatin,Wound Dressing
+920,Acumed Medical Group,Blk 727 Ang Mo Kio Ave 6,560727,Salbutamol; Lisinopril; Ibuprofen; Omeprazole,Ultrasound
+921,OneCare Clinic Yishun,846 Yishun Ring Rd #01-3669,760846,Metformin,Health Screening; Wound Dressing; Minor Surgery; Blood Test
+922,SUNBEAM MEDICAL CLINIC,443C Fajar Road #01-76,673443,Lisinopril; Atorvastatin; Salbutamol; Amoxicillin; Simvastatin,Vaccination; ECG; Ultrasound
+923,OneCare Clinic Yishun,846 Yishun Ring Rd #01-3669,760846,Amlodipine; Salbutamol; Amoxicillin; Ibuprofen; Paracetamol,Minor Surgery
+924,Bukit Batok Medical Clinic,632 Bukit Batok Central,650632,Amoxicillin,Endoscopy; ECG; Ultrasound
+925,FRONTIER PEOPLE'S CLINIC PTE LTD,Blk 123 Bedok North Street 2 #01-152,460123,Omeprazole; Amoxicillin; Atorvastatin; Simvastatin; Metformin,ECG
+926,SUNBEAM MEDICAL CLINIC,443C Fajar Road #01-76,673443,Salbutamol; Atorvastatin; Metformin; Omeprazole; Lisinopril,Health Screening; Blood Test; ECG
+927,CHANGI CLINIC,848 Sims Avenue #01-734 Eunosville,400848,Ibuprofen; Lisinopril; Metformin; Amoxicillin; Omeprazole,Physiotherapy; Vaccination; Wound Dressing; Minor Surgery
+928,Central 24-HR Clinic (Hougang),"681 Hougang Ave 8, #01-829",530681,Simvastatin; Amlodipine,Health Screening; Ultrasound; Endoscopy
+929,OneCare Clinic Yishun,846 Yishun Ring Rd #01-3669,760846,Amoxicillin; Ibuprofen; Lisinopril; Omeprazole,Endoscopy; Blood Test; Wound Dressing; X-Ray; Minor Surgery
+930,Trucare Medical,Blk 682 Hougang Ave 4 #01-320,530682,Lisinopril; Amlodipine; Simvastatin,Wound Dressing; ECG; Blood Test; Minor Surgery
+931,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Ibuprofen; Amoxicillin; Salbutamol,X-Ray; Health Screening; Blood Test
+932,FRONTIER PEOPLE'S CLINIC PTE LTD,Blk 123 Bedok North Street 2 #01-152,460123,Paracetamol,Ultrasound; Endoscopy; Vaccination; Blood Test; Physiotherapy
+933,Acumed Medical Group,Blk 727 Ang Mo Kio Ave 6,560727,Salbutamol; Amlodipine; Amoxicillin,Minor Surgery; Health Screening
+934,CHANGI CLINIC,848 Sims Avenue #01-734 Eunosville,400848,Atorvastatin; Amlodipine,Minor Surgery
+935,Everhealth Clinic & Surgery,201D Tampines Street 21 #01-1171,524201,Omeprazole; Amlodipine,Physiotherapy
+936,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Paracetamol; Metformin; Amlodipine; Simvastatin; Omeprazole,Ultrasound; X-Ray; ECG
+937,Trucare Medical,Blk 682 Hougang Ave 4 #01-320,530682,Lisinopril,Minor Surgery; Endoscopy; X-Ray; Vaccination
+938,Bukit Batok Medical Clinic,632 Bukit Batok Central,650632,Amoxicillin,Ultrasound; Blood Test; Endoscopy; Health Screening; ECG
+939,Central 24-HR Clinic (Yishun),"701A Yishun Ave 5, #01-04",761701,Lisinopril; Amoxicillin,Blood Test; Health Screening
+940,Central 24-HR Clinic (Hougang),"681 Hougang Ave 8, #01-829",530681,Omeprazole; Lisinopril; Paracetamol; Ibuprofen; Amoxicillin,X-Ray; Health Screening
+941,CHANGI CLINIC,848 Sims Avenue #01-734 Eunosville,400848,Atorvastatin; Metformin; Ibuprofen,Endoscopy; Health Screening; X-Ray; ECG; Blood Test
+942,Central 24-HR Clinic (Hougang),"681 Hougang Ave 8, #01-829",530681,Lisinopril; Metformin; Amoxicillin; Amlodipine,X-Ray; ECG; Blood Test; Vaccination; Endoscopy
+943,Central 24-HR Clinic (Yishun),"701A Yishun Ave 5, #01-04",761701,Paracetamol; Simvastatin; Atorvastatin,Endoscopy; Wound Dressing; Physiotherapy
+944,OneCare Clinic Yishun,846 Yishun Ring Rd #01-3669,760846,Amoxicillin; Paracetamol; Ibuprofen; Simvastatin; Atorvastatin,Blood Test; Physiotherapy; Minor Surgery; Wound Dressing
+945,CHANGI CLINIC,848 Sims Avenue #01-734 Eunosville,400848,Omeprazole,X-Ray
+946,Silver Cross Family Clinic,2 Lorong Lew Lian #01-50,531002,Metformin; Paracetamol; Amoxicillin; Simvastatin; Salbutamol,Wound Dressing
+947,FRONTIER PEOPLE'S CLINIC PTE LTD,Blk 123 Bedok North Street 2 #01-152,460123,Lisinopril; Atorvastatin; Amoxicillin; Metformin,Ultrasound; Wound Dressing; Blood Test; Endoscopy
+948,Central 24-HR Clinic (Yishun),"701A Yishun Ave 5, #01-04",761701,Omeprazole; Lisinopril; Amoxicillin; Atorvastatin,Minor Surgery; Ultrasound; X-Ray; Wound Dressing; Blood Test
+949,Central 24-HR Clinic (Hougang),"681 Hougang Ave 8, #01-829",530681,Atorvastatin,Physiotherapy; X-Ray; Minor Surgery; Wound Dressing; ECG
+950,Silver Cross Family Clinic,2 Lorong Lew Lian #01-50,531002,Omeprazole; Atorvastatin; Lisinopril; Metformin; Ibuprofen,Health Screening; Endoscopy
+951,Healthway Medical,446 Clementi Ave 3 #01-201,120446,Amoxicillin,Endoscopy; Vaccination; Ultrasound; Wound Dressing; Minor Surgery
+952,Central 24-HR Clinic (Clementi),450 Clementi Ave 3 #01-291,120450,Omeprazole; Amoxicillin; Salbutamol,Ultrasound; ECG; Wound Dressing; Health Screening; X-Ray
+953,CHANGI CLINIC,848 Sims Avenue #01-734 Eunosville,400848,Metformin; Simvastatin,ECG; Ultrasound
+954,FRONTIER PEOPLE'S CLINIC PTE LTD,Blk 123 Bedok North Street 2 #01-152,460123,Ibuprofen; Salbutamol; Omeprazole; Atorvastatin,Vaccination; Endoscopy; Blood Test
+955,The Clinic Group,1 Raffles Quay #09-02,048583,Amoxicillin,X-Ray; Physiotherapy
+956,OneCare Clinic Yishun,846 Yishun Ring Rd #01-3669,760846,Paracetamol; Omeprazole,X-Ray
+957,Central 24-HR Clinic (Jurong),"492 Jurong West Street 41, #01-54",640492,Amlodipine; Salbutamol,Minor Surgery; Health Screening; Physiotherapy; X-Ray; Ultrasound
+958,The Clinic Group,1 Raffles Quay #09-02,048583,Lisinopril; Omeprazole,Health Screening; Vaccination
+959,CHANG CLINIC & SURGERY,7 Everton Park #01-21,080007,Atorvastatin; Simvastatin; Amlodipine; Metformin,Vaccination; Minor Surgery; Blood Test
+960,East Coast Family Clinic,121 Bedok Reservoir Rd #01-202,470121,Amlodipine; Lisinopril; Paracetamol; Atorvastatin,Ultrasound; Endoscopy; X-Ray
+961,TANG FAMILY CLINIC,84 Jalan Jurong Kechil,598593,Metformin; Atorvastatin; Paracetamol; Simvastatin,X-Ray
+962,OneCare Clinic Yishun,846 Yishun Ring Rd #01-3669,760846,Paracetamol; Amlodipine; Salbutamol,Health Screening
+963,FRONTIER PEOPLE'S CLINIC PTE LTD,Blk 123 Bedok North Street 2 #01-152,460123,Omeprazole,Wound Dressing
+964,TANG FAMILY CLINIC,84 Jalan Jurong Kechil,598593,Atorvastatin; Salbutamol; Simvastatin; Amlodipine; Metformin,Endoscopy; Physiotherapy
+965,Acumed Medical Group,Blk 727 Ang Mo Kio Ave 6,560727,Atorvastatin; Salbutamol; Omeprazole; Metformin; Amlodipine,Blood Test; X-Ray; Ultrasound; Minor Surgery; Physiotherapy
+966,Everhealth Clinic & Surgery,201D Tampines Street 21 #01-1171,524201,Atorvastatin; Ibuprofen; Amoxicillin; Omeprazole; Metformin,Physiotherapy; Wound Dressing; ECG
+967,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Amoxicillin,Physiotherapy; Vaccination; Wound Dressing
+968,East Coast Family Clinic,121 Bedok Reservoir Rd #01-202,470121,Simvastatin; Lisinopril,Health Screening; Ultrasound; X-Ray; Vaccination; Physiotherapy
+969,The Clinic Group,1 Raffles Quay #09-02,048583,Lisinopril; Amoxicillin,ECG; Physiotherapy; X-Ray; Minor Surgery
+970,Acumed Medical Group,Blk 727 Ang Mo Kio Ave 6,560727,Amlodipine,Minor Surgery; Vaccination
+971,Central 24-HR Clinic (Clementi),450 Clementi Ave 3 #01-291,120450,Atorvastatin; Lisinopril; Ibuprofen; Amlodipine; Paracetamol,Vaccination; Minor Surgery; ECG
+972,Central 24-HR Clinic (Yishun),"701A Yishun Ave 5, #01-04",761701,Paracetamol; Amlodipine,Blood Test
+973,OneCare Clinic Yishun,846 Yishun Ring Rd #01-3669,760846,Salbutamol,Endoscopy; X-Ray; Ultrasound; Vaccination
+974,Acumed Medical Group,Blk 727 Ang Mo Kio Ave 6,560727,Metformin; Amlodipine; Ibuprofen; Salbutamol,ECG; Wound Dressing; X-Ray
+975,Silver Cross Family Clinic,2 Lorong Lew Lian #01-50,531002,Paracetamol,X-Ray; Vaccination; Wound Dressing; Health Screening
+976,Silver Cross Family Clinic,2 Lorong Lew Lian #01-50,531002,Omeprazole; Paracetamol; Ibuprofen; Simvastatin; Amoxicillin,Health Screening; Physiotherapy; Minor Surgery
+977,Bukit Batok Medical Clinic,632 Bukit Batok Central,650632,Simvastatin; Amlodipine; Lisinopril; Metformin,Ultrasound
+978,SUNBEAM MEDICAL CLINIC,443C Fajar Road #01-76,673443,Salbutamol; Metformin; Lisinopril; Amoxicillin,Minor Surgery
+979,OneCare Clinic Yishun,846 Yishun Ring Rd #01-3669,760846,Atorvastatin; Simvastatin; Metformin,Health Screening; Physiotherapy; Endoscopy; Blood Test; Minor Surgery
+980,Central 24-HR Clinic (Yishun),"701A Yishun Ave 5, #01-04",761701,Ibuprofen; Atorvastatin,Minor Surgery; Physiotherapy
+981,East Coast Family Clinic,121 Bedok Reservoir Rd #01-202,470121,Omeprazole; Simvastatin; Metformin; Ibuprofen; Amlodipine,Wound Dressing; Endoscopy
+982,CHANGI CLINIC,848 Sims Avenue #01-734 Eunosville,400848,Lisinopril,Minor Surgery; ECG; Blood Test
+983,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Atorvastatin; Metformin; Omeprazole,Health Screening; Endoscopy; X-Ray; ECG
+984,OneCare Clinic Yishun,846 Yishun Ring Rd #01-3669,760846,Paracetamol; Atorvastatin; Omeprazole; Amlodipine; Metformin,Blood Test
+985,East Coast Family Clinic,121 Bedok Reservoir Rd #01-202,470121,Omeprazole; Amoxicillin; Atorvastatin; Ibuprofen; Salbutamol,Health Screening; Physiotherapy; Vaccination
+986,TANG FAMILY CLINIC,84 Jalan Jurong Kechil,598593,Salbutamol; Amlodipine; Metformin; Omeprazole; Amoxicillin,ECG; Endoscopy; Minor Surgery; X-Ray
+987,SUNBEAM MEDICAL CLINIC,443C Fajar Road #01-76,673443,Ibuprofen,Ultrasound; Vaccination; ECG; Blood Test
+988,SUNBEAM MEDICAL CLINIC,443C Fajar Road #01-76,673443,Omeprazole; Amoxicillin; Amlodipine,Health Screening; Minor Surgery
+989,CHANGI CLINIC,848 Sims Avenue #01-734 Eunosville,400848,Metformin; Omeprazole; Paracetamol; Atorvastatin,Blood Test; Endoscopy; Vaccination; Minor Surgery
+990,SUNBEAM MEDICAL CLINIC,443C Fajar Road #01-76,673443,Amlodipine; Omeprazole,Wound Dressing; Vaccination
+991,Everhealth Clinic & Surgery,201D Tampines Street 21 #01-1171,524201,Salbutamol; Omeprazole; Atorvastatin; Paracetamol,Ultrasound
+992,Zion Medical Centre,Blk 502 Jurong West Ave 1 #01-815,640502,Omeprazole; Simvastatin,Health Screening; X-Ray; Minor Surgery; Vaccination; Wound Dressing
+993,Central 24-HR Clinic (Hougang),"681 Hougang Ave 8, #01-829",530681,Paracetamol; Ibuprofen; Simvastatin; Atorvastatin,Endoscopy
+994,Central 24-HR Clinic (Bedok),"219 Bedok Central, #01-124",460219,Paracetamol; Omeprazole; Lisinopril; Ibuprofen; Simvastatin,Physiotherapy
+995,Silver Cross Family Clinic,2 Lorong Lew Lian #01-50,531002,Simvastatin,Minor Surgery
+996,Acumed Medical Group,Blk 727 Ang Mo Kio Ave 6,560727,Paracetamol; Ibuprofen; Metformin,Health Screening; Physiotherapy; ECG; Minor Surgery; Endoscopy
+997,East Coast Family Clinic,121 Bedok Reservoir Rd #01-202,470121,Metformin; Lisinopril; Ibuprofen; Amoxicillin; Simvastatin,Wound Dressing; ECG
+998,FRONTIER PEOPLE'S CLINIC PTE LTD,Blk 123 Bedok North Street 2 #01-152,460123,Metformin,X-Ray; Vaccination; Health Screening; Wound Dressing; Physiotherapy
+999,Bukit Batok Medical Clinic,632 Bukit Batok Central,650632,Ibuprofen; Salbutamol; Amoxicillin; Metformin,Blood Test
+1000,Healthway Medical,446 Clementi Ave 3 #01-201,120446,Simvastatin; Lisinopril; Omeprazole,ECG; Health Screening; Physiotherapy; Wound Dressing; Minor Surgery

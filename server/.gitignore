@@ -7,3 +7,4 @@ iris-env/
 .venv
 server/.env.dev
 *.dev
+.env
