@@ -176,95 +176,95 @@ index = build_doctor_index()
 
 
 # ---- CRUD OPERATIONS ----
-@app.route('/create_tables', methods=['POST'])
-def create_tables():
-    """Creates all required tables in the InterSystems IRIS database for DoctorAssign using CSV-based schema."""
-    conn = get_iris_connection()
-    cursor = conn.cursor()
+# @app.route('/create_tables', methods=['POST'])
+# def create_tables():
+#     """Creates all required tables in the InterSystems IRIS database for DoctorAssign using CSV-based schema."""
+#     conn = get_iris_connection()
+#     cursor = conn.cursor()
 
-    try:
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS SQLUser.Doctor (
-                doctorId INT PRIMARY KEY,
-                name VARCHAR(255),
-                specialty VARCHAR(255),
-                doctorContact VARCHAR(50),
-                locationId INT,
-                experience_years INT,
-                available_hours VARCHAR(255),
-                description TEXT,
-                embedding_vector TEXT
-            )
-        """)
+#     try:
+#         cursor.execute("""
+#             CREATE TABLE IF NOT EXISTS SQLUser.Doctor (
+#                 doctorId INT PRIMARY KEY,
+#                 name VARCHAR(255),
+#                 specialty VARCHAR(255),
+#                 doctorContact VARCHAR(50),
+#                 locationId INT,
+#                 experience_years INT,
+#                 available_hours VARCHAR(255),
+#                 description TEXT,
+#                 embedding_vector TEXT
+#             )
+#         """)
 
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS SQLUser.Patient (
-                patientId INT PRIMARY KEY,
-                email VARCHAR(255),
-                name VARCHAR(255),
-                age INT,
-                gender VARCHAR(10),
-                drug_allergies TEXT,
-                medical_conditions TEXT
-            )
-        """)
+#         cursor.execute("""
+#             CREATE TABLE IF NOT EXISTS SQLUser.Patient (
+#                 patientId INT PRIMARY KEY,
+#                 email VARCHAR(255),
+#                 name VARCHAR(255),
+#                 age INT,
+#                 gender VARCHAR(10),
+#                 drug_allergies TEXT,
+#                 medical_conditions TEXT
+#             )
+#         """)
 
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS SQLUser.PatientChat (
-                chatId INT PRIMARY KEY,
-                patientId INT,
-                Title VARCHAR(255),
-                FOREIGN KEY (patientId) REFERENCES SQLUser.Patient(patientId)
-            )
-        """)
+#         cursor.execute("""
+#             CREATE TABLE IF NOT EXISTS SQLUser.PatientChat (
+#                 chatId INT PRIMARY KEY,
+#                 patientId INT,
+#                 Title VARCHAR(255),
+#                 FOREIGN KEY (patientId) REFERENCES SQLUser.Patient(patientId)
+#             )
+#         """)
 
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS SQLUser.ChatMessage (
-                messageId INT PRIMARY KEY,
-                chatId INT,
-                content TEXT,
-                timestamp DATETIME,
-                FOREIGN KEY (chatId) REFERENCES SQLUser.PatientChat(chatId)
-            )
-        """)
+#         cursor.execute("""
+#             CREATE TABLE IF NOT EXISTS SQLUser.ChatMessage (
+#                 messageId INT PRIMARY KEY,
+#                 chatId INT,
+#                 content TEXT,
+#                 timestamp DATETIME,
+#                 FOREIGN KEY (chatId) REFERENCES SQLUser.PatientChat(chatId)
+#             )
+#         """)
 
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS SQLUser.ChatResponse (
-                responseId INT PRIMARY KEY,
-                chatId INT,
-                content TEXT,
-                timestamp DATETIME,
-                FOREIGN KEY (chatId) REFERENCES SQLUser.PatientChat(chatId)
-            )
-        """)
+#         cursor.execute("""
+#             CREATE TABLE IF NOT EXISTS SQLUser.ChatResponse (
+#                 responseId INT PRIMARY KEY,
+#                 chatId INT,
+#                 content TEXT,
+#                 timestamp DATETIME,
+#                 FOREIGN KEY (chatId) REFERENCES SQLUser.PatientChat(chatId)
+#             )
+#         """)
 
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS SQLUser.Location (
-                locationId INT PRIMARY KEY,
-                clinicName VARCHAR(255),
-                Address VARCHAR(255),
-                postalCode VARCHAR(20),
-                medications TEXT,
-                procedures TEXT
-            )
-        """)
+#         cursor.execute("""
+#             CREATE TABLE IF NOT EXISTS SQLUser.Location (
+#                 locationId INT PRIMARY KEY,
+#                 clinicName VARCHAR(255),
+#                 Address VARCHAR(255),
+#                 postalCode VARCHAR(20),
+#                 medications TEXT,
+#                 procedures TEXT
+#             )
+#         """)
 
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS SQLUser.Admin (
-                adminId INT PRIMARY KEY,
-                name VARCHAR(255),
-                admin_role VARCHAR(50)
-            )
-        """)
+#         cursor.execute("""
+#             CREATE TABLE IF NOT EXISTS SQLUser.Admin (
+#                 adminId INT PRIMARY KEY,
+#                 name VARCHAR(255),
+#                 admin_role VARCHAR(50)
+#             )
+#         """)
 
-    except Exception as e:
-        return jsonify({"response": f"Error creating tables: {str(e)}"})
+#     except Exception as e:
+#         return jsonify({"response": f"Error creating tables: {str(e)}"})
 
-    cursor.close()
-    conn.commit()
-    conn.close()
+#     cursor.close()
+#     conn.commit()
+#     conn.close()
 
-    return jsonify({"response": "All tables created successfully"})
+#     return jsonify({"response": "All tables created successfully"})
 
 
 @app.route('/getall', methods=['POST'])
