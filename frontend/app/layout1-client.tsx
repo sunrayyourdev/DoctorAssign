@@ -1,17 +1,22 @@
+"use client"
+
 import Link from "next/link"
 import { Phone, Home, MessageSquare, Settings, Bell, UserCircle } from "lucide-react"
-import type React from "react" // Added import for React
+import { usePathname } from "next/navigation"
+import type React from "react"
 
-interface LayoutProps {
+interface LayoutClientProps {
   children: React.ReactNode
 }
 
-export default function Layout({ children }: LayoutProps) {
+export default function LayoutClient({ children }: LayoutClientProps) {
+  const pathname = usePathname()
+
   return (
     <div className="min-h-screen bg-background">
-      <header className="sticky top-0 z-50 w-full border-b bg-blue-400 h-12">
+      {/* <header className="sticky top-0 z-50 w-full border-b bg-blue-400 h-12">
         <div className="container flex items-center h-full">
-          <div className="text-white">Medical Portal</div>
+          <div className="text-white">Medical Portal - Development</div>
           <div className="ml-auto flex items-center space-x-4">
             <Link href="#" className="text-white text-sm">
               Manual/FAQ
@@ -24,25 +29,31 @@ export default function Layout({ children }: LayoutProps) {
             </Link>
           </div>
         </div>
-      </header>
+      </header> */}
       <div className="flex">
         <aside className="w-[200px] min-h-[calc(100vh-48px)] border-r bg-gray-50">
           <nav className="p-4 space-y-2">
-            <Link href="#" className="flex items-center gap-3 p-2 rounded-lg hover:bg-gray-100 text-gray-700">
+            <Link
+              href="/profile"
+              className={`flex items-center gap-3 p-2 rounded-lg hover:bg-gray-100 ${pathname === "/" ? "bg-gray-100 font-medium" : "text-gray-700"}`}
+            >
               <div className="flex items-center justify-center w-6 h-6 rounded-full bg-blue-600 text-white text-sm">
                 1
               </div>
               <Home className="w-5 h-5" />
               <span className="text-sm">Home</span>
             </Link>
-            <Link href="#" className="flex items-center gap-3 p-2 rounded-lg hover:bg-gray-100 text-gray-700">
+            <Link href="/profile" className="flex items-center gap-3 p-2 rounded-lg hover:bg-gray-100 text-gray-700">
               <div className="flex items-center justify-center w-6 h-6 rounded-full bg-blue-600 text-white text-sm">
                 2
               </div>
               <UserCircle className="w-5 h-5" />
               <span className="text-sm">My Profile</span>
             </Link>
-            <Link href="#" className="flex items-center gap-3 p-2 rounded-lg hover:bg-gray-100 text-gray-700">
+            <Link
+              href="/patientschat"
+              className={`flex items-center gap-3 p-2 rounded-lg hover:bg-gray-100 ${pathname === "/patientschat" ? "bg-gray-100 font-medium" : "text-gray-700"}`}
+            >
               <div className="flex items-center justify-center w-6 h-6 rounded-full bg-blue-600 text-white text-sm">
                 3
               </div>
