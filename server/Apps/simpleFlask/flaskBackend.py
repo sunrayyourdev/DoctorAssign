@@ -425,10 +425,8 @@ def recommend_doctor():
         if not doctor:
             return jsonify({"error": "Doctor not found in database"}), 404
 
-        # Get column names from the cursor
+        # Get column names from the cursor and convert DataRow to dictionary
         columns = [desc[0] for desc in cursor.description]
-
-        # Convert DataRow to dictionary
         doctor_dict = dict(zip(columns, doctor))
 
         # --- OpenAI ChatGPT Validation ---
@@ -436,7 +434,8 @@ def recommend_doctor():
 
         # Prompt to analyze patient symptoms and validate recommendation
         prompt = f"""
-        Patient's reported symptoms: "{patient_input}"
+        Patient's reported symptoms (please extract and consider only the medically relevant content, and ignore any extraneous or non-medical text such as testing messages, repeated statements, or unrelated chatter):
+        "{patient_input}"
 
         Recommended Doctor:
         - Name: {doctor_dict['name']}
@@ -445,12 +444,14 @@ def recommend_doctor():
         - Available Hours: {doctor_dict['available_hours']}
         - Description: {doctor_dict['description']}
 
-        Answer the following:
-        1. Based on the symptoms provided, is there enough information to determine if this doctor is a good fit? Answer ONLY "Yes" or "No".
-        2. If "Yes", provide a structured response covering:
-            - **Possible conditions** the patient might have.
-            - **Why this doctor is a good match** for the symptoms.
-            - **A patient-friendly explanation** recommending the doctor.
+        Assume that this recommended doctor has been selected by a sophisticated vector search algorithm as the best match. Based solely on the medically relevant symptoms provided above, please answer the following questions:
+
+        1. Is there enough medically relevant information in the patient's reported symptoms to confidently justify that this doctor is a good match? Answer ONLY "Yes" or "No". (Assume that even one clearly stated significant symptom is sufficient.)
+        2. If you answer "Yes", please provide a structured explanation that includes:
+           - A list of possible conditions that could be inferred from the patient's symptoms.
+           - An explanation of why the doctor's specialty is appropriate for these conditions.
+           - A brief, patient-friendly summary that explains the recommendation.
+        3. If you answer "No", please explain which additional medically relevant details are needed to confidently justify the recommendation.
         """
 
         # Make OpenAI API call
@@ -466,38 +467,41 @@ def recommend_doctor():
         gpt_reply = openai_response.choices[0].message.content
         print(f"OpenAI Response: {gpt_reply}")
 
-        # Extract first answer (Yes/No) and explanation
+        # Parse the GPT response
         lines = gpt_reply.split("\n")
-
         first_answer = lines[0].strip()  # First line should be "Yes" or "No"
+        cleaned_answer = re.sub(r'^\d+\.\s*', '', first_answer.strip().lower())
 
-        # If ChatGPT determines there's not enough data, return an appropriate response
-        if "no" in first_answer.strip().lower():
-            return jsonify({
-                "error": "Not enough data reported on the patient's symptoms to be confident in the recommended doctor."
-            })
+        # Instead of rejecting the result if GPT says "No", always trust the vector search.
+        # If GPT returns "No", we add a note explaining that more information may be needed.
+        additional_message = ""
+        if cleaned_answer == "no":
+            additional_message = ("We matched you with this doctor; however, we believe that more information may be needed "
+                                  "before a proper recommendation can be made. Please consider consulting the doctor for further advice.")
 
-        # Remove numbered points (1., 2., etc.) from explanation parts
+        # Remove leading numbering from subsequent explanation lines
         cleaned_explanation = [
-            re.sub(r"^\d+\.\s*", "", line).strip()  # Remove leading "1. ", "2. ", etc.
-            for line in lines[1:] if line.strip()  # Ignore empty lines
+            re.sub(r"^\d+\.\s*", "", line).strip() for line in lines[1:] if line.strip()
         ]
 
-        # Format explanation with bullet points
+        # Format the explanation with an optional additional message
         formatted_explanation = f"""
-        Possible Conditions:
-        {cleaned_explanation[0]}
+{additional_message}
 
-        Why this doctor is a good fit: 
-        {cleaned_explanation[1]}
+Possible Conditions:
+{cleaned_explanation[0] if len(cleaned_explanation) > 0 else "N/A"}
 
-        Patient-friendly recommendation:  
-        {cleaned_explanation[2]}
-        """
+Why this doctor is a good fit:
+{cleaned_explanation[1] if len(cleaned_explanation) > 1 else "N/A"}
 
-        # Combine ChatGPT explanation with doctor details
+Patient-friendly recommendation:
+{cleaned_explanation[2] if len(cleaned_explanation) > 2 else "N/A"}
+"""
+
+        # Combine ChatGPT's explanation with doctor details
         response_data = {
             "doctor_details": doctor_dict,
+            "chatgpt_evaluation": cleaned_answer,
             "chatgpt_analysis": formatted_explanation
         }
 
