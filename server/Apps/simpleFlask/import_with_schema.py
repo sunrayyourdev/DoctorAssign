@@ -1,7 +1,30 @@
 from dotenv import load_dotenv
-import iris
-import pandas as pd
+import sys
 import os
+
+# Get the site-packages directory of the current environment
+import site
+site_packages = site.getsitepackages()[0]
+
+# Add the iris module path to sys.path if it exists
+iris_module_path = os.path.join(site_packages, 'iris')
+if os.path.exists(iris_module_path):
+    sys.path.append(site_packages)
+else:
+    # Alternative: try to find the module in the wheel extraction location
+    alt_path = '/tmp/wheel_extract/iris'
+    if os.path.exists(alt_path):
+        sys.path.append('/tmp/wheel_extract')
+
+# Now try to import iris
+try:
+    import iris
+    print("Successfully imported iris module")
+except ImportError as e:
+    print(f"Failed to import iris module: {e}")
+    sys.exit(1)
+
+import pandas as pd
 import json
 
 # IRIS Database Connection Details
