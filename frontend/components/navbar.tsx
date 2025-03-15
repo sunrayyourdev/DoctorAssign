@@ -29,8 +29,11 @@ export default function Navbar() {
         <NavItem href="/admin" active={pathname === "/admin"}>
           Dashboard
         </NavItem>
-        <NavItem href="/new-appointment" active={pathname === "/new-appointment"}>
-          New Appointment
+        <NavItem href="/doctor-dashboard" active={pathname === "/doctor-dashboard"}>
+          Doctor Dashboard
+        </NavItem>
+        <NavItem href="/api-test" active={pathname === "/api-test"}>
+          API Test
         </NavItem>
       </div>
 

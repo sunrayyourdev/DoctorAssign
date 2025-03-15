@@ -55,7 +55,11 @@ CORS(app)
 
 @app.route('/')
 def homepage():
-    return render_template('index.html') 
+    return jsonify({
+        "status": "ok",
+        "message": "DoctorAssign API is running",
+        "version": "1.0.0"
+    }) 
 
 # ---- DATABASE CONNECTION CONFIG ----
 load_dotenv()
