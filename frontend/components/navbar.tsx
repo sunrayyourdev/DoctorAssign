@@ -26,16 +26,13 @@ export default function Navbar() {
 
       {/* Navigation Tabs */}
       <div className="flex items-center gap-1 md:gap-2">
-        <NavItem href="/admin" active={pathname === "/admin"}>
-          Dashboard
-        </NavItem>
         <NavItem href="/doctor-dashboard" active={pathname === "/doctor-dashboard"}>
           Doctor Dashboard
         </NavItem>
         <NavItem href="/api-test" active={pathname === "/api-test"}>
           API Test
         </NavItem>
-      </div>
+      </div> 
 
       {/* User Profile */}
       <div className="flex items-center">

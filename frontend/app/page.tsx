@@ -304,12 +304,12 @@ export default function DoctorMatchingChat() {
               <AlertCircle className="h-4 w-4" />
               <span>Settings</span>
             </Button>
-            <Link href="/api-test" passHref>
+            {/* <Link href="/api-test" passHref>
               <Button variant="outline" size="sm" className="flex items-center gap-2">
                 <Activity className="h-4 w-4" />
                 <span>Test API</span>
               </Button>
-            </Link>
+            </Link> */}
           </div>
         </div>
         
